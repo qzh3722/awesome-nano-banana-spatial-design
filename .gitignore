@@ -1,0 +1,59 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.sublime-*
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Large work files (keep repository lean)
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# Backup files
+*.bak
+*.backup
+~*
+
+# Node modules (if adding any automation tools later)
+node_modules/
+npm-debug.log*
+
+# Python (if adding any scripts later)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# Build outputs (if adding any build process)
+dist/
+build/
+*.egg-info/
+
+# Keep assets directory but ignore very large files
+assets/**/*.psd
+assets/**/*.ai
+
+# Allow placeholder images but document they need replacement
+# (Remove this line once real images are added)
