@@ -1,6 +1,6 @@
 <div align="center">
 
-![Awesome Nano Banana Spatial Design Banner](./assets/images/banner.png)
+![Awesome Nano Banana Spatial Design Banner](./assets/images/banner.jpg)
 
 # Awesome Nano Banana Spatial Design
 

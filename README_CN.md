@@ -1,6 +1,6 @@
 <div align="center">
 
-![Awesome Nano Banana 空间设计 Banner](./assets/images/banner.png)
+![Awesome Nano Banana 空间设计 Banner](./assets/images/banner.jpg)
 
 # Awesome Nano Banana 空间设计提示词库
 
