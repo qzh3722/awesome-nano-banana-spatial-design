@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing! This guide will help you submit high-quality use cases and improvements.
 
+> 📖 **For AI Assistants & Developers**: Before contributing, please read [DEVELOPMENT_CONTEXT.md](./DEVELOPMENT_CONTEXT.md) to understand the complete project history, technical decisions, and current development status.
+
 ## How to Contribute
 
 ### 1. Types of Contributions

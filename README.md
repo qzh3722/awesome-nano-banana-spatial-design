@@ -157,6 +157,16 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 - Workflow integration guides
 - Advanced parameter optimization techniques
 
+## Project Status & Development
+
+📊 **Current Progress**: 3/100 cases completed | Phase 1: Foundation ✅ | Phase 2: Content Creation 🚧
+
+For detailed development history, technical decisions, and AI context:
+- 📖 **[Development Context Document](./DEVELOPMENT_CONTEXT.md)** - Complete project history and context for AI assistants
+
+For project planning and timeline:
+- 🗺️ **[Roadmap](./docs/ROADMAP.md)** - 4-week MVP development plan
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
