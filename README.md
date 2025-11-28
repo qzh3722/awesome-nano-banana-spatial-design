@@ -1,8 +1,14 @@
+<div align="center">
+
+![Awesome Nano Banana Spatial Design Banner](./assets/images/banner.png)
+
 # Awesome Nano Banana Spatial Design
 
 > A curated collection of professional-grade prompts for Nano Banana Pro, specifically designed for spatial design professionals.
 
 [中文版](./README_CN.md) | **English**
+
+</div>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)

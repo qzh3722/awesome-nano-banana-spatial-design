@@ -1,8 +1,14 @@
+<div align="center">
+
+![Awesome Nano Banana 空间设计 Banner](./assets/images/banner.png)
+
 # Awesome Nano Banana 空间设计提示词库
 
 > 专为空间设计专业人士精心策划的 Nano Banana Pro 提示词合集
 
 **中文** | [English](./README.md)
+
+</div>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
