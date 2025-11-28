@@ -6,7 +6,18 @@
 
 > A curated collection of professional-grade prompts for Nano Banana Pro, specifically designed for spatial design professionals.
 
-[中文版](./README_CN.md) | **English**
+<!-- Language Switcher -->
+<table>
+<tr>
+<td align="center"><b>🌐 Language / 语言</b></td>
+</tr>
+<tr>
+<td align="center">
+<b>English</b> |
+<a href="./README.zh-CN.md">简体中文</a>
+</td>
+</tr>
+</table>
 
 </div>
 
