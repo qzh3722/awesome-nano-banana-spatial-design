@@ -182,8 +182,8 @@ Common workflows:
 ## Community
 
 ### Where can I ask questions?
-- [GitHub Discussions](https://github.com/yourusername/awesome-nano-banana-spatial-design/discussions) - Best for general questions
-- [GitHub Issues](https://github.com/yourusername/awesome-nano-banana-spatial-design/issues) - For bugs or problems with specific cases
+- [GitHub Discussions](https://github.com/qzh3722/awesome-nano-banana-spatial-design/discussions) - Best for general questions
+- [GitHub Issues](https://github.com/qzh3722/awesome-nano-banana-spatial-design/issues) - For bugs or problems with specific cases
 
 ### Can I share my results?
 Please do! We'd love to see:
@@ -225,8 +225,8 @@ Currently focused on Nano Banana Pro. Future plans may include:
 ## Still have questions?
 
 - Check the [Getting Started Guide](./GETTING_STARTED.md)
-- Browse [existing discussions](https://github.com/yourusername/awesome-nano-banana-spatial-design/discussions)
-- Open a [new discussion](https://github.com/yourusername/awesome-nano-banana-spatial-design/discussions/new)
+- Browse [existing discussions](https://github.com/qzh3722/awesome-nano-banana-spatial-design/discussions)
+- Open a [new discussion](https://github.com/qzh3722/awesome-nano-banana-spatial-design/discussions/new)
 
 ---
 

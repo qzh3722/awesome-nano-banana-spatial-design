@@ -151,8 +151,8 @@
 
 ## 联系我们
 
-- 问题反馈: [GitHub Issues](https://github.com/yourusername/awesome-nano-banana-spatial-design/issues)
-- 讨论交流: [GitHub Discussions](https://github.com/yourusername/awesome-nano-banana-spatial-design/discussions)
+- 问题反馈: [GitHub Issues](https://github.com/qzh3722/awesome-nano-banana-spatial-design/issues)
+- 讨论交流: [GitHub Discussions](https://github.com/qzh3722/awesome-nano-banana-spatial-design/discussions)
 
 ---
 

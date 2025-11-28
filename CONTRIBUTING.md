@@ -53,7 +53,7 @@ We welcome:
 
 #### Option A: GitHub Issues (Easier)
 
-1. Go to [Issues](https://github.com/yourusername/awesome-nano-banana-spatial-design/issues)
+1. Go to [Issues](https://github.com/qzh3722/awesome-nano-banana-spatial-design/issues)
 2. Click "New Issue" and select appropriate template
 3. Fill in all required information
 4. Attach example images if applicable
@@ -134,8 +134,8 @@ Contributors will be:
 
 ### 8. Questions?
 
-- Check existing [Issues](https://github.com/yourusername/awesome-nano-banana-spatial-design/issues)
-- Join [Discussions](https://github.com/yourusername/awesome-nano-banana-spatial-design/discussions)
+- Check existing [Issues](https://github.com/qzh3722/awesome-nano-banana-spatial-design/issues)
+- Join [Discussions](https://github.com/qzh3722/awesome-nano-banana-spatial-design/discussions)
 - Reach out to maintainers
 
 ---

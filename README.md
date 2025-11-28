@@ -151,8 +151,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Connect
 
-- Issues: [GitHub Issues](https://github.com/yourusername/awesome-nano-banana-spatial-design/issues)
-- Discussions: [GitHub Discussions](https://github.com/yourusername/awesome-nano-banana-spatial-design/discussions)
+- Issues: [GitHub Issues](https://github.com/qzh3722/awesome-nano-banana-spatial-design/issues)
+- Discussions: [GitHub Discussions](https://github.com/qzh3722/awesome-nano-banana-spatial-design/discussions)
 
 ---
 
