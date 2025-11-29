@@ -92,11 +92,7 @@ IMPORTANT: Strictly follow the input floor plan. Do not add any items that are n
   "output_requirements": {
     "view": "orthographic_top_down_90_degrees",
     "style": "photorealistic",
-    "image_size": {
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": "match_input"
-    },
+    "aspect_ratio": "match_input",
     "lighting": {
       "type": "natural_daylight",
       "time_of_day": "10:00_AM",

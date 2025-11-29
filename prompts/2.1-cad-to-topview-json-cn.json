@@ -1,25 +1,21 @@
 {
   "task": "cad_floor_plan_to_photorealistic_topview",
   "project_type": "residential_apartment",
-  
   "input_summary": {
     "total_rooms": 9,
     "total_furniture_pieces": 28,
     "total_plumbing_fixtures": 7,
-   "architectural_features_count": 1,
-    "empty_spaces": ["balcony", "entrance"],
+    "architectural_features_count": 1,
+    "empty_spaces": [
+      "balcony",
+      "entrance"
+    ],
     "language": "chinese"
   },
-  
   "output_requirements": {
     "view": "orthographic_top_down_90_degrees",
     "style": "photorealistic",
-    "image_size": {
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": "match_input",
-      "note": "Maintain aspect ratio from input CAD to prevent distortion"
-    },
+    "aspect_ratio": "match_input",
     "lighting": {
       "type": "natural_daylight",
       "time_of_day": "10:00_AM",
@@ -33,7 +29,6 @@
       "font_size": "proportional_to_room_size"
     }
   },
-  
   "architectural_features": [
     {
       "type": "walk_in_closet",
@@ -45,7 +40,6 @@
       "DO_NOT_render_as": "freestanding_wardrobe_cabinet"
     }
   ],
-  
   "rooms": [
     {
       "id": "living_room",
@@ -119,7 +113,6 @@
         }
       ]
     },
-    
     {
       "id": "dining_area",
       "label": "餐厅",
@@ -153,7 +146,6 @@
         }
       ]
     },
-    
     {
       "id": "kitchen",
       "label": "厨房",
@@ -202,7 +194,6 @@
         }
       ]
     },
-    
     {
       "id": "master_bedroom",
       "label": "主卧室",
@@ -237,7 +228,6 @@
       ],
       "architectural_feature_reference": "walk_in_closet_see_architectural_features_section"
     },
-    
     {
       "id": "bedroom_2",
       "label": "次卧室",
@@ -279,7 +269,6 @@
         }
       ]
     },
-    
     {
       "id": "master_bathroom",
       "label": "主卫生间",
@@ -329,7 +318,6 @@
       "total_sink_count": 2,
       "verification": "bathtub_AND_separate_shower_AND_toilet_AND_double_vanity"
     },
-    
     {
       "id": "secondary_bathroom",
       "label": "卫生间",
@@ -368,7 +356,6 @@
       "total_sink_count": 1,
       "verification": "shower_only_NO_tub_plus_toilet_plus_single_sink"
     },
-    
     {
       "id": "entrance",
       "label": "玄关",
@@ -381,7 +368,6 @@
       "rendering": "show_as_clean_circulation_area"
     }
   ],
-  
   "empty_spaces": [
     {
       "id": "balcony",
@@ -401,7 +387,6 @@
       "verification": "confirm_balcony_is_empty_with_flooring_only"
     }
   ],
-  
   "strict_constraints": {
     "no_added_items": true,
     "no_removed_items": true,
@@ -442,7 +427,6 @@
       "secondary_bathroom": "has_shower_only_no_bathtub"
     }
   },
-  
   "verification_checklist": {
     "room_count": 9,
     "furniture_count": 28,
