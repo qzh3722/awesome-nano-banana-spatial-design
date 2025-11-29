@@ -53,6 +53,79 @@
 
 ---
 
+## 🔄 Standard Prompt Development Workflow (MANDATORY)
+
+**Purpose**: Prevent premature commits and meaningless git history pollution
+
+**Process** (5 steps, strictly follow):
+
+### Step 1: Requirement Discussion & Prompt Drafting
+- **Who**: User + AI collaborate
+- **Focus**: English version first (source of truth)
+- **Deliverables**: 
+  - Natural language prompt (EN)
+  - JSON prompt (EN)
+- **Status**: Draft, NOT pushed to repo
+
+### Step 2: Image Generation (User-Side)
+- **Who**: User
+- **Action**: Use drafted prompts to generate images via Nano Banana Pro
+- **Output**: Generated images (natural-en.jpg, json-en.jpg)
+- **Note**: May generate 2-3 variations if using natural language
+
+### Step 3: AI Review & QA
+- **Who**: User shares images → AI reviews
+- **Evaluation Criteria**:
+  - Accuracy vs. input CAD
+  - Prompt adherence (no added/missing items)
+  - Professional quality
+  - Technical correctness
+- **Outcome**: Pass / Revise prompts / Acceptable with notes
+
+### Step 4: Iteration (if needed)
+- **Trigger**: Step 3 failed or needs improvement
+- **Action**: Refine prompts based on AI feedback
+- **Loop**: Return to Step 2 with revised prompts
+- **Max Iterations**: 2-3 rounds (if more needed, reconsider approach)
+
+### Step 5: Finalization & Repository Update
+- **Trigger**: Step 3 passed, prompts validated
+- **Actions** (in order):
+  1. Create Chinese translations (prompts + labels)
+  2. Update README.md (EN) with final prompts
+  3. Update README.zh-CN.md (CN) with translations
+  4. Add generated images to `assets/cases/X.X-case-name/`
+  5. Commit with meaningful message
+  6. Push to GitHub
+- **Status**: Case X.X complete ✅
+
+---
+
+### Workflow Benefits
+
+✅ **Quality First**: Only push validated content  
+✅ **Clean Git History**: No back-and-forth commits  
+✅ **Time Efficient**: Catch issues before committing  
+✅ **User Validation**: Real-world testing before finalization  
+
+### Anti-Pattern (What NOT to Do)
+
+❌ **Case 2.1 Anti-Pattern** (learned lesson):
+1. Create prompts
+2. Push immediately (commit 1)
+3. User tests → find issues
+4. Revise prompts
+5. Push again (commit 2)
+6. Find more issues
+7. Push fixes (commit 3, 4, 5...)
+8. Result: Messy git history, wasted time
+
+✅ **Correct Pattern** (Steps 1-5 above):
+1. Draft → Test → Review → Iterate → Finalize → Push once
+2. Result: Clean commit, validated quality
+
+---
+
 ## 📋 Latest Progress Summary (2025-11-30)
 
 **Case 2.1 Complete** ✅:
