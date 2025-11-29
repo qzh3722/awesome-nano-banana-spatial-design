@@ -53,7 +53,7 @@
 
 #### 输出：自然语言提示词
 
-![自然语言输出](./assets/cases/2.1-cad-to-topview/output-natural.jpg)
+![自然语言输出](./assets/cases/2.1-cad-to-topview/output-natural-cn.jpg)
 
 **提示词：**
 ```
@@ -68,7 +68,7 @@
 
 #### 输出：JSON结构化提示词
 
-![JSON提示词输出](./assets/cases/2.1-cad-to-topview/output-json.jpg)
+![JSON提示词输出](./assets/cases/2.1-cad-to-topview/output-json-cn.jpg)
 
 **详细JSON提示词：**
 
