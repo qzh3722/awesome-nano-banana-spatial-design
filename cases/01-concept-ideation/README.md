@@ -38,7 +38,34 @@
 
 ---
 
-**Case Count**: 0 (cases will be added as tested)
+## 📋 本阶段场景清单 | Scenario List
+
+### 🥇 High Priority
+
+| ID | 场景名称 / Scenario Name | 预计节省时间 / Time Saving | 状态 / Status |
+|----|------------------------|--------------------------|---------------|
+| 1.2 | 方案对比多次建模 / Multi-style Concept Comparison | 6-12h/project | 📝 待测试 To Test |
+
+### 🥈 Medium Priority
+
+| ID | 场景名称 / Scenario Name | 预计节省时间 / Time Saving | 状态 / Status |
+|----|------------------------|--------------------------|---------------|
+| 1.1 | 手绘草图快速可视化 / Hand Sketch to Rendering | 10-20h/project | 📝 待测试 To Test |
+| 1.4 | 空间氛围快速探索 / Atmosphere Exploration | 1-2h/session | 📝 待测试 To Test |
+| 1.5 | 概念模型快速生成 / Conceptual Massing Study | 1-2h/iteration | 📝 待测试 To Test |
+| 13.2 | 传统文化符号现代化演绎 / Cultural Symbol Modernization | 2-3h | 📝 待测试 To Test |
+| 13.3 | 地域风格适配 / Regional Style Adaptation | 4-6h/region | 📝 待测试 To Test |
+
+### 🥉 Low Priority
+
+| ID | 场景名称 / Scenario Name | 预计节省时间 / Time Saving | 状态 / Status |
+|----|------------------------|--------------------------|---------------|
+| 1.3 | 概念拼贴板制作 / Mood Board Generation | 1-2h | 📝 待测试 To Test |
+| 13.4 | 时代风格复原 / Historical Style Restoration | 6-10h | 📝 待测试 To Test |
+
+**Total Scenarios**: 8 | **Estimated Total Time Savings**: 10-30h per project
+
+---
 
 **Related Stages**:
 - Next: [02 - Space Planning](../02-space-planning/) (after concept is approved)
