@@ -431,6 +431,193 @@ User requested complete framework overhaul after overnight reflection:
   - **Action**: Re-generate natural language outputs with stricter prompt
   - **Verification**: Check ottoman count (2), chaise distinctness, bar stool count (4)
 
+### 8. Prompt Engineering Best Practices (Mandatory Standard)
+
+**Objective**: Systematic methodology to minimize errors across all 62 use cases
+
+**Document**: `prompt-engineering-best-practices.md` (Artifact)
+
+**Derived From**: Case 2.1 comprehensive QA findings
+
+**Core Methodology** (5 Phases):
+
+#### Phase 1: Exhaustive Input Analysis
+**Before writing any prompt:**
+
+1. **Spatial Inventory**
+   - Room count, names, dimensions
+   - Built-in elements (walk-in closets, alcoves, architectural features)
+   - Empty spaces (balconies, hallways) - document what is NOT there
+
+2. **Furniture Inventory** (Per Room)
+   - Itemized list with exact quantities
+   - Distinctions (sectional vs. chaise, built-in vs. freestanding)
+   - Independence notes (separate pieces that might merge)
+
+3. **Fixture Inventory** (Bathrooms/Kitchens)
+   - ALL plumbing fixtures (bathtub + separate shower common error)
+   - Exact counts (single vs. double vanity)
+   - Fixed vs. movable elements
+
+4. **Empty Space Notation**
+   - Explicitly document spaces with NO furniture
+   - Critical for preventing AI additions
+
+**Time Investment**: 15-20 minutes per case  
+**Error Reduction**: ~70% of common mistakes caught here
+
+---
+
+#### Phase 2: Structured Prompt Writing
+
+**Natural Language Template:**
+```
+1. Transformation goal
+2. What to ADD (matching CAD)
+3. What to PRESERVE (exact counts, proportions)
+4. What NOT to ADD ⭐ CRITICAL
+5. Language specification
+6. Critical elements list (easy-to-miss items)
+```
+
+**JSON Template:**
+```json
+{
+  "input_summary": {room_count, furniture_count, fixture_count},
+  "architectural_features": [separate from furniture],
+  "rooms": [detailed specs per room],
+  "empty_spaces": [explicit empty array],
+  "strict_constraints": {no_added, no_removed, exact_counts}
+}
+```
+
+**Key Innovations from Case 2.1**:
+- Separate `architectural_features` from `furniture` (walk-in closet issue)
+- Explicit `empty_spaces` category (balcony issue)
+- `independence` field for furniture (chaise lounge issue)
+- `separate_from_tub` for showers (missing fixture issue)
+
+---
+
+#### Phase 3: Common Error Patterns & Prevention
+
+**Error Pattern Library** (from Case 2.1):
+
+| Error | Symptom | Prevention |
+|-------|---------|------------|
+| Decorative Additions | Plants, vases, pillows added | Explicit negative list in prompt |
+| Merged Furniture | Chaise + sofa blend | "independence" field in JSON |
+| Architectural Confusion | Walk-in closet → wardrobe | Separate architectural category |
+| Count Inaccuracies | Wrong number of stools/chairs | "exact_counts_enforced" in JSON |
+| Missing Fixtures | Separate shower omitted | "separate_from_tub": true |
+
+**Prevention Strategies**:
+- Explicit negative constraints ("DO NOT ADD")
+- Quantity precision ("exactly 4 bar stools" not "bar stools")
+- Architectural vs. furniture categorization
+- Reference-based constraints ("only items with CAD symbols")
+
+---
+
+#### Phase 4: Pre-Submission QA Checklist
+
+**Mandatory verification before generating:**
+
+- [ ] Input analysis complete (all inventories done)
+- [ ] All CAD elements referenced in prompt
+- [ ] Negative constraints included
+- [ ] Quantities specified exactly
+- [ ] Architectural features distinguished from furniture
+- [ ] Empty spaces explicitly noted
+- [ ] Language specification clear
+- [ ] Easy-to-miss items highlighted
+
+**Estimated Time**: 5 minutes  
+**Impact**: Catches 90% of specification errors before generation
+
+---
+
+#### Phase 5: Post-Generation QA Review
+
+**Deep technical review** (see Section 7):
+- Compare each output against input inventory
+- Verify exact counts
+- Check for added/missing elements
+- Validate architectural rendering
+- Create detailed QA report
+- Document errors for methodology improvement
+
+---
+
+### Prompt Quality Metrics
+
+**Target Accuracy (Post-Best-Practices):**
+- Room count: 100%
+- Furniture quantity: 95%+
+- No added deco items: 90%+
+- Architectural correctness: 90%+
+- Fixture count: 95%+
+- Empty space preservation: 95%+
+
+**Case 2.1 Baseline (Pre-Best-Practices):**
+- Natural language: ~40% accuracy
+- JSON: ~60% accuracy
+- **Improvement needed**: 30-50 percentage points
+
+**Expected Improvement with Methodology:**
+- Natural language: 85-90% accuracy
+- JSON: 95%+ accuracy
+
+---
+
+### Implementation for Cases 2.2 - 6.8
+
+**Standard Workflow** (per case):
+
+1. **Input Analysis** (15-20 min)
+   - Complete all checklists from best practices guide
+   - Document inventory in structured format
+   - Note tricky/easy-to-miss elements
+
+2. **Prompt Drafting** (10-15 min)
+   - Use templates from best practices
+   - Customize for specific case requirements
+   - Add case-specific constraints
+
+3. **Quality Review** (5 min)
+   - Run through QA checklist
+   - Validate against prompt matrix
+   - Refine weak specification points
+
+4. **Generate & Test** (varies)
+   - Generate all outputs (natural EN/CN, JSON EN/CN)
+   - Technical QA review (Section 7)
+   - Document discrepancies
+
+5. **Iterate if Needed**
+   - Update prompt based on QA findings
+   - Re-generate failed outputs
+   - Re-test until QA approved
+
+**Total Time per Case**: 30-40 minutes initially → 20-25 minutes as templates mature
+
+---
+
+### Continuous Improvement Loop
+
+After each case:
+1. Update error pattern library with new findings
+2. Refine templates based on lessons learned
+3. Add new prevention strategies
+4. Update checklists
+5. Measure accuracy improvement
+
+**Document Maintenance**:
+- Review `prompt-engineering-best-practices.md` after every 10 cases
+- Incorporate community feedback
+- Version control prompt templates
+- Share learnings across all cases
+
 ---
 
 ## 🔧 Technical Stack
