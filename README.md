@@ -59,7 +59,7 @@ Convert technical CAD floor plans into photorealistic colored top-down visualiza
 ```
 Transform the provided CAD floor plan into a photorealistic colored top-down visualization for client presentation. Add realistic furniture, clear room labels, and material-appropriate flooring for each space. Use soft natural lighting and maintain architectural accuracy.
 
-Room Label Language: All room labels must be in ENGLISH. Examples: "LIVING ROOM", "DINING AREA", "KITCHEN", "MASTER BEDROOM", "BEDROOM 2", "BATHROOM", "ENTRANCE", "BALCONY".
+Room Label Language: All room labels must be in ENGLISH.
 
 IMPORTANT: Strictly follow the input floor plan. Do not add any items that are not shown in the original CAD drawing. Do not remove or omit any items that appear in the original plan. Maintain exact room count, furniture placement, and spatial layout as provided.
 ```
