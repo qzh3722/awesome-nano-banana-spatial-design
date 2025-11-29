@@ -3,9 +3,9 @@
 
 > 🤖 **AI Assistant Notice**: This document contains the complete development history and context. **ALWAYS READ THIS FILE FIRST** when resuming development to understand what has been done and what needs to be done next.
 
-**Last Updated**: 2025-11-28
-**Current Phase**: Phase 1 Complete, Ready for Phase 2 (Content Creation)
-**Repository Status**: Private, Ready for content development
+**Last Updated**: 2025-11-29
+**Current Phase**: Framework Restructuring Complete, Ready for Content Creation
+**Repository Status**: Private, Ready for workflow-based content development
 
 ---
 
@@ -14,10 +14,11 @@
 ### Project Overview
 - **Name**: Awesome Nano Banana Spatial Design
 - **Type**: Curated prompt library for spatial design professionals
-- **Target**: 100 high-quality use cases for Nano Banana Pro (Gemini 3 Pro Image)
+- **Target**: 100+ high-quality use cases for Nano Banana Pro (Gemini 3 Pro Image)
 - **Languages**: Bilingual (English + 简体中文)
-- **Categories**: Architecture (30), Interior (40), Landscape (30)
-- **Status**: Foundation complete, 3 example cases created
+- **Classification**: Workflow-based (6 stages) × Space Types (Residential/Commercial/Outdoor)
+- **Workflow Stages**: Concept → Planning → Technical → Material → Rendering → Specialized
+- **Status**: Framework v2.0 complete, 3 example cases rewritten
 
 ### GitHub Repository
 - **Owner**: qzh3722
@@ -51,16 +52,24 @@ awesome-nano-banana-spatial-design/
 │       ├── banner.jpg        # 218KB optimized (was 2MB PNG)
 │       └── README.md
 │
-├── cases/                    # 100 planned cases
-│   ├── architecture/         # 30 cases planned
-│   │   ├── README.md        # Category index
-│   │   └── A-001-cad-to-colored-plan.md  # ✅ Example case
-│   ├── interior/            # 40 cases planned
+├── cases/                    # 100+ planned cases (workflow-based structure)
+│   ├── architecture/         # Legacy structure (to be reorganized)
 │   │   ├── README.md
-│   │   └── I-001-furniture-layout.md     # ✅ Example case
-│   └── landscape/           # 30 cases planned
-│       ├── README.md
-│       └── L-001-master-plan-visualization.md  # ✅ Example case
+│   │   └── A-001-cad-to-colored-plan.md  # ✅ v2.0 Example
+│   ├── interior/
+│   │   ├── README.md
+│   │   └── I-001-furniture-layout.md     # ✅ v2.0 Example
+│   ├── landscape/
+│   │   ├── README.md
+│   │   └── L-001-master-plan-visualization.md  # ✅ v2.0 Example
+│   │
+│   └── [PLANNED] Workflow-based structure:
+│       ├── 01-concept-ideation/          # From zero to creative solutions
+│       ├── 02-space-planning/            # Layout optimization & circulation
+│       ├── 03-technical-to-visual/       # CAD/drawings to visualization
+│       ├── 04-material-styling/          # Material refinement & styling
+│       ├── 05-scene-rendering/           # Final presentation renders
+│       └── 06-specialized-tasks/         # Special use cases
 │
 └── docs/
     ├── GETTING_STARTED.md   # User guide
@@ -120,53 +129,145 @@ awesome-nano-banana-spatial-design/
 - Successfully pushed all commits to private repository
 - Repository accessible at: https://github.com/qzh3722/awesome-nano-banana-spatial-design
 
+#### Session 2: Framework Restructuring (2025-11-29)
+
+**Major Strategic Pivot**:
+User requested complete framework overhaul after overnight reflection:
+
+1. **Classification System Change**:
+   - **Old**: Fixed domain categories (Architecture 30, Interior 40, Landscape 30)
+   - **New**: Workflow-based classification (6 stages) × Space types (open-ended count)
+   - **Rationale**: More intuitive for designers, matches actual workflow, avoids content imbalance
+
+2. **Workflow Stages Defined** (in correct designer sequence):
+   - **Stage 1**: Concept Ideation - From zero to creative solutions
+   - **Stage 2**: Space Planning - Layout optimization & circulation design
+   - **Stage 3**: Technical to Visual - CAD/drawings to visualization
+   - **Stage 4**: Material & Styling - Material refinement and styling
+   - **Stage 5**: Scene Rendering - Final presentation renders
+   - **Stage 6**: Specialized Tasks - Special use cases (text rendering, seasonal, etc.)
+
+3. **Case Structure Simplified**:
+   - **Old**: 7 major sections (Problem, Parameters, Prompt, Quality, Tips, Related, Tags)
+   - **New**: 4 essential sections (Preview, Prompt, Tips, Tags)
+   - **Improvement**: Cleaner, card-style layout; large compressed images; bilingual maintained
+
+4. **Files Updated to v2.0**:
+   - `CASE_TEMPLATE.md` - Complete rewrite to new simplified structure
+   - `cases/architecture/A-001-cad-to-colored-plan.md` - Rewritten to v2.0
+   - `cases/interior/I-001-furniture-layout.md` - Rewritten to v2.0
+   - `cases/landscape/L-001-master-plan-visualization.md` - Rewritten to v2.0
+
+5. **New Case Structure Features**:
+   - Large hero images (gallery-style, compressed JPG)
+   - Bilingual prompts (Chinese first, English second)
+   - Practical Tips section (usage advice, variations, best practices)
+   - Bilingual hashtags for discoverability
+   - Version tracking and contributor attribution
+
+**Commit 6: `[PENDING]` - Framework v2.0: Template and case restructuring**
+- Updated CASE_TEMPLATE.md to simplified 4-section structure
+- Rewrote A-001 (CAD to visualization) to v2.0
+- Rewrote I-001 (Furniture layout) to v2.0
+- Rewrote L-001 (Landscape master plan) to v2.0
+- Added Tips sections to all cases
+- Maintained full bilingual support throughout
+- Updated all cases to Version 2.0
+
+**Commit 7: `[PLANNED]` - Directory reorganization to workflow structure**
+- Create 6 workflow stage directories
+- Move cases to appropriate workflow categories
+- Update README files to explain new classification
+- Update all cross-references and links
+
 ---
 
-## 🎯 Current Status (2025-11-28)
+## 🎯 Current Status (2025-11-29)
 
 ### Completed Tasks ✅
 - [x] Repository structure established
 - [x] Bilingual documentation complete
-- [x] Case template finalized
-- [x] 3 example cases created (one per category)
+- [x] Case template v1.0 created (7-section structure)
+- [x] 3 example cases created v1.0 (domain-based)
 - [x] GitHub repository initialized (Private)
 - [x] Banner image added and optimized
 - [x] Professional language switcher implemented
-- [x] All documentation files created
-- [x] Git remote configured and synced
+- [x] **Framework v2.0 restructuring complete**
+- [x] **Classification changed to workflow-based (6 stages)**
+- [x] **CASE_TEMPLATE.md rewritten (4-section simplified structure)**
+- [x] **All 3 example cases updated to v2.0**
+- [x] **Tips section added to all cases**
+- [x] **DEVELOPMENT_CONTEXT.md updated**
 
 ### Next Steps 🎯
-- [ ] Begin Phase 2: Architecture cases (A-002 to A-030)
-- [ ] Create first batch of 8 CAD-to-Visualization cases
+- [ ] **IMMEDIATE**: Git commit phase 1 (template + case restructuring)
+- [ ] Reorganize directory structure (create 6 workflow stage directories)
+- [ ] Update README.md and README.zh-CN.md to explain new workflow classification
+- [ ] Git commit phase 2 (directory reorganization + README updates)
+- [ ] Push all changes to GitHub
+- [ ] Begin creating new cases using workflow-based structure
 - [ ] Generate example images for each case
-- [ ] Test all prompts 3-5 times for quality assurance
-- [ ] Establish image generation workflow
 
 ### Pending Decisions 🤔
+- Exact file naming convention for workflow-based cases
+- Whether to keep legacy A-/I-/L- prefixes or use new STAGE-TYPE-NUM format
 - Image generation tool/workflow for case examples
-- Quality standards for example images
-- Review process before committing new cases
+- Migration path for future cases from legacy to workflow structure
 
 ---
 
 ## 🏗️ Architecture Decisions
 
-### 1. File Naming Convention
+### 1. Workflow-Based Classification (Framework v2.0)
 
-**Cases**: `[CATEGORY-ID]-[descriptive-name].md`
+**Decision Date**: 2025-11-29
+**Status**: Implemented
+
+**Old Approach (v1.0)**:
+- Fixed domain categories: Architecture (30), Interior (40), Landscape (30)
+- File naming: `A-###`, `I-###`, `L-###`
+
+**New Approach (v2.0)**:
+- **Primary Classification**: 6 Workflow Stages (matches designer's actual process)
+  1. 01-concept-ideation - From zero to creative solutions
+  2. 02-space-planning - Layout optimization & circulation
+  3. 03-technical-to-visual - CAD/drawings to visualization
+  4. 04-material-styling - Material refinement & styling
+  5. 05-scene-rendering - Final presentation renders
+  6. 06-specialized-tasks - Special use cases
+- **Secondary Classification**: Space types (residential, commercial, outdoor)
+- **Case Count**: Open-ended (not fixed per category)
+
+**Rationale**:
+- Workflow stages more intuitive for designers
+- Matches actual designer workflow (user confirmed "路径A")
+- Avoids content imbalance across domains
+- Each workflow stage equally important regardless of space type
+- Easier for users to find cases matching their current work stage
+
+### 2. File Naming Convention
+
+**v1.0 (Legacy)**: `[CATEGORY-ID]-[descriptive-name].md`
 - Architecture: `A-001`, `A-002`, ..., `A-030`
 - Interior: `I-001`, `I-002`, ..., `I-040`
 - Landscape: `L-001`, `L-002`, ..., `L-030`
 
+**v2.0 (Planned)**: `[STAGE]-[TYPE]-[NUM]-[descriptive-name].md`
+- Example: `03-TECH-RES-001-cad-floor-plan-to-render.md`
+- Example: `02-PLAN-COM-005-office-furniture-layout.md`
+- Stage codes: 01-06 (workflow stages)
+- Type codes: RES (residential), COM (commercial), OUT (outdoor)
+
 **Images**: `[CASE-ID]-[input|output]-[descriptor].jpg`
 - Example: `A-001-output-modern-styled.jpg`
+- Large, compressed JPG format (~200KB target)
 
 **README Files**:
 - `README.md` - English (default, GitHub homepage)
 - `README.zh-CN.md` - Simplified Chinese (GitHub i18n standard)
 - `README_CN.md` - Deprecated, backward compatibility only
 
-### 2. Language Strategy
+### 3. Language Strategy
 
 **Approach**: Parallel bilingual content
 - Every case must have complete English AND Chinese content
@@ -175,7 +276,35 @@ awesome-nano-banana-spatial-design/
 - Current: EN (default) + zh-CN
 - Future: Can add ja, ko, es, fr, de, etc.
 
-### 3. Image Optimization
+### 4. Case Structure (Framework v2.0)
+
+**Decision Date**: 2025-11-29
+**Status**: Implemented
+
+**Old Structure (v1.0)**: 7 major sections
+1. Problem Statement
+2. Key Parameters
+3. Complete Prompt Template
+4. Quality Checklist
+5. Tips & Best Practices
+6. Related Cases
+7. Tags & Metadata
+
+**New Structure (v2.0)**: 4 essential sections (card-style)
+1. **效果预览 / Preview** - Large hero image showing input→output
+2. **提示词 / Prompt** - Bilingual prompt templates (CN/EN)
+3. **Tips / 使用技巧** - Practical usage tips (CN/EN)
+4. **标签 / Tags** - Bilingual hashtags for discoverability
+
+**Improvements**:
+- Simplified from 7 to 4 sections (cleaner, more focused)
+- Visual-first approach (large images)
+- Tips section added for practical advice
+- Maintained full bilingual support
+- Version tracking added
+- More gallery-like, less documentation-heavy
+
+### 5. Image Optimization
 
 **Decision**: Use compressed JPG for web images
 - Banner: JPG, ~200KB, quality 80
@@ -188,15 +317,15 @@ awesome-nano-banana-spatial-design/
 - No visible quality loss
 - Better for users with slow connections
 
-### 4. Content Quality Standards
+### 6. Content Quality Standards
 
-**Every case must include**:
-1. Clear problem statement (EN + CN)
-2. Complete prompt template with placeholders
-3. Tested parameters (minimum 3-5 test generations)
-4. At least one high-quality example output (1920px+ width)
-5. Practical tips from real usage
-6. Links to related cases
+**v2.0 Requirements - Every case must include**:
+1. **Large preview image** - High-quality example (1920px+ width, compressed JPG ~200KB)
+2. **Bilingual prompts** - Complete prompt templates in Chinese AND English
+3. **Practical tips** - Usage advice, variations, best practices (CN + EN)
+4. **Bilingual tags** - Relevant hashtags for discoverability
+5. **Tested prompts** - Minimum 3-5 test generations to verify quality
+6. **Version tracking** - Last updated date, contributor, version number
 
 **Review checklist** available in CASE_TEMPLATE.md
 
@@ -316,6 +445,24 @@ awesome-nano-banana-spatial-design/
 - Better mobile experience
 **Implementation**: Commit 2734a63
 
+### Decision 5: Framework v2.0 Restructuring
+**Choice**: Complete pivot from domain-based to workflow-based classification
+**Date**: 2025-11-29
+**Rationale**:
+- **User insight**: After overnight reflection, user realized workflow stages match designer thinking better than domains
+- **User's workflow confirmed**: "路径A" (from zero start): Concept → Planning → Technical → Material → Rendering → Specialized
+- **Content balance**: Avoids thin content in architecture/landscape; all workflow stages equally important
+- **Open-ended growth**: No fixed case counts per category, add cases as tested
+- **Improved UX**: Designers can find cases matching their current work stage
+- **Case structure simplification**: 7-section structure too complex, simplified to 4-section card-style
+- **Visual-first approach**: Large images for at-a-glance understanding
+**Impact**:
+- All 3 example cases rewritten to v2.0
+- CASE_TEMPLATE.md completely restructured
+- Future directory reorganization planned
+- README updates needed to explain new classification
+**Implementation**: Session 2 (2025-11-29), Commit 6 pending
+
 ---
 
 ## ⚠️ Known Issues & Limitations
@@ -375,10 +522,11 @@ awesome-nano-banana-spatial-design/
 - `docs/ROADMAP.md` - 4-week development plan
 - `CONTRIBUTING.md` - Guidelines for contributors
 
-### Case Examples
-- `cases/architecture/A-001-cad-to-colored-plan.md` - Architecture example
-- `cases/interior/I-001-furniture-layout.md` - Interior example
-- `cases/landscape/L-001-master-plan-visualization.md` - Landscape example
+### Case Examples (v2.0)
+- `cases/architecture/A-001-cad-to-colored-plan.md` - Architecture example (v2.0 structure)
+- `cases/interior/I-001-furniture-layout.md` - Interior example (v2.0 structure)
+- `cases/landscape/L-001-master-plan-visualization.md` - Landscape example (v2.0 structure)
+- All cases now use simplified 4-section card-style format with Tips section
 
 ---
 
@@ -387,17 +535,20 @@ awesome-nano-banana-spatial-design/
 When resuming development, AI should:
 
 1. **Read this file first** to understand context
-2. **Check current phase** in ROADMAP.md
+2. **Check "Current Status"** section for latest state
 3. **Review last commit** to see what was done
 4. **Continue from "Next Steps"** section above
 5. **Update this file** after significant progress
 
-### Immediate Next Tasks (Week 2)
-1. Begin creating Architecture cases A-002 through A-008
-2. Establish image generation workflow
-3. Generate example images for new cases
-4. Test all prompts thoroughly (3-5 generations each)
-5. Update progress in this document
+### Immediate Next Tasks (Post-Restructuring)
+1. **Git commit phase 1**: Template and case restructuring (IMMEDIATE)
+2. **Directory reorganization**: Create 6 workflow stage directories
+3. **Update README files**: Explain new workflow-based classification
+4. **Git commit phase 2**: Directory reorganization + README updates
+5. **Push to GitHub**: Push all changes
+6. Begin creating new cases using v2.0 structure
+7. Establish image generation workflow
+8. Test all prompts thoroughly (3-5 generations each)
 
 ### Before Each Session Ends
 - [ ] Update "Last Updated" date at top
@@ -439,6 +590,18 @@ When resuming development, AI should:
 - Established structure for ongoing updates
 - Added all architectural decisions made so far
 
+### v2.0 - 2025-11-29
+- **Major update**: Documented Framework v2.0 restructuring
+- Added Session 2 development timeline
+- Updated classification from domain-based to workflow-based
+- Documented 6 workflow stages (Concept → Planning → Technical → Material → Rendering → Specialized)
+- Added Decision 5: Framework v2.0 restructuring rationale
+- Updated case structure documentation (7-section → 4-section card-style)
+- Updated file naming conventions (legacy vs planned v2.0)
+- Updated Current Status section with v2.0 completion
+- Updated all references to reflect workflow-based organization
+- Added commits 6-7 (pending) to timeline
+
 ---
 
 ## 📚 Additional Notes
@@ -456,20 +619,31 @@ When resuming development, AI should:
 - Repository is **private** - don't assume it's public
 - All content must be **bilingual** (EN + CN)
 - Every case needs **3-5 test generations** before committing
-- Follow the **case template** strictly
+- Follow the **v2.0 case template** strictly (4-section card-style)
 - Maintain **git commit message** quality
+- **Framework v2.0**: Workflow-based classification is now the standard
 
 **File Naming Patterns**:
-- Cases: `[A|I|L]-###-descriptive-name.md`
+- **Legacy (v1.0)**: `[A|I|L]-###-descriptive-name.md` (current 3 examples)
+- **Planned (v2.0)**: `[STAGE]-[TYPE]-[NUM]-descriptive-name.md` (future cases)
 - Images: `[case-id]-[input|output]-description.jpg`
 - Language files: `README.{lang}.md` (ISO 639-1 codes)
 
 ### Critical Context Items
 - **Nano Banana Pro** = Gemini 3 Pro Image model
 - **Thinking Mode** = Special feature for logical reasoning
-- **100 cases** = 30 architecture + 40 interior + 30 landscape
-- **4-week MVP** = Goal timeline for initial 100 cases
-- **Week 5** = Planned public release
+- **Framework v2.0** = Workflow-based classification (6 stages)
+- **6 Workflow Stages**:
+  1. Concept Ideation
+  2. Space Planning
+  3. Technical to Visual
+  4. Material & Styling
+  5. Scene Rendering
+  6. Specialized Tasks
+- **100+ cases** = Open-ended count, not fixed per category
+- **User's workflow** = "路径A" (Concept → Planning → Technical → Material → Rendering → Specialized)
+- **Case structure** = v2.0 uses 4-section card-style (Preview + Prompt + Tips + Tags)
+- **Target timeline** = MVP with quality cases, then public release
 
 ---
 

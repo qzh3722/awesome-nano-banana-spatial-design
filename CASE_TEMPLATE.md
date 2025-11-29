@@ -1,143 +1,93 @@
-# [Case ID] Case Title (English) / 案例标题（中文）
+# [Case Title in English] / [案例标题中文]
 
-**Category**: [Architecture / Interior / Landscape]
-**Subcategory**: [Specific subcategory]
-**Difficulty**: [Beginner / Intermediate / Advanced]
-**Thinking Mode**: [Required / Optional / Not Needed]
+## 效果预览 / Preview
 
----
+> **Note**: Use large, compressed images for better visual impact. Show Input → Output when applicable.
+>
+> **注意**: 使用压缩后的大图以获得更好的视觉效果。如适用,展示输入→输出对比。
 
-## 🎯 Problem Statement / 痛点描述
-
-### English
-[Describe the specific design challenge or pain point this prompt solves. Be concrete and relate to real-world scenarios. Example: "Clients often struggle to visualize how a black-and-white CAD floor plan will look in reality. This prompt transforms technical drawings into photorealistic colored floor plans with furniture and materials."]
-
-### 中文
-[描述此提示词解决的具体设计挑战或痛点。要具体，并与真实场景相关。例如："客户经常难以想象黑白CAD平面图在现实中的样子。此提示词将技术图纸转换为带有家具和材质的照片级彩色平面图。"]
+![Example Output](../assets/images/[case-id]-output.jpg)
+*Short description of what the image shows / 图片展示内容的简短描述*
 
 ---
 
-## 📝 Prompt Template / 提示词模板
+## 提示词 / Prompt
+
+### 中文版
+
+```
+[在此粘贴完整的中文提示词]
+
+示例:
+为以下空间创建照片级俯视家具布局图:
+
+房间规格:
+- 房间类型: {房间类型}
+- 尺寸: {长度} x {宽度} 米
+- 层高: {高度} 米
+
+设计风格:
+- 风格: {室内风格}
+- 色彩方案: {色彩方案}
+- 材质偏好: {材质}
+
+技术要求:
+- 以完美的俯视正交视图显示空间
+- 包含真实阴影和光照
+- 确保家具比例正确,与房间大小相称
+
+结果应为演示级质量,具有照片级真实材质和专业软装。
+```
 
 ### English Version
+
 ```
-[Insert full prompt here with clear placeholders marked as {PLACEHOLDER}]
+[Paste the complete English prompt here]
 
-Example structure:
-Generate a {STYLE} architectural visualization of a {BUILDING_TYPE} featuring {KEY_ELEMENTS}.
-The design should emphasize {DESIGN_FOCUS} with attention to {SPECIFIC_DETAILS}.
+Example:
+Create a photorealistic top-down furniture layout for the following space:
 
-Technical requirements:
-- Perspective: {CAMERA_ANGLE}
-- Lighting: {LIGHTING_CONDITION}
-- Materials: {MATERIAL_LIST}
-- Context: {SURROUNDINGS}
+Room Specifications:
+- Room Type: {ROOM_TYPE}
+- Dimensions: {LENGTH} x {WIDTH} meters
+- Ceiling Height: {HEIGHT} meters
 
-[Optional: If using reference images]
-Reference the uploaded image for {WHAT_TO_REFERENCE}.
-```
+Design Style:
+- Style: {INTERIOR_STYLE}
+- Color Palette: {COLOR_SCHEME}
+- Material Preferences: {MATERIALS}
 
-### 中文版本
-```
-[在此插入完整的中文提示词，占位符用{占位符}标注]
+Technical Requirements:
+- Show the space from a perfect top-down orthographic view
+- Include realistic shadows and lighting
+- Ensure furniture is properly scaled and proportional to room size
 
-示例结构：
-生成一个{风格}的{建筑类型}建筑可视化图，突出{关键元素}。
-设计应强调{设计重点}，并注意{具体细节}。
-
-技术要求：
-- 视角：{相机角度}
-- 光照：{光照条件}
-- 材质：{材质列表}
-- 环境：{周边环境}
-
-[可选：如使用参考图]
-参考上传的图像来获取{参考内容}。
+The result should be presentation-quality with photorealistic materials and professional styling.
 ```
 
 ---
 
-## ⚙️ Key Parameters / 关键参数
-
-| Parameter | Value | Notes |
-|-----------|-------|-------|
-| **aspect_ratio** | `16:9` / `4:3` / `1:1` / `9:16` | Choose based on use case |
-| **thinking_mode** | `On` / `Off` | Enable for complex spatial reasoning |
-| **guidance_scale** | `7-15` (recommended: `10`) | Higher = more prompt adherence |
-| **seed** | `[Optional]` | For reproducibility |
-| **reference_image** | `[Yes/No]` | See reference guidance below |
-
-### Reference Image Guidance / 参考图使用指南
-
-**When to use reference images:**
-- Material textures or palettes
-- Specific furniture or objects
-- Hand sketches or concept drawings
-- CAD plans or elevations
-- Site photos or context
-
-**What to upload:**
-[Describe the type of reference image needed, e.g., "Upload a black-and-white CAD floor plan in PNG format"]
-
-**How the model will use it:**
-[Explain how the reference will influence the output, e.g., "The model will extract the spatial layout and convert it to a photorealistic top-down view"]
-
----
-
-## 🖼️ Example Output / 示例结果
-
-### Input (Optional) / 输入（可选）
-[If applicable, show the reference image used]
-
-![Input Example](../assets/images/[case-id]-input.jpg)
-*Caption: [Describe the input]*
-
-### Output / 输出
-[Show the generated result]
-
-![Output Example](../assets/images/[case-id]-output.jpg)
-*Caption: [Describe the key features of the generated image]*
-
-**Prompt used for this example:**
-```
-[Paste the exact prompt used to generate this specific result]
-```
-
----
-
-## 💡 Tips & Variations / 使用技巧与变体
-
-### English
-1. **Tip 1**: [Practical advice, e.g., "For better material definition, specify exact material names like 'white oak flooring' instead of just 'wood'"]
-2. **Tip 2**: [Another tip]
-3. **Variation**: [Suggest how to modify the prompt for different scenarios]
+## Tips / 使用技巧
 
 ### 中文
-1. **技巧1**: [实用建议，例如："为了更好的材质定义，指定具体材质名称如'白橡木地板'而不是仅仅'木材'"]
-2. **技巧2**: [另一个技巧]
-3. **变体**: [建议如何修改提示词以适应不同场景]
+
+- **技巧1**: [实用建议,例如: "指定具体材质名称如'白橡木地板'而不是'木地板',效果更真实"]
+- **技巧2**: [另一个技巧,例如: "启用Thinking Mode可提高复杂空间的布局准确性"]
+- **变体**: [如何调整提示词,例如: "替换{风格}为'日式/现代/工业风'可快速切换设计风格"]
+
+### English
+
+- **Tip 1**: [Practical advice, e.g., "Specify exact material names like 'white oak flooring' instead of just 'wood' for better results"]
+- **Tip 2**: [Another tip, e.g., "Enable Thinking Mode for better accuracy in complex spaces"]
+- **Variation**: [How to adjust the prompt, e.g., "Replace {STYLE} with 'Japanese/Modern/Industrial' to quickly switch design styles"]
 
 ---
 
-## 🔗 Related Cases / 相关案例
+## 标签 / Tags
 
-- [Case ID + Title](./case-xxx.md) - [Brief description of relation]
-- [Case ID + Title](./case-xxx.md) - [Brief description of relation]
+`#CAD转可视化` `#室内设计` `#现代风格` `#空间规划`
 
----
-
-## 📊 Quality Checklist / 质量检查清单
-
-Before publishing this case, ensure:
-
-- [ ] Problem statement is clear and relatable
-- [ ] Prompt is complete with all necessary placeholders
-- [ ] Parameters are tested and optimal
-- [ ] Example output is high-quality (minimum 1920px width)
-- [ ] Both English and Chinese versions are complete
-- [ ] Reference image guidance is clear (if applicable)
-- [ ] Tips are practical and tested
-- [ ] Related cases are linked
+`#CAD-to-visualization` `#interior-design` `#modern-style` `#space-planning`
 
 ---
 
