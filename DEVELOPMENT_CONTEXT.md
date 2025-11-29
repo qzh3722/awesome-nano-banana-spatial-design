@@ -330,49 +330,106 @@ User requested complete framework overhaul after overnight reflection:
 
 **Review checklist** available in CASE_TEMPLATE.md
 
-### 7. QA Review Process (Standard for Each Case)
+### 7. QA Technical Review Process (Standard for Each Case)
 
-**Objective**: Verify all images display correctly on GitHub with proper labels
+**Objective**: Compare input vs output images to identify violations, professional errors, and prompt adherence failures
 
-**When to Execute**: After pushing each case (both EN/CN versions with all images)
+**When to Execute**: After pushing each case with all generated images
 
-**Steps**:
-1. **Navigate to GitHub Repository**
-   - URL: https://github.com/qzh3722/awesome-nano-banana-spatial-design
-   
-2. **Review English Version** (`README.md`)
-   - Scroll to the case section
-   - Verify all images load correctly
-   - Check that room labels are in ENGLISH
-   - Verify image quality and clarity
-   - Take screenshot for documentation
-   
-3. **Review Chinese Version** (`README.zh-CN.md`)
-   - Navigate to Chinese README
-   - Scroll to the case section
-   - Verify all images load correctly
-   - Check that room labels are in CHINESE (中文)
-   - Verify image quality and clarity
-   - Take screenshot for documentation
-   
-4. **Report Findings**
-   - If errors found: Document filename and specific issue
-   - User corrects and re-uploads
-   - Re-run QA after correction
-   - If no errors: Mark case as QA approved ✅
+**Review Levels**:
 
-**Common Issues to Check**:
-- Missing images (broken links)
-- Wrong language labels (English in CN version or vice versa)
-- Low quality/blurry images
-- Wrong file references (typos in paths)
-- Images not matching descriptions
+#### Level 1: Visual Display Check (Basic)
+1. Navigate to GitHub repository
+2. Verify all images load correctly (no broken links)
+3. Check language labels match version (EN/CN)
+4. Take screenshots for documentation
+
+#### Level 2: Technical Accuracy Review (Deep) ⭐ **Required**
+1. **Input Analysis**
+   - Document all spatial elements in CAD/input image
+   - Create furniture/room inventory checklist
+   - Note room count, furniture quantities, layout
+
+2. **Output Comparison** (Each generated image)
+   - Compare against input inventory
+   - Identify **added elements** (violations of "strictly follow input")
+   - Identify **missing elements** (omissions from original)
+   - Verify **furniture counts** (e.g., 2 ottomans, 4 bar stools, 8 chairs)
+
+3. **Prompt Adherence Check**
+   - ✅ **No added items**: Decorative elements, plants, accessories not in input
+   - ✅ **No removed items**: All CAD symbols must appear in output
+   - ✅ **Correct language labels**: English prompt → English labels; Chinese prompt → Chinese labels
+   - ✅ **Material accuracy**: Colors, textures match specifications
+
+4. **Professional Quality Check**
+   - Room proportions maintained
+   - Furniture placement matches CAD layout
+   - Distinct pieces remain distinct (e.g., chaise lounge ≠ sectional sofa)
+   - Realistic lighting and shadows
+   - Presentation-grade quality
+
+5. **Documentation**
+   - Create detailed QA report (see template: `case-X.X-technical-qa-report.md`)
+   - List all discrepancies with file names
+   - Categorize: ❌ Critical (re-generate), ⚠️ Minor (verification needed), ✅ Passed
+   - Provide recommendations for correction
+
+6. **User Notification**
+   - Report findings to user
+   - If critical issues found: User re-generates images
+   - If minor issues: User verifies or confirms acceptable
+   - If passed: Mark case as QA approved ✅
+
+**QA Report Template**:
+```markdown
+# Case X.X Technical QA Report
+
+## Input Inventory
+- Room count: X
+- Furniture items: [list all]
+- Spatial elements: [list all]
+
+## Output Comparison
+
+### File: output-natural.jpg
+- ❌ Added elements: [list]
+- ❌ Missing elements: [list]
+- ⚠️ Unclear items: [list items needing verification]
+- ✅ Correct elements: [count]
+
+### File: output-json.jpg
+[Same structure]
+
+## Prompt Adherence Summary
+| Requirement | Natural-EN | JSON-EN | Natural-CN | JSON-CN |
+|-------------|-----------|---------|-----------|---------|
+| No added items | ❌/✅ | ❌/✅ | ❌/✅ | ❌/✅ |
+| All original items | ❌/✅ | ❌/✅ | ❌/✅ | ❌/✅ |
+| Correct labels | ❌/✅ | ❌/✅ | ❌/✅ | ❌/✅ |
+
+## Recommendations
+1. [Action items]
+
+## Final Status
+⚠️ Requires re-generation / ✅ QA Approved
+```
+
+**Common Professional Errors to Check**:
+- Added decorative items (plants, art, rugs not in CAD)
+- Merged furniture (separate pieces blended together)
+- Incorrect counts (missing stools, chairs, ottomans)
+- Wrong language labels (English in CN version)
+- Distorted proportions (rooms stretched/compressed)
+- Missing rooms or spaces from input
 
 **QA Approval Status**:
-- Case 2.1: ✅ QA Approved (2025-11-29)
-  - English version: No issues found
-  - Chinese version: No issues found
-  - Screenshots: `case_2_1_english_*.png`, `case_2_1_chinese_*.png`
+- Case 2.1: ⚠️ **Conditional Pass - Re-generation Required** (2025-11-29)
+  - JSON outputs (EN/CN): ✅ Acceptable (minor verification needed)
+  - Natural language outputs (EN/CN): ❌ Failed (added decorative elements)
+  - Technical QA Report: `case-2.1-technical-qa-report.md`
+  - **Action**: Re-generate natural language outputs with stricter prompt
+  - **Verification**: Check ottoman count (2), chaise distinctness, bar stool count (4)
 
 ---
 
