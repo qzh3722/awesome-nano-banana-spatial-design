@@ -58,14 +58,8 @@ Convert technical CAD floor plans into photorealistic colored top-down visualiza
 **Prompt:**
 ```
 Transform the provided CAD floor plan into a photorealistic colored top-down visualization for client presentation. Add realistic furniture, clear room labels, and material-appropriate flooring for each space. Use soft natural lighting and maintain architectural accuracy.
-```
 
-**Parameters:**
-```json
-{
-  "model": "gemini-3-pro-image-preview",
-  "imageSize": "2K"
-}
+IMPORTANT: Strictly follow the input floor plan. Do not add any items that are not shown in the original CAD drawing. Do not remove or omit any items that appear in the original plan. Maintain exact room count, furniture placement, and spatial layout as provided.
 ```
 
 ---
