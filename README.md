@@ -57,53 +57,11 @@ Convert technical CAD floor plans into photorealistic colored top-down visualiza
 
 **Prompt:**
 ```
-Transform the provided CAD floor plan of a 9-room residential apartment into a photorealistic colored top-down visualization for client presentation.
+Transform the provided CAD floor plan into a photorealistic colored top-down visualization for client presentation. Add realistic furniture, clear room labels, and material-appropriate flooring for each space. Use soft natural lighting and maintain architectural accuracy.
 
-ADD realistic furniture matching ALL CAD symbols, clear room labels in ENGLISH, material-appropriate flooring for each space, and soft natural daylight (10 AM quality) with subtle shadows for depth.
+Room Label Language: All room labels must be in ENGLISH.
 
-PRESERVE EXACTLY all 9 rooms, all furniture pieces with exact quantities (see critical counts below), all 7 plumbing fixtures, spatial proportions, and all architectural features including built-in spaces.
-
-CRITICAL FURNITURE & FIXTURE COUNTS:
-- Living Room: L-shaped sectional sofa (1), chaise lounge SEPARATE from sofa (1), coffee table (1), 2 round ottomans, TV console (1), area rug (1)
-- Dining Area: Dining table (1), exactly 8 dining chairs (4 per long side)
-- Kitchen: Kitchen island (1), exactly 4 bar stools at island counter
-- Master Bedroom: Queen/King bed (1), 2 bedside tables, bench/chair at foot of bed (1), walk-in closet as architectural space
-- Bedroom 2: Single bed (1), desk (1), desk chair (1), wardrobe (1)
-- Master Bathroom: Bathtub (1), SEPARATE glass-enclosed shower (1), toilet (1), double vanity with 2 sinks
-- Secondary Bathroom: Shower stall only (NO bathtub), toilet (1), single sink vanity (1 sink only)
-- Entrance: Open circulation space or minimal furniture
-- Balcony: EMPTY with flooring only
-
-ARCHITECTURAL FEATURES (Not Furniture):
-- Master Bedroom has a WALK-IN CLOSET (architectural alcove/dressing room space recessed into wall, NOT a freestanding wardrobe cabinet)
-
-DO NOT ADD any of the following:
-- Decorative accessories (plants, vases, artwork, sculptures, decorative bowls)
-- Textiles beyond functional use (no decorative pillows, throws, tapestries)
-- Any plants, flowers, or greenery (indoor or outdoor)
-- Table settings, dishware, food items, or kitchenware displays
-- Furniture in empty spaces (balcony MUST remain empty, entrance minimal)
-- Extra fixtures beyond CAD symbols
-- Any items without corresponding CAD furniture/fixture symbols
-
-EMPTY SPACES (Flooring Only - No Furniture):
-- Balcony: Must remain completely empty showing only composite decking floor, NO furniture, NO plants, NO decorative items
-- Entrance/Hallway: Minimal or empty circulation space with tile flooring only
-
-LANGUAGE: All room labels must be in ENGLISH (e.g., LIVING ROOM, DINING AREA, KITCHEN, MASTER BEDROOM, BEDROOM 2, MASTER BATHROOM, BATHROOM, ENTRANCE, BALCONY).
-
-FURNITURE INDEPENDENCE (Critical Distinctions):
-- Chaise lounge in living room is a SEPARATE piece NOT attached to the sectional sofa, should be angled near window corner
-- 2 round ottomans are DISTINCT from coffee table, both must be clearly visible as separate circular elements
-- Master bathroom has BOTH bathtub AND a separate glass-enclosed shower (2 distinct fixtures), not a tub-shower combo
-
-VERIFICATION BEFORE FINALIZING:
-- Room count: exactly 9
-- Furniture count: ~25-30 pieces total
-- Fixture count: exactly 7 (4 in master bath, 3 in secondary bath)
-- Balcony: completely empty
-- Master bedroom: walk-in closet shown as architectural space, not furniture
-- All exact counts match (8 dining chairs, 4 bar stools, 2 ottomans, 2 bedside tables, 2 sinks in master bath)
+IMPORTANT: Strictly follow the input floor plan. Do not add any items that are not shown in the original CAD drawing. Do not remove or omit any items that appear in the original plan. Maintain exact room count, furniture placement, and spatial layout as provided.
 ```
 
 ---
@@ -295,6 +253,7 @@ VERIFICATION BEFORE FINALIZING:
 
 #### 💡 Tips
 
+- **Iterative Generation Recommended**: Natural language prompts work best with an iterative approach. Generate 2-3 variations first, select the best one, then use simple image editing tools (Photoshop, Figma, Canva) to refine minor details if needed. This hybrid workflow often produces better results than trying to perfect everything in a single prompt.
 - **Verify JSON Completeness**: Before submitting, ensure all rooms from your CAD plan are included in the JSON. Missing furniture (like ottomans or chaise lounges) will not appear in the output.
 - **Material Consistency**: Keep the same flooring material for connected spaces (e.g., kitchen + dining + entrance) for visual flow.
 - **Room Label Clarity**: JSON prompt produces more precise text rendering. If labels are unclear with natural language, use the JSON specification.
