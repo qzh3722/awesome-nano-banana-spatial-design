@@ -3,9 +3,76 @@
 
 > 🤖 **AI Assistant Notice**: This document contains the complete development history and context. **ALWAYS READ THIS FILE FIRST** when resuming development to understand what has been done and what needs to be done next.
 
-**Last Updated**: 2025-11-29
-**Current Phase**: Scenario Library Integrated (62 scenarios), Ready for Testing
-**Repository Status**: Private, Scenario mapping complete
+**Last Updated**: 2025-11-30  
+**Current Phase**: Case 2.1 Testing Complete, Methodology Validated  
+**Repository Status**: Private, Scenario mapping complete, Case 2.1 finalized  
+**Latest Commit**: d6ae345 (Image dimension fix)
+
+---
+
+## ⚠️ CRITICAL: Anti-Regression Principles (READ FIRST)
+
+**These rules prevent walking backwards. Always follow:**
+
+### 1. Image Dimensions - NEVER Specify Fixed Sizes
+- ❌ **NEVER** add `width`, `height` in JSON prompts
+- ✅ **ONLY** use `aspect_ratio: "match_input"` 
+- **Why**: Fixed dimensions cause image distortion
+- **Regression History**: Fixed in commit de3ff91, regressed in b1f3cd4, re-fixed in d6ae345
+
+### 2. Prompt Simplicity Hierarchy
+- **Natural Language**: Keep simple, use iteration (v1.0 proven)
+- **JSON**: Can be detailed with structure (v2.0 proven)
+- **Why**: User testing showed natural language complexity ≠ accuracy improvement
+- **Validated**: 2025-11-30 user testing
+
+### 3. Bilingual Content Standards (MANDATORY)
+- **Source of Truth**: English version (README.md, prompts)
+- **Chinese Version**: Complete translation of English, NOT independent content
+- **Synchronization**: Both READMEs must have identical structure
+- **Translation Scope**: 
+  - ✅ Room labels (LIVING ROOM → 客厅)
+  - ✅ Prompt text (full translation)
+  - ✅ Tips section (translate all)
+  - ✅ JSON label fields (translate labels only, keep structure)
+- **File Naming**: 
+  - English: `output-natural.jpg`, `output-json.jpg`
+  - Chinese: `output-natural-cn.jpg`, `output-json-cn.jpg`
+- **Verification**: CN version = EN content + Chinese language, no additions/omissions
+
+### 4. JSON Prompt Structure (v2.0 Standard)
+- ✅ Include: `architectural_features`, `empty_spaces`, `strict_constraints`
+- ✅ Use: `independence` fields, `CRITICAL` notes, exact counts
+- ✅ Keep: Simple aspect_ratio specification
+- ❌ **NEVER**: Fixed dimensions, overly nested structures
+
+### 5. QA Process
+- Level 1: Visual display check (images load, labels match language)
+- Level 2: Technical accuracy review (only if errors suspected)
+- **Don't over-QA**: User testing > complex pre-validation
+
+---
+
+## 📋 Latest Progress Summary (2025-11-30)
+
+**Case 2.1 Complete** ✅:
+- ✅ Natural language prompts finalized (v1.0 - concise, proven)
+- ✅ JSON prompts finalized (v2.0 - detailed, 95%+ accuracy target)
+- ✅ Bilingual READMEs synchronized (EN/CN)
+- ✅ Regression fixed (image dimensions removed d6ae345)
+- ✅ User testing validated hybrid approach
+- ✅ Iterative generation tip added
+
+**Methodology Established** 🎯:
+- Hybrid workflow: Simple natural + iteration OR detailed JSON
+- Error pattern library created
+- Best practices documented (artifact)
+- Anti-regression principles formalized (above)
+
+**Next**:
+- Apply refined methodology to Cases 2.2+
+- Monitor for regression patterns
+- Collect user feedback on iteration workflow
 
 ---
 
