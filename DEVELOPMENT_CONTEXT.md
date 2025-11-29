@@ -326,8 +326,53 @@ User requested complete framework overhaul after overnight reflection:
 4. **Bilingual tags** - Relevant hashtags for discoverability
 5. **Tested prompts** - Minimum 3-5 test generations to verify quality
 6. **Version tracking** - Last updated date, contributor, version number
+7. **QA Review** - Visual verification on GitHub after push (see QA Process below)
 
 **Review checklist** available in CASE_TEMPLATE.md
+
+### 7. QA Review Process (Standard for Each Case)
+
+**Objective**: Verify all images display correctly on GitHub with proper labels
+
+**When to Execute**: After pushing each case (both EN/CN versions with all images)
+
+**Steps**:
+1. **Navigate to GitHub Repository**
+   - URL: https://github.com/qzh3722/awesome-nano-banana-spatial-design
+   
+2. **Review English Version** (`README.md`)
+   - Scroll to the case section
+   - Verify all images load correctly
+   - Check that room labels are in ENGLISH
+   - Verify image quality and clarity
+   - Take screenshot for documentation
+   
+3. **Review Chinese Version** (`README.zh-CN.md`)
+   - Navigate to Chinese README
+   - Scroll to the case section
+   - Verify all images load correctly
+   - Check that room labels are in CHINESE (中文)
+   - Verify image quality and clarity
+   - Take screenshot for documentation
+   
+4. **Report Findings**
+   - If errors found: Document filename and specific issue
+   - User corrects and re-uploads
+   - Re-run QA after correction
+   - If no errors: Mark case as QA approved ✅
+
+**Common Issues to Check**:
+- Missing images (broken links)
+- Wrong language labels (English in CN version or vice versa)
+- Low quality/blurry images
+- Wrong file references (typos in paths)
+- Images not matching descriptions
+
+**QA Approval Status**:
+- Case 2.1: ✅ QA Approved (2025-11-29)
+  - English version: No issues found
+  - Chinese version: No issues found
+  - Screenshots: `case_2_1_english_*.png`, `case_2_1_chinese_*.png`
 
 ---
 
