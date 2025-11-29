@@ -20,7 +20,9 @@
 
 [🎨 Concept Ideation](#-01--concept-ideation) • [📐 Space Planning](#-02--space-planning) • [🔧 Technical to Visual](#-03--technical-to-visual) • [🎨 Material & Styling](#-04--material--styling) • [🖼️ Scene Rendering](#-05--scene-rendering) • [⚙️ Specialized Tasks](#%EF%B8%8F-06--specialized-tasks)
 
-**Total Use Cases**: 62 | **Tested**: 3 | **In Development**: 59
+**Total Use Cases**: 62 | **Tested & Validated**: 1 | **In Development**: 61
+
+> **📌 Disclaimer**: All images used in case examples are for educational and research purposes only. Input images are sourced from publicly available architectural drawings or created specifically for demonstration. This repository does not claim ownership of referenced images and they are used under fair use principles for non-commercial educational purposes.
 
 ---
 
@@ -72,21 +74,41 @@ Generate 3-5 style variations of the same space for client selection
 ### 🥇 High Priority
 
 <table>
-<tr><td width="60%">
+<tr><td colspan="3">
 
 **2.1 CAD Floor Plan to Client-Friendly View** | CAD平面转客户易懂俯视图
 
-Convert technical CAD plans into photorealistic top-down views with furniture
+Convert technical CAD plans into photorealistic top-down views with furniture and room labels
 
-💾 Save: 6-9h/project | 📝 Status: To Test
-
-</td><td width="40%">
-
-[🇨🇳 CN Prompt](./prompts/2.1-cn.md) • [🇬🇧 EN Prompt](./prompts/2.1-en.md)
-
-![Placeholder](https://via.placeholder.com/300x200/fff3e0/ff6f00?text=CAD+to+TopView)
+💾 **Time Saved**: 6-9h/project | ✅ **Status**: Tested & Validated
 
 </td></tr>
+<tr>
+<td width="33%">
+
+**Input**: CAD Floor Plan
+![Input](./assets/cases/2.1-cad-to-topview/input.jpg)
+
+</td>
+<td width="33%">
+
+**Output**: Natural Language
+![Natural](./assets/cases/2.1-cad-to-topview/output-natural.jpg)
+
+</td>
+<td width="33%">
+
+**Output**: JSON Prompt
+![JSON](./assets/cases/2.1-cad-to-topview/output-json.jpg)
+
+</td>
+</tr>
+<tr><td colspan="3" align="center">
+
+[🇬🇧 View Full Prompt](./prompts/2.1-cad-to-topview-en.md)
+
+</td></tr>
+</table>
 
 <tr><td width="60%">
 
