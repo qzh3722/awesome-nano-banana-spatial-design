@@ -46,83 +46,114 @@
 
 ## Content Structure
 
-This library contains **100 curated use cases** organized into three main categories:
+This library contains **100+ curated use cases** organized by **designer workflow stages**, not traditional categories. This workflow-based approach matches how designers actually work, making it easier to find the right prompt for your current task.
 
-### 🏠 Architecture & Workflow (30 cases)
-Professional architectural visualization and workflow optimization.
+### 🎨 01 - Concept Ideation
+From zero to creative solutions. Generate initial design concepts, explore style directions, and visualize ideas from text descriptions.
 
-**Subcategories:**
-- CAD to Visualization (CAD转可视化)
-- Concept Development (概念推敲)
-- Material & Facade Studies (材质与立面研究)
-- Structural & Technical Analysis (结构与技术分析)
+[Browse Concept Ideation Cases →](./cases/01-concept-ideation/)
 
-[Browse Architecture Cases →](./cases/architecture/)
+### 📐 02 - Space Planning
+Layout optimization & circulation design. Generate furniture layouts, optimize space utilization, design circulation paths, and define functional zones.
 
-### 🛋️ Interior Design & Styling (40 cases)
-Interior space design and styling solutions.
+**Example**: Furniture layout generation for living rooms, offices, etc.
 
-**Subcategories:**
-- Space Planning & Layout (空间布局)
-- Material & Lighting (材质与光照)
-- Furniture & Styling (家具与软装)
-- Style Transformation (风格转换)
-- Text & Graphics in Space (空间中的文字与图形)
+[Browse Space Planning Cases →](./cases/02-space-planning/)
 
-[Browse Interior Cases →](./cases/interior/)
+### 🔧 03 - Technical to Visual
+CAD/drawings to photorealistic visualization. Transform technical drawings (floor plans, elevations, sections) into presentation-quality renders.
 
-### 🌳 Landscape & Outdoor Living (30 cases)
-Landscape architecture and outdoor space design.
+**Examples**: CAD floor plan → colored top-down view, Landscape master plan → bird's-eye visualization
 
-**Subcategories:**
-- Site Planning & Hardscape (场地规划与硬景)
-- Planting & Softscape (植物配置与软景)
-- Garden Styles (庭院风格)
-- Seasonal & Lighting Effects (季节与光效)
+[Browse Technical to Visual Cases →](./cases/03-technical-to-visual/)
 
-[Browse Landscape Cases →](./cases/landscape/)
+### 🎨 04 - Material & Styling
+Material refinement & styling details. Change materials, test color schemes, design soft furnishings, and transform styles.
+
+[Browse Material & Styling Cases →](./cases/04-material-styling/)
+
+### 🖼️ 05 - Scene Rendering
+Final presentation renders. Generate high-quality perspective views, human-eye-level scenes, and atmospheric renders for client presentations.
+
+[Browse Scene Rendering Cases →](./cases/05-scene-rendering/)
+
+### ⚙️ 06 - Specialized Tasks
+Special use cases & advanced features. Multilingual text rendering, image editing, visual consistency, technical analysis diagrams, and more.
+
+[Browse Specialized Tasks →](./cases/06-specialized-tasks/)
+
+---
+
+### Legacy Organization
+
+For backward compatibility, cases are also available in the original domain-based structure:
+- [Architecture](./cases/architecture/) - Building design and visualization
+- [Interior](./cases/interior/) - Interior space design
+- [Landscape](./cases/landscape/) - Landscape architecture
 
 ## Quick Start
 
-### 1. Browse by Category
-Navigate to the category folder that matches your needs:
-- [Architecture](./cases/architecture/)
-- [Interior](./cases/interior/)
-- [Landscape](./cases/landscape/)
+### 1. Browse by Workflow Stage
+Navigate to the workflow stage that matches your current task:
+- **Starting from scratch?** → [01 - Concept Ideation](./cases/01-concept-ideation/)
+- **Have dimensions, need layout?** → [02 - Space Planning](./cases/02-space-planning/)
+- **Have CAD/drawings, need visuals?** → [03 - Technical to Visual](./cases/03-technical-to-visual/)
+- **Need to refine materials/style?** → [04 - Material & Styling](./cases/04-material-styling/)
+- **Ready for final renders?** → [05 - Scene Rendering](./cases/05-scene-rendering/)
+- **Special requirements?** → [06 - Specialized Tasks](./cases/06-specialized-tasks/)
 
 ### 2. Select a Use Case
-Each case includes:
-- Clear problem statement
-- Complete prompt with parameters
-- Reference image guidance (if applicable)
-- Example output
+Each case includes (v2.0 card-style format):
+- **Preview** - Large hero image showing input→output
+- **Prompt** - Bilingual prompt templates (Chinese + English)
+- **Tips** - Practical usage advice and variations
+- **Tags** - Bilingual hashtags for discoverability
 
 ### 3. Copy & Customize
-Copy the prompt structure and adapt it to your specific project needs.
+Copy the prompt structure and adapt it to your specific project needs. Prompts are designed to be flexible with clearly marked placeholders.
 
-## Case Template Structure
+## Case Template Structure (v2.0)
 
-Each case follows this standardized format:
+Each case follows this simplified card-style format:
 
 ```markdown
 # Case Title (English) / 案例标题（中文）
 
-## Problem Statement / 痛点描述
-What design challenge does this solve?
+## 效果预览 / Preview
+[Large hero image showing input→output example]
+*Brief description*
 
-## Prompt Template / 提示词模板
-[Full prompt with placeholders]
+---
 
-## Key Parameters / 关键参数
-- aspect_ratio: "16:9"
-- thinking_mode: "On/Off"
-- reference_image: [Description]
+## 提示词 / Prompt
 
-## Example Output / 示例结果
-[Generated image showcase]
+### 中文版
+[Complete Chinese prompt with {placeholders}]
 
-## Tips & Variations / 使用技巧与变体
-[Professional insights]
+### English Version
+[Complete English prompt with {PLACEHOLDERS}]
+
+---
+
+## Tips / 使用技巧
+
+### 中文
+- **技巧1**: Practical advice
+- **技巧2**: Usage variations
+- **变体**: How to adjust
+
+### English
+- **Tip 1**: Practical advice
+- **Tip 2**: Usage variations
+- **Variation**: How to adjust
+
+---
+
+## 标签 / Tags
+`#标签` `#tags`
+
+**Last Updated**: Date
+**Version**: 2.0
 ```
 
 ## Key Features of Nano Banana Pro
@@ -146,10 +177,17 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 
 ## Roadmap
 
-### MVP Phase (Current)
-- ✅ Repository structure
-- ✅ First 100 curated cases
-- ✅ Bilingual documentation
+### Framework v2.0 (Current - Nov 2025)
+- ✅ Repository structure established
+- ✅ **Workflow-based classification system** (6 stages)
+- ✅ **Simplified case structure** (card-style with Tips)
+- ✅ 3 example cases updated to v2.0
+- ✅ Bilingual documentation (EN + CN)
+
+### Content Development (Ongoing)
+- 🚧 100+ curated cases across 6 workflow stages
+- 🚧 Real-world tested prompts
+- 🚧 Gallery-style example images
 
 ### Future Plans
 - Community-submitted cases
@@ -159,13 +197,19 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 
 ## Project Status & Development
 
-📊 **Current Progress**: 3/100 cases completed | Phase 1: Foundation ✅ | Phase 2: Content Creation 🚧
+📊 **Framework v2.0 Complete** | 3 example cases (v2.0) | Workflow-based organization ✅
+
+**What's New in v2.0:**
+- Workflow-based classification (matches how designers actually work)
+- Simplified case structure: Preview + Prompt + Tips + Tags
+- 6 workflow stages: Concept → Planning → Technical → Material → Rendering → Specialized
+- Visual-first approach with large gallery-style images
 
 For detailed development history, technical decisions, and AI context:
 - 📖 **[Development Context Document](./DEVELOPMENT_CONTEXT.md)** - Complete project history and context for AI assistants
 
 For project planning and timeline:
-- 🗺️ **[Roadmap](./docs/ROADMAP.md)** - 4-week MVP development plan
+- 🗺️ **[Roadmap](./docs/ROADMAP.md)** - Development plan
 
 ## License
 
