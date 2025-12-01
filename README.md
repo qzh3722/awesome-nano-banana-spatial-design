@@ -74,6 +74,101 @@ IMPORTANT: Strictly follow the input floor plan. Do not add any items that are n
 
 > **Why use JSON?** JSON excels at defining **structural relationships, validation rules, and constraints** that natural language cannot precisely express. It's not about repeating dimensions (which are estimates anyway), but about enforcing **exactness where it matters**: counts, separations, types, and prohibitions.
 
+**🔧 JSON Generator for New CAD Drawings:**
+
+Got a new CAD floor plan? We've created a **Reusable JSON Generator** to automate the JSON creation process. This meta-prompt template analyzes ANY CAD drawing (residential, commercial, or public space) and generates a standardized JSON prompt following our format.
+
+**How to use:**
+1. Upload your CAD floor plan to a Vision AI (e.g., Gemini Pro Vision, GPT-4 Vision, Claude 3.5 Sonnet)
+2. Copy and paste the JSON Generator Prompt Template (see below)
+3. The AI will systematically scan your floor plan and output a complete JSON prompt
+4. Review and use the generated JSON for your visualization task
+
+**Benefits:**
+- ✅ Ensures complete room coverage (no missed spaces)
+- ✅ Enforces unique naming standards automatically
+- ✅ Applies constraint-oriented approach
+- ✅ Reduces manual analysis errors
+- ✅ Works for residential, commercial, and public spaces
+
+<details>
+<summary>📋 Click to view JSON Generator Prompt Template</summary>
+
+Copy this entire prompt and use it with your CAD floor plan image:
+
+```markdown
+# JSON Prompt Generator for CAD Floor Plans
+
+> **Purpose**: Analyze the UPLOADED CAD floor plan and generate a standardized JSON prompt.
+
+## Instructions for Vision AI
+
+You are a professional architectural analyst. Analyze the uploaded CAD floor plan **exhaustively** and generate a structured JSON prompt for transforming it into a photorealistic colored top-down visualization.
+
+### 1. COMPLETE SPATIAL ANALYSIS
+
+Execute these scanning procedures in order:
+
+#### A. Grid Scan Method
+- Divide the floor plan into a 3×3 grid
+- Scan each grid cell systematically
+- Identify ALL enclosed or semi-enclosed spaces
+
+#### B. Wall Trace Method
+- Trace along perimeter walls clockwise
+- Identify every space bounded by walls
+- Include small rooms (storage, closets, powder rooms)
+
+#### C. Functional Space Checklist (Universal)
+Verify you have identified ALL applicable categories:
+
+**For ANY space type:**
+- [ ] Primary functional areas
+- [ ] Service/support areas (kitchens, restrooms, janitor rooms)
+- [ ] Storage spaces (closets, equipment rooms, warehouses)
+- [ ] Circulation spaces (entrances, lobbies, hallways, staircases)
+- [ ] Utility/mechanical spaces (equipment rooms, server rooms)
+- [ ] Outdoor/semi-outdoor spaces (balconies, terraces, courtyards)
+
+**Space Type Examples:**
+- Residential: Living rooms, bedrooms, bathrooms
+- Commercial: Workspaces, offices, meeting rooms, break rooms
+- Retail: Sales floor, fitting rooms, stockrooms
+- Hospitality: Guest rooms, lobby, restaurants, fitness centers
+- Public: Waiting areas, service counters, restrooms, exhibition halls
+
+#### D. Built-in Elements Checklist
+- [ ] Floor-mounted fixtures
+- [ ] Wall-mounted fixtures (upper cabinets)
+- [ ] Architectural alcoves (walk-in closets)
+- [ ] Plumbing fixtures
+
+### 2. ROOM NAMING STANDARDS
+
+**Unique Naming Rule**: Multiple rooms of same type MUST have unique numbers:
+- ✅ Correct: "BEDROOM 2", "BEDROOM 3", "STORAGE 1", "STORAGE 2"
+- ❌ Wrong: "BEDROOM", "BEDROOM" (duplicates)
+
+### 3. CRITICAL RULES
+
+1. **NO Estimated Dimensions**: Do NOT include sizes like "120x60cm"
+2. **NO Color Codes**: Do NOT include "#D4B896" style codes
+3. **Focus on Constraints**: Use `independence_rule`, `COUNT_CRITICAL`, `separation_rule`
+4. **Task Field**: MUST explicitly mention "UPLOADED"
+
+### 4. OUTPUT FORMAT
+
+Provide:
+1. Brief analysis summary (total rooms, categories)
+2. Complete JSON prompt in code block
+
+Use the JSON structure from the main specification below.
+
+**Now analyze the uploaded CAD and generate the JSON prompt.**
+```
+
+</details>
+
 <details>
 <summary>Click to expand full JSON specification</summary>
 

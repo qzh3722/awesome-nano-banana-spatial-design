@@ -1,9 +1,8 @@
 # JSON Prompt Generator for CAD Floor Plans
-# CAD平面图JSON提示词生成器
 
 > **Purpose**: This is a meta-prompt for Vision AI to analyze ANY uploaded CAD floor plan and generate a standardized JSON prompt following our format.
 >
-> **用途**: 这是给Vision AI的元提示词，用于分析任何上传的CAD平面图，并按我们的格式标准生成JSON提示词。
+
 
 ---
 
@@ -29,14 +28,23 @@ Execute the following scanning procedures **in order**:
 - Include small rooms like storage, closets, powder rooms
 - Note semi-enclosed areas (open on one side)
 
-#### C. Functional Space Checklist
-Verify you have identified ALL of these categories:
-- [ ] Living spaces (living room, bedrooms, dining room)
-- [ ] Service spaces (kitchen, bathrooms)
-- [ ] Storage spaces (storage rooms, walk-in closets, pantries)
-- [ ] Circulation spaces (entrance, hallways, corridors)
-- [ ] Utility spaces (equipment room, laundry room)
-- [ ] Outdoor spaces (balcony, terrace, patio)
+#### C. Functional Space Checklist (Universal for All Space Types)
+Verify you have identified ALL applicable categories based on the space type:
+
+**For ANY space type, identify:**
+- [ ] Primary functional areas (main activity zones based on space purpose)
+- [ ] Service/support areas (kitchens, pantries, restrooms, janitor rooms)
+- [ ] Storage spaces (storage rooms, closets, equipment rooms, warehouses)
+- [ ] Circulation spaces (entrances, lobbies, hallways, corridors, staircases)
+- [ ] Utility/mechanical spaces (equipment rooms, server rooms, HVAC rooms)
+- [ ] Outdoor/semi-outdoor spaces (balconies, terraces, patios, courtyards)
+
+**Examples by Space Type:**
+- **Residential**: Living rooms, bedrooms, dining rooms, kitchens, bathrooms, balconies
+- **Commercial Office**: Open workspaces, private offices, meeting rooms, break rooms, reception areas
+- **Retail**: Sales floor, fitting rooms, stockrooms, cashier areas, customer service desks
+- **Hospitality**: Guest rooms, lobby, conference rooms, restaurants, fitness centers, pools
+- **Public**: Waiting areas, service counters, information desks, public restrooms, exhibition halls
 
 #### D. Built-in Elements Checklist
 Identify and categorize:
