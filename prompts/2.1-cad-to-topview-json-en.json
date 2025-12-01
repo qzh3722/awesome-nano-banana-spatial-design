@@ -1,0 +1,451 @@
+{
+    "task": "cad_floor_plan_to_photorealistic_topview",
+    "project_type": "residential_apartment",
+    "input_summary": {
+        "total_rooms": 9,
+        "total_furniture_pieces": 28,
+        "total_plumbing_fixtures": 7,
+        "architectural_features_count": 1,
+        "empty_spaces": [
+            "balcony",
+            "entrance"
+        ],
+        "language": "english"
+    },
+    "output_requirements": {
+        "view": "orthographic_top_down_90_degrees",
+        "style": "photorealistic",
+        "aspect_ratio": "match_input",
+        "lighting": {
+            "type": "natural_daylight",
+            "time_of_day": "10:00_AM",
+            "quality": "soft_diffused",
+            "shadows": "subtle_for_depth"
+        },
+        "room_labels": {
+            "language": "english",
+            "style": "clean_sans_serif",
+            "position": "centered_in_rooms",
+            "font_size": "proportional_to_room_size"
+        }
+    },
+    "architectural_features": [
+        {
+            "type": "walk_in_closet",
+            "location": "master_bedroom_right_side",
+            "description": "Built-in architectural alcove, walk-in closet space",
+            "rendering_requirement": "Show as built-in architectural space, NOT as freestanding wardrobe furniture",
+            "visual_cue": "Alcove area with opening, appearing as room extension rather than furniture",
+            "color": "white_matte_finish",
+            "DO_NOT_render_as": "freestanding_wardrobe_cabinet"
+        }
+    ],
+    "rooms": [
+        {
+            "id": "living_room",
+            "label": "LIVING ROOM",
+            "flooring": {
+                "material": "engineered_wood",
+                "species": "light_oak",
+                "color": "#D4B896",
+                "finish": "matte",
+                "plank_width": "15cm",
+                "pattern": "horizontal_continuous"
+            },
+            "furniture": [
+                {
+                    "item": "sectional_sofa",
+                    "type": "L_shaped",
+                    "configuration": "3_seat_section_plus_corner_plus_2_seat_section",
+                    "quantity": 1,
+                    "material": "linen_upholstery",
+                    "color": "#C8B8A8",
+                    "placement": "main_seating_area_facing_tv_wall"
+                },
+                {
+                    "item": "chaise_lounge",
+                    "type": "standalone_daybed",
+                    "quantity": 1,
+                    "independence": "SEPARATE_piece_NOT_attached_to_sectional",
+                    "placement": "angled_near_window_corner",
+                    "distinction": "visually_distinct_from_sectional_sofa",
+                    "material": "matching_linen",
+                    "color": "#C8B8A8",
+                    "CRITICAL_NOTE": "Must be clearly separate from sectional, angled orientation"
+                },
+                {
+                    "item": "coffee_table",
+                    "type": "rectangular_center_table",
+                    "quantity": 1,
+                    "size": "120x60cm",
+                    "material": "walnut_wood",
+                    "finish": "natural_stain",
+                    "placement": "centered_in_seating_group"
+                },
+                {
+                    "item": "round_ottomans",
+                    "shape": "circular",
+                    "quantity": 2,
+                    "diameter": "45cm",
+                    "material": "fabric_upholstered",
+                    "color": "#E8E0D8",
+                    "placement": "near_coffee_table",
+                    "independence": "distinct_from_coffee_table",
+                    "rendering_note": "Both ottomans must be clearly visible as TWO separate circular elements",
+                    "CRITICAL": "Exact count = 2, both must be distinguishable"
+                },
+                {
+                    "item": "tv_console",
+                    "type": "media_cabinet",
+                    "quantity": 1,
+                    "length": "180cm",
+                    "material": "walnut_wood",
+                    "finish": "natural_stain",
+                    "placement": "against_wall_opposite_sofa"
+                },
+                {
+                    "item": "area_rug",
+                    "type": "under_seating_group",
+                    "quantity": 1,
+                    "size": "200x300cm",
+                    "color": "#F5F0E8",
+                    "pattern": "subtle_geometric_or_solid"
+                }
+            ]
+        },
+        {
+            "id": "dining_area",
+            "label": "DINING AREA",
+            "flooring": {
+                "material": "porcelain_tile",
+                "size": "60x60cm",
+                "color": "#E8DCC8",
+                "finish": "polished",
+                "grout_color": "#D8CCC0",
+                "grout_width": "2mm"
+            },
+            "furniture": [
+                {
+                    "item": "dining_table",
+                    "type": "rectangular",
+                    "quantity": 1,
+                    "size": "180x90cm",
+                    "seating_capacity": 8,
+                    "material": "walnut_wood",
+                    "finish": "natural_stain"
+                },
+                {
+                    "item": "dining_chairs",
+                    "type": "upholstered",
+                    "quantity": 8,
+                    "arrangement": "4_on_each_long_side",
+                    "material": "oak_frame_fabric_seat",
+                    "color": "#C8B8A8",
+                    "CRITICAL": "Must show exactly 8 chairs, 4 per long side",
+                    "verification": "count_all_8_chairs_visible"
+                }
+            ]
+        },
+        {
+            "id": "kitchen",
+            "label": "KITCHEN",
+            "flooring": {
+                "material": "porcelain_tile",
+                "size": "60x60cm",
+                "color": "#E8DCC8",
+                "finish": "polished",
+                "same_as": "dining_area"
+            },
+            "furniture": [
+                {
+                    "item": "kitchen_island",
+                    "type": "central_island_with_seating",
+                    "quantity": 1,
+                    "size": "240x90cm",
+                    "countertop_material": "white_quartz",
+                    "countertop_color": "#FFFFFF",
+                    "cabinet_color": "#808080",
+                    "features": "bar_seating_on_one_side"
+                },
+                {
+                    "item": "bar_stools",
+                    "type": "counter_height",
+                    "quantity": 4,
+                    "material": "metal_frame_wood_seat",
+                    "color": "#8B7355",
+                    "placement": "along_island_counter",
+                    "CRITICAL": "Must show exactly 4 bar stools at island",
+                    "verification": "count_all_4_stools_visible"
+                }
+            ],
+            "fixtures": [
+                {
+                    "item": "sink",
+                    "type": "undermount_single_bowl",
+                    "location": "island_or_perimeter",
+                    "visible_from_top_view": true,
+                    "shape": "circular_or_rectangular"
+                },
+                {
+                    "item": "cooktop",
+                    "type": "gas_electric_or_induction",
+                    "burners": 4,
+                    "visible_from_top_view": true
+                }
+            ]
+        },
+        {
+            "id": "master_bedroom",
+            "label": "MASTER BEDROOM",
+            "flooring": {
+                "material": "engineered_wood",
+                "same_as": "living_room"
+            },
+            "furniture": [
+                {
+                    "item": "bed",
+                    "type": "queen_or_king",
+                    "quantity": 1,
+                    "headboard": "upholstered_linen",
+                    "color": "#F5F0E8",
+                    "placement": "centered_against_wall"
+                },
+                {
+                    "item": "bedside_tables",
+                    "type": "nightstands",
+                    "quantity": 2,
+                    "material": "walnut_wood",
+                    "placement": "symmetrically_flanking_bed",
+                    "CRITICAL": "Must show exactly 2 nightstands, one on each side"
+                },
+                {
+                    "item": "bench_or_chair",
+                    "type": "seating_at_foot_of_bed",
+                    "quantity": 1,
+                    "material": "upholstered",
+                    "color": "#C8B8A8"
+                }
+            ],
+            "architectural_feature_reference": "walk_in_closet_see_architectural_features_section"
+        },
+        {
+            "id": "bedroom_2",
+            "label": "BEDROOM 2",
+            "flooring": {
+                "material": "engineered_wood",
+                "same_as": "living_room"
+            },
+            "furniture": [
+                {
+                    "item": "single_bed",
+                    "type": "twin",
+                    "quantity": 1,
+                    "size": "120x200cm",
+                    "headboard": "simple_upholstered",
+                    "color": "#E8E0D8"
+                },
+                {
+                    "item": "desk",
+                    "type": "work_desk",
+                    "quantity": 1,
+                    "size": "120x60cm",
+                    "material": "light_oak",
+                    "finish": "natural"
+                },
+                {
+                    "item": "desk_chair",
+                    "type": "office_chair",
+                    "quantity": 1,
+                    "material": "mesh_and_metal",
+                    "color": "#404040"
+                },
+                {
+                    "item": "wardrobe",
+                    "type": "standalone_or_built_in",
+                    "quantity": 1,
+                    "color": "white",
+                    "doors": 2,
+                    "note": "This is regular wardrobe, not to be confused with master bedroom walk-in closet"
+                }
+            ]
+        },
+        {
+            "id": "master_bathroom",
+            "label": "MASTER BATHROOM",
+            "flooring": {
+                "material": "porcelain_tile",
+                "style": "marble_look",
+                "size": "30x60cm",
+                "color": "#F5F5F5",
+                "finish": "polished"
+            },
+            "fixtures": [
+                {
+                    "item": "bathtub",
+                    "type": "alcove_or_freestanding",
+                    "quantity": 1,
+                    "material": "acrylic_or_porcelain",
+                    "color": "white",
+                    "size": "170x75cm_approximate"
+                },
+                {
+                    "item": "shower_enclosure",
+                    "type": "glass_enclosed_separate",
+                    "quantity": 1,
+                    "separate_from_bathtub": true,
+                    "CRITICAL": "This is a SEPARATE shower, not combined with bathtub",
+                    "enclosure": "frameless_glass",
+                    "size": "90x90cm_or_larger",
+                    "rendering_note": "Must be visually distinct from bathtub, shown as separate fixture"
+                },
+                {
+                    "item": "toilet",
+                    "type": "wall_hung_or_floor_mounted",
+                    "quantity": 1,
+                    "color": "white"
+                },
+                {
+                    "item": "vanity",
+                    "type": "double_vanity",
+                    "sinks": 2,
+                    "CRITICAL": "Must have exactly 2 sinks, not 1",
+                    "counter_material": "white_quartz_or_marble",
+                    "cabinet_color": "white_or_light_gray",
+                    "mirror": "full_width_above_vanity"
+                }
+            ],
+            "total_fixture_count": 4,
+            "total_sink_count": 2,
+            "verification": "bathtub_AND_separate_shower_AND_toilet_AND_double_vanity"
+        },
+        {
+            "id": "secondary_bathroom",
+            "label": "BATHROOM 2",
+            "flooring": {
+                "material": "porcelain_tile",
+                "size": "30x30cm",
+                "color": "#F0F0F0",
+                "finish": "matte"
+            },
+            "fixtures": [
+                {
+                    "item": "shower_stall",
+                    "type": "enclosed_shower_only",
+                    "quantity": 1,
+                    "NO_BATHTUB": true,
+                    "CRITICAL": "This bathroom has SHOWER ONLY, absolutely NO bathtub",
+                    "enclosure": "glass_or_curtain",
+                    "size": "80x80cm_approximate"
+                },
+                {
+                    "item": "toilet",
+                    "type": "wall_hung_or_floor_mounted",
+                    "quantity": 1,
+                    "color": "white"
+                },
+                {
+                    "item": "vanity",
+                    "type": "single_sink",
+                    "sinks": 1,
+                    "CRITICAL": "Must have exactly 1 sink, NOT 2",
+                    "counter_material": "white_quartz",
+                    "cabinet_color": "white"
+                }
+            ],
+            "total_fixture_count": 3,
+            "total_sink_count": 1,
+            "verification": "shower_only_NO_tub_plus_toilet_plus_single_sink"
+        },
+        {
+            "id": "entrance",
+            "label": "ENTRANCE",
+            "flooring": {
+                "material": "porcelain_tile",
+                "same_as": "kitchen_dining"
+            },
+            "furniture": [],
+            "note": "Open circulation space, empty or minimal furniture only",
+            "rendering": "show_as_clean_circulation_area"
+        }
+    ],
+    "empty_spaces": [
+        {
+            "id": "balcony",
+            "label": "BALCONY",
+            "flooring": {
+                "material": "composite_decking",
+                "color": "#8B8B8B",
+                "texture": "wood_grain_pattern",
+                "finish": "weatherproof_matte"
+            },
+            "furniture": [],
+            "plants": [],
+            "decorative_items": [],
+            "CRITICAL_CONSTRAINT": "Balcony MUST remain completely EMPTY",
+            "rendering_requirement": "Show only flooring material, NO furniture, NO plants, NO planters, NO any objects",
+            "boundary": "curved_railing_visible_as_edge",
+            "verification": "confirm_balcony_is_empty_with_flooring_only"
+        }
+    ],
+    "strict_constraints": {
+        "no_added_items": true,
+        "no_removed_items": true,
+        "no_decorative_accessories": [
+            "plants",
+            "vases",
+            "artwork",
+            "sculptures",
+            "decorative_bowls",
+            "throw_pillows",
+            "decorative_throws",
+            "table_settings",
+            "dishware",
+            "food_items"
+        ],
+        "empty_spaces_enforcement": {
+            "balcony": "must_remain_empty",
+            "entrance": "minimal_or_empty"
+        },
+        "exact_counts_required": {
+            "dining_chairs": 8,
+            "bar_stools": 4,
+            "round_ottomans": 2,
+            "bedside_tables": 2,
+            "master_bath_sinks": 2,
+            "secondary_bath_sinks": 1
+        },
+        "independence_enforced": [
+            "chaise_lounge_separate_from_sectional",
+            "ottomans_distinct_from_coffee_table",
+            "master_bath_shower_separate_from_bathtub"
+        ],
+        "architectural_vs_furniture": {
+            "walk_in_closet": "architectural_space_not_furniture"
+        },
+        "fixture_clarity": {
+            "master_bathroom": "has_both_bathtub_and_separate_shower",
+            "secondary_bathroom": "has_shower_only_no_bathtub"
+        }
+    },
+    "verification_checklist": {
+        "room_count": 9,
+        "furniture_count": 28,
+        "fixture_count": 7,
+        "architectural_features": 1,
+        "empty_spaces": 2,
+        "language_labels": "english",
+        "critical_verifications": [
+            "walk_in_closet_as_architectural_not_furniture",
+            "balcony_completely_empty",
+            "chaise_lounge_separate_and_angled",
+            "2_round_ottomans_distinct",
+            "4_bar_stools_at_island",
+            "8_dining_chairs_total",
+            "2_nightstands_in_master_bedroom",
+            "master_bath_has_bathtub_AND_separate_shower",
+            "master_bath_has_2_sinks",
+            "secondary_bath_has_shower_only_no_tub",
+            "secondary_bath_has_1_sink_only"
+        ]
+    }
+}

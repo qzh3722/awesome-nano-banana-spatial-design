@@ -72,131 +72,303 @@
 
 **详细JSON提示词：**
 
+> **为什么使用JSON?** JSON擅长定义**结构化关系、验证规则和约束**,这是自然语言无法精确表达的。重点不在于重复尺寸（这些都是估计值），而在于**在关键处强制精确性**:计数、独立性、类型和禁止项。
+
 <details>
 <summary>点击展开完整JSON规格</summary>
 
 ```json
 {
-  "任务": "cad转彩色俯视图",
-  "输出要求": {
-    "视图类型": "正交俯视",
-    "风格": "照片级真实",
-    "光照": {
-      "类型": "自然日光",
-      "时间": "上午10点",
-      "质量": "柔和漫射",
-      "色温": "5500K"
-    }
+  "task": "cad_floor_plan_to_photorealistic_topview",
+  "input_analysis": {
+    "total_rooms": 9,
+    "total_furniture_count": 28,
+    "total_fixtures": 7,
+    "architectural_features": 1,
+    "empty_space_count": 2
   },
-  "空间分析": {
-    "房间": [
-      {
-        "id": "客厅",
-        "标签": "客厅",
-        "地板": {
-          "材质": "工程木地板",
-          "木种": "浅色橡木",
-          "颜色": "#D4B896",
-          "板宽": "150mm",
-          "纹理可见度": "高"
+  
+  "output_requirements": {
+    "view_type": "orthographic_top_down",
+    "style": "photorealistic",
+    "aspect_ratio": "match_input",
+    "lighting": "natural_daylight_soft_shadows",
+    "label_language": "chinese"
+  },
+  
+  "architectural_features": [
+    {
+      "feature_id": "walk_in_closet_master",
+      "location": "master_bedroom",
+      "category": "ARCHITECTURAL_not_furniture",
+      "rendering_rule": "显示为带开口的嵌入式空间,不是独立柜体",
+      "visual_distinction": "必须呈现为房间延伸,而非家具",
+      "DO_NOT_render_as": ["衣柜", "柜子", "大衣柜", "衣柜家具"]
+    }
+  ],
+  
+  "rooms": [
+    {
+      "id": "living_room",
+      "label": "客厅",
+      "flooring_material": "浅色橡木地板",
+      "furniture_list": [
+        {
+          "item": "转角沙发",
+          "configuration": "L型",
+          "quantity": 1
         },
-        "家具": [
-          {"物品": "L型沙发", "材质": "亚麻布艺", "颜色": "#C7B8A3"},
-          {"物品": "贵妃椅", "位置": "靠窗角落"},
-          {"物品": "茶几", "材质": "胡桃木", "尺寸": "120x60cm"},
-          {"物品": "圆形矮凳", "数量": 2, "形状": "圆形"},
-          {"物品": "电视柜", "材质": "胡桃木", "长度": "180cm"},
-          {"物品": "地毯", "尺寸": "200x300cm", "颜色": "暖米色"}
-        ]
-      },
-      {
-        "id": "餐厅",
-        "标签": "餐厅",
-        "地板": {
-          "材质": "抛光瓷砖",
-          "尺寸": "60x60cm",
-          "颜色": "#E8DCC8",
-          "表面处理": "抛光"
+        {
+          "item": "贵妃椅",
+          "quantity": 1,
+          "independence_rule": "必须与转角沙发分离",
+          "placement_rule": "靠窗倾斜摆放",
+          "visual_distinction_required": "明显独立的家具"
         },
-        "家具": [
-          {"物品": "餐桌", "尺寸": "180x90cm", "座位数": 8},
-          {"物品": "餐椅", "数量": 8, "材质": "橡木软包"}
-        ]
-      },
-      {
-        "id": "厨房",
-        "标签": "厨房",
-        "地板": {"材qual": "抛光瓷砖", "同": "餐厅"},
-        "家具": [
-          {"物品": "厨房岛台", "台面": "白色石英石", "尺寸": "240x90cm"},
-          {"物品": "吧台椅", "数量": 4},
-          {"物品": "水槽", "类型": "台下盆", "俯视可见": true}
-        ]
-      },
-      {
-        "id": "主卧",
-        "标签": "主卧室",
-        "地板": {"材质": "工程木地板", "同": "客厅"},
-        "家具": [
-          {"物品": "双人床", "床头板": "软包亚麻"},
-          {"物品": "床头柜", "数量": 2, "材质": "胡桃木"},
-          {"物品": "衣柜", "类型": "嵌入式", "表面": "白色哑光"}
-        ]
-      },
-      {
-        "id": "次卧",
-        "标签": "次卧室",
-        "地板": {"材质": "工程木地板", "同": "客厅"},
-        "家具": [
-          {"物品": "单人床", "尺寸": "120x200cm"},
-          {"物品": "书桌", "尺寸": "120x60cm", "材质": "浅色橡木"},
-          {"物品": "衣柜", "类型": "独立式", "颜色": "白色"}
-        ]
-      },
-      {
-        "id": "主卫",
-        "标签": "卫生间",
-        "地板": {
-          "材质": "抛光瓷砖",
-          "样式": "大理石纹",
-          "尺寸": "30x60cm",
-          "颜色": "#F5F5F5"
+        {
+          "item": "茶几",
+          "quantity": 1,
+          "material": "木质"
         },
-        "洁具": [
-          {"物品": "浴缸", "类型": "独立式或嵌入式"},
-          {"物品": "马桶", "类型": "壁挂式", "颜色": "白色"},
-          {"物品": "洗手台", "类型": "台盆一体"}
-        ]
-      },
-      {
-        "id": "玄关",
-        "标签": "玄关",
-        "地板": {"材质": "抛光瓷砖", "同": "厨房"}
-      },
-      {
-        "id": "阳台",
-        "标签": "阳台",
-        "地板": {
-          "材质": "复合木地板",
-          "颜色": "#8B8B8B",
-          "表面": "木纹纹理"
+        {
+          "item": "圆形矮凳",
+          "quantity": 2,
+          "shape": "圆形",
+          "independence_rule": "与茶几区分",
+          "COUNT_CRITICAL": "精确2个_独立件_都可见"
+        },
+        {
+          "item": "电视柜",
+          "quantity": 1
+        },
+        {
+          "item": "地毯",
+          "quantity": 1
         }
+      ]
+    },
+    {
+      "id": "dining_area",
+      "label": "餐厅",
+      "flooring_material": "瓷砖",
+      "furniture_list": [
+        {
+          "item": "餐桌",
+          "quantity": 1,
+          "seating_capacity": 8
+        },
+        {
+          "item": "餐椅",
+          "quantity": 8,
+          "arrangement": "长边各4把",
+          "COUNT_CRITICAL": "精确8把椅子_全部可见"
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "label": "厨房",
+      "flooring_material": "瓷砖_与餐厅匹配",
+      "furniture_list": [
+        {
+          "item": "厨房岛台",
+          "quantity": 1,
+          "countertop_material": "白色石英石"
+        },
+        {
+          "item": "吧台椅",
+          "quantity": 4,
+          "placement": "沿岛台",
+          "COUNT_CRITICAL": "精确4把_全在岛台"
+        }
+      ],
+      "fixtures": [
+        {"item": "水槽", "quantity": 1, "type": "台下盆"},
+        {"item": "灶台", "quantity": 1}
+      ]
+    },
+    {
+      "id": "master_bedroom",
+      "label": "主卧室",
+      "flooring_material": "木地板_与客厅匹配",
+      "furniture_list": [
+        {"item": "床", "type": "大床", "quantity": 1},
+        {
+          "item": "床头柜",
+          "quantity": 2,
+          "placement": "对称置于床两侧",
+          "COUNT_CRITICAL": "精确2个_两侧各1"
+        },
+        {"item": "座椅", "quantity": 1, "location": "床尾"}
+      ],
+      "architectural_reference": "包含步入式衣帽间_见建筑特征"
+    },
+    {
+      "id": "bedroom_2",
+      "label": "次卧室1",
+      "flooring_material": "木地板_与客厅匹配",
+      "furniture_list": [
+        {"item": "单人床", "quantity": 1},
+        {"item": "书桌", "quantity": 1},
+        {"item": "书桌椅", "quantity": 1},
+        {"item": "衣柜", "quantity": 1, "type": "独立式家具_非建筑"}
+      ]
+    },
+    {
+      "id": "master_bathroom",
+      "label": "主卫生间",
+      "flooring_material": "大理石纹瓷砖",
+      "fixtures": [
+        {"item": "浴缸", "quantity": 1},
+        {
+          "item": "淋浴房",
+          "quantity": 1,
+          "separation_rule": "与浴缸分离_不组合",
+          "CRITICAL": "两个独立洁具_淋浴和浴缸",
+          "visual_requirement": "明显可区分的独立单元"
+        },
+        {"item": "马桶", "quantity": 1},
+        {
+          "item": "洗手台",
+          "sink_count": 2,
+          "type": "双盆台",
+          "COUNT_CRITICAL": "精确2个洗手盆"
+        }
+      ],
+      "total_fixture_verification": 4
+    },
+    {
+      "id": "secondary_bathroom",
+      "label": "卫生间2",
+      "flooring_material": "瓷砖",
+      "fixtures": [
+        {
+          "item": "淋浴间",
+          "quantity": 1,
+          "NO_BATHTUB": true,
+          "CRITICAL": "仅淋浴_此卫生间绝对没有浴缸"
+        },
+        {"item": "马桶", "quantity": 1},
+        {
+          "item": "洗手台",
+          "sink_count": 1,
+          "type": "单盆",
+          "COUNT_CRITICAL": "精确1个洗手盆_不是2个"
+        }
+      ],
+      "total_fixture_verification": 3
+    },
+    {
+      "id": "entrance",
+      "label": "玄关",
+      "flooring_material": "瓷砖_与厨房匹配",
+      "furniture_list": [],
+      "usage_note": "流线空间_极少或无家具"
+    }
+  ],
+  
+  "empty_spaces": [
+    {
+      "id": "balcony",
+      "label": "阳台",
+      "flooring_material": "复合地板",
+      "furniture_list": [],
+      "plants": [],
+      "decorative_items": [],
+      "CRITICAL_CONSTRAINT": "必须保持完全空置",
+      "absolute_prohibition": [
+        "禁止_家具",
+        "禁止_植物",
+        "禁止_花盆",
+        "禁止_装饰物品",
+        "禁止_任何物品"
+      ],
+      "rendering_rule": "仅显示地面_其他什么都不要"
+    }
+  ],
+  
+  "strict_constraints": {
+    "count_accuracy": {
+      "dining_chairs": {"exact": 8, "verification": "清点全部8把可见"},
+      "bar_stools": {"exact": 4, "verification": "全部4把在岛台"},
+      "round_ottomans": {"exact": 2, "verification": "两个可区分"},
+      "bedside_tables": {"exact": 2, "verification": "两侧各一"},
+      "master_bath_sinks": {"exact": 2, "verification": "双台盆"},
+      "secondary_bath_sinks": {"exact": 1, "verification": "仅单盆"}
+    },
+    
+    "independence_requirements": [
+      {
+        "item": "贵妃椅",
+        "must_be_separate_from": "转角沙发",
+        "visual_proof": "明显独立的倾斜件"
+      },
+      {
+        "item": "圆形矮凳",
+        "must_be_separate_from": "茶几",
+        "visual_proof": "两个独立圆形"
+      },
+      {
+        "item": "主卫淋浴",
+        "must_be_separate_from": "浴缸",
+        "visual_proof": "两个独立洁具_不组合"
       }
-    ]
-  },
-  "文字渲染": {
-    "房间标签": {
-      "字体": "思源黑体",
-      "字重": "中等",
-      "颜色": "#333333",
-      "位置": "房间居中",
-      "样式": "简洁大写"
+    ],
+    
+    "categorical_distinctions": {
+      "walk_in_closet": "建筑特征_非家具",
+      "bedroom_2_wardrobe": "家具_非建筑"
+    },
+    
+    "fixture_clarity": {
+      "master_bathroom": "同时有_浴缸和独立淋浴",
+      "secondary_bathroom": "仅淋浴_绝对没有浴缸"
+    },
+    
+    "prohibition_list": {
+      "no_added_decorative_items": [
+        "植物",
+        "花瓶",
+        "艺术品",
+        "雕塑",
+        "抱枕",
+        "餐具摆设",
+        "书籍",
+        "配饰"
+      ],
+      "empty_space_enforcement": {
+        "balcony": "绝对不允许任何物品",
+        "entrance": "仅极少或空置"
+      }
+    },
+    
+    "rendering_validation": {
+      "no_added_items_rule": "严格仅渲染CAD符号对应物品",
+      "no_removed_items_rule": "所有CAD元素必须出现",
+      "no_merged_elements_rule": "独立物品保持独立",
+      "no_hallucinated_features_rule": "不臆造建筑元素"
     }
   },
-  "输出规格": {
-    "宽高比": "匹配输入",
-    "分辨率": "2K",
-    "质量": "演示级"
+  
+  "verification_checklist": {
+    "room_count_check": 9,
+    "furniture_count_check": 28,
+    "fixture_count_check": 7,
+    "architectural_features_check": 1,
+    "empty_spaces_check": 2,
+    "mandatory_verifications": [
+      "步入式衣帽间_作为建筑非家具",
+      "阳台_完全空置已验证",
+      "贵妃椅_独立且倾斜",
+      "2个矮凳_都独立可见",
+      "4把吧台椅_全在岛台",
+      "8把餐椅_全部存在",
+      "2个床头柜_对称",
+      "主卫_淋浴和浴缸都有且独立",
+      "主卫_2个洗手盆已验证",
+      "次卫_仅淋浴无浴缸已确认",
+      "次卫_仅1个洗手盆已验证"
+    ]
   }
 }
 ```
