@@ -92,7 +92,12 @@ Generate JSON with the following structure:
     "style": "photorealistic",
     "aspect_ratio": "match_input",
     "lighting": "natural_daylight_soft_shadows",
-    "label_language": "english" // or "chinese"
+    "label_language": "english", // or "chinese"
+    "labeling_policy": {
+      "coverage": "ALL_defined_spaces_MUST_be_labeled",
+      "existing_text": "REMOVE_original_CAD_text_and_REPLACE_with_new_labels",
+      "style": "clear_sans_serif_text_centered_in_room"
+    }
   },
   
   "architectural_features": [

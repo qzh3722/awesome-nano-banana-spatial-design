@@ -183,20 +183,6 @@ Use the JSON structure from the main specification below.
     },
     "project_type": "residential_apartment",
     "input_analysis": {
-        "total_rooms": 15,
-        "total_furniture_count": 28,
-        "total_fixtures": 7,
-        "architectural_features": 2,
-        "empty_spaces": 2
-    },
-    "output_requirements": {
-        "view_type": "orthographic_top_down",
-        "style": "photorealistic",
-        "aspect_ratio": "match_input",
-        "lighting": "natural_daylight_soft_shadows",
-        "label_language": "english"
-    },
-    "architectural_features": [
         {
             "feature_id": "walk_in_closet",
             "location": "master_bedroom",
