@@ -64,6 +64,30 @@
 - **Validation**: Check all labels for uniqueness before finalizing JSON
 - **Reference**: See artifact `unique-room-naming-standard.md` for complete rules
 
+### 7. Task Field Specification (MANDATORY) ⭐ **NEW 2025-12-01**
+- **Requirement**: Task field MUST explicitly reference the uploaded/provided input
+- **Format**: "Transform the UPLOADED [input type] into [output type]"
+- **Examples**:
+  - ✅ "Transform the UPLOADED CAD floor plan into photorealistic colored top-down view"
+  - ✅ "将上传的CAD平面图转换为照片级彩色俯视图"
+  - ❌ "cad_floor_plan_to_photorealistic_topview" (no reference to uploaded image)
+- **Include**: `input_specification` object with source, constraint, prohibition, verification
+- **Why**: Prevents AI from generating unrelated layouts instead of transforming the provided input
+- **Critical Impact**: Without this, AI may hallucinate completely different floor plans
+
+### 8. Completeness Scanning (MANDATORY) ⭐ **NEW 2025-12-01**
+- **Requirement**: ALL enclosed/semi-enclosed spaces in CAD MUST be identified before creating JSON
+- **Method**: Execute grid scan + wall trace + functional checklist
+- **Verification Formula**: `JSON_room_count >= CAD_identified_spaces`
+- **Common Missed Spaces**:
+  - Storage rooms (储藏间)
+  - Powder rooms (客卫)
+  - En-suite bathrooms (次卫)
+  - Upper cabinets (吊柜)
+  - Walk-in closets (步入式衣帽间)
+- **Why**: Incomplete analysis leads to missing rooms in output → user dissatisfaction
+- **Tool**: Use `json-generator-prompt.md` template to ensure systematic analysis
+
 ---
 
 ## 🔄 Standard Prompt Development Workflow (MANDATORY)
