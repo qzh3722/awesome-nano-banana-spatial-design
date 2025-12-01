@@ -1,8 +1,14 @@
 {
-    "task": "cad_floor_plan_to_photorealistic_topview",
+    "task": "Transform the UPLOADED CAD floor plan image into photorealistic colored top-down visualization",
+    "input_specification": {
+        "source": "uploaded_cad_drawing",
+        "constraint": "MUST_use_uploaded_image_as_ONLY_spatial_reference",
+        "prohibition": "DO_NOT_generate_alternative_layouts",
+        "verification": "output_layout_MUST_match_input_exactly"
+    },
     "project_type": "residential_apartment",
     "input_summary": {
-        "total_rooms": 9,
+        "total_rooms": 15,
         "total_furniture_pieces": 28,
         "total_plumbing_fixtures": 7,
         "architectural_features_count": 1,
@@ -38,6 +44,14 @@
             "visual_cue": "Alcove area with opening, appearing as room extension rather than furniture",
             "color": "white_matte_finish",
             "DO_NOT_render_as": "freestanding_wardrobe_cabinet"
+        },
+        {
+            "type": "kitchen_upper_cabinets",
+            "location": "kitchen_above_countertops",
+            "description": "Wall-mounted upper cabinets in kitchen",
+            "rendering_requirement": "Show as built-in architectural fixtures mounted on walls above counters",
+            "visual_cue": "Visible as overhead cabinetry in orthographic view",
+            "category": "ARCHITECTURAL_not_furniture"
         }
     ],
     "rooms": [
@@ -366,6 +380,128 @@
             "furniture": [],
             "note": "Open circulation space, empty or minimal furniture only",
             "rendering": "show_as_clean_circulation_area"
+        },
+        {
+            "id": "storage_1",
+            "label": "STORAGE 1",
+            "flooring": {
+                "material": "porcelain_tile",
+                "same_as": "dining_area"
+            },
+            "furniture": [],
+            "note": "Small storage room near dining area",
+            "usage": "storage_utility_space"
+        },
+        {
+            "id": "powder_room",
+            "label": "POWDER ROOM",
+            "flooring": {
+                "material": "porcelain_tile",
+                "size": "30x30cm",
+                "finish": "matte"
+            },
+            "fixtures": [
+                {
+                    "item": "toilet",
+                    "quantity": 1,
+                    "type": "wall_hung_or_floor_mounted"
+                },
+                {
+                    "item": "vanity",
+                    "type": "small_single_sink",
+                    "sinks": 1
+                }
+            ],
+            "note": "Guest bathroom, powder room for visitors"
+        },
+        {
+            "id": "bathroom_1",
+            "label": "BATHROOM 1",
+            "flooring": {
+                "material": "porcelain_tile",
+                "size": "30x30cm",
+                "finish": "matte"
+            },
+            "fixtures": [
+                {
+                    "item": "shower_stall",
+                    "quantity": 1,
+                    "type": "enclosed_shower"
+                },
+                {
+                    "item": "toilet",
+                    "quantity": 1
+                },
+                {
+                    "item": "vanity",
+                    "type": "single_sink",
+                    "sinks": 1
+                }
+            ]
+        },
+        {
+            "id": "bedroom_3",
+            "label": "BEDROOM 3",
+            "flooring": {
+                "material": "engineered_wood",
+                "same_as": "living_room"
+            },
+            "furniture": [
+                {
+                    "item": "single_bed",
+                    "type": "twin",
+                    "quantity": 1
+                },
+                {
+                    "item": "desk",
+                    "quantity": 1
+                },
+                {
+                    "item": "desk_chair",
+                    "quantity": 1
+                },
+                {
+                    "item": "wardrobe",
+                    "quantity": 1,
+                    "type": "standalone"
+                }
+            ]
+        },
+        {
+            "id": "ensuite_bathroom",
+            "label": "EN-SUITE BATHROOM",
+            "flooring": {
+                "material": "porcelain_tile",
+                "size": "30x30cm",
+                "finish": "matte"
+            },
+            "fixtures": [
+                {
+                    "item": "shower_stall",
+                    "quantity": 1,
+                    "NO_BATHTUB": true
+                },
+                {
+                    "item": "toilet",
+                    "quantity": 1
+                },
+                {
+                    "item": "vanity",
+                    "type": "single_sink",
+                    "sinks": 1
+                }
+            ],
+            "note": "Private bathroom attached to Bedroom 3"
+        },
+        {
+            "id": "storage_2",
+            "label": "STORAGE 2",
+            "flooring": {
+                "material": "porcelain_tile"
+            },
+            "furniture": [],
+            "note": "Small storage room near hallway",
+            "usage": "storage_utility_space"
         }
     ],
     "empty_spaces": [
@@ -428,7 +564,7 @@
         }
     },
     "verification_checklist": {
-        "room_count": 9,
+        "room_count": 15,
         "furniture_count": 28,
         "fixture_count": 7,
         "architectural_features": 1,

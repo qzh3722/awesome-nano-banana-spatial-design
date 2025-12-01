@@ -1,8 +1,14 @@
 {
-  "task": "cad_floor_plan_to_photorealistic_topview",
+  "task": "将上传的CAD平面图转换为照片级真实的彩色俯视图",
+  "input_specification": {
+    "source": "上传的CAD图纸",
+    "constraint": "必须使用上传的图片作为唯一空间参考",
+    "prohibition": "禁止生成替代布局",
+    "verification": "输出布局必须精确匹配输入"
+  },
   "project_type": "residential_apartment",
   "input_summary": {
-    "total_rooms": 9,
+    "total_rooms": 15,
     "total_furniture_pieces": 28,
     "total_plumbing_fixtures": 7,
     "architectural_features_count": 1,
@@ -38,6 +44,14 @@
       "visual_cue": "凹槽区域带开口，呈现为房间延伸而非家具",
       "color": "white_matte_finish",
       "DO_NOT_render_as": "freestanding_wardrobe_cabinet"
+    },
+    {
+      "type": "kitchen_upper_cabinets",
+      "location": "kitchen_above_countertops",
+      "description": "厨房吊柜,墙面安装",
+      "rendering_requirement": "显示为墙面安装的内置建筑固定装置",
+      "visual_cue": "在俯视图中可见的吊柜轮廓",
+      "category": "ARCHITECTURAL_not_furniture"
     }
   ],
   "rooms": [
@@ -366,6 +380,128 @@
       "furniture": [],
       "note": "Open circulation space, empty or minimal furniture only",
       "rendering": "show_as_clean_circulation_area"
+    },
+    {
+      "id": "storage_1",
+      "label": "储藏间1",
+      "flooring": {
+        "material": "porcelain_tile",
+        "same_as": "dining_area"
+      },
+      "furniture": [],
+      "note": "餐厅附近的小储藏室",
+      "usage": "storage_utility_space"
+    },
+    {
+      "id": "powder_room",
+      "label": "客卫",
+      "flooring": {
+        "material": "porcelain_tile",
+        "size": "30x30cm",
+        "finish": "matte"
+      },
+      "fixtures": [
+        {
+          "item": "toilet",
+          "quantity": 1,
+          "type": "wall_hung_or_floor_mounted"
+        },
+        {
+          "item": "vanity",
+          "type": "small_single_sink",
+          "sinks": 1
+        }
+      ],
+      "note": "访客卫生间"
+    },
+    {
+      "id": "bathroom_1",
+      "label": "卫生间1",
+      "flooring": {
+        "material": "porcelain_tile",
+        "size": "30x30cm",
+        "finish": "matte"
+      },
+      "fixtures": [
+        {
+          "item": "shower_stall",
+          "quantity": 1,
+          "type": "enclosed_shower"
+        },
+        {
+          "item": "toilet",
+          "quantity": 1
+        },
+        {
+          "item": "vanity",
+          "type": "single_sink",
+          "sinks": 1
+        }
+      ]
+    },
+    {
+      "id": "bedroom_3",
+      "label": "次卧室2",
+      "flooring": {
+        "material": "engineered_wood",
+        "same_as": "living_room"
+      },
+      "furniture": [
+        {
+          "item": "single_bed",
+          "type": "twin",
+          "quantity": 1
+        },
+        {
+          "item": "desk",
+          "quantity": 1
+        },
+        {
+          "item": "desk_chair",
+          "quantity": 1
+        },
+        {
+          "item": "wardrobe",
+          "quantity": 1,
+          "type": "standalone"
+        }
+      ]
+    },
+    {
+      "id": "ensuite_bathroom",
+      "label": "次卫",
+      "flooring": {
+        "material": "porcelain_tile",
+        "size": "30x30cm",
+        "finish": "matte"
+      },
+      "fixtures": [
+        {
+          "item": "shower_stall",
+          "quantity": 1,
+          "NO_BATHTUB": true
+        },
+        {
+          "item": "toilet",
+          "quantity": 1
+        },
+        {
+          "item": "vanity",
+          "type": "single_sink",
+          "sinks": 1
+        }
+      ],
+      "note": "次卧室2的私人卫生间"
+    },
+    {
+      "id": "storage_2",
+      "label": "储藏间2",
+      "flooring": {
+        "material": "porcelain_tile"
+      },
+      "furniture": [],
+      "note": "走廊附近的小储藏室",
+      "usage": "storage_utility_space"
     }
   ],
   "empty_spaces": [
@@ -428,7 +564,7 @@
     }
   },
   "verification_checklist": {
-    "room_count": 9,
+    "room_count": 15,
     "furniture_count": 28,
     "fixture_count": 7,
     "architectural_features": 1,
