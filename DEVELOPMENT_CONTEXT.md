@@ -51,6 +51,19 @@
 - Level 2: Technical accuracy review (only if errors suspected)
 - **Don't over-QA**: User testing > complex pre-validation
 
+### 6. Unique Room Naming (MANDATORY for Multi-Room Layouts) ⭐ **NEW 2025-12-01**
+- **Requirement**: All room labels in JSON must be UNIQUE
+- **Rule**: If multiple rooms of same type exist (e.g., 2+ bedrooms, 3+ bathrooms), add unique numbering
+- **Examples**:
+  - ✅ 次卧室1, 次卧室2, 次卧室3 (CN)
+  - ✅ BEDROOM 2, BEDROOM 3, BEDROOM 4 (EN)
+  - ✅ 卫生间1, 卫生间2, 卫生间3 (CN)
+  - ✅ BATHROOM 2, BATHROOM 3 (EN)
+  - ❌ 次卧室, 次卧室 (duplicate labels not allowed)
+- **Why**: Essential for large layouts and commercial projects to identify specific rooms
+- **Validation**: Check all labels for uniqueness before finalizing JSON
+- **Reference**: See artifact `unique-room-naming-standard.md` for complete rules
+
 ---
 
 ## 🔄 Standard Prompt Development Workflow (MANDATORY)
@@ -837,7 +850,7 @@ After each case:
 - [ ] A-005: Axonometric Drawing to Realistic View
 - [ ] A-006: Detail Drawing to Close-up Render
 - [ ] A-007: Sketch Plan to Presentation Quality
-- [ ] A-008: Technical Drawing to Client-Friendly Visual
+- [ ] A-008: Technical Drawing to Rendered Visualization
 
 **Concept Development (8 cases)** - Status: 0/8
 - [ ] A-009 through A-016 (planned in docs/ROADMAP.md)

@@ -230,7 +230,7 @@
     },
     {
       "id": "bedroom_2",
-      "label": "次卧室",
+      "label": "次卧室1",
       "flooring": {
         "material": "engineered_wood",
         "same_as": "living_room"
@@ -320,7 +320,7 @@
     },
     {
       "id": "secondary_bathroom",
-      "label": "卫生间",
+      "label": "卫生间2",
       "flooring": {
         "material": "porcelain_tile",
         "size": "30x30cm",

@@ -17,7 +17,7 @@ Professional architectural visualization and workflow optimization prompts.
 5. A-005: Axonometric Drawing to Realistic View / 轴测图转真实视图
 6. A-006: Detail Drawing to Close-up Render / 详图转特写渲染
 7. A-007: Sketch Plan to Presentation Quality / 草图平面转演示级质量
-8. A-008: Technical Drawing to Client-Friendly Visual / 技术图纸转客户友好图像
+8. A-008: Technical Drawing to Rendered Visualization / 技术图纸转渲染可视化
 
 ### Concept Development / 概念推敲 (8 cases)
 

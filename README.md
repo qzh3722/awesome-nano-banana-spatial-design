@@ -37,11 +37,11 @@
 *Layout optimization & circulation design*
 
 **Cases in this stage:**  
-[▶ 2.1 CAD Floor Plan to Client-Friendly View](#21-cad-floor-plan-to-client-friendly-view) • [2.2 Furniture Layout Variations](#) • [2.3 Circulation Analysis](#)
+[▶ 2.1 CAD Floor Plan to Colored Floor Plan](#21-cad-floor-plan-to-colored-floor-plan) • [2.2 Furniture Layout Variations](#) • [2.3 Circulation Analysis](#)
 
 ---
 
-### 2.1 CAD Floor Plan to Client-Friendly View
+### 2.1 CAD Floor Plan to Colored Floor Plan
 
 Convert technical CAD floor plans into photorealistic colored top-down visualizations with realistic furniture and clear room labels for client presentation.
 

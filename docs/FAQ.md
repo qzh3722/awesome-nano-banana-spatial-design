@@ -152,7 +152,7 @@ Common workflows:
 1. **Early concept**: Sketch → Prompt → Quick visualizations
 2. **Design development**: CAD plan → Prompt → Presentation images
 3. **Material selection**: Material board → Prompt → Realistic application
-4. **Client presentation**: Technical drawings → Prompts → Client-friendly visuals
+4. **Client presentation**: Technical drawings → Prompts → Rendered visualizations
 
 ## Troubleshooting
 
