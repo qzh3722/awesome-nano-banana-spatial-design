@@ -31,6 +31,24 @@
 **Cases in this stage:**  
 [1.1 Hand Sketch to Rendering](#) • [1.2 Multi-Style Concept Comparison](#) • [1.3 Mood Board Generation](#)
 
+### [Intro] 城市俯视等距 3D 卡通微缩场景
+
+**Prompt:**
+```
+Present a clear, 45° top-down isometric miniature 3D cartoon scene of [CITY], featuring its most iconic landmarks and architectural elements. Use soft, refined textures with realistic PBR materials and gentle, lifelike lighting and shadows. Integrate the current weather conditions directly into the city environment to create an immersive atmospheric mood. Use a clean, minimalistic composition with a soft, solid-colored background.
+```
+
+---
+
+### [Intro] PS5 的技术蓝图
+
+**Prompt:**
+```
+A two-panel technical blueprint diagram in clean monochrome line-art, matching the exact layout of the provided PlayStation 1 schematic. On the left side, draw a full, intact Sony PlayStation 5 console in precise thin line-art on a white background. On the right side, draw a highly detailed, vertically exploded-view diagram of the PS5 showing each
+```
+
+---
+
 ---
 
 ## 📐 Space Planning
@@ -651,6 +669,42 @@ Use the JSON structure from the main specification below.
   - Flooring colors (e.g., `"#D4B896"` → darker/lighter tones)
   - Overall atmosphere (`"modern_residential"` → `"luxury"`, `"minimalist"`)
 
+### 05. 彩色平面图生成 (Colored Floor Plan)
+
+**Prompt:**
+```
+Rendered architectural floor plan (top view). Fill the bedrooms with wood texture, bathrooms with tile texture, and living areas with carpet. Add subtle drop shadows to furniture to show depth. Style: High-end real estate marketing brochure, flat lighting.
+```
+
+---
+
+### 08. 景观分区分析图 (Landscape Zoning Map)
+
+**Prompt:**
+```
+Site analysis diagram. Overlay color-coded zones on the site plan: Green for 'Public Park', Blue for 'Water Feature', Yellow for 'Residential'. Use hatch patterns and legends. Vector graphic style.
+```
+
+---
+
+### 09. 城市肌理底图风格化 (Urban Fabric Stylization)
+
+**Prompt:**
+```
+Urban figure-ground diagram (Noli map). Render all buildings as solid black masses and all streets/open spaces as pure white. High contrast, abstract map style. Remove all vegetation and cars.
+```
+
+---
+
+### 34. 办公位布局优化 (Office Desk Layout)
+
+**Prompt:**
+```
+Open plan office interior. Rows of modern white desks with ergonomic black chairs. Separate the rows with planter boxes containing snake plants. Busy professional atmosphere, daytime.
+```
+
+---
+
 ---
 
 ## 🔧 Technical to Visual
@@ -658,6 +712,132 @@ Use the JSON structure from the main specification below.
 
 **Cases in this stage:**  
 [3.1 Elevation to Street View](#) • [3.2 Section to Interior Perspective](#)
+
+### 01. 平面图转轴测图 (Floor Plan to Axonometric)
+
+**Prompt:**
+```
+Transform this 2D floor plan into a 3D isometric architectural drawing. Extrude the walls to a consistent height. Apply a 'clay render' style with soft ambient occlusion shadows. Keep the layout exactly as shown in the plan. Highlight circulation paths in soft blue.
+```
+
+---
+
+### 02. 剖面图转剖透视 (Section to Section Perspective)
+
+**Prompt:**
+```
+Architectural section perspective based on this line drawing. Render the cut surfaces (walls/slabs) in solid jet black (Poché). Render the interior spaces with photorealistic materials: concrete ceiling, oak flooring. Add depth and atmospheric lighting entering from the windows. 4K resolution.
+```
+
+---
+
+### 03. 爆炸轴测图生成 (Exploded Axonometric)
+
+**Prompt:**
+```
+Exploded axonometric diagram of the building structure. Separate the layers vertically: foundation at the bottom, structural grid in the middle, and roof skin at the top. Style: Technical illustration, clean white background, thin linework, pastel color coding for each layer.
+```
+
+---
+
+### 04. 手绘草图转体块推敲 (Sketch to Massing Model)
+
+**Prompt:**
+```
+Convert this loose architectural sketch into a clean, geometric white massing model. Straighten the lines and correct the perspective. Render in a 'studio lighting' setup with sharp shadows to define the volumes. Abstract minimalism.
+```
+
+---
+
+### 06. 结构系统分析图 (Structural Analysis Diagram)
+
+**Prompt:**
+```
+Structural diagram. Make the non-structural walls transparent/ghosted. Highlight the columns and main beams in solid red. Show the load-bearing logic. X-ray architectural style.
+```
+
+---
+
+### 07. 暖通空调(HVAC)布局可视化 (HVAC Overlay)
+
+**Prompt:**
+```
+Reflected ceiling plan visualization. Overlay 3D semi-transparent blue ducts showing the HVAC system. Distinguish supply diffusers (arrows out) and return vents. Maintain the layout of the lights.
+```
+
+---
+
+### 10. 垂直交通流线图 (Vertical Circulation)
+
+**Prompt:**
+```
+Sectional circulation diagram. Highlight staircases and elevator shafts in glowing orange. Add arrows indicating upward movement. Dark background blueprint style.
+```
+
+---
+
+### 12. 构造节点三维剖切 (3D Detail Callout)
+
+**Prompt:**
+```
+Photorealistic 3D cutaway of a curtain wall detail based on this drawing. Show the layers: aluminum mullion, double glazing, rubber gasket, and insulation. Macro photography style, sharp focus on the joint.
+```
+
+---
+
+### 17. 隐蔽工程透视 (MEP X-Ray)
+
+**Prompt:**
+```
+Technical visualization. A bathroom wall rendered with 50% transparency. Reveal the copper plumbing pipes and PVC drainage pipes inside the wall cavity. Educational diagram style.
+```
+
+---
+
+### 18. 施工工艺分层示意 (Construction Layers)
+
+**Prompt:**
+```
+Layered floor construction diagram. Peel back the layers to show: 1. Concrete slab, 2. Acoustic mat, 3. Underfloor heating pipes, 4. Screed, 5. Timber finish. Label each layer.
+```
+
+---
+
+### 46. 无障碍分析图 (Accessibility Diagram)
+
+**Prompt:**
+```
+Accessibility analysis overlay on floor plan. Show 1.5m diameter turning circles in red dashed lines in bathrooms and hallways. Highlight wheelchair ramps in blue. Technical annotation style.
+```
+
+---
+
+### 47. 可持续设计图解 (Sustainability Diagram)
+
+**Prompt:**
+```
+Sustainability concept section. Show blue arrows for natural ventilation airflow through windows. Show yellow arrows for sunlight shading. Add icons for 'Solar Panels' on the roof. Educational style.
+```
+
+---
+
+### 48. 鸟瞰图转总平面 (Aerial to Site Plan)
+
+**Prompt:**
+```
+Convert this aerial drone photo into a flat architectural site plan diagram. Flatten the perspective to 2D top-down. Simplify trees to circles and buildings to solid shapes. Desaturated colors.
+```
+
+---
+
+### 49. 3D 打印预览图 (3D Print Preview)
+
+**Prompt:**
+```
+Render this building model as a 3D printed object. Material: White PLA plastic with visible layer lines. Sitting on a wooden table. Depth of field blurring the background.
+```
+
+---
 
 ---
 
@@ -667,6 +847,78 @@ Use the JSON structure from the main specification below.
 **Cases in this stage:**  
 [4.1 Material Scheme Comparison](#) • [4.2 Material Downgrade for Budget](#)
 
+### 11. 材质板转 3D 渲染 (Moodboard to Render)
+
+**Prompt:**
+```
+Interior rendering of a living room using the materials from the reference image. Apply the boucle fabric to the sofa, the walnut wood to the cabinets, and the terrazzo sample to the floor. Maintain accurate texture scaling.
+```
+
+---
+
+### 13. 定制柜体内部结构 (Joinery Internal View)
+
+**Prompt:**
+```
+Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawers with glass fronts, and LED strip lighting in the shelves. Finish: Dark grey melamine. Perspective view.
+```
+
+---
+
+### 14. 砖石铺贴纹理研究 (Pattern Generation)
+
+**Prompt:**
+```
+Close-up texture study of a brick wall. Arrange the bricks in a 'vertical stack bond' pattern. Bricks should be handmade terracotta with irregular edges and thick mortar joints.
+```
+
+---
+
+### 15. 灯光照度可视化 (Lighting Falloff)
+
+**Prompt:**
+```
+Lighting visualization. A textured stone wall lit by three recessed spotlights from above. Show the realistic 'scallop' shape of the light beams and the texture relief created by grazing light.
+```
+
+---
+
+### 16. 软装布艺褶皱模拟 (Fabric Physics)
+
+**Prompt:**
+```
+Close-up of heavy velvet curtains pooling on a wooden floor. Show realistic fabric folds, weight, and light sheen. Color: Deep emerald green.
+```
+
+---
+
+### 19. 异形家具曲面分析 (Curved Surface Analysis)
+
+**Prompt:**
+```
+Studio render of a parametric curved bench. Material: Glossy white fiberglass. Use 'zebra stripe' reflection mapping to highlight the curvature continuity.
+```
+
+---
+
+### 20. 老旧材质做旧模拟 (Weathering Simulation)
+
+**Prompt:**
+```
+Material aging simulation. Show a copper facade panel with realistic green patina (verdigris) streaming down from the top edges, simulating 10 years of weather exposure.
+```
+
+---
+
+### 30. 艺术品/挂画替换 (Art Staging)
+
+**Prompt:**
+```
+Replace the painting on the wall with a large-scale abstract expressionist artwork in blue and gold tones. Add a frame that matches the furniture wood.
+```
+
+---
+
 ---
 
 ## 🖼️ Scene Rendering
@@ -675,6 +927,69 @@ Use the JSON structure from the main specification below.
 **Cases in this stage:**  
 [5.1 Multi-Angle Interior](#) • [5.2 Day/Night Lighting](#)
 
+### 29. 日夜光环境转换 (Day to Night)
+
+**Prompt:**
+```
+Turn this daylight photo into a night scene. Dark blue sky. Turn on the interior lights (3000K warm white). Add exterior uplighting to the trees.
+```
+
+---
+
+### 35. 餐厅灯光氛围模拟 (Restaurant Ambiance)
+
+**Prompt:**
+```
+Fine dining restaurant interior. Moody, low-key lighting. Tables illuminated by focused pin-spots, leaving the surrounding areas in shadow. Velvet booth seating. Candlelight on tables.
+```
+
+---
+
+### 37. 酒店客房标准间 (Hotel Room Visualization)
+
+**Prompt:**
+```
+Luxury hotel room interior. King size bed with crisp white linens and a beige throw. Floor-to-ceiling window with shear curtains. Warm bedside lamps on. Symmetrical composition.
+```
+
+---
+
+### 40. 咖啡馆氛围板 (Cafe Mood Visualization)
+
+**Prompt:**
+```
+Rustic coffee shop interior. Exposed brick walls, reclaimed wood tables, industrial pendant lights. Steam rising from a coffee cup in the foreground. Warm, inviting, morning light.
+```
+
+---
+
+### 44. 漫游关键帧生成 (Walkthrough Keyframes)
+
+**Prompt:**
+```
+Cinematic storyboard keyframes for architectural walkthrough. Frame 1: Wide shot of building exterior at dawn. Frame 2: Close up of hand opening the door. Frame 3: Eye- level view of the sunlit lobby. Consistent color grading.
+```
+
+---
+
+### 45. 配景人物植入 (Entourage Population)
+
+**Prompt:**
+```
+Populate this plaza render with diverse groups of people. People walking, sitting on benches, talking. Motion blur on walking figures. Ensure shadows match the sun direction of the scene.
+```
+
+---
+
+### 50. 风格一致性检查 (Style Consistency Check)
+
+**Prompt:**
+```
+Apply the color grading and lighting style of Reference Image A to Reference Image B. Make them look like they belong to the same photography set. Keep the content of Image B unchanged.
+```
+
+---
+
 ---
 
 ## ⚙️ Specialized Tasks
@@ -682,6 +997,159 @@ Use the JSON structure from the main specification below.
 
 **Cases in this stage:**  
 [6.1 Multilingual Signage](#) • [6.2 Seasonal Variations](#) • [6.3 On-Site Quick Solutions](#)
+
+### 21. 保留家具换硬装 (Keep Furniture, Change Room)
+
+**Prompt:**
+```
+Renovation visualization. Change the wall color to sage green and the floor to herringbone parquet. Constraint: Keep the existing sofa, coffee table, and rug exactly as they are in the photo. Do not move them.
+```
+
+---
+
+### 22. 清空房间 (Declutter / Empty Room)
+
+**Prompt:**
+```
+Real estate photo editing. Remove all furniture, boxes, and clutter from this room. Show the clean, empty space with bare walls and flooring. Auto-fill the floor texture where furniture was removed.
+```
+
+---
+
+### 23. 虚拟软装 (Virtual Staging)
+
+**Prompt:**
+```
+Virtual staging. Furnish this empty bedroom with a Queen-sized bed, two nightstands, and a wardrobe. Style: Modern Minimalist. Ensure furniture perspective aligns with the room's vanishing points.
+```
+
+---
+
+### 24. 厨房翻新：换门板不换布局 (Kitchen Facelift)
+
+**Prompt:**
+```
+Kitchen facelift. Replace the oak cabinet doors with matte navy blue flat-panel doors. Change countertop to white marble. Keep the kitchen layout, appliances, and sink position exactly unchanged.
+```
+
+---
+
+### 25. 窗外景观替换 (View Replacement)
+
+**Prompt:**
+```
+View substitution. Replace the white window background with a cityscape at twilight. Add realistic blue reflections of the city lights onto the interior floor.
+```
+
+---
+
+### 26. 建筑立面改造 (Facade Cladding Swap)
+
+**Prompt:**
+```
+Building exterior renovation. Replace the red brick facade with sleek silver aluminum composite panels. Keep the window openings and building shape structurally identical.
+```
+
+---
+
+### 27. 增加绿植氛围 (Biophilic Injection)
+
+**Prompt:**
+```
+Add lush indoor plants to this office lobby. Place tall Ficus trees in the corners and hanging planters from the ceiling beams. Natural, vibrant atmosphere.
+```
+
+---
+
+### 28. 季节/天气变换 (Seasonal Variation)
+
+**Prompt:**
+```
+Change season to Winter. Cover the garden ground with snow. Trees should be bare branches. Add warm light glow coming from the house windows. Cozy winter evening.
+```
+
+---
+
+### 31. 门头招牌设计 (Storefront Signage)
+
+**Prompt:**
+```
+Retail storefront render. Place a 3D neon sign reading 'URBAN CAFE' above the entrance. Font style: Retro script. Color: Bright pink. Show realistic glow reflection on the glass window.
+```
+
+---
+
+### 32. 货架陈列生成 (Visual Merchandising)
+
+**Prompt:**
+```
+Supermarket shelves visualization. Fill the shelves with neatly arranged cereal boxes and colorful packaging. Ensure distinct, non-repetitive product designs. bright, even lighting.
+```
+
+---
+
+### 33. 展台设计方案 (Exhibition Booth)
+
+**Prompt:**
+```
+3x3 meter exhibition booth design. Minimalist white style with a central reception counter. Large LED screen on the back wall displaying a abstract blue wave pattern. Spotlights on the counter.
+```
+
+---
+
+### 36. 品牌快闪店 (Pop-up Store)
+
+**Prompt:**
+```
+Pop-up store design in a mall atrium. A cylindrical structure made of translucent polycarbonate sheets. Glowing from within with purple light. Branding text 'FUTURE TECH' on the top header.
+```
+
+---
+
+### 38. 导视系统模拟 (Wayfinding Mockup)
+
+**Prompt:**
+```
+Hospital corridor interior. Apply clear vinyl wayfinding graphics to the floor: A blue line with text 'Radiology' and a red line with text 'Emergency'. Perspective adjusted to match the floor plane.
+```
+
+---
+
+### 39. 橱窗陈列设计 (Window Display)
+
+**Prompt:**
+```
+Fashion boutique window display. Two mannequins wearing avant-garde silver jackets. Background: Abstract geometric shapes suspended in air. Lighting: Dramatic purple and teal spotlights.
+```
+
+---
+
+### 41. 概念推演过程图 (Concept Diagram Sequence)
+
+**Prompt:**
+```
+Architectural concept diagram series. Three steps: 1. A simple cube. 2. The cube sliced diagonally. 3. The final form with terraced gardens. Style: Simple white isometric blocks with blue arrows showing the transformation.
+```
+
+---
+
+### 42. 渲染图转水彩手绘 (Render to Watercolor)
+
+**Prompt:**
+```
+Convert this photorealistic building render into a loose watercolor sketch. Soft washes of color, pencil outlines, bleeding edges. Artistic, hand-drawn feel. Reduce detail.
+```
+
+---
+
+### 43. 汇报排版生成 (Presentation Board Layout)
+
+**Prompt:**
+```
+Architectural presentation board layout. Arrange the provided render (top), floor plan (bottom left), and material palette (bottom right) on a clean white background. Add a title 'PROJECT HORIZON' in minimalist sans-serif font.
+```
+
+---
 
 ---
 
