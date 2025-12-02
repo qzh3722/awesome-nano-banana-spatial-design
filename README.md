@@ -24,30 +24,43 @@
 > **📌 Disclaimer**: All images used in case examples are for educational and research purposes only. Input images are sourced from publicly available architectural drawings or created specifically for demonstration. This repository does not claim ownership of referenced images and they are used under fair use principles for non-commercial educational purposes.
 
 ---
-
 ## 🎨 Concept Ideation
 *From zero to creative concepts*
 
 **Cases in this stage:**  
-[城市俯视等距 3D 卡通微缩场景](#城市俯视等距-3d-卡通微缩场景) • [PS5 的技术蓝图](#ps5-的技术蓝图)
+[1.1 Wardrobe Deconstruction](#1.1-wardrobe-deconstruction) • [1.2 3D Storefront Render](#1.2-3d-storefront-render)
 
-### 城市俯视等距 3D 卡通微缩场景
+### 1.1 Wardrobe Deconstruction
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
-Present a clear, 45° top-down isometric miniature 3D cartoon scene of [CITY], featuring its most iconic landmarks and architectural elements. Use soft, refined textures with realistic PBR materials and gentle, lifelike lighting and shadows. Integrate the current weather conditions directly into the city environment to create an immersive atmospheric mood. Use a clean, minimalistic composition with a soft, solid-colored background.
+based on an uploaded image.**
 ```
 
 ---
 
-### PS5 的技术蓝图
+### 1.2 3D Storefront Render
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
-A two-panel technical blueprint diagram in clean monochrome line-art, matching the exact layout of the provided PlayStation 1 schematic. On the left side, draw a full, intact Sony PlayStation 5 console in precise thin line-art on a white background. On the right side, draw a highly detailed, vertically exploded-view diagram of the PS5 showing each
+Ultra-realistic 3D render of a cute, miniature [BRAND NAME] storefront building.
 ```
-
----
 
 ---
 
@@ -55,621 +68,17 @@ A two-panel technical blueprint diagram in clean monochrome line-art, matching t
 *Layout optimization & circulation design*
 
 **Cases in this stage:**  
-[2.1 CAD Floor Plan to Colored Floor Plan](#21-cad-floor-plan-to-colored-floor-plan) • [1. COMPLETE SPATIAL ANALYSIS](#1-complete-spatial-analysis) • [2. ROOM NAMING STANDARDS](#2-room-naming-standards) • [3. CRITICAL RULES](#3-critical-rules) • [4. OUTPUT FORMAT](#4-output-format) • [彩色平面图生成 (Colored Floor Plan)](#彩色平面图生成-colored-floor-plan) • [景观分区分析图 (Landscape Zoning Map)](#景观分区分析图-landscape-zoning-map) • [城市肌理底图风格化 (Urban Fabric Stylization)](#城市肌理底图风格化-urban-fabric-stylization) • [办公位布局优化 (Office Desk Layout)](#办公位布局优化-office-desk-layout)
+[2.1 Colored Floor Plan](#2.1-colored-floor-plan) • [2.2 Landscape Zoning Map](#2.2-landscape-zoning-map) • [2.3 Urban Fabric Stylization](#2.3-urban-fabric-stylization) • [2.4 Office Desk Layout](#2.4-office-desk-layout)
 
----
+### 2.1 Colored Floor Plan
 
-### 2.1 CAD Floor Plan to Colored Floor Plan
+#### Input
 
-Convert technical CAD floor plans into photorealistic colored top-down visualizations with realistic furniture and clear room labels for client presentation.
+![Input Image](./assets/placeholders/input.jpg)
 
-#### Input: CAD Floor Plan
+#### Output
 
-![CAD Floor Plan Input](./assets/cases/2.1-cad-to-topview/input.jpg)
-
----
-
-#### Output: Natural Language Prompt
-
-![Natural Language Output](./assets/cases/2.1-cad-to-topview/output-natural.jpg)
-
-**Prompt:**
-```
-Transform the provided CAD floor plan into a photorealistic colored top-down visualization for client presentation. Add realistic furniture, clear room labels, and material-appropriate flooring for each space. Use soft natural lighting and maintain architectural accuracy.
-
-Room Label Language: All room labels must be in ENGLISH.
-
-IMPORTANT: Strictly follow the input floor plan. Do not add any items that are not shown in the original CAD drawing. Do not remove or omit any items that appear in the original plan. Maintain exact room count, furniture placement, and spatial layout as provided.
-```
-
----
-
-#### Output: JSON-Structured Prompt
-
-![JSON Prompt Output](./assets/cases/2.1-cad-to-topview/output-json.jpg)
-
-**Detailed JSON Prompt:**
-
-> **Why use JSON?** JSON excels at defining **structural relationships, validation rules, and constraints** that natural language cannot precisely express. It's not about repeating dimensions (which are estimates anyway), but about enforcing **exactness where it matters**: counts, separations, types, and prohibitions.
-
-**🔧 JSON Generator for New CAD Drawings:**
-
-Got a new CAD floor plan? We've created a **Reusable JSON Generator** to automate the JSON creation process. This meta-prompt template analyzes ANY CAD drawing (residential, commercial, or public space) and generates a standardized JSON prompt following our format.
-
-**How to use:**
-1. Upload your CAD floor plan to a Vision AI (e.g., Gemini Pro Vision, GPT-4 Vision, Claude 3.5 Sonnet)
-2. Copy and paste the JSON Generator Prompt Template (see below)
-3. The AI will systematically scan your floor plan and output a complete JSON prompt
-4. Review and use the generated JSON for your visualization task
-
-**Benefits:**
-- ✅ Ensures complete room coverage (no missed spaces)
-- ✅ Enforces unique naming standards automatically
-- ✅ Applies constraint-oriented approach
-- ✅ Reduces manual analysis errors
-- ✅ Works for residential, commercial, and public spaces
-
-<details>
-<summary>📋 Click to view JSON Generator Prompt Template</summary>
-
-Copy this entire prompt and use it with your CAD floor plan image:
-
-```markdown
-# JSON Prompt Generator for CAD Floor Plans
-
-> **Purpose**: Analyze the UPLOADED CAD floor plan and generate a standardized JSON prompt.
-
-## Instructions for Vision AI
-
-You are a professional architectural analyst. Analyze the uploaded CAD floor plan **exhaustively** and generate a structured JSON prompt for transforming it into a photorealistic colored top-down visualization.
-
-### 1. COMPLETE SPATIAL ANALYSIS
-
-Execute these scanning procedures in order:
-
-#### A. Grid Scan Method
-- Divide the floor plan into a 3×3 grid
-- Scan each grid cell systematically
-- Identify ALL enclosed or semi-enclosed spaces
-
-#### B. Wall Trace Method
-- Trace along perimeter walls clockwise
-- Identify every space bounded by walls
-- Include small rooms (storage, closets, powder rooms)
-
-#### C. Functional Space Checklist (Universal)
-Verify you have identified ALL applicable categories:
-
-**For ANY space type:**
-- [ ] Primary functional areas
-- [ ] Service/support areas (kitchens, restrooms, janitor rooms)
-- [ ] Storage spaces (closets, equipment rooms, warehouses)
-- [ ] Circulation spaces (entrances, lobbies, hallways, staircases)
-- [ ] Utility/mechanical spaces (equipment rooms, server rooms)
-- [ ] Outdoor/semi-outdoor spaces (balconies, terraces, courtyards)
-
-**Space Type Examples:**
-- Residential: Living rooms, bedrooms, bathrooms
-- Commercial: Workspaces, offices, meeting rooms, break rooms
-- Retail: Sales floor, fitting rooms, stockrooms
-- Hospitality: Guest rooms, lobby, restaurants, fitness centers
-- Public: Waiting areas, service counters, restrooms, exhibition halls
-
-#### D. Built-in Elements Checklist
-- [ ] Floor-mounted fixtures
-- [ ] Wall-mounted fixtures (upper cabinets)
-- [ ] Architectural alcoves (walk-in closets)
-- [ ] Plumbing fixtures
-
-### 2. ROOM NAMING STANDARDS
-
-**Unique Naming Rule**: Multiple rooms of same type MUST have unique numbers:
-- ✅ Correct: "BEDROOM 2", "BEDROOM 3", "STORAGE 1", "STORAGE 2"
-- ❌ Wrong: "BEDROOM", "BEDROOM" (duplicates)
-
-### 3. CRITICAL RULES
-
-1. **NO Estimated Dimensions**: Do NOT include sizes like "120x60cm"
-2. **NO Color Codes**: Do NOT include "#D4B896" style codes
-3. **Focus on Constraints**: Use `independence_rule`, `COUNT_CRITICAL`, `separation_rule`
-4. **Task Field**: MUST explicitly mention "UPLOADED"
-
-### 4. OUTPUT FORMAT
-
-Provide:
-1. Brief analysis summary (total rooms, categories)
-2. Complete JSON prompt in code block
-
-Use the JSON structure from the main specification below.
-
-**Now analyze the uploaded CAD and generate the JSON prompt.**
-```
-
-</details>
-
-<details>
-<summary>Click to expand full JSON specification</summary>
-
-```json
-{
-    "task": "Transform the UPLOADED CAD floor plan image into photorealistic colored top-down visualization",
-    "input_specification": {
-        "source": "uploaded_cad_drawing",
-        "constraint": "MUST_use_uploaded_image_as_ONLY_spatial_reference",
-        "prohibition": "DO_NOT_generate_alternative_layouts",
-        "verification": "output_layout_MUST_match_input_exactly"
-    },
-    "project_type": "residential_apartment",
-    "input_analysis": {
-        "total_rooms": 15,
-        "total_furniture_count": 28,
-        "total_fixtures": 7,
-        "architectural_features": 2,
-        "empty_spaces": 2
-    },
-    "output_requirements": {
-        "view_type": "orthographic_top_down",
-        "style": "photorealistic",
-        "aspect_ratio": "match_input",
-        "lighting": "natural_daylight_soft_shadows",
-        "label_language": "english",
-        "labeling_policy": {
-            "coverage": "ALL_defined_spaces_MUST_be_labeled",
-            "existing_text": "REMOVE_original_CAD_text_and_REPLACE_with_new_labels",
-            "style": "clear_sans_serif_text_centered_in_room"
-        }
-    },
-    "architectural_features": [
-        {
-            "feature_id": "walk_in_closet",
-            "location": "master_bedroom",
-            "category": "ARCHITECTURAL_not_furniture",
-            "rendering_rule": "Show as built-in space with opening, NOT as freestanding cabinet",
-            "DO_NOT_render_as": [
-                "wardrobe",
-                "cabinet",
-                "armoire",
-                "closet_furniture"
-            ]
-        },
-        {
-            "feature_id": "kitchen_upper_cabinets",
-            "location": "kitchen",
-            "category": "ARCHITECTURAL_not_furniture",
-            "rendering_rule": "Wall-mounted overhead cabinetry visible in top view"
-        }
-    ],
-    "rooms": [
-        {
-            "id": "living_room",
-            "label": "LIVING ROOM",
-            "flooring_material": "light_oak_wood",
-            "furniture_list": [
-                {
-                    "item": "sectional_sofa",
-                    "configuration": "L_shaped",
-                    "quantity": 1
-                },
-                {
-                    "item": "chaise_lounge",
-                    "quantity": 1,
-                    "independence_rule": "MUST_be_separate_from_sectional",
-                    "placement_rule": "angled_placement",
-                    "CRITICAL": "Clearly_distinct_angled_piece"
-                },
-                {
-                    "item": "coffee_table",
-                    "quantity": 1,
-                    "material": "wood"
-                },
-                {
-                    "item": "round_ottomans",
-                    "quantity": 2,
-                    "shape": "circular",
-                    "independence_rule": "distinct_from_coffee_table",
-                    "COUNT_CRITICAL": "EXACTLY_2_separate_circular_pieces_both_visible"
-                },
-                {
-                    "item": "tv_console",
-                    "quantity": 1,
-                    "material": "wood"
-                },
-                {
-                    "item": "area_rug",
-                    "quantity": 1
-                }
-            ]
-        },
-        {
-            "id": "dining_area",
-            "label": "DINING AREA",
-            "flooring_material": "ceramic_tile",
-            "furniture_list": [
-                {
-                    "item": "dining_table",
-                    "quantity": 1,
-                    "seating_capacity": 8,
-                    "material": "wood"
-                },
-                {
-                    "item": "dining_chairs",
-                    "quantity": 8,
-                    "arrangement": "4_per_long_side",
-                    "COUNT_CRITICAL": "EXACTLY_8_chairs_all_visible"
-                }
-            ]
-        },
-        {
-            "id": "kitchen",
-            "label": "KITCHEN",
-            "flooring_material": "ceramic_tile_matching_dining",
-            "furniture_list": [
-                {
-                    "item": "kitchen_island",
-                    "quantity": 1,
-                    "countertop_material": "white_quartz"
-                },
-                {
-                    "item": "bar_stools",
-                    "quantity": 4,
-                    "placement": "along_island",
-                    "COUNT_CRITICAL": "EXACTLY_4_stools_all_at_island"
-                }
-            ],
-            "fixtures": [
-                {
-                    "item": "sink",
-                    "quantity": 1,
-                    "type": "undermount"
-                },
-                {
-                    "item": "cooktop",
-                    "quantity": 1
-                }
-            ]
-        },
-        {
-            "id": "master_bedroom",
-            "label": "MASTER BEDROOM",
-            "flooring_material": "wood_matching_living_room",
-            "furniture_list": [
-                {
-                    "item": "bed",
-                    "type": "queen_or_king",
-                    "quantity": 1
-                },
-                {
-                    "item": "bedside_tables",
-                    "quantity": 2,
-                    "placement": "symmetrically_flanking_bed",
-                    "COUNT_CRITICAL": "EXACTLY_2_one_each_side"
-                },
-                {
-                    "item": "seating",
-                    "quantity": 1,
-                    "location": "foot_of_bed"
-                }
-            ],
-            "architectural_reference": "includes_walk_in_closet"
-        },
-        {
-            "id": "bedroom_2",
-            "label": "BEDROOM 2",
-            "flooring_material": "wood_matching_living_room",
-            "furniture_list": [
-                {
-                    "item": "single_bed",
-                    "quantity": 1
-                },
-                {
-                    "item": "desk",
-                    "quantity": 1
-                },
-                {
-                    "item": "desk_chair",
-                    "quantity": 1
-                },
-                {
-                    "item": "wardrobe",
-                    "quantity": 1,
-                    "type": "standalone_furniture_not_architectural"
-                }
-            ]
-        },
-        {
-            "id": "master_bathroom",
-            "label": "MASTER BATHROOM",
-            "flooring_material": "marble_look_tile",
-            "fixtures": [
-                {
-                    "item": "bathtub",
-                    "quantity": 1
-                },
-                {
-                    "item": "shower_enclosure",
-                    "quantity": 1,
-                    "separation_rule": "SEPARATE_from_bathtub_NOT_combined",
-                    "CRITICAL": "Two_distinct_fixtures_shower_AND_tub"
-                },
-                {
-                    "item": "toilet",
-                    "quantity": 1
-                },
-                {
-                    "item": "vanity",
-                    "sink_count": 2,
-                    "type": "double_sink",
-                    "COUNT_CRITICAL": "EXACTLY_2_sinks"
-                }
-            ],
-            "total_fixture_verification": 4
-        },
-        {
-            "id": "secondary_bathroom",
-            "label": "BATHROOM 2",
-            "flooring_material": "ceramic_tile",
-            "fixtures": [
-                {
-                    "item": "shower_stall",
-                    "quantity": 1,
-                    "NO_BATHTUB": true,
-                    "CRITICAL": "SHOWER_ONLY_absolutely_NO_bathtub"
-                },
-                {
-                    "item": "toilet",
-                    "quantity": 1
-                },
-                {
-                    "item": "vanity",
-                    "sink_count": 1,
-                    "type": "single_sink",
-                    "COUNT_CRITICAL": "EXACTLY_1_sink_NOT_2"
-                }
-            ],
-            "total_fixture_verification": 3
-        },
-        {
-            "id": "entrance",
-            "label": "ENTRANCE",
-            "flooring_material": "ceramic_tile_matching_kitchen",
-            "furniture_list": [],
-            "usage_note": "circulation_space_minimal_furniture"
-        },
-        {
-            "id": "storage_1",
-            "label": "STORAGE 1",
-            "flooring_material": "ceramic_tile_matching_dining",
-            "furniture_list": [],
-            "usage": "storage"
-        },
-        {
-            "id": "powder_room",
-            "label": "POWDER ROOM",
-            "flooring_material": "ceramic_tile",
-            "fixtures": [
-                {
-                    "item": "toilet",
-                    "quantity": 1
-                },
-                {
-                    "item": "vanity",
-                    "sink_count": 1,
-                    "type": "small_single_sink"
-                }
-            ],
-            "note": "guest_bathroom"
-        },
-        {
-            "id": "bathroom_1",
-            "label": "BATHROOM 1",
-            "flooring_material": "ceramic_tile",
-            "fixtures": [
-                {
-                    "item": "shower_stall",
-                    "quantity": 1
-                },
-                {
-                    "item": "toilet",
-                    "quantity": 1
-                },
-                {
-                    "item": "vanity",
-                    "sink_count": 1,
-                    "type": "single_sink"
-                }
-            ]
-        },
-        {
-            "id": "bedroom_3",
-            "label": "BEDROOM 3",
-            "flooring_material": "wood_matching_living_room",
-            "furniture_list": [
-                {
-                    "item": "single_bed",
-                    "quantity": 1
-                },
-                {
-                    "item": "desk",
-                    "quantity": 1
-                },
-                {
-                    "item": "desk_chair",
-                    "quantity": 1
-                },
-                {
-                    "item": "wardrobe",
-                    "quantity": 1,
-                    "type": "standalone"
-                }
-            ]
-        },
-        {
-            "id": "ensuite_bathroom",
-            "label": "EN-SUITE",
-            "flooring_material": "ceramic_tile",
-            "fixtures": [
-                {
-                    "item": "shower_stall",
-                    "quantity": 1,
-                    "NO_BATHTUB": true
-                },
-                {
-                    "item": "toilet",
-                    "quantity": 1
-                },
-                {
-                    "item": "vanity",
-                    "sink_count": 1,
-                    "type": "single_sink"
-                }
-            ],
-            "note": "private_bathroom_for_bedroom_3"
-        },
-        {
-            "id": "storage_2",
-            "label": "STORAGE 2",
-            "flooring_material": "ceramic_tile",
-            "furniture_list": [],
-            "usage": "storage"
-        }
-    ],
-    "empty_spaces": [
-        {
-            "id": "balcony",
-            "label": "BALCONY",
-            "flooring_material": "composite_decking",
-            "furniture_list": [],
-            "plants": [],
-            "decorative_items": [],
-            "CRITICAL_CONSTRAINT": "MUST_remain_completely_EMPTY",
-            "absolute_prohibition": [
-                "NO_furniture",
-                "NO_plants",
-                "NO_planters",
-                "NO_decorative_objects",
-                "NO_items_whatsoever"
-            ],
-            "rendering_rule": "show_ONLY_flooring_surface_nothing_else"
-        }
-    ],
-    "strict_constraints": {
-        "count_accuracy": {
-            "dining_chairs": {
-                "exact": 8,
-                "verification": "count_all_8_visible"
-            },
-            "bar_stools": {
-                "exact": 4,
-                "verification": "all_4_at_island"
-            },
-            "round_ottomans": {
-                "exact": 2,
-                "verification": "two_distinct_pieces"
-            },
-            "bedside_tables": {
-                "exact": 2,
-                "verification": "one_on_each_side"
-            },
-            "master_bath_sinks": {
-                "exact": 2,
-                "verification": "double_vanity"
-            },
-            "secondary_bath_sinks": {
-                "exact": 1,
-                "verification": "single_vanity"
-            }
-        },
-        "independence_requirements": [
-            {
-                "item": "chaise_lounge",
-                "must_be_separate_from": "sectional_sofa",
-                "visual_proof": "clearly_distinct_angled_piece"
-            },
-            {
-                "item": "round_ottomans",
-                "must_be_separate_from": "coffee_table",
-                "visual_proof": "two_separate_circular_items"
-            },
-            {
-                "item": "master_shower",
-                "must_be_separate_from": "bathtub",
-                "visual_proof": "two_distinct_fixtures_not_combined"
-            }
-        ],
-        "categorical_distinctions": {
-            "walk_in_closet": "architectural_feature_NOT_furniture",
-            "bedroom_wardrobes": "furniture_NOT_architectural",
-            "kitchen_upper_cabinets": "architectural_NOT_furniture"
-        },
-        "fixture_clarity": {
-            "master_bathroom": "has_BOTH_tub_AND_separate_shower",
-            "secondary_bathroom": "SHOWER_ONLY_absolutely_NO_bathtub",
-            "ensuite_bathroom": "SHOWER_ONLY_no_bathtub"
-        },
-        "prohibition_list": {
-            "no_added_decorative_items": [
-                "plants",
-                "vases",
-                "artwork",
-                "sculptures",
-                "throw_pillows",
-                "table_settings",
-                "books",
-                "accessories"
-            ],
-            "empty_space_enforcement": {
-                "balcony": "absolutely_nothing_allowed",
-                "entrance": "minimal_or_empty"
-            }
-        },
-        "rendering_validation": {
-            "no_added_items_rule": "strictly_only_items_with_CAD_symbols",
-            "no_removed_items_rule": "all_CAD_elements_must_appear",
-            "no_merged_elements_rule": "separate_items_stay_separate",
-            "no_hallucinated_features_rule": "no_invented_architectural_elements"
-        }
-    },
-    "verification_checklist": {
-        "room_count": 15,
-        "furniture_count": 28,
-        "fixture_count": 7,
-        "architectural_features": 2,
-        "empty_spaces": 2,
-        "mandatory_verifications": [
-            "walk_in_closet_as_architectural_not_furniture",
-            "kitchen_upper_cabinets_visible",
-            "balcony_completely_empty_verified",
-            "chaise_lounge_separate_and_angled",
-            "2_ottomans_distinct_and_visible",
-            "4_bar_stools_at_island",
-            "8_dining_chairs_present",
-            "2_bedside_tables_symmetrical",
-            "master_bath_has_separate_shower_and_tub",
-            "master_bath_has_2_sinks",
-            "secondary_bath_has_shower_only_no_tub",
-            "secondary_bath_has_1_sink",
-            "ensuite_has_shower_only"
-        ]
-    }
-}
-```
-
-</details>
-
----
-
-#### 💡 Tips
-
-- **Iterative Generation Recommended**: Natural language prompts work best with an iterative approach. Generate 2-3 variations first, select the best one, then use simple image editing tools (Photoshop, Figma, Canva) to refine minor details if needed. This hybrid workflow often produces better results than trying to perfect everything in a single prompt.
-- **Verify JSON Completeness**: Before submitting, ensure all rooms from your CAD plan are included in the JSON. Missing furniture (like ottomans or chaise lounges) will not appear in the output.
-- **Material Consistency**: Keep the same flooring material for connected spaces (e.g., kitchen + dining + entrance) for visual flow.
-- **Room Label Clarity**: JSON prompt produces more precise text rendering. If labels are unclear with natural language, use the JSON specification.
-- **Style Variations**: To change design styles, modify:
-  - Furniture materials (e.g., `"linen_fabric"` → `"leather"`)
-  - Flooring colors (e.g., `"#D4B896"` → darker/lighter tones)
-  - Overall atmosphere (`"modern_residential"` → `"luxury"`, `"minimalist"`)
-
-### 彩色平面图生成 (Colored Floor Plan)
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -678,7 +87,15 @@ Rendered architectural floor plan (top view). Fill the bedrooms with wood textur
 
 ---
 
-### 景观分区分析图 (Landscape Zoning Map)
+### 2.2 Landscape Zoning Map
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -687,7 +104,15 @@ Site analysis diagram. Overlay color-coded zones on the site plan: Green for 'Pu
 
 ---
 
-### 城市肌理底图风格化 (Urban Fabric Stylization)
+### 2.3 Urban Fabric Stylization
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -696,7 +121,15 @@ Urban figure-ground diagram (Noli map). Render all buildings as solid black mass
 
 ---
 
-### 办公位布局优化 (Office Desk Layout)
+### 2.4 Office Desk Layout
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -705,15 +138,157 @@ Open plan office interior. Rows of modern white desks with ergonomic black chair
 
 ---
 
----
-
 ## 🔧 Technical to Visual
 *CAD/drawings to photorealistic visualization*
 
 **Cases in this stage:**  
-[平面图转轴测图 (Floor Plan to Axonometric)](#平面图转轴测图-floor-plan-to-axonometric) • [剖面图转剖透视 (Section to Section Perspective)](#剖面图转剖透视-section-to-section-perspective) • [爆炸轴测图生成 (Exploded Axonometric)](#爆炸轴测图生成-exploded-axonometric) • [手绘草图转体块推敲 (Sketch to Massing Model)](#手绘草图转体块推敲-sketch-to-massing-model) • [结构系统分析图 (Structural Analysis Diagram)](#结构系统分析图-structural-analysis-diagram) • [暖通空调(HVAC)布局可视化 (HVAC Overlay)](#暖通空调hvac布局可视化-hvac-overlay) • [垂直交通流线图 (Vertical Circulation)](#垂直交通流线图-vertical-circulation) • [构造节点三维剖切 (3D Detail Callout)](#构造节点三维剖切-3d-detail-callout) • [隐蔽工程透视 (MEP X-Ray)](#隐蔽工程透视-mep-x-ray) • [施工工艺分层示意 (Construction Layers)](#施工工艺分层示意-construction-layers) • [无障碍分析图 (Accessibility Diagram)](#无障碍分析图-accessibility-diagram) • [可持续设计图解 (Sustainability Diagram)](#可持续设计图解-sustainability-diagram) • [鸟瞰图转总平面 (Aerial to Site Plan)](#鸟瞰图转总平面-aerial-to-site-plan) • [3D 打印预览图 (3D Print Preview)](#3d-打印预览图-3d-print-preview)
+[3.1 Central Subject Image](#3.1-central-subject-image) • [3.2 Photorealistic Product Shots](#3.2-photorealistic-product-shots) • [3.3 Lifestyle & Contextual Items](#3.3-lifestyle-&-contextual-items) • [3.4 Expression & Detail Sheet](#3.4-expression-&-detail-sheet) • [3.5 Central Subject Image](#3.5-central-subject-image) • [3.6 Full Holistic Deconstruction (Photorealistic Product Shots)](#3.6-full-holistic-deconstruction-photorealistic-product-shots) • [3.7 Lifestyle and Environmental Factors](#3.7-lifestyle-and-environmental-factors) • [3.8 Expression and Detail Sheet](#3.8-expression-and-detail-sheet) • [3.9 Floor Plan to Axonometric](#3.9-floor-plan-to-axonometric) • [3.10 Section to Section Perspective](#3.10-section-to-section-perspective) • [3.11 Exploded Axonometric](#3.11-exploded-axonometric) • [3.12 Sketch to Massing Model](#3.12-sketch-to-massing-model) • [3.13 Structural Analysis Diagram](#3.13-structural-analysis-diagram) • [3.14 HVAC](#3.14-hvac) • [3.15 Vertical Circulation](#3.15-vertical-circulation) • [3.16 3D Detail Callout](#3.16-3d-detail-callout) • [3.17 MEP X-Ray](#3.17-mep-x-ray) • [3.18 Construction Layers](#3.18-construction-layers) • [3.19 Accessibility Diagram](#3.19-accessibility-diagram) • [3.20 Sustainability Diagram](#3.20-sustainability-diagram) • [3.21 Aerial to Site Plan](#3.21-aerial-to-site-plan) • [3.22 3D Print Preview](#3.22-3d-print-preview) • [3.23 Structure Reference](#3.23-structure-reference) • [3.24 Iterative Process](#3.24-iterative-process) • [3.25 Using Text Capabilities for Annotation](#3.25-using-text-capabilities-for-annotation) • [3.26 Glass Railing Detail](#3.26-glass-railing-detail) • [3.27 "Structure Reference" is the Core](#3.27-structure-reference-is-the-core) • [3.28 Using "Inpainting" for Minimally Invasive Surgery](#3.28-using-inpainting-for-minimally-invasive-surgery) • [3.29 The Magic of Text Rendering](#3.29-the-magic-of-text-rendering) • [3.30 Multimodal Blending](#3.30-multimodal-blending) • [3.31 Top](#3.31-top) • [3.32 Bottom Left](#3.32-bottom-left) • [3.33 Bottom Middle](#3.33-bottom-middle) • [3.34 Bottom Right](#3.34-bottom-right)
 
-### 平面图转轴测图 (Floor Plan to Axonometric)
+### 3.1 Central Subject Image
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.2 Photorealistic Product Shots
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.3 Lifestyle & Contextual Items
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.4 Expression & Detail Sheet
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.5 Central Subject Image
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.6 Full Holistic Deconstruction (Photorealistic Product Shots)
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.7 Lifestyle and Environmental Factors
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.8 Expression and Detail Sheet
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.9 Floor Plan to Axonometric
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -722,7 +297,15 @@ Transform this 2D floor plan into a 3D isometric architectural drawing. Extrude 
 
 ---
 
-### 剖面图转剖透视 (Section to Section Perspective)
+### 3.10 Section to Section Perspective
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -731,7 +314,15 @@ Architectural section perspective based on this line drawing. Render the cut sur
 
 ---
 
-### 爆炸轴测图生成 (Exploded Axonometric)
+### 3.11 Exploded Axonometric
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -740,7 +331,15 @@ Exploded axonometric diagram of the building structure. Separate the layers vert
 
 ---
 
-### 手绘草图转体块推敲 (Sketch to Massing Model)
+### 3.12 Sketch to Massing Model
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -749,7 +348,15 @@ Convert this loose architectural sketch into a clean, geometric white massing mo
 
 ---
 
-### 结构系统分析图 (Structural Analysis Diagram)
+### 3.13 Structural Analysis Diagram
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -758,7 +365,15 @@ Structural diagram. Make the non-structural walls transparent/ghosted. Highlight
 
 ---
 
-### 暖通空调(HVAC)布局可视化 (HVAC Overlay)
+### 3.14 HVAC
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -767,7 +382,15 @@ Reflected ceiling plan visualization. Overlay 3D semi-transparent blue ducts sho
 
 ---
 
-### 垂直交通流线图 (Vertical Circulation)
+### 3.15 Vertical Circulation
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -776,7 +399,15 @@ Sectional circulation diagram. Highlight staircases and elevator shafts in glowi
 
 ---
 
-### 构造节点三维剖切 (3D Detail Callout)
+### 3.16 3D Detail Callout
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -785,7 +416,15 @@ Photorealistic 3D cutaway of a curtain wall detail based on this drawing. Show t
 
 ---
 
-### 隐蔽工程透视 (MEP X-Ray)
+### 3.17 MEP X-Ray
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -794,7 +433,15 @@ Technical visualization. A bathroom wall rendered with 50% transparency. Reveal 
 
 ---
 
-### 施工工艺分层示意 (Construction Layers)
+### 3.18 Construction Layers
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -803,7 +450,15 @@ Layered floor construction diagram. Peel back the layers to show: 1. Concrete sl
 
 ---
 
-### 无障碍分析图 (Accessibility Diagram)
+### 3.19 Accessibility Diagram
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -812,7 +467,15 @@ Accessibility analysis overlay on floor plan. Show 1.5m diameter turning circles
 
 ---
 
-### 可持续设计图解 (Sustainability Diagram)
+### 3.20 Sustainability Diagram
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -821,7 +484,15 @@ Sustainability concept section. Show blue arrows for natural ventilation airflow
 
 ---
 
-### 鸟瞰图转总平面 (Aerial to Site Plan)
+### 3.21 Aerial to Site Plan
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -830,7 +501,15 @@ Convert this aerial drone photo into a flat architectural site plan diagram. Fla
 
 ---
 
-### 3D 打印预览图 (3D Print Preview)
+### 3.22 3D Print Preview
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -839,15 +518,225 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 ---
 
+### 3.23 Structure Reference
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.24 Iterative Process
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.25 Using Text Capabilities for Annotation
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.26 Glass Railing Detail
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.27 "Structure Reference" is the Core
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.28 Using "Inpainting" for Minimally Invasive Surgery
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.29 The Magic of Text Rendering
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.30 Multimodal Blending
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.31 Top
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.32 Bottom Left
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.33 Bottom Middle
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
+---
+
+### 3.34 Bottom Right
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
 ---
 
 ## 🎨 Material & Styling
 *Material refinement & cost optimization*
 
 **Cases in this stage:**  
-[材质板转 3D 渲染 (Moodboard to Render)](#材质板转-3d-渲染-moodboard-to-render) • [定制柜体内部结构 (Joinery Internal View)](#定制柜体内部结构-joinery-internal-view) • [砖石铺贴纹理研究 (Pattern Generation)](#砖石铺贴纹理研究-pattern-generation) • [灯光照度可视化 (Lighting Falloff)](#灯光照度可视化-lighting-falloff) • [软装布艺褶皱模拟 (Fabric Physics)](#软装布艺褶皱模拟-fabric-physics) • [异形家具曲面分析 (Curved Surface Analysis)](#异形家具曲面分析-curved-surface-analysis) • [老旧材质做旧模拟 (Weathering Simulation)](#老旧材质做旧模拟-weathering-simulation) • [艺术品/挂画替换 (Art Staging)](#艺术品挂画替换-art-staging)
+[4.1 Moodboard to Render](#4.1-moodboard-to-render) • [4.2 Joinery Internal View](#4.2-joinery-internal-view) • [4.3 Pattern Generation](#4.3-pattern-generation) • [4.4 Lighting Falloff](#4.4-lighting-falloff) • [4.5 Fabric Physics](#4.5-fabric-physics) • [4.6 Curved Surface Analysis](#4.6-curved-surface-analysis) • [4.7 Weathering Simulation](#4.7-weathering-simulation) • [4.8 Art Staging](#4.8-art-staging)
 
-### 材质板转 3D 渲染 (Moodboard to Render)
+### 4.1 Moodboard to Render
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -856,7 +745,15 @@ Interior rendering of a living room using the materials from the reference image
 
 ---
 
-### 定制柜体内部结构 (Joinery Internal View)
+### 4.2 Joinery Internal View
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -865,7 +762,15 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 ---
 
-### 砖石铺贴纹理研究 (Pattern Generation)
+### 4.3 Pattern Generation
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -874,7 +779,15 @@ Close-up texture study of a brick wall. Arrange the bricks in a 'vertical stack 
 
 ---
 
-### 灯光照度可视化 (Lighting Falloff)
+### 4.4 Lighting Falloff
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -883,7 +796,15 @@ Lighting visualization. A textured stone wall lit by three recessed spotlights f
 
 ---
 
-### 软装布艺褶皱模拟 (Fabric Physics)
+### 4.5 Fabric Physics
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -892,7 +813,15 @@ Close-up of heavy velvet curtains pooling on a wooden floor. Show realistic fabr
 
 ---
 
-### 异形家具曲面分析 (Curved Surface Analysis)
+### 4.6 Curved Surface Analysis
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -901,7 +830,15 @@ Studio render of a parametric curved bench. Material: Glossy white fiberglass. U
 
 ---
 
-### 老旧材质做旧模拟 (Weathering Simulation)
+### 4.7 Weathering Simulation
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -910,7 +847,15 @@ Material aging simulation. Show a copper facade panel with realistic green patin
 
 ---
 
-### 艺术品/挂画替换 (Art Staging)
+### 4.8 Art Staging
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -919,15 +864,21 @@ Replace the painting on the wall with a large-scale abstract expressionist artwo
 
 ---
 
----
-
 ## 🖼️ Scene Rendering
 *Final presentation quality renders*
 
 **Cases in this stage:**  
-[日夜光环境转换 (Day to Night)](#日夜光环境转换-day-to-night) • [餐厅灯光氛围模拟 (Restaurant Ambiance)](#餐厅灯光氛围模拟-restaurant-ambiance) • [酒店客房标准间 (Hotel Room Visualization)](#酒店客房标准间-hotel-room-visualization) • [咖啡馆氛围板 (Cafe Mood Visualization)](#咖啡馆氛围板-cafe-mood-visualization) • [漫游关键帧生成 (Walkthrough Keyframes)](#漫游关键帧生成-walkthrough-keyframes) • [配景人物植入 (Entourage Population)](#配景人物植入-entourage-population) • [风格一致性检查 (Style Consistency Check)](#风格一致性检查-style-consistency-check)
+[5.1 Day to Night](#5.1-day-to-night) • [5.2 Restaurant Ambiance](#5.2-restaurant-ambiance) • [5.3 Hotel Room Visualization](#5.3-hotel-room-visualization) • [5.4 Cafe Mood Visualization](#5.4-cafe-mood-visualization) • [5.5 Walkthrough Keyframes](#5.5-walkthrough-keyframes) • [5.6 Entourage Population](#5.6-entourage-population) • [5.7 Style Consistency Check](#5.7-style-consistency-check)
 
-### 日夜光环境转换 (Day to Night)
+### 5.1 Day to Night
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -936,7 +887,15 @@ Turn this daylight photo into a night scene. Dark blue sky. Turn on the interior
 
 ---
 
-### 餐厅灯光氛围模拟 (Restaurant Ambiance)
+### 5.2 Restaurant Ambiance
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -945,7 +904,15 @@ Fine dining restaurant interior. Moody, low-key lighting. Tables illuminated by 
 
 ---
 
-### 酒店客房标准间 (Hotel Room Visualization)
+### 5.3 Hotel Room Visualization
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -954,7 +921,15 @@ Luxury hotel room interior. King size bed with crisp white linens and a beige th
 
 ---
 
-### 咖啡馆氛围板 (Cafe Mood Visualization)
+### 5.4 Cafe Mood Visualization
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -963,7 +938,15 @@ Rustic coffee shop interior. Exposed brick walls, reclaimed wood tables, industr
 
 ---
 
-### 漫游关键帧生成 (Walkthrough Keyframes)
+### 5.5 Walkthrough Keyframes
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -972,7 +955,15 @@ Cinematic storyboard keyframes for architectural walkthrough. Frame 1: Wide shot
 
 ---
 
-### 配景人物植入 (Entourage Population)
+### 5.6 Entourage Population
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -981,7 +972,15 @@ Populate this plaza render with diverse groups of people. People walking, sittin
 
 ---
 
-### 风格一致性检查 (Style Consistency Check)
+### 5.7 Style Consistency Check
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -990,15 +989,21 @@ Apply the color grading and lighting style of Reference Image A to Reference Ima
 
 ---
 
----
-
 ## ⚙️ Specialized Tasks
 *Special use cases & advanced features*
 
 **Cases in this stage:**  
-[保留家具换硬装 (Keep Furniture, Change Room)](#保留家具换硬装-keep-furniture-change-room) • [清空房间 (Declutter / Empty Room)](#清空房间-declutter--empty-room) • [虚拟软装 (Virtual Staging)](#虚拟软装-virtual-staging) • [厨房翻新：换门板不换布局 (Kitchen Facelift)](#厨房翻新换门板不换布局-kitchen-facelift) • [窗外景观替换 (View Replacement)](#窗外景观替换-view-replacement) • [建筑立面改造 (Facade Cladding Swap)](#建筑立面改造-facade-cladding-swap) • [增加绿植氛围 (Biophilic Injection)](#增加绿植氛围-biophilic-injection) • [季节/天气变换 (Seasonal Variation)](#季节天气变换-seasonal-variation) • [门头招牌设计 (Storefront Signage)](#门头招牌设计-storefront-signage) • [货架陈列生成 (Visual Merchandising)](#货架陈列生成-visual-merchandising) • [展台设计方案 (Exhibition Booth)](#展台设计方案-exhibition-booth) • [品牌快闪店 (Pop-up Store)](#品牌快闪店-pop-up-store) • [导视系统模拟 (Wayfinding Mockup)](#导视系统模拟-wayfinding-mockup) • [橱窗陈列设计 (Window Display)](#橱窗陈列设计-window-display) • [概念推演过程图 (Concept Diagram Sequence)](#概念推演过程图-concept-diagram-sequence) • [渲染图转水彩手绘 (Render to Watercolor)](#渲染图转水彩手绘-render-to-watercolor) • [汇报排版生成 (Presentation Board Layout)](#汇报排版生成-presentation-board-layout)
+[6.1 Keep Furniture, Change Room](#6.1-keep-furniture,-change-room) • [6.2 Declutter / Empty Room](#6.2-declutter--empty-room) • [6.3 Virtual Staging](#6.3-virtual-staging) • [6.4 Kitchen Facelift](#6.4-kitchen-facelift) • [6.5 View Replacement](#6.5-view-replacement) • [6.6 Facade Cladding Swap](#6.6-facade-cladding-swap) • [6.7 Biophilic Injection](#6.7-biophilic-injection) • [6.8 Seasonal Variation](#6.8-seasonal-variation) • [6.9 Storefront Signage](#6.9-storefront-signage) • [6.10 Visual Merchandising](#6.10-visual-merchandising) • [6.11 Exhibition Booth](#6.11-exhibition-booth) • [6.12 Pop-up Store](#6.12-pop-up-store) • [6.13 Wayfinding Mockup](#6.13-wayfinding-mockup) • [6.14 Window Display](#6.14-window-display) • [6.15 Concept Diagram Sequence](#6.15-concept-diagram-sequence) • [6.16 Render to Watercolor](#6.16-render-to-watercolor) • [6.17 Presentation Board Layout](#6.17-presentation-board-layout) • [6.18 Entrance Focal Tree](#6.18-entrance-focal-tree)
 
-### 保留家具换硬装 (Keep Furniture, Change Room)
+### 6.1 Keep Furniture, Change Room
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1007,7 +1012,15 @@ Renovation visualization. Change the wall color to sage green and the floor to h
 
 ---
 
-### 清空房间 (Declutter / Empty Room)
+### 6.2 Declutter / Empty Room
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1016,7 +1029,15 @@ Real estate photo editing. Remove all furniture, boxes, and clutter from this ro
 
 ---
 
-### 虚拟软装 (Virtual Staging)
+### 6.3 Virtual Staging
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1025,7 +1046,15 @@ Virtual staging. Furnish this empty bedroom with a Queen-sized bed, two nightsta
 
 ---
 
-### 厨房翻新：换门板不换布局 (Kitchen Facelift)
+### 6.4 Kitchen Facelift
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1034,7 +1063,15 @@ Kitchen facelift. Replace the oak cabinet doors with matte navy blue flat-panel 
 
 ---
 
-### 窗外景观替换 (View Replacement)
+### 6.5 View Replacement
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1043,7 +1080,15 @@ View substitution. Replace the white window background with a cityscape at twili
 
 ---
 
-### 建筑立面改造 (Facade Cladding Swap)
+### 6.6 Facade Cladding Swap
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1052,7 +1097,15 @@ Building exterior renovation. Replace the red brick facade with sleek silver alu
 
 ---
 
-### 增加绿植氛围 (Biophilic Injection)
+### 6.7 Biophilic Injection
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1061,7 +1114,15 @@ Add lush indoor plants to this office lobby. Place tall Ficus trees in the corne
 
 ---
 
-### 季节/天气变换 (Seasonal Variation)
+### 6.8 Seasonal Variation
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1070,7 +1131,15 @@ Change season to Winter. Cover the garden ground with snow. Trees should be bare
 
 ---
 
-### 门头招牌设计 (Storefront Signage)
+### 6.9 Storefront Signage
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1079,7 +1148,15 @@ Retail storefront render. Place a 3D neon sign reading 'URBAN CAFE' above the en
 
 ---
 
-### 货架陈列生成 (Visual Merchandising)
+### 6.10 Visual Merchandising
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1088,7 +1165,15 @@ Supermarket shelves visualization. Fill the shelves with neatly arranged cereal 
 
 ---
 
-### 展台设计方案 (Exhibition Booth)
+### 6.11 Exhibition Booth
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1097,7 +1182,15 @@ Supermarket shelves visualization. Fill the shelves with neatly arranged cereal 
 
 ---
 
-### 品牌快闪店 (Pop-up Store)
+### 6.12 Pop-up Store
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1106,7 +1199,15 @@ Pop-up store design in a mall atrium. A cylindrical structure made of translucen
 
 ---
 
-### 导视系统模拟 (Wayfinding Mockup)
+### 6.13 Wayfinding Mockup
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1115,7 +1216,15 @@ Hospital corridor interior. Apply clear vinyl wayfinding graphics to the floor: 
 
 ---
 
-### 橱窗陈列设计 (Window Display)
+### 6.14 Window Display
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1124,7 +1233,15 @@ Fashion boutique window display. Two mannequins wearing avant-garde silver jacke
 
 ---
 
-### 概念推演过程图 (Concept Diagram Sequence)
+### 6.15 Concept Diagram Sequence
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1133,7 +1250,15 @@ Architectural concept diagram series. Three steps: 1. A simple cube. 2. The cube
 
 ---
 
-### 渲染图转水彩手绘 (Render to Watercolor)
+### 6.16 Render to Watercolor
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1142,7 +1267,15 @@ Convert this photorealistic building render into a loose watercolor sketch. Soft
 
 ---
 
-### 汇报排版生成 (Presentation Board Layout)
+### 6.17 Presentation Board Layout
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
 
 **Prompt:**
 ```
@@ -1151,7 +1284,23 @@ Architectural presentation board layout. Arrange the provided render (top), floo
 
 ---
 
+### 6.18 Entrance Focal Tree
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+
+```
+
 ---
+
 
 ## 📚 Resources
 
