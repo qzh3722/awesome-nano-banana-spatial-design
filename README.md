@@ -183,6 +183,25 @@ Use the JSON structure from the main specification below.
     },
     "project_type": "residential_apartment",
     "input_analysis": {
+        "total_rooms": 15,
+        "total_furniture_count": 28,
+        "total_fixtures": 7,
+        "architectural_features": 2,
+        "empty_spaces": 2
+    },
+    "output_requirements": {
+        "view_type": "orthographic_top_down",
+        "style": "photorealistic",
+        "aspect_ratio": "match_input",
+        "lighting": "natural_daylight_soft_shadows",
+        "label_language": "english",
+        "labeling_policy": {
+            "coverage": "ALL_defined_spaces_MUST_be_labeled",
+            "existing_text": "REMOVE_original_CAD_text_and_REPLACE_with_new_labels",
+            "style": "clear_sans_serif_text_centered_in_room"
+        }
+    },
+    "architectural_features": [
         {
             "feature_id": "walk_in_closet",
             "location": "master_bedroom",
@@ -394,16 +413,16 @@ Use the JSON structure from the main specification below.
         {
             "id": "entrance",
             "label": "ENTRANCE",
-            "flooring_material": "tile_matching_kitchen",
+            "flooring_material": "ceramic_tile_matching_kitchen",
             "furniture_list": [],
-            "usage_note": "circulation_space_minimal_or_empty"
+            "usage_note": "circulation_space_minimal_furniture"
         },
         {
             "id": "storage_1",
             "label": "STORAGE 1",
-            "flooring_material": "tile_matching_dining",
+            "flooring_material": "ceramic_tile_matching_dining",
             "furniture_list": [],
-            "usage": "storage_utility"
+            "usage": "storage"
         },
         {
             "id": "powder_room",
@@ -468,7 +487,7 @@ Use the JSON structure from the main specification below.
         },
         {
             "id": "ensuite_bathroom",
-            "label": "EN-SUITE BATHROOM",
+            "label": "EN-SUITE",
             "flooring_material": "ceramic_tile",
             "fixtures": [
                 {
@@ -486,14 +505,14 @@ Use the JSON structure from the main specification below.
                     "type": "single_sink"
                 }
             ],
-            "note": "attached_to_bedroom_3"
+            "note": "private_bathroom_for_bedroom_3"
         },
         {
             "id": "storage_2",
             "label": "STORAGE 2",
             "flooring_material": "ceramic_tile",
             "furniture_list": [],
-            "usage": "storage_utility"
+            "usage": "storage"
         }
     ],
     "empty_spaces": [
@@ -510,9 +529,9 @@ Use the JSON structure from the main specification below.
                 "NO_plants",
                 "NO_planters",
                 "NO_decorative_objects",
-                "NO_any_items"
+                "NO_items_whatsoever"
             ],
-            "rendering_rule": "show_ONLY_flooring_surface"
+            "rendering_rule": "show_ONLY_flooring_surface_nothing_else"
         }
     ],
     "strict_constraints": {
@@ -527,11 +546,11 @@ Use the JSON structure from the main specification below.
             },
             "round_ottomans": {
                 "exact": 2,
-                "verification": "both_distinguishable"
+                "verification": "two_distinct_pieces"
             },
             "bedside_tables": {
                 "exact": 2,
-                "verification": "one_each_side"
+                "verification": "one_on_each_side"
             },
             "master_bath_sinks": {
                 "exact": 2,
@@ -539,7 +558,7 @@ Use the JSON structure from the main specification below.
             },
             "secondary_bath_sinks": {
                 "exact": 1,
-                "verification": "single_only"
+                "verification": "single_vanity"
             }
         },
         "independence_requirements": [
@@ -551,10 +570,10 @@ Use the JSON structure from the main specification below.
             {
                 "item": "round_ottomans",
                 "must_be_separate_from": "coffee_table",
-                "visual_proof": "two_separate_circular_forms"
+                "visual_proof": "two_separate_circular_items"
             },
             {
-                "item": "master_bath_shower",
+                "item": "master_shower",
                 "must_be_separate_from": "bathtub",
                 "visual_proof": "two_distinct_fixtures_not_combined"
             }
@@ -565,9 +584,9 @@ Use the JSON structure from the main specification below.
             "kitchen_upper_cabinets": "architectural_NOT_furniture"
         },
         "fixture_clarity": {
-            "master_bathroom": "has_BOTH_bathtub_AND_separate_shower",
-            "secondary_bathroom": "has_shower_ONLY_absolutely_NO_bathtub",
-            "ensuite_bathroom": "has_shower_ONLY_NO_bathtub"
+            "master_bathroom": "has_BOTH_tub_AND_separate_shower",
+            "secondary_bathroom": "SHOWER_ONLY_absolutely_NO_bathtub",
+            "ensuite_bathroom": "SHOWER_ONLY_no_bathtub"
         },
         "prohibition_list": {
             "no_added_decorative_items": [
@@ -582,7 +601,7 @@ Use the JSON structure from the main specification below.
             ],
             "empty_space_enforcement": {
                 "balcony": "absolutely_nothing_allowed",
-                "entrance": "minimal_or_empty_only"
+                "entrance": "minimal_or_empty"
             }
         },
         "rendering_validation": {
@@ -603,15 +622,15 @@ Use the JSON structure from the main specification below.
             "kitchen_upper_cabinets_visible",
             "balcony_completely_empty_verified",
             "chaise_lounge_separate_and_angled",
-            "2_ottomans_both_distinct_and_visible",
-            "4_bar_stools_all_at_island",
-            "8_dining_chairs_all_present",
+            "2_ottomans_distinct_and_visible",
+            "4_bar_stools_at_island",
+            "8_dining_chairs_present",
             "2_bedside_tables_symmetrical",
-            "master_bath_both_shower_AND_tub_separate",
-            "master_bath_2_sinks_verified",
-            "secondary_bath_shower_only_NO_tub_confirmed",
-            "secondary_bath_1_sink_only_verified",
-            "ensuite_bath_shower_only_NO_tub"
+            "master_bath_has_separate_shower_and_tub",
+            "master_bath_has_2_sinks",
+            "secondary_bath_has_shower_only_no_tub",
+            "secondary_bath_has_1_sink",
+            "ensuite_has_shower_only"
         ]
     }
 }

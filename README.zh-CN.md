@@ -85,7 +85,7 @@
 
 **🔧 新CAD图纸的JSON生成器：**
 
-有一张新的CAD平面图？我们创建了一个**可复用的JSON生成器**来自动化JSON创建过程。这个元提示词模板可以分析任何CAD图纸（住宅、商业或公共空间），并按照我们的格式生成标准化的JSON提示词。
+一张新的CAD平面图？我们创建了一个**可复用的JSON生成器**来自动化JSON创建过程。这个元提示词模板可以分析任何CAD图纸（住宅、商业或公共空间），并按照我们的格式生成标准化的JSON提示词。
 
 **如何使用：**
 1. 将您的CAD平面图上传到Vision AI（如Gemini Pro Vision, GPT-4 Vision, Claude 3.5 Sonnet）
@@ -203,7 +203,12 @@
     "style": "photorealistic",
     "aspect_ratio": "match_input",
     "lighting": "natural_daylight_soft_shadows",
-    "label_language": "chinese"
+    "label_language": "chinese",
+    "labeling_policy": {
+      "coverage": "ALL_defined_spaces_MUST_be_labeled",
+      "existing_text": "REMOVE_original_CAD_text_and_REPLACE_with_new_labels",
+      "style": "clear_sans_serif_text_centered_in_room"
+    }
   },
   "architectural_features": [
     {
@@ -661,51 +666,51 @@
 *CAD/图纸转照片级可视化*
 
 **本阶段案例：**  
-[3.1 立面图转街景渲染](#) • [3.2 剖面图转室内透视](#)
+[3.1 立面图转街景](#) • [3.2 剖面图转室内透视](#)
 
 ---
 
 ## 🎨 材质软装
-*材质细化与成本控制*
+*材质细化与成本优化*
 
 **本阶段案例：**  
-[4.1 材料方案对比](#) • [4.2 材料降级替换](#)
+[4.1 材质方案对比](#) • [4.2 预算降级材质替换](#)
 
 ---
 
 ## 🖼️ 场景渲染
-*最终演示级效果图*
+*最终演示级渲染*
 
 **本阶段案例：**  
-[5.1 多角度室内渲染](#) • [5.2 日景夜景对比](#)
+[5.1 多角度室内漫游](#) • [5.2 日夜景光照模拟](#)
 
 ---
 
 ## ⚙️ 专项应用
-*特殊场景与高级功能*
+*特殊用途与高级功能*
 
 **本阶段案例：**  
-[6.1 多语言导视标识](#) • [6.2 四季变化](#) • [6.3 现场问题快速方案](#)
+[6.1 多语言导视系统](#) • [6.2 季节性装饰变化](#) • [6.3 现场快速方案](#)
 
 ---
 
 ## 📚 资源
 
-- 📖 [CASE_TEMPLATE.md](./CASE_TEMPLATE.md) - 新案例创建模板
-- 🤝 [CONTRIBUTING.md](./CONTRIBUTING.md) - 贡献指南
+- 📖 [CASE_TEMPLATE.md](./CASE_TEMPLATE.md) - 创建新案例的模板
+- 🤝 [CONTRIBUTING.md](./CONTRIBUTING.md) - 如何贡献新案例
 
 ---
 
 ## 许可证
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+本项目采用 MIT 许可证 - 详情请见 [LICENSE](LICENSE) 文件。
 
 ---
 
 <div align="center">
 
-**用❤️为设计师打造**
+**Made with ❤️ for Designers**
 
-基于 **Gemini 3 Pro Image** 技术
+Powered by **Gemini 3 Pro Image**
 
 </div>
