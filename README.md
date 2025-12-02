@@ -4,9 +4,9 @@
 
 # Awesome Nano Banana Spatial Design
 
-> Professional prompts for spatial designers powered by Gemini 3 Pro Image
+> Professional Prompt Library for Spatial Designers using Gemini 3 Pro Image
  
-<!-- Language Switcher -->
+<!-- Language Switch -->
 **English** | [简体中文](./README.zh-CN.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -19,16 +19,16 @@
 ## 🎯 Quick Navigation
 
 **Jump to Workflow Stage:**  
-[🎨 Concept Ideation](#-concept-ideation) • [📐 Space Planning](#-space-planning) • [🔧 Technical to Visual](#-technical-to-visual) • [🎨 Material & Styling](#-material--styling) • [🖼️ Scene Rendering](#-scene-rendering) • [⚙️ Specialized Tasks](#%EF%B8%8F-specialized-tasks)
+[🎨 Concept Ideation](#-concept-ideation) • [📐 Space Planning](#-space-planning) • [🔧 Technical to Visual](#-technical-to-visual) • [🎨 Material & Styling](#-material--styling) • [🖼️ Scene Rendering](#%EF%B8%8F-scene-rendering) • [⚙️ Specialized Tasks](#%EF%B8%8F-specialized-tasks)
 
-> **📌 Disclaimer**: All images used in case examples are for educational and research purposes only. Input images are sourced from publicly available architectural drawings or created specifically for demonstration. This repository does not claim ownership of referenced images and they are used under fair use principles for non-commercial educational purposes.
+> **📌 Disclaimer**: All images used in this case library are for educational and research purposes only. Input images are from public architectural drawings or created specifically for demonstration. This repository claims no ownership of referenced images; all images are used under fair use principles for non-commercial educational purposes.
 
 ---
 ## 🎨 Concept Ideation
-*From zero to creative concepts*
+*From Zero to Creative Concept*
 
 **Cases in this stage:**  
-[1.1 Wardrobe Deconstruction](#1.1-wardrobe-deconstruction) • [1.2 3D Storefront Render](#1.2-3d-storefront-render)
+[1.1 Wardrobe Deconstruction](#11-wardrobe-deconstruction) • [1.2 3D Storefront Render](#12-3d-storefront-render)
 
 ### 1.1 Wardrobe Deconstruction
 
@@ -65,28 +65,632 @@ Ultra-realistic 3D render of a cute, miniature [BRAND NAME] storefront building.
 ---
 
 ## 📐 Space Planning
-*Layout optimization & circulation design*
+*Layout Optimization & Circulation Design*
 
 **Cases in this stage:**  
-[2.1 Colored Floor Plan](#2.1-colored-floor-plan) • [2.2 Landscape Zoning Map](#2.2-landscape-zoning-map) • [2.3 Urban Fabric Stylization](#2.3-urban-fabric-stylization) • [2.4 Office Desk Layout](#2.4-office-desk-layout)
+[2.1 Colored Floor Plan](#21-colored-floor-plan) • [2.2 Landscape Zoning Map](#22-landscape-zoning-map) • [2.3 Urban Fabric Stylization](#23-urban-fabric-stylization) • [2.4 Office Desk Layout](#24-office-desk-layout)
 
 ### 2.1 Colored Floor Plan
 
-#### Input
 
-![Input Image](./assets/placeholders/input.jpg)
+Convert technical CAD floor plans into photorealistic colored top views with real furniture and clear room labels for client presentations.
 
-#### Output
+#### Input: CAD Floor Plan
 
-![Output Image](./assets/placeholders/output.jpg)
+![CAD Floor Plan Input](./assets/cases/2.1-cad-to-topview/input.jpg)
+
+---
+
+#### Output: Natural Language Prompt
+
+![Natural Language Output](./assets/cases/2.1-cad-to-topview/output-natural-cn.jpg)
+
+**Room Labeling:**
+- You MUST label **every** space in the floor plan (e.g., "Living Room", "Bedroom 2", "Storage").
+- If the original CAD drawing contains text or labels, **you MUST completely remove them** and replace them with new, clear, professional labels.
+- Do not overlay new labels on top of old ones.
+
+**Output Requirements:**
+- **View**: Orthographic top-down view.
+- **Style**: Photorealistic, natural lighting.
 
 **Prompt:**
 ```
-Rendered architectural floor plan (top view). Fill the bedrooms with wood texture, bathrooms with tile texture, and living areas with carpet. Add subtle drop shadows to furniture to show depth. Style: High-end real estate marketing brochure, flat lighting.
+Convert the provided CAD floor plan into a photorealistic colored top view for client presentation. Add real furniture, clear room labels, and appropriate flooring materials for each space. Use soft natural lighting and maintain architectural accuracy.
+
+Room Label Language: All room labels must be in English.
+
+IMPORTANT: Strictly follow the input floor plan. Do not add any items not present in the original CAD. Do not remove or omit any items present in the original. Maintain accurate room count, furniture placement, and spatial layout.
 ```
 
 ---
 
+#### Output: JSON Structured Prompt
+
+![JSON Prompt Output](./assets/cases/2.1-cad-to-topview/output-json-cn.jpg)
+
+**Detailed JSON Prompt:**
+
+> **Why JSON?** JSON excels at defining **structured relationships, validation rules, and constraints** that natural language cannot express precisely. The focus is not on repeating dimensions (which are estimates), but on **enforcing precision where it matters**: counts, independence, types, and prohibitions.
+
+**🔧 JSON Generator for New CAD Drawings:**
+
+Have a new CAD floor plan? We created a **Reusable JSON Generator** to automate the JSON creation process. This meta-prompt template can analyze any CAD drawing (residential, commercial, or public space) and generate a standardized JSON prompt in our format.
+
+**How to Use:**
+1. Upload your CAD floor plan to Vision AI (e.g., Gemini Pro Vision, GPT-4 Vision, Claude 3.5 Sonnet)
+2. Copy and paste the JSON Generator Prompt Template (see below)
+3. AI will systematically scan your floor plan and output a complete JSON prompt
+4. Review and use the generated JSON for visualization tasks
+
+**Benefits:**
+- ✅ Ensures complete room coverage (no missed spaces)
+- ✅ Automates unique naming standards
+- ✅ Applies constraint-oriented approach
+- ✅ Reduces manual analysis errors
+- ✅ Works for residential, commercial, and public spaces
+
+<details>
+<summary>📋 Click to View JSON Generator Prompt Template</summary>
+
+Copy the entire prompt and use it with your CAD floor plan:
+
+```markdown
+# CAD Floor Plan JSON Prompt Generator
+
+> **Purpose**: Analyze uploaded CAD floor plans and generate standardized JSON prompts.
+
+## Vision AI Instructions
+
+You are a professional architectural analyst. **Exhaustively analyze** the uploaded CAD floor plan and generate a structured JSON prompt for converting it into a photorealistic colored top view.
+
+### 1. Complete Spatial Analysis
+
+Execute the following scanning procedures in order:
+
+#### A. Grid Scan Method
+- Divide the floor plan into a 3x3 grid
+- Systematically scan each grid cell
+- Identify all enclosed or semi-enclosed spaces
+
+#### B. Wall Tracing Method
+- Trace clockwise along the perimeter walls
+- Identify every space enclosed by walls
+- Include small rooms (storage, closets, powder rooms)
+
+#### C. Functional Space Checklist (Universal)
+Verify you have identified all applicable categories:
+
+**For ANY Space Type:**
+- [ ] Primary Function Areas
+- [ ] Service/Support Areas (Kitchen, Bathroom, Utility)
+- [ ] Storage Spaces (Wardrobes, Closets, Storage Rooms)
+- [ ] Circulation Spaces (Entrance, Lobby, Hallway, Stairs)
+- [ ] Utility/MEP Spaces (Equipment Room, Server Room)
+- [ ] Outdoor/Semi-outdoor Spaces (Balcony, Terrace, Courtyard)
+
+**Space Type Examples:**
+- Residential: Living Room, Bedroom, Bathroom
+- Commercial: Workstation, Office, Meeting Room, Pantry
+- Retail: Sales Area, Fitting Room, Stockroom
+- Hospitality: Guest Room, Lobby, Restaurant, Gym
+- Public: Waiting Area, Reception, Restroom, Exhibition Hall
+
+#### D. Built-in Element Checklist
+- [ ] Floor Fixtures
+- [ ] Wall Fixtures (Upper Cabinets)
+- [ ] Architectural Niches (Walk-in Closets)
+- [ ] Sanitary Ware
+
+### 2. Room Naming Standards
+
+**Unique Naming Rule**: Rooms of the same type MUST have unique numbers:
+- ✅ Correct: "Bedroom 2", "Bedroom 3", "Storage 1"
+- ❌ Incorrect: "Bedroom", "Bedroom" (Duplicate)
+
+### 3. Key Rules
+
+1. **No Estimated Dimensions**: Do not include dimensions like "120x60cm"
+2. **No Color Codes**: Do not include codes like "#D4B896"
+3. **Focus on Constraints**: Use `independence_rule`, `COUNT_CRITICAL`, `separation_rule`
+4. **Task Field**: Must explicitly mention "uploaded"
+
+### 4. Output Format
+
+Provide:
+1. Brief Analysis Summary (Total rooms, categories)
+2. Complete JSON Prompt in a code block
+
+Use the JSON structure specification below.
+
+**Now analyze the uploaded CAD and generate the JSON prompt.**
+```
+
+</details>
+
+<details>
+<summary>Click to Expand Full JSON Specification</summary>
+
+```json
+{
+  "task": "Convert uploaded CAD floor plan to photorealistic colored top view",
+  "input_specification": {
+    "source": "uploaded CAD drawing",
+    "constraint": "Must use uploaded image as sole spatial reference",
+    "prohibition": "Do not generate alternative layouts",
+    "verification": "Output layout must match input exactly"
+  },
+  "project_type": "residential_apartment",
+  "input_analysis": {
+    "total_rooms": 15,
+    "total_furniture_count": 28,
+    "total_fixtures": 7,
+    "architectural_features": 2,
+    "empty_spaces": 2
+  },
+  "output_requirements": {
+    "view_type": "orthographic_top_down",
+    "style": "photorealistic",
+    "aspect_ratio": "match_input",
+    "lighting": "natural_daylight_soft_shadows",
+    "label_language": "english",
+    "labeling_policy": {
+      "coverage": "ALL_defined_spaces_MUST_be_labeled",
+      "existing_text": "REMOVE_original_CAD_text_and_REPLACE_with_new_labels",
+      "style": "clear_sans_serif_text_centered_in_room"
+    }
+  },
+  "architectural_features": [
+    {
+      "feature_id": "walk_in_closet",
+      "location": "master_bedroom",
+      "category": "ARCHITECTURAL_not_furniture",
+      "rendering_rule": "Show as built-in space with opening, not standalone cabinet",
+      "DO_NOT_render_as": [
+        "wardrobe",
+        "cabinet",
+        "armoire",
+        "furniture"
+      ]
+    },
+    {
+      "feature_id": "kitchen_upper_cabinets",
+      "location": "kitchen",
+      "category": "ARCHITECTURAL_not_furniture",
+      "rendering_rule": "Wall-mounted upper cabinets visible in top view"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "living_room",
+      "label": "Living Room",
+      "flooring_material": "Light Oak Wood",
+      "furniture_list": [
+        {
+          "item": "Sectional Sofa",
+          "configuration": "L-shaped",
+          "quantity": 1
+        },
+        {
+          "item": "Chaise Lounge",
+          "quantity": 1,
+          "independence_rule": "Must be separate from sectional sofa",
+          "placement_rule": "Angled placement",
+          "CRITICAL": "Distinct independent angled piece"
+        },
+        {
+          "item": "Coffee Table",
+          "quantity": 1,
+          "material": "Wood"
+        },
+        {
+          "item": "Round Ottomans",
+          "quantity": 2,
+          "shape": "Round",
+          "independence_rule": "Distinct from coffee table",
+          "COUNT_CRITICAL": "Exactly 2 independent round pieces visible"
+        },
+        {
+          "item": "TV Stand",
+          "quantity": 1,
+          "material": "Wood"
+        },
+        {
+          "item": "Rug",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "dining_area",
+      "label": "Dining Room",
+      "flooring_material": "Tile",
+      "furniture_list": [
+        {
+          "item": "Dining Table",
+          "quantity": 1,
+          "seating_capacity": 8,
+          "material": "Wood"
+        },
+        {
+          "item": "Dining Chairs",
+          "quantity": 8,
+          "arrangement": "4 on each long side",
+          "COUNT_CRITICAL": "Exactly 8 chairs all visible"
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "label": "Kitchen",
+      "flooring_material": "Tile",
+      "furniture_list": [
+        {
+          "item": "Kitchen Island",
+          "quantity": 1,
+          "countertop_material": "White Quartz"
+        },
+        {
+          "item": "Bar Stools",
+          "quantity": 4,
+          "placement": "Along island",
+          "COUNT_CRITICAL": "Exactly 4 stools at island"
+        }
+      ],
+      "fixtures": [
+        {
+          "item": "Sink",
+          "quantity": 1,
+          "type": "Undermount"
+        },
+        {
+          "item": "Stovetop",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "master_bedroom",
+      "label": "Master Bedroom",
+      "flooring_material": "Wood",
+      "furniture_list": [
+        {
+          "item": "Bed",
+          "type": "King Size",
+          "quantity": 1
+        },
+        {
+          "item": "Nightstands",
+          "quantity": 2,
+          "placement": "Symmetrical on both sides",
+          "COUNT_CRITICAL": "Exactly 2, one on each side"
+        },
+        {
+          "item": "Bench",
+          "quantity": 1,
+          "location": "End of bed"
+        }
+      ],
+      "architectural_reference": "Includes Walk-in Closet"
+    },
+    {
+      "id": "bedroom_2",
+      "label": "Bedroom 2",
+      "flooring_material": "Wood",
+      "furniture_list": [
+        {
+          "item": "Single Bed",
+          "quantity": 1
+        },
+        {
+          "item": "Desk",
+          "quantity": 1
+        },
+        {
+          "item": "Desk Chair",
+          "quantity": 1
+        },
+        {
+          "item": "Wardrobe",
+          "quantity": 1,
+          "type": "Freestanding Furniture"
+        }
+      ]
+    },
+    {
+      "id": "master_bathroom",
+      "label": "Master Bath",
+      "flooring_material": "Marble Tile",
+      "fixtures": [
+        {
+          "item": "Bathtub",
+          "quantity": 1
+        },
+        {
+          "item": "Shower Stall",
+          "quantity": 1,
+          "separation_rule": "Separate from bathtub",
+          "CRITICAL": "Two independent fixtures: Shower AND Bathtub"
+        },
+        {
+          "item": "Toilet",
+          "quantity": 1
+        },
+        {
+          "item": "Vanity Sink",
+          "sink_count": 2,
+          "type": "Double Vanity",
+          "COUNT_CRITICAL": "Exactly 2 sinks"
+        }
+      ],
+      "total_fixture_verification": 4
+    },
+    {
+      "id": "secondary_bathroom",
+      "label": "Bath 2",
+      "flooring_material": "Tile",
+      "fixtures": [
+        {
+          "item": "Shower Stall",
+          "quantity": 1,
+          "NO_BATHTUB": true,
+          "CRITICAL": "Shower ONLY, absolutely NO bathtub"
+        },
+        {
+          "item": "Toilet",
+          "quantity": 1
+        },
+        {
+          "item": "Vanity Sink",
+          "sink_count": 1,
+          "type": "Single Vanity",
+          "COUNT_CRITICAL": "Exactly 1 sink"
+        }
+      ],
+      "total_fixture_verification": 3
+    },
+    {
+      "id": "entrance",
+      "label": "Entrance",
+      "flooring_material": "Tile",
+      "furniture_list": [],
+      "usage_note": "Circulation space, minimal or no furniture"
+    },
+    {
+      "id": "storage_1",
+      "label": "Storage 1",
+      "flooring_material": "Tile",
+      "furniture_list": [],
+      "usage": "Storage"
+    },
+    {
+      "id": "powder_room",
+      "label": "Powder Room",
+      "flooring_material": "Tile",
+      "fixtures": [
+        {
+          "item": "Toilet",
+          "quantity": 1
+        },
+        {
+          "item": "Vanity Sink",
+          "sink_count": 1,
+          "type": "Small Single"
+        }
+      ],
+      "note": "Guest Restroom"
+    },
+    {
+      "id": "bathroom_1",
+      "label": "Bath 1",
+      "flooring_material": "Tile",
+      "fixtures": [
+        {
+          "item": "Shower Stall",
+          "quantity": 1
+        },
+        {
+          "item": "Toilet",
+          "quantity": 1
+        },
+        {
+          "item": "Vanity Sink",
+          "sink_count": 1,
+          "type": "Single"
+        }
+      ]
+    },
+    {
+      "id": "bedroom_3",
+      "label": "Bedroom 3",
+      "flooring_material": "Wood",
+      "furniture_list": [
+        {
+          "item": "Single Bed",
+          "quantity": 1
+        },
+        {
+          "item": "Desk",
+          "quantity": 1
+        },
+        {
+          "item": "Desk Chair",
+          "quantity": 1
+        },
+        {
+          "item": "Wardrobe",
+          "quantity": 1,
+          "type": "Freestanding"
+        }
+      ]
+    },
+    {
+      "id": "ensuite_bathroom",
+      "label": "Ensuite",
+      "flooring_material": "Tile",
+      "fixtures": [
+        {
+          "item": "Shower Stall",
+          "quantity": 1,
+          "NO_BATHTUB": true
+        },
+        {
+          "item": "Toilet",
+          "quantity": 1
+        },
+        {
+          "item": "Vanity Sink",
+          "sink_count": 1,
+          "type": "Single"
+        }
+      ],
+      "note": "Private bath for Bedroom 3"
+    },
+    {
+      "id": "storage_2",
+      "label": "Storage 2",
+      "flooring_material": "Tile",
+      "furniture_list": [],
+      "usage": "Storage"
+    }
+  ],
+  "empty_spaces": [
+    {
+      "id": "balcony",
+      "label": "Balcony",
+      "flooring_material": "Decking",
+      "furniture_list": [],
+      "plants": [],
+      "decorative_items": [],
+      "CRITICAL_CONSTRAINT": "Must remain completely empty",
+      "absolute_prohibition": [
+        "NO_furniture",
+        "NO_plants",
+        "NO_pots",
+        "NO_decor",
+        "NO_items"
+      ],
+      "rendering_rule": "Show flooring only, nothing else"
+    }
+  ],
+  "strict_constraints": {
+    "count_accuracy": {
+      "dining_chairs": {
+        "exact": 8,
+        "verification": "Count all 8 visible"
+      },
+      "bar_stools": {
+        "exact": 4,
+        "verification": "All 4 at island"
+      },
+      "round_ottomans": {
+        "exact": 2,
+        "verification": "Two distinct pieces"
+      },
+      "bedside_tables": {
+        "exact": 2,
+        "verification": "One on each side"
+      },
+      "master_bath_sinks": {
+        "exact": 2,
+        "verification": "Double vanity"
+      },
+      "secondary_bath_sinks": {
+        "exact": 1,
+        "verification": "Single vanity only"
+      }
+    },
+    "independence_requirements": [
+      {
+        "item": "Chaise Lounge",
+        "must_be_separate_from": "Sectional Sofa",
+        "visual_proof": "Distinct angled piece"
+      },
+      {
+        "item": "Round Ottomans",
+        "must_be_separate_from": "Coffee Table",
+        "visual_proof": "Two independent round shapes"
+      },
+      {
+        "item": "Master Shower",
+        "must_be_separate_from": "Bathtub",
+        "visual_proof": "Two separate fixtures"
+      }
+    ],
+    "categorical_distinctions": {
+      "walk_in_closet": "Architectural Feature",
+      "bedroom_wardrobes": "Furniture",
+      "kitchen_upper_cabinets": "Architectural Feature"
+    },
+    "fixture_clarity": {
+      "master_bathroom": "Has BOTH Bathtub AND Shower",
+      "secondary_bathroom": "Shower ONLY, NO Bathtub",
+      "ensuite_bathroom": "Shower ONLY, NO Bathtub"
+    },
+    "prohibition_list": {
+      "no_added_decorative_items": [
+        "Plants",
+        "Vases",
+        "Art",
+        "Sculptures",
+        "Pillows",
+        "Table settings",
+        "Books",
+        "Accessories"
+      ],
+      "empty_space_enforcement": {
+        "balcony": "Absolutely NO items allowed",
+        "entrance": "Minimal or empty"
+      }
+    },
+    "rendering_validation": {
+      "no_added_items_rule": "Strictly render ONLY items corresponding to CAD symbols",
+      "no_removed_items_rule": "All CAD elements must appear",
+      "no_merged_elements_rule": "Independent items remain independent",
+      "no_hallucinated_features_rule": "Do not invent architectural elements"
+    }
+  },
+  "verification_checklist": {
+    "room_count": 15,
+    "furniture_count": 28,
+    "fixture_count": 7,
+    "architectural_features": 2,
+    "empty_spaces": 2,
+    "mandatory_verifications": [
+      "Walk-in Closet as architectural feature",
+      "Kitchen Upper Cabinets visible",
+      "Balcony completely empty",
+      "Chaise Lounge independent and angled",
+      "2 Ottomans independent and visible",
+      "4 Bar Stools at island",
+      "8 Dining Chairs present",
+      "2 Nightstands symmetrical",
+      "Master Bath has separate Shower and Tub",
+      "Master Bath has 2 sinks",
+      "Bath 2 has Shower ONLY",
+      "Bath 2 has 1 sink",
+      "Ensuite has Shower ONLY"
+    ]
+  }
+}
+```
+
+</details>
+
+---
+
+#### 💡 Tips
+
+- **Iterative Generation**: Natural language prompts work best iteratively. Generate 2-3 variations, pick the best one, and refine details with simple image editing tools (Photoshop, Figma, Canva). This hybrid workflow often beats trying to perfect everything in a single prompt.
+- **Check JSON Completeness**: Ensure all rooms from the CAD are included in the JSON before submitting. Missing furniture (like ottomans or chaise) will not appear in the output.
+- **Material Consistency**: Keep flooring materials consistent across connected spaces (e.g., Kitchen + Dining + Entrance) for visual flow.
+- **Label Clarity**: JSON prompts yield more precise text rendering. If natural language labels are unclear, use the JSON specification.
+- **Style Variations**: To change the design style, modify:
+  - Furniture materials (e.g., `"Linen Fabric"` → `"Leather"`)
+  - Flooring colors (e.g., `"#D4B896"` → Darker/Lighter shades)
+  - Overall atmosphere (`"Modern Residential"` → `"Luxury"`, `"Minimalist"`)
+
+---
 ### 2.2 Landscape Zoning Map
 
 #### Input
@@ -139,10 +743,10 @@ Open plan office interior. Rows of modern white desks with ergonomic black chair
 ---
 
 ## 🔧 Technical to Visual
-*CAD/drawings to photorealistic visualization*
+*Technical Drawings to Visualization*
 
 **Cases in this stage:**  
-[3.1 Central Subject Image](#3.1-central-subject-image) • [3.2 Photorealistic Product Shots](#3.2-photorealistic-product-shots) • [3.3 Lifestyle & Contextual Items](#3.3-lifestyle-&-contextual-items) • [3.4 Expression & Detail Sheet](#3.4-expression-&-detail-sheet) • [3.5 Central Subject Image](#3.5-central-subject-image) • [3.6 Full Holistic Deconstruction (Photorealistic Product Shots)](#3.6-full-holistic-deconstruction-photorealistic-product-shots) • [3.7 Lifestyle and Environmental Factors](#3.7-lifestyle-and-environmental-factors) • [3.8 Expression and Detail Sheet](#3.8-expression-and-detail-sheet) • [3.9 Floor Plan to Axonometric](#3.9-floor-plan-to-axonometric) • [3.10 Section to Section Perspective](#3.10-section-to-section-perspective) • [3.11 Exploded Axonometric](#3.11-exploded-axonometric) • [3.12 Sketch to Massing Model](#3.12-sketch-to-massing-model) • [3.13 Structural Analysis Diagram](#3.13-structural-analysis-diagram) • [3.14 HVAC](#3.14-hvac) • [3.15 Vertical Circulation](#3.15-vertical-circulation) • [3.16 3D Detail Callout](#3.16-3d-detail-callout) • [3.17 MEP X-Ray](#3.17-mep-x-ray) • [3.18 Construction Layers](#3.18-construction-layers) • [3.19 Accessibility Diagram](#3.19-accessibility-diagram) • [3.20 Sustainability Diagram](#3.20-sustainability-diagram) • [3.21 Aerial to Site Plan](#3.21-aerial-to-site-plan) • [3.22 3D Print Preview](#3.22-3d-print-preview) • [3.23 Structure Reference](#3.23-structure-reference) • [3.24 Iterative Process](#3.24-iterative-process) • [3.25 Using Text Capabilities for Annotation](#3.25-using-text-capabilities-for-annotation) • [3.26 Glass Railing Detail](#3.26-glass-railing-detail) • [3.27 "Structure Reference" is the Core](#3.27-structure-reference-is-the-core) • [3.28 Using "Inpainting" for Minimally Invasive Surgery](#3.28-using-inpainting-for-minimally-invasive-surgery) • [3.29 The Magic of Text Rendering](#3.29-the-magic-of-text-rendering) • [3.30 Multimodal Blending](#3.30-multimodal-blending) • [3.31 Top](#3.31-top) • [3.32 Bottom Left](#3.32-bottom-left) • [3.33 Bottom Middle](#3.33-bottom-middle) • [3.34 Bottom Right](#3.34-bottom-right)
+[3.1 Central Subject Image](#31-central-subject-image) • [3.2 Complete Ensemble Deconstruction](#32-complete-ensemble-deconstruction) • [3.3 Lifestyle & Contextual Items](#33-lifestyle--contextual-items) • [3.4 Expression & Detail Sheet](#34-expression--detail-sheet) • [3.5 Central Subject Image](#35-central-subject-image) • [3.6 Complete Ensemble Deconstruction](#36-complete-ensemble-deconstruction) • [3.7 Lifestyle and Environmental Factors](#37-lifestyle-and-environmental-factors) • [3.8 Expression and Detail Sheet](#38-expression-and-detail-sheet) • [3.9 Floor Plan to Axonometric](#39-floor-plan-to-axonometric) • [3.10 Section to Section Perspective](#310-section-to-section-perspective) • [3.11 Exploded Axonometric](#311-exploded-axonometric) • [3.12 Sketch to Massing Model](#312-sketch-to-massing-model) • [3.13 Structural Analysis Diagram](#313-structural-analysis-diagram) • [3.14 HVAC](#314-hvac) • [3.15 Vertical Circulation](#315-vertical-circulation) • [3.16 3D Detail Callout](#316-3d-detail-callout) • [3.17 MEP X-Ray](#317-mep-x-ray) • [3.18 Construction Layers](#318-construction-layers) • [3.19 Accessibility Diagram](#319-accessibility-diagram) • [3.20 Sustainability Diagram](#320-sustainability-diagram) • [3.21 Aerial to Site Plan](#321-aerial-to-site-plan) • [3.22 3D Print Preview](#322-3d-print-preview) • [3.23 Structure Reference](#323-structure-reference) • [3.24 Iterative Process](#324-iterative-process) • [3.25 Using Text Capabilities for Annotation](#325-using-text-capabilities-for-annotation) • [3.26 Glass Railing Detail](#326-glass-railing-detail) • [3.27 "Structure Reference" is the Core](#327-structure-reference-is-the-core) • [3.28 Using "Inpainting" for Minimally Invasive Surgery](#328-using-inpainting-for-minimally-invasive-surgery) • [3.29 The Magic of Text Rendering](#329-the-magic-of-text-rendering) • [3.30 Multimodal Blending](#330-multimodal-blending) • [3.31 Main Image](#331-main-image) • [3.32 Small Image](#332-small-image) • [3.33 Small Image](#333-small-image) • [3.34 Small Image](#334-small-image)
 
 ### 3.1 Central Subject Image
 
@@ -161,7 +765,7 @@ Open plan office interior. Rows of modern white desks with ergonomic black chair
 
 ---
 
-### 3.2 Photorealistic Product Shots
+### 3.2 Complete Ensemble Deconstruction
 
 #### Input
 
@@ -229,7 +833,7 @@ Open plan office interior. Rows of modern white desks with ergonomic black chair
 
 ---
 
-### 3.6 Full Holistic Deconstruction (Photorealistic Product Shots)
+### 3.6 Complete Ensemble Deconstruction
 
 #### Input
 
@@ -654,7 +1258,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 ---
 
-### 3.31 Top
+### 3.31 Main Image
 
 #### Input
 
@@ -671,7 +1275,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 ---
 
-### 3.32 Bottom Left
+### 3.32 Small Image
 
 #### Input
 
@@ -688,7 +1292,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 ---
 
-### 3.33 Bottom Middle
+### 3.33 Small Image
 
 #### Input
 
@@ -705,7 +1309,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 ---
 
-### 3.34 Bottom Right
+### 3.34 Small Image
 
 #### Input
 
@@ -723,12 +1327,12 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 ---
 
 ## 🎨 Material & Styling
-*Material refinement & cost optimization*
+*Materials & Styling*
 
 **Cases in this stage:**  
-[4.1 Moodboard to Render](#4.1-moodboard-to-render) • [4.2 Joinery Internal View](#4.2-joinery-internal-view) • [4.3 Pattern Generation](#4.3-pattern-generation) • [4.4 Lighting Falloff](#4.4-lighting-falloff) • [4.5 Fabric Physics](#4.5-fabric-physics) • [4.6 Curved Surface Analysis](#4.6-curved-surface-analysis) • [4.7 Weathering Simulation](#4.7-weathering-simulation) • [4.8 Art Staging](#4.8-art-staging)
+[4.1 材质板转 3D 渲染](#41-材质板转-3d-渲染) • [4.2 定制柜体内部结构](#42-定制柜体内部结构) • [4.3 砖石铺贴纹理研究](#43-砖石铺贴纹理研究) • [4.4 灯光照度可视化](#44-灯光照度可视化) • [4.5 软装布艺褶皱模拟](#45-软装布艺褶皱模拟) • [4.6 异形家具曲面分析](#46-异形家具曲面分析) • [4.7 老旧材质做旧模拟](#47-老旧材质做旧模拟) • [4.8 艺术品/挂画替换](#48-艺术品挂画替换)
 
-### 4.1 Moodboard to Render
+### 4.1 材质板转 3D 渲染
 
 #### Input
 
@@ -745,7 +1349,7 @@ Interior rendering of a living room using the materials from the reference image
 
 ---
 
-### 4.2 Joinery Internal View
+### 4.2 定制柜体内部结构
 
 #### Input
 
@@ -762,7 +1366,7 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 ---
 
-### 4.3 Pattern Generation
+### 4.3 砖石铺贴纹理研究
 
 #### Input
 
@@ -779,7 +1383,7 @@ Close-up texture study of a brick wall. Arrange the bricks in a 'vertical stack 
 
 ---
 
-### 4.4 Lighting Falloff
+### 4.4 灯光照度可视化
 
 #### Input
 
@@ -796,7 +1400,7 @@ Lighting visualization. A textured stone wall lit by three recessed spotlights f
 
 ---
 
-### 4.5 Fabric Physics
+### 4.5 软装布艺褶皱模拟
 
 #### Input
 
@@ -813,7 +1417,7 @@ Close-up of heavy velvet curtains pooling on a wooden floor. Show realistic fabr
 
 ---
 
-### 4.6 Curved Surface Analysis
+### 4.6 异形家具曲面分析
 
 #### Input
 
@@ -830,7 +1434,7 @@ Studio render of a parametric curved bench. Material: Glossy white fiberglass. U
 
 ---
 
-### 4.7 Weathering Simulation
+### 4.7 老旧材质做旧模拟
 
 #### Input
 
@@ -847,7 +1451,7 @@ Material aging simulation. Show a copper facade panel with realistic green patin
 
 ---
 
-### 4.8 Art Staging
+### 4.8 艺术品/挂画替换
 
 #### Input
 
@@ -865,12 +1469,12 @@ Replace the painting on the wall with a large-scale abstract expressionist artwo
 ---
 
 ## 🖼️ Scene Rendering
-*Final presentation quality renders*
+*Scene Rendering*
 
 **Cases in this stage:**  
-[5.1 Day to Night](#5.1-day-to-night) • [5.2 Restaurant Ambiance](#5.2-restaurant-ambiance) • [5.3 Hotel Room Visualization](#5.3-hotel-room-visualization) • [5.4 Cafe Mood Visualization](#5.4-cafe-mood-visualization) • [5.5 Walkthrough Keyframes](#5.5-walkthrough-keyframes) • [5.6 Entourage Population](#5.6-entourage-population) • [5.7 Style Consistency Check](#5.7-style-consistency-check)
+[5.1 日夜光环境转换](#51-日夜光环境转换) • [5.2 餐厅灯光氛围模拟](#52-餐厅灯光氛围模拟) • [5.3 酒店客房标准间](#53-酒店客房标准间) • [5.4 咖啡馆氛围板](#54-咖啡馆氛围板) • [5.5 漫游关键帧生成](#55-漫游关键帧生成) • [5.6 配景人物植入](#56-配景人物植入) • [5.7 风格一致性检查](#57-风格一致性检查)
 
-### 5.1 Day to Night
+### 5.1 日夜光环境转换
 
 #### Input
 
@@ -887,7 +1491,7 @@ Turn this daylight photo into a night scene. Dark blue sky. Turn on the interior
 
 ---
 
-### 5.2 Restaurant Ambiance
+### 5.2 餐厅灯光氛围模拟
 
 #### Input
 
@@ -904,7 +1508,7 @@ Fine dining restaurant interior. Moody, low-key lighting. Tables illuminated by 
 
 ---
 
-### 5.3 Hotel Room Visualization
+### 5.3 酒店客房标准间
 
 #### Input
 
@@ -921,7 +1525,7 @@ Luxury hotel room interior. King size bed with crisp white linens and a beige th
 
 ---
 
-### 5.4 Cafe Mood Visualization
+### 5.4 咖啡馆氛围板
 
 #### Input
 
@@ -938,7 +1542,7 @@ Rustic coffee shop interior. Exposed brick walls, reclaimed wood tables, industr
 
 ---
 
-### 5.5 Walkthrough Keyframes
+### 5.5 漫游关键帧生成
 
 #### Input
 
@@ -955,7 +1559,7 @@ Cinematic storyboard keyframes for architectural walkthrough. Frame 1: Wide shot
 
 ---
 
-### 5.6 Entourage Population
+### 5.6 配景人物植入
 
 #### Input
 
@@ -972,7 +1576,7 @@ Populate this plaza render with diverse groups of people. People walking, sittin
 
 ---
 
-### 5.7 Style Consistency Check
+### 5.7 风格一致性检查
 
 #### Input
 
@@ -990,12 +1594,12 @@ Apply the color grading and lighting style of Reference Image A to Reference Ima
 ---
 
 ## ⚙️ Specialized Tasks
-*Special use cases & advanced features*
+*Specialized Tasks*
 
 **Cases in this stage:**  
-[6.1 Keep Furniture, Change Room](#6.1-keep-furniture,-change-room) • [6.2 Declutter / Empty Room](#6.2-declutter--empty-room) • [6.3 Virtual Staging](#6.3-virtual-staging) • [6.4 Kitchen Facelift](#6.4-kitchen-facelift) • [6.5 View Replacement](#6.5-view-replacement) • [6.6 Facade Cladding Swap](#6.6-facade-cladding-swap) • [6.7 Biophilic Injection](#6.7-biophilic-injection) • [6.8 Seasonal Variation](#6.8-seasonal-variation) • [6.9 Storefront Signage](#6.9-storefront-signage) • [6.10 Visual Merchandising](#6.10-visual-merchandising) • [6.11 Exhibition Booth](#6.11-exhibition-booth) • [6.12 Pop-up Store](#6.12-pop-up-store) • [6.13 Wayfinding Mockup](#6.13-wayfinding-mockup) • [6.14 Window Display](#6.14-window-display) • [6.15 Concept Diagram Sequence](#6.15-concept-diagram-sequence) • [6.16 Render to Watercolor](#6.16-render-to-watercolor) • [6.17 Presentation Board Layout](#6.17-presentation-board-layout) • [6.18 Entrance Focal Tree](#6.18-entrance-focal-tree)
+[6.1 保留家具换硬装](#61-保留家具换硬装) • [6.2 清空房间](#62-清空房间) • [6.3 虚拟软装](#63-虚拟软装) • [6.4 厨房翻新：换门板不换布局](#64-厨房翻新换门板不换布局) • [6.5 窗外景观替换](#65-窗外景观替换) • [6.6 建筑立面改造](#66-建筑立面改造) • [6.7 增加绿植氛围](#67-增加绿植氛围) • [6.8 季节/天气变换](#68-季节天气变换) • [6.9 门头招牌设计](#69-门头招牌设计) • [6.10 货架陈列生成](#610-货架陈列生成) • [6.11 展台设计方案](#611-展台设计方案) • [6.12 品牌快闪店](#612-品牌快闪店) • [6.13 导视系统模拟](#613-导视系统模拟) • [6.14 橱窗陈列设计](#614-橱窗陈列设计) • [6.15 概念推演过程图](#615-概念推演过程图) • [6.16 渲染图转水彩手绘](#616-渲染图转水彩手绘) • [6.17 汇报排版生成](#617-汇报排版生成) • [6.18 入口对景树](#618-入口对景树)
 
-### 6.1 Keep Furniture, Change Room
+### 6.1 保留家具换硬装
 
 #### Input
 
@@ -1012,7 +1616,7 @@ Renovation visualization. Change the wall color to sage green and the floor to h
 
 ---
 
-### 6.2 Declutter / Empty Room
+### 6.2 清空房间
 
 #### Input
 
@@ -1029,7 +1633,7 @@ Real estate photo editing. Remove all furniture, boxes, and clutter from this ro
 
 ---
 
-### 6.3 Virtual Staging
+### 6.3 虚拟软装
 
 #### Input
 
@@ -1046,7 +1650,7 @@ Virtual staging. Furnish this empty bedroom with a Queen-sized bed, two nightsta
 
 ---
 
-### 6.4 Kitchen Facelift
+### 6.4 厨房翻新：换门板不换布局
 
 #### Input
 
@@ -1063,7 +1667,7 @@ Kitchen facelift. Replace the oak cabinet doors with matte navy blue flat-panel 
 
 ---
 
-### 6.5 View Replacement
+### 6.5 窗外景观替换
 
 #### Input
 
@@ -1080,7 +1684,7 @@ View substitution. Replace the white window background with a cityscape at twili
 
 ---
 
-### 6.6 Facade Cladding Swap
+### 6.6 建筑立面改造
 
 #### Input
 
@@ -1097,7 +1701,7 @@ Building exterior renovation. Replace the red brick facade with sleek silver alu
 
 ---
 
-### 6.7 Biophilic Injection
+### 6.7 增加绿植氛围
 
 #### Input
 
@@ -1114,7 +1718,7 @@ Add lush indoor plants to this office lobby. Place tall Ficus trees in the corne
 
 ---
 
-### 6.8 Seasonal Variation
+### 6.8 季节/天气变换
 
 #### Input
 
@@ -1131,7 +1735,7 @@ Change season to Winter. Cover the garden ground with snow. Trees should be bare
 
 ---
 
-### 6.9 Storefront Signage
+### 6.9 门头招牌设计
 
 #### Input
 
@@ -1148,7 +1752,7 @@ Retail storefront render. Place a 3D neon sign reading 'URBAN CAFE' above the en
 
 ---
 
-### 6.10 Visual Merchandising
+### 6.10 货架陈列生成
 
 #### Input
 
@@ -1165,7 +1769,7 @@ Supermarket shelves visualization. Fill the shelves with neatly arranged cereal 
 
 ---
 
-### 6.11 Exhibition Booth
+### 6.11 展台设计方案
 
 #### Input
 
@@ -1182,7 +1786,7 @@ Supermarket shelves visualization. Fill the shelves with neatly arranged cereal 
 
 ---
 
-### 6.12 Pop-up Store
+### 6.12 品牌快闪店
 
 #### Input
 
@@ -1199,7 +1803,7 @@ Pop-up store design in a mall atrium. A cylindrical structure made of translucen
 
 ---
 
-### 6.13 Wayfinding Mockup
+### 6.13 导视系统模拟
 
 #### Input
 
@@ -1216,7 +1820,7 @@ Hospital corridor interior. Apply clear vinyl wayfinding graphics to the floor: 
 
 ---
 
-### 6.14 Window Display
+### 6.14 橱窗陈列设计
 
 #### Input
 
@@ -1233,7 +1837,7 @@ Fashion boutique window display. Two mannequins wearing avant-garde silver jacke
 
 ---
 
-### 6.15 Concept Diagram Sequence
+### 6.15 概念推演过程图
 
 #### Input
 
@@ -1250,7 +1854,7 @@ Architectural concept diagram series. Three steps: 1. A simple cube. 2. The cube
 
 ---
 
-### 6.16 Render to Watercolor
+### 6.16 渲染图转水彩手绘
 
 #### Input
 
@@ -1267,7 +1871,7 @@ Convert this photorealistic building render into a loose watercolor sketch. Soft
 
 ---
 
-### 6.17 Presentation Board Layout
+### 6.17 汇报排版生成
 
 #### Input
 
@@ -1284,7 +1888,7 @@ Architectural presentation board layout. Arrange the provided render (top), floo
 
 ---
 
-### 6.18 Entrance Focal Tree
+### 6.18 入口对景树
 
 #### Input
 
