@@ -51,15 +51,15 @@ Using the uploaded floor plan as the base image, arrange furniture and soft furn
 
 #### Input
 
-![Input Image](./assets/placeholders/input.jpg)
+![Input Image](./assets/cases/1.2-3d-storefront-render/input.jpg)
 
 #### Output
 
-![Output Image](./assets/placeholders/output.jpg)
+![Output Image](./assets/cases/1.2-3d-storefront-render/output.jpg)
 
 **Prompt:**
 ```
-Ultra-realistic 3D render of a cute, miniature [BRAND NAME] storefront building.
+Ultra-realistic 3D render of a cute, miniature [Uploaded images] building.
 ```
 
 ---

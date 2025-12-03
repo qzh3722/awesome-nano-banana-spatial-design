@@ -51,15 +51,15 @@
 
 #### 输入
 
-![输入图片](./assets/placeholders/input.jpg)
+![输入图片](./assets/cases/1.2-3d-storefront-render/input.jpg)
 
 #### 输出
 
-![输出图片](./assets/placeholders/output.jpg)
+![输出图片](./assets/cases/1.2-3d-storefront-render/output.jpg)
 
 **提示词：**
 ```
-Ultra-realistic 3D render of a cute, miniature [BRAND NAME] storefront building.
+超写实3D渲染，可爱的迷你[上传图片]建筑。
 ```
 
 ---
