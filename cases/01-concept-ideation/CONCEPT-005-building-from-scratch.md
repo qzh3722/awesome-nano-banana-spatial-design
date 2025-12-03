@@ -6,10 +6,10 @@
 >
 > 无需参考图片，仅通过文字描述生成建筑可视化。
 
-![Text Input](../../assets/placeholders/input_text.jpg)
-*Input: Text Description / 输入：文字描述*
+![Text Input](../../assets/placeholders/input.jpg)
+*Input: Text Description (Placeholder) / 输入：文字描述（占位符）*
 
-![Output Render](../../assets/placeholders/output.jpg)
+![Output Render](../../assets/cases/1.2-building-from-scratch/output.jpg)
 *Output: Architectural Render (Placeholder) / 输出：建筑渲染（占位符）*
 
 ---

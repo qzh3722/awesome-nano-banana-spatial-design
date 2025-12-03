@@ -57,7 +57,7 @@ Using the uploaded floor plan as the base image, arrange furniture and soft furn
 
 #### Output
 
-![Output Image](./assets/placeholders/output.jpg)
+![Output Image](./assets/cases/1.2-building-from-scratch/output.jpg)
 
 **Prompt:**
 ```

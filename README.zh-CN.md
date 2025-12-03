@@ -57,7 +57,7 @@
 
 #### 输出
 
-![输出图片](./assets/placeholders/output.jpg)
+![输出图片](./assets/cases/1.2-building-from-scratch/output.jpg)
 
 **提示词：**
 ```
