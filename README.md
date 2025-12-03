@@ -809,7 +809,7 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 **Prompt:**
 ```
-
+Generate a visual breakdown of the subject's attire, presenting each item as a separate, high-quality product photograph. This breakdown must include: Outer and Mid-Layers (All visible garments and accessories), Foundational Elements (A technical illustration of the essential structural garments). Include detailed close-ups of key materials.
 ```
 
 ---
@@ -826,7 +826,7 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 **Prompt:**
 ```
-
+Based on the subject's style, infer and generate a collection of 4-6 photorealistic items that suggest their likely environment, interests, or daily routine.
 ```
 
 ---
@@ -843,7 +843,7 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 **Prompt:**
 ```
-
+Generate a series of 3-4 close-up portraits showing a range of natural, context-appropriate expressions.
 ```
 
 ---
@@ -860,7 +860,7 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 **Prompt:**
 ```
-
+Place the subject from the uploaded image in a full-body pose as the central focus. Maintain the subject's likeness (face, hair, clothing) while enhancing the image to a professional, high-fashion photographic standard.
 ```
 
 ---
@@ -877,7 +877,7 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 **Prompt:**
 ```
-
+Generate a visual breakdown of the subject's attire, presenting each item as a separate, high-quality product photograph. This breakdown must include: Outer and Mid-Layers (All visible garments and accessories), Foundational Elements (A technical illustration of the essential structural garments). Include detailed close-ups of key materials.
 ```
 
 ---
@@ -894,7 +894,7 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 **Prompt:**
 ```
-
+Based on the subject's style, infer and generate a collection of 4-6 photorealistic items that suggest their likely environment, interests, or daily routine.
 ```
 
 ---
@@ -911,7 +911,7 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 
 **Prompt:**
 ```
-
+Generate a series of 3-4 close-up portraits showing a range of natural, context-appropriate expressions.
 ```
 
 ---
@@ -1166,7 +1166,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+Apply the color grading and lighting style of Reference Image A to Reference Image B. Make them look like they belong to the same photography set. Keep the content of Image B unchanged.
 ```
 
 ---
@@ -1183,7 +1183,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+Do not try to complete all work with a single Prompt. Generate the massing first, then the materials, and finally use Inpainting to fix details (such as changing a light or adding a person).
 ```
 
 ---
@@ -1200,7 +1200,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+Nano Banana Pro has strong text capabilities. You can ask it to generate floor plans with labels like 'Kitchen', 'Living Room' directly in the Prompt, saving the step of adding text in PS later.
 ```
 
 ---
@@ -1217,7 +1217,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+3D technical detail of frameless glass balustrade shoe base channel embedded in concrete. Show the stainless steel cladding cover. Close-up macro view.
 ```
 
 ---
@@ -1234,7 +1234,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+In all scenarios involving 'renovation', 'coloring', or 'redrawing', be sure to enable the Structure Reference function and set a high weight (e.g., 0.8-1.0), otherwise the AI will arbitrarily change the wall positions, which is disastrous for designers.
 ```
 
 ---
@@ -1251,7 +1251,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+Do not redraw the entire image every time. For example, if you just want to change a garage door or add shutters, please use the Inpainting function and only paint the area that needs modification, so as to ensure that the surrounding environment remains unchanged.
 ```
 
 ---
@@ -1268,7 +1268,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+When generating analysis diagrams, ask directly in the Prompt to generate charts with text such as 'Sun Path', 'Private Zone'. Nano Banana Pro's text generation capability is far superior to old models.
 ```
 
 ---
@@ -1285,7 +1285,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+Scenario: Client likes the materials of Image A, the lighting of Image B, and their own floor plan of Image C. Operation: Use A and B as Style Reference, and C as Structure Reference to generate a fused scheme in one go.
 ```
 
 ---
@@ -1302,7 +1302,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+A wide-angle perspective view of the main living area, showing the connection between the living room and dining area. Apply a consistent Modern Minimalist style with warm oak wood flooring and off-white walls. Photorealistic rendering, soft natural lighting.
 ```
 
 ---
@@ -1319,7 +1319,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+A view of the Master Bedroom, focusing on the bed and window. Apply a consistent Modern Minimalist style with warm oak wood flooring and off-white walls. Photorealistic rendering, soft natural lighting.
 ```
 
 ---
@@ -1336,7 +1336,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+A view of the Home Office / Study room. Apply a consistent Modern Minimalist style with warm oak wood flooring and off-white walls. Photorealistic rendering, soft natural lighting.
 ```
 
 ---
@@ -1353,7 +1353,7 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 
 **Prompt:**
 ```
-
+A 3D top-down floor plan view showing the furniture layout. Apply a consistent Modern Minimalist style with warm oak wood flooring and off-white walls. Photorealistic rendering, soft natural lighting.
 ```
 
 ---
