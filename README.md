@@ -28,21 +28,21 @@
 *From Zero to Creative Concept*
 
 **Cases in this stage:**  
-[1.1 Wardrobe Deconstruction](#11-wardrobe-deconstruction) • [1.2 3D Storefront Render](#12-3d-storefront-render)
+[1.1 Auto-Furnish Floor Plan](#11-auto-furnish-floor-plan) • [1.2 3D Storefront Render](#12-3d-storefront-render)
 
-### 1.1 Wardrobe Deconstruction
+### 1.1 Auto-Furnish Floor Plan
 
 #### Input
 
-![Input Image](./assets/placeholders/input.jpg)
+![Input Image](./assets/cases/1.1-auto-furnish-plan/input.jpg)
 
 #### Output
 
-![Output Image](./assets/placeholders/output.jpg)
+![Output Image](./assets/cases/1.1-auto-furnish-plan/output.jpg)
 
 **Prompt:**
 ```
-based on an uploaded image.**
+Using the uploaded floor plan as the base image, arrange furniture and soft furnishings in each space according to the functional room labels indicated by the text annotations in the original drawing. Maintain all wall structures, door locations, window positions, and architectural elements exactly as shown without any modifications to the building configuration. Do not add any new walls or partitions to the layout. Preserve the black and white line drawing style and monochromatic palette throughout the composition. Remove all text annotations and labels from the final output, showing only the architectural elements and newly added furniture arrangements.
 ```
 
 ---
@@ -746,9 +746,9 @@ Open plan office interior. Rows of modern white desks with ergonomic black chair
 *Technical Drawings to Visualization*
 
 **Cases in this stage:**  
-[3.1 Central Subject Image](#31-central-subject-image) • [3.2 Complete Ensemble Deconstruction](#32-complete-ensemble-deconstruction) • [3.3 Lifestyle & Contextual Items](#33-lifestyle--contextual-items) • [3.4 Expression & Detail Sheet](#34-expression--detail-sheet) • [3.5 Central Subject Image](#35-central-subject-image) • [3.6 Complete Ensemble Deconstruction](#36-complete-ensemble-deconstruction) • [3.7 Lifestyle and Environmental Factors](#37-lifestyle-and-environmental-factors) • [3.8 Expression and Detail Sheet](#38-expression-and-detail-sheet) • [3.9 Floor Plan to Axonometric](#39-floor-plan-to-axonometric) • [3.10 Section to Section Perspective](#310-section-to-section-perspective) • [3.11 Exploded Axonometric](#311-exploded-axonometric) • [3.12 Sketch to Massing Model](#312-sketch-to-massing-model) • [3.13 Structural Analysis Diagram](#313-structural-analysis-diagram) • [3.14 HVAC](#314-hvac) • [3.15 Vertical Circulation](#315-vertical-circulation) • [3.16 3D Detail Callout](#316-3d-detail-callout) • [3.17 MEP X-Ray](#317-mep-x-ray) • [3.18 Construction Layers](#318-construction-layers) • [3.19 Accessibility Diagram](#319-accessibility-diagram) • [3.20 Sustainability Diagram](#320-sustainability-diagram) • [3.21 Aerial to Site Plan](#321-aerial-to-site-plan) • [3.22 3D Print Preview](#322-3d-print-preview) • [3.23 Structure Reference](#323-structure-reference) • [3.24 Iterative Process](#324-iterative-process) • [3.25 Using Text Capabilities for Annotation](#325-using-text-capabilities-for-annotation) • [3.26 Glass Railing Detail](#326-glass-railing-detail) • [3.27 "Structure Reference" is the Core](#327-structure-reference-is-the-core) • [3.28 Using "Inpainting" for Minimally Invasive Surgery](#328-using-inpainting-for-minimally-invasive-surgery) • [3.29 The Magic of Text Rendering](#329-the-magic-of-text-rendering) • [3.30 Multimodal Blending](#330-multimodal-blending) • [3.31 Main Image](#331-main-image) • [3.32 Small Image](#332-small-image) • [3.33 Small Image](#333-small-image) • [3.34 Small Image](#334-small-image)
+[3.1 Joinery Internal View](#31-joinery-internal-view) • [3.2 Complete Ensemble Deconstruction](#32-complete-ensemble-deconstruction) • [3.3 Lifestyle & Contextual Items](#33-lifestyle--contextual-items) • [3.4 Expression & Detail Sheet](#34-expression--detail-sheet) • [3.5 Central Subject Image](#35-central-subject-image) • [3.6 Complete Ensemble Deconstruction](#36-complete-ensemble-deconstruction) • [3.7 Lifestyle and Environmental Factors](#37-lifestyle-and-environmental-factors) • [3.8 Expression and Detail Sheet](#38-expression-and-detail-sheet) • [3.9 Floor Plan to Axonometric](#39-floor-plan-to-axonometric) • [3.10 Section to Section Perspective](#310-section-to-section-perspective) • [3.11 Exploded Axonometric](#311-exploded-axonometric) • [3.12 Sketch to Massing Model](#312-sketch-to-massing-model) • [3.13 Structural Analysis Diagram](#313-structural-analysis-diagram) • [3.14 HVAC](#314-hvac) • [3.15 Vertical Circulation](#315-vertical-circulation) • [3.16 3D Detail Callout](#316-3d-detail-callout) • [3.17 MEP X-Ray](#317-mep-x-ray) • [3.18 Construction Layers](#318-construction-layers) • [3.19 Accessibility Diagram](#319-accessibility-diagram) • [3.20 Sustainability Diagram](#320-sustainability-diagram) • [3.21 Aerial to Site Plan](#321-aerial-to-site-plan) • [3.22 3D Print Preview](#322-3d-print-preview) • [3.23 Structure Reference](#323-structure-reference) • [3.24 Iterative Process](#324-iterative-process) • [3.25 Using Text Capabilities for Annotation](#325-using-text-capabilities-for-annotation) • [3.26 Glass Railing Detail](#326-glass-railing-detail) • [3.27 "Structure Reference" is the Core](#327-structure-reference-is-the-core) • [3.28 Using "Inpainting" for Minimally Invasive Surgery](#328-using-inpainting-for-minimally-invasive-surgery) • [3.29 The Magic of Text Rendering](#329-the-magic-of-text-rendering) • [3.30 Multimodal Blending](#330-multimodal-blending) • [3.31 Main Image](#331-main-image) • [3.32 Small Image](#332-small-image) • [3.33 Small Image](#333-small-image) • [3.34 Small Image](#334-small-image)
 
-### 3.1 Central Subject Image
+### 3.1 Joinery Internal View
 
 #### Input
 
@@ -760,7 +760,7 @@ Open plan office interior. Rows of modern white desks with ergonomic black chair
 
 **Prompt:**
 ```
-
+Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawers with glass fronts, and LED strip lighting in the shelves. Finish: Dark grey melamine. Perspective view.
 ```
 
 ---
