@@ -28,7 +28,7 @@
 *From Zero to Creative Concept*
 
 **Cases in this stage:**  
-[1.1 Auto-Furnish Floor Plan](#11-auto-furnish-floor-plan) • [1.2 3D Storefront Render](#12-3d-storefront-render)
+[1.1 Auto-Furnish Floor Plan](#11-auto-furnish-floor-plan) • [1.2 (Reserved)](#12-reserved) • [1.3 Miniature Building Model](#13-miniature-building-model)
 
 ### 1.1 Auto-Furnish Floor Plan
 
@@ -47,15 +47,20 @@ Using the uploaded floor plan as the base image, arrange furniture and soft furn
 
 ---
 
-### 1.2 3D Storefront Render
+### 1.2 (Reserved)
+> This case slot is reserved for future use.
+
+---
+
+### 1.3 Miniature Building Model
 
 #### Input
 
-![Input Image](./assets/cases/1.2-3d-storefront-render/input.jpg)
+![Input Image](./assets/cases/1.3-miniature-building-model/input.jpg)
 
 #### Output
 
-![Output Image](./assets/cases/1.2-3d-storefront-render/output.jpg)
+![Output Image](./assets/cases/1.3-miniature-building-model/output.jpg)
 
 **Prompt:**
 ```

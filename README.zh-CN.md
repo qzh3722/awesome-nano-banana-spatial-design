@@ -28,7 +28,7 @@
 *从零到创意方案*
 
 **本阶段案例：**  
-[1.1 自动布置平面图](#11-自动布置平面图-auto-furnish-floor-plan) • [1.2 3D 店铺渲染图](#12-3d-店铺渲染图)
+[1.1 自动布置平面图](#11-自动布置平面图-auto-furnish-floor-plan) • [1.2 (预留)](#12-预留) • [1.3 迷你建筑模型](#13-迷你建筑模型-miniature-building-model)
 
 ### 1.1 自动布置平面图 (Auto-Furnish Floor Plan)
 
@@ -47,15 +47,20 @@
 
 ---
 
-### 1.2 3D 店铺渲染图
+### 1.2 (预留)
+> 此案例位置预留待用。
+
+---
+
+### 1.3 迷你建筑模型 (Miniature Building Model)
 
 #### 输入
 
-![输入图片](./assets/cases/1.2-3d-storefront-render/input.jpg)
+![输入图片](./assets/cases/1.3-miniature-building-model/input.jpg)
 
 #### 输出
 
-![输出图片](./assets/cases/1.2-3d-storefront-render/output.jpg)
+![输出图片](./assets/cases/1.3-miniature-building-model/output.jpg)
 
 **提示词：**
 ```
