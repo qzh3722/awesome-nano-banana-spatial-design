@@ -100,7 +100,7 @@ Ultra-realistic 3D render of a cute, miniature [Uploaded images] building.
 *Layout Optimization & Circulation Design*
 
 **Cases in this stage:**  
-[2.1 Colored Floor Plan](#21-colored-floor-plan) • [2.2 Landscape Zoning Map](#22-landscape-zoning-map) • [2.3 Urban Fabric Stylization](#23-urban-fabric-stylization) • [2.4 Office Desk Layout](#24-office-desk-layout)
+[2.1 Colored Floor Plan](#21-colored-floor-plan) • [2.2 Landscape Zoning Map](#22-landscape-zoning-map) • [2.3 Urban Fabric Stylization](#23-urban-fabric-stylization) • [2.4 Site Plan to Photorealistic Aerial](#24-site-plan-to-photorealistic-aerial)
 
 ### 2.1 Colored Floor Plan
 
@@ -752,29 +752,6 @@ Site analysis diagram. Overlay color-coded zones on the site plan: Green for 'Pu
 
 **Prompt:**
 ```
-Urban figure-ground diagram (Noli map). Render all buildings as solid black masses and all streets/open spaces as pure white. High contrast, abstract map style. Remove all vegetation and cars.
-```
-
----
-
-### 2.4 Office Desk Layout
-
-#### Input
-
-![Input Image](./assets/placeholders/input.jpg)
-
-#### Output
-
-![Output Image](./assets/placeholders/output.jpg)
-
-**Prompt:**
-```
-Open plan office interior. Rows of modern white desks with ergonomic black chairs. Separate the rows with planter boxes containing snake plants. Busy professional atmosphere, daytime.
-```
-
----
-
-## 🔧 Technical to Visual
 *Technical Drawings to Visualization*
 
 **Cases in this stage:**  
