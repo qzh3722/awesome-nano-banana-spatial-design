@@ -28,7 +28,7 @@
 *From Zero to Creative Concept*
 
 **Cases in this stage:**  
-[1.1 Auto-Furnish Floor Plan](#11-auto-furnish-floor-plan) • [1.2 Building from Scratch](#12-building-from-scratch) • [1.3 Miniature Building Model](#13-miniature-building-model)
+[1.1 Auto-Furnish Floor Plan](#11-auto-furnish-floor-plan) • [1.2 Building from Scratch](#12-building-from-scratch) • [1.3 Miniature Building Model](#13-miniature-building-model) • [1.4 Generative Design Process](#14-generative-design-process)
 
 ### 1.1 Auto-Furnish Floor Plan
 
@@ -92,6 +92,23 @@ Do not provide exhaustive lists of every design detail, material specification, 
 **Prompt:**
 ```
 Ultra-realistic 3D render of a cute, miniature [Uploaded images] building.
+```
+
+---
+
+### 1.4 Generative Design Process
+
+#### Input
+
+![Input Image](./assets/cases/1.4-generative-design-process/input.jpg)
+
+#### Output
+
+![Output Image](./assets/cases/1.4-generative-design-process/output.jpg)
+
+**Prompt:**
+```
+Using the uploaded building image as the final design outcome, generate a concept diagram sequence showing the generative design process in a 2x2 grid layout containing four sequential stages. Analyze the formal characteristics of the building shown in the uploaded image, then working backwards, illustrate the conceptual evolution from simple geometric mass to the final form. Stage 1 (top left) should show the initial primary massing as a simple geometric volume. Stage 2 (top right) should show the first major formal transformation such as subtractive operations or volumetric adjustments. Stage 3 (bottom left) should show secondary refinements including additional cutting, twisting, or articulation. Stage 4 (bottom right) should show the final building form matching the uploaded image. Present each stage as a clear three-dimensional diagram that demonstrates how the design evolved through successive formal operations from basic volume to completed architectural configuration.
 ```
 
 ---
