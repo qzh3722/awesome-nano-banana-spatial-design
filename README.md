@@ -160,7 +160,7 @@ Using the uploaded CAD floor plan showing the original as-built condition, prese
 *Layout Optimization & Circulation Design*
 
 **Cases in this stage:**  
-[2.1 Colored Floor Plan](#21-colored-floor-plan) • [2.2 Landscape Zoning Map](#22-landscape-zoning-map) • [2.3 Urban Fabric Stylization](#23-urban-fabric-stylization) • [2.4 Site Plan to Photorealistic Aerial](#24-site-plan-to-photorealistic-aerial)
+[2.1 Colored Floor Plan](#21-colored-floor-plan) • [2.2 Landscape Zoning Map](#22-landscape-zoning-map) • [2.3 Urban Fabric Stylization](#23-urban-fabric-stylization) • [2.4 Site Plan to Photorealistic Aerial](#24-site-plan-to-photorealistic-aerial) • [2.5 Office Layout Planning](#25-office-layout-planning)
 
 ### 2.1 Colored Floor Plan
 
@@ -844,6 +844,23 @@ Using the previously generated morning rendering as the base image, convert the 
 
 #### 💡 Tips
 *   **Continuous Iteration:** Nano Banana Pro supports continuous iteration. You can use the output of a previous generation as the input for the next step without re-uploading, allowing for progressive refinement (e.g., changing time of day).
+
+---
+
+### 2.5 Office Layout Planning
+
+#### Input
+
+![Input Image](./assets/cases/2.5-office-layout-planning/input.jpg)
+
+#### Output
+
+![Output Image](./assets/cases/2.5-office-layout-planning/output.jpg)
+
+**Prompt:**
+```
+Using the uploaded blank floor plan showing the original as-built condition, preserve all existing building structure including exterior walls, load-bearing walls, all door openings, and all window positions exactly as shown without any modifications. Design a complete office layout that meets ergonomic standards for workplace design. The space planning must include the following required functional zones: a general manager's office positioned in a location with appropriate status and privacy, executive offices for senior management, and a finance office configured for relative enclosure and independence from other work areas. Arrange open-plan workstations in the remaining areas following ergonomic spacing standards for desk dimensions, circulation clearances, and visual privacy between stations. Optimize workstation arrangement to create efficient circulation paths that minimize cross-traffic through work zones. Designate and furnish collaboration areas positioned to support team interaction without disrupting focused work zones. All furniture placement must comply with ergonomic principles including appropriate desk heights, chair clearances, and equipment accessibility. Present the result as a complete office floor plan showing partition walls for enclosed offices, workstation layouts, and all furniture arrangements in professional architectural drawing style with appropriate line weights and graphic conventions.
+```
 
 ---
 
