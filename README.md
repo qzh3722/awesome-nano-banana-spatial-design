@@ -727,11 +727,11 @@ Use the JSON structure specification below.
 
 #### Input
 
-![Input Image](./assets/placeholders/input.jpg)
+![Input Image](./assets/cases/2.2-landscape-zoning-map/input.jpg)
 
 #### Output
 
-![Output Image](./assets/placeholders/output.jpg)
+![Output Image](./assets/cases/2.2-landscape-zoning-map/output.jpg)
 
 **Prompt:**
 ```
