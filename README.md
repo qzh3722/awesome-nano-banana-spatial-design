@@ -725,6 +725,37 @@ Site analysis diagram. Overlay color-coded zones on the site plan: Green for 'Pu
 
 **Prompt:**
 ```
+### 2.4 Site Plan to Photorealistic Aerial
+
+#### Phase 1: Morning
+
+![Input Image](./assets/cases/2.4-site-plan-to-aerial/input.jpg)
+*Input: Site Plan*
+
+![Output Image](./assets/cases/2.4-site-plan-to-aerial/output.jpg)
+*Output: Morning Aerial View*
+
+**Prompt:**
+```
+Using the uploaded site plan as the source document, generate a photorealistic rendering that shows the site as it would appear in reality to an ordinary observer. Convert the plan view into a three-dimensional realistic visualization with the residential building, water features, and public park areas rendered with real-world materials, textures, and natural lighting. Model the topographic contour lines shown in the plan as actual terrain elevation changes, creating visible hills, slopes, and landform variations across the landscape. Position the viewpoint as a centered aerial perspective directly above the site center, as if captured by drone photography from overhead. Apply morning light conditions with the sun at low angle appropriate to early morning hours, creating corresponding shadows, warm light quality, and atmospheric effects characteristic of dawn illumination. Present the scene as a realistic photograph-quality image that clearly communicates how the completed development would appear when built.
+```
+
+#### Phase 2: Nighttime Iteration
+
+![Output Image Night](./assets/cases/2.4-site-plan-to-aerial/output-night.jpg)
+*Output: Nighttime Illumination*
+
+**Prompt:**
+```
+Using the previously generated morning rendering as the base image, convert the lighting conditions from early morning to nighttime. Remove the natural daylight illumination and replace with nighttime lighting scenario. Add artificial lighting appropriate to the site elements including interior building lights visible through windows, exterior architectural lighting for the residential structure, landscape lighting for pathways and public park areas, and accent lighting for water features. Maintain all spatial configurations, materials, textures, topography, and viewing angle exactly as shown in the current image, modifying only the time of day and corresponding lighting conditions to represent evening illumination.
+```
+
+#### 💡 Tips
+*   **Continuous Iteration:** Nano Banana Pro supports continuous iteration. You can use the output of a previous generation as the input for the next step without re-uploading, allowing for progressive refinement (e.g., changing time of day).
+
+---
+
+## 🔧 Technical to Visual
 *Technical Drawings to Visualization*
 
 **Cases in this stage:**  
