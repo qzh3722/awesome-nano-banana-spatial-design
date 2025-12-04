@@ -787,6 +787,8 @@ Using the previously generated morning rendering as the base image, convert the 
 
 ---
 
+
+
 ## 🔧 Technical to Visual
 *Technical Drawings to Visualization*
 
