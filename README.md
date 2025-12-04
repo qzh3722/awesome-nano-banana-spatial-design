@@ -744,11 +744,11 @@ Site analysis diagram. Overlay color-coded zones on the site plan: Green for 'Pu
 
 #### Input
 
-![Input Image](./assets/placeholders/input.jpg)
+![Input Image](./assets/cases/2.3-urban-fabric-stylization/input.jpg)
 
 #### Output
 
-![Output Image](./assets/placeholders/output.jpg)
+![Output Image](./assets/cases/2.3-urban-fabric-stylization/output.jpg)
 
 **Prompt:**
 ```

@@ -744,11 +744,11 @@
 
 #### 输入
 
-![输入图片](./assets/placeholders/input.jpg)
+![输入图片](./assets/cases/2.3-urban-fabric-stylization/input.jpg)
 
 #### 输出
 
-![输出图片](./assets/placeholders/output.jpg)
+![输出图片](./assets/cases/2.3-urban-fabric-stylization/output.jpg)
 
 **提示词：**
 ```
