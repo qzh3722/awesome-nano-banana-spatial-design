@@ -24,33 +24,6 @@
 > **📌 Disclaimer**: All images used in this case library are for educational and research purposes only. Input images are from public architectural drawings or created specifically for demonstration. This repository claims no ownership of referenced images; all images are used under fair use principles for non-commercial educational purposes.
 
 ---
-## 🎨 Concept Ideation
-*From Zero to Creative Concept*
-
-**Cases in this stage:**  
-[1.1 Auto-Furnish Floor Plan](#11-auto-furnish-floor-plan) • [1.2 Building from Scratch](#12-building-from-scratch) • [1.3 Miniature Building Model](#13-miniature-building-model)
-
-### 1.1 Auto-Furnish Floor Plan
-
-#### Input
-
-![Input Image](./assets/cases/1.1-auto-furnish-plan/input.jpg)
-
-#### Output
-
-![Output Image](./assets/cases/1.1-auto-furnish-plan/output.jpg)
-
-**Prompt:**
-```
-Using the uploaded floor plan as the base image, arrange furniture and soft furnishings in each space according to the functional room labels indicated by the text annotations in the original drawing. Maintain all wall structures, door locations, window positions, and architectural elements exactly as shown without any modifications to the building configuration. Do not add any new walls or partitions to the layout. Preserve the black and white line drawing style and monochromatic palette throughout the composition. Remove all text annotations and labels from the final output, showing only the architectural elements and newly added furniture arrangements.
-```
-
-> **💡 Tip**: If you need to modify the generated image, please modify one space at a time. Do not propose modification opinions for multiple spaces simultaneously, otherwise the result may not be ideal.
-
----
-
-### 1.2 Building from Scratch
-
 #### Input
 
 *Text Description Only / 仅文字描述*
