@@ -122,6 +122,15 @@ Using the uploaded building image as the final design outcome, generate a concep
 #### Output
 
 ![Output Image](./assets/cases/1.5-sketch-to-photo/output.jpg)
+*Output: Architecture*
+
+#### Example 2: Interior Design
+
+![Input Image Interior](./assets/cases/1.5-sketch-to-photo/input-interior.jpg)
+*Input: Interior Sketch*
+
+![Output Image Interior](./assets/cases/1.5-sketch-to-photo/output-interior.jpg)
+*Output: Interior Visualization*
 
 **Prompt:**
 ```

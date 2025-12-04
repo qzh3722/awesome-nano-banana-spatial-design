@@ -12,7 +12,15 @@
 *Input: Hand-drawn Sketch / 输入：手绘草图*
 
 ![Output Image](../../assets/cases/1.5-sketch-to-photo/output.jpg)
-*Output: Photorealistic Visualization / 输出：照片级可视化*
+*Output: Photorealistic Visualization (Architecture) / 输出：照片级可视化（建筑）*
+
+### Example 2: Interior Design / 示例 2：室内设计
+
+![Input Image Interior](../../assets/cases/1.5-sketch-to-photo/input-interior.jpg)
+*Input: Interior Sketch / 输入：室内草图*
+
+![Output Image Interior](../../assets/cases/1.5-sketch-to-photo/output-interior.jpg)
+*Output: Interior Visualization / 输出：室内可视化*
 
 ---
 

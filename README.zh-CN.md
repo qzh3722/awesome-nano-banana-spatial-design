@@ -122,6 +122,15 @@
 #### 输出
 
 ![输出图片](./assets/cases/1.5-sketch-to-photo/output.jpg)
+*输出：建筑可视化*
+
+#### 示例 2：室内设计
+
+![输入图片室内](./assets/cases/1.5-sketch-to-photo/input-interior.jpg)
+*输入：室内草图*
+
+![输出图片室内](./assets/cases/1.5-sketch-to-photo/output-interior.jpg)
+*输出：室内可视化*
 
 **提示词：**
 ```
