@@ -1242,9 +1242,44 @@ Using the first uploaded image as the style reference and the second uploaded im
 
 #### 💡 Tips
 
-*   **Upload Order:** 1. Style Reference, 2. Target Scene.
-*   **Structure Preservation:** Prompt emphasizes keeping "spatial configuration" and "furniture layout".
-*   **Style Transfer:** Focuses on "aesthetic qualities" like color, material, and lighting.
+### Instructions (Translation Notes)
+**Upload Order:**
+
+1.  **First Image:** Style Reference (any image with a clear visual style: interior photo, artwork, illustration, photography, etc.)
+2.  **Second Image:** Target Spatial Scene (photo of the real space or model to be restyled)
+
+**Applicable Scenarios:**
+This prompt template works with various style sources:
+*   **Interior Design Style References:**
+    *   Interior photos of specific design genres (e.g., Wabi-sabi, Nordic Minimalist, Industrial)
+    *   Renderings from other projects
+    *   Photos of high-end hotels or commercial spaces
+*   **Artistic Style References:**
+    *   Paintings (Impressionism, Expressionism, Abstract, etc.)
+    *   Illustration styles
+    *   Photography tone and mood
+    *   Graphic design or visual art works
+
+**Technical Principles:**
+This prompt transfers the following style characteristics:
+*   **Color System:** Hue, saturation, contrast relationships
+*   **Material Treatment:** Expression of surface textures
+*   **Lighting Mood:** Emotional quality and character of lighting
+*   **Decorative Vocabulary:** Expression of design elements
+*   **Overall Aesthetic:** Unity of visual language
+
+While keeping these elements unchanged:
+*   3D structure and layout of the space
+*   Position and configuration of furniture
+*   Architectural features and spatial proportions
+*   Perspective and viewpoint
+
+**Difference from Material Replacement:**
+*   **Material Replacement:** Precisely replaces the surface material of specific elements (e.g., flooring, walls).
+*   **Style Transfer:** Changes the visual aesthetic and expression of the entire scene; it is a global stylistic reinterpretation.
+
+**Note:**
+This is a holistic style transfer tool. If you only need to change the material of specific elements, please use the previous "Material Replacement" prompt template. Style transfer affects the overall visual expression of the scene, not just individual material swaps.
 
 ---
 
