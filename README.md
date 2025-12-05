@@ -870,21 +870,21 @@ Using the uploaded blank floor plan showing the original as-built condition, pre
 *Technical Drawings to Visualization*
 
 **Cases in this stage:**  
-[3.1 Joinery Internal View](#31-joinery-internal-view) • [3.2 Complete Ensemble Deconstruction](#32-complete-ensemble-deconstruction) • [3.3 Lifestyle & Contextual Items](#33-lifestyle--contextual-items) • [3.4 Expression & Detail Sheet](#34-expression--detail-sheet) • [3.5 Central Subject Image](#35-central-subject-image) • [3.6 Complete Ensemble Deconstruction](#36-complete-ensemble-deconstruction) • [3.7 Lifestyle and Environmental Factors](#37-lifestyle-and-environmental-factors) • [3.8 Expression and Detail Sheet](#38-expression-and-detail-sheet) • [3.9 Floor Plan to Axonometric](#39-floor-plan-to-axonometric) • [3.10 Section to Section Perspective](#310-section-to-section-perspective) • [3.11 Exploded Axonometric](#311-exploded-axonometric) • [3.12 Sketch to Massing Model](#312-sketch-to-massing-model) • [3.13 Structural Analysis Diagram](#313-structural-analysis-diagram) • [3.14 HVAC](#314-hvac) • [3.15 Vertical Circulation](#315-vertical-circulation) • [3.16 3D Detail Callout](#316-3d-detail-callout) • [3.17 MEP X-Ray](#317-mep-x-ray) • [3.18 Construction Layers](#318-construction-layers) • [3.19 Accessibility Diagram](#319-accessibility-diagram) • [3.20 Sustainability Diagram](#320-sustainability-diagram) • [3.21 Aerial to Site Plan](#321-aerial-to-site-plan) • [3.22 3D Print Preview](#322-3d-print-preview) • [3.23 Structure Reference](#323-structure-reference) • [3.24 Iterative Process](#324-iterative-process) • [3.25 Using Text Capabilities for Annotation](#325-using-text-capabilities-for-annotation) • [3.26 Glass Railing Detail](#326-glass-railing-detail) • [3.27 "Structure Reference" is the Core](#327-structure-reference-is-the-core) • [3.28 Using "Inpainting" for Minimally Invasive Surgery](#328-using-inpainting-for-minimally-invasive-surgery) • [3.29 The Magic of Text Rendering](#329-the-magic-of-text-rendering) • [3.30 Multimodal Blending](#330-multimodal-blending) • [3.31 Main Image](#331-main-image) • [3.32 Small Image](#332-small-image) • [3.33 Small Image](#333-small-image) • [3.34 Small Image](#334-small-image)
+[3.1 2D Floor Plan to 3D Isometric](#31-2d-floor-plan-to-3d-isometric) • [3.2 Complete Ensemble Deconstruction](#32-complete-ensemble-deconstruction) • [3.3 Lifestyle & Contextual Items](#33-lifestyle--contextual-items) • [3.4 Expression & Detail Sheet](#34-expression--detail-sheet) • [3.5 Central Subject Image](#35-central-subject-image) • [3.6 Complete Ensemble Deconstruction](#36-complete-ensemble-deconstruction) • [3.7 Lifestyle and Environmental Factors](#37-lifestyle-and-environmental-factors) • [3.8 Expression and Detail Sheet](#38-expression-and-detail-sheet) • [3.9 Floor Plan to Axonometric](#39-floor-plan-to-axonometric) • [3.10 Section to Section Perspective](#310-section-to-section-perspective) • [3.11 Exploded Axonometric](#311-exploded-axonometric) • [3.12 Sketch to Massing Model](#312-sketch-to-massing-model) • [3.13 Structural Analysis Diagram](#313-structural-analysis-diagram) • [3.14 HVAC](#314-hvac) • [3.15 Vertical Circulation](#315-vertical-circulation) • [3.16 3D Detail Callout](#316-3d-detail-callout) • [3.17 MEP X-Ray](#317-mep-x-ray) • [3.18 Construction Layers](#318-construction-layers) • [3.19 Accessibility Diagram](#319-accessibility-diagram) • [3.20 Sustainability Diagram](#320-sustainability-diagram) • [3.21 Aerial to Site Plan](#321-aerial-to-site-plan) • [3.22 3D Print Preview](#322-3d-print-preview) • [3.23 Structure Reference](#323-structure-reference) • [3.24 Iterative Process](#324-iterative-process) • [3.25 Using Text Capabilities for Annotation](#325-using-text-capabilities-for-annotation) • [3.26 Glass Railing Detail](#326-glass-railing-detail) • [3.27 "Structure Reference" is the Core](#327-structure-reference-is-the-core) • [3.28 Using "Inpainting" for Minimally Invasive Surgery](#328-using-inpainting-for-minimally-invasive-surgery) • [3.29 The Magic of Text Rendering](#329-the-magic-of-text-rendering) • [3.30 Multimodal Blending](#330-multimodal-blending) • [3.31 Main Image](#331-main-image) • [3.32 Small Image](#332-small-image) • [3.33 Small Image](#333-small-image) • [3.34 Small Image](#334-small-image)
 
-### 3.1 Joinery Internal View
+### 3.1 2D Floor Plan to 3D Isometric
 
 #### Input
 
-![Input Image](./assets/placeholders/input.jpg)
+![Input Image](./assets/cases/3.1-plan-to-isometric/input.jpg)
 
 #### Output
 
-![Output Image](./assets/placeholders/output.jpg)
+![Output Image](./assets/cases/3.1-plan-to-isometric/output.jpg)
 
 **Prompt:**
 ```
-Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawers with glass fronts, and LED strip lighting in the shelves. Finish: Dark grey melamine. Perspective view.
+Transform this 2D floor plan into a 3D isometric architectural drawing. Extrude the walls to a consistent height. Apply a 'blueprint style' style with soft ambient occlusion shadows.
 ```
 
 ---
