@@ -1169,7 +1169,7 @@ Apply the color grading and lighting style of Reference Image A to Reference Ima
 *Materials & Styling*
 
 **Cases in this stage:**  
-[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 定制柜体内部结构](#42-定制柜体内部结构) • [4.3 砖石铺贴纹理研究](#43-砖石铺贴纹理研究) • [4.4 灯光照度可视化](#44-灯光照度可视化) • [4.5 软装布艺褶皱模拟](#45-软装布艺褶皱模拟) • [4.6 异形家具曲面分析](#46-异形家具曲面分析) • [4.7 老旧材质做旧模拟](#47-老旧材质做旧模拟) • [4.8 艺术品/挂画替换](#48-艺术品挂画替换)
+[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 Style Transfer](#42-style-transfer) • [4.3 砖石铺贴纹理研究](#43-砖石铺贴纹理研究) • [4.4 灯光照度可视化](#44-灯光照度可视化) • [4.5 软装布艺褶皱模拟](#45-软装布艺褶皱模拟) • [4.6 异形家具曲面分析](#46-异形家具曲面分析) • [4.7 老旧材质做旧模拟](#47-老旧材质做旧模拟) • [4.8 艺术品/挂画替换](#48-艺术品挂画替换) • [4.9 Joinery Internal View](#49-joinery-internal-view)
 
 ### 4.1 Realistic Material Replacement
 
@@ -1193,26 +1193,58 @@ Using the first uploaded image as the source material sample and the second uplo
 
 #### 💡 Tips
 
-*   **Upload Order:** 1. Material Sample, 2. Target Scene.
-*   **Parameter:** Fill in `[specify element]` with `flooring`, `wall tiles`, `cabinet doors`, etc.
-*   **Structure Locking:** Use Structure Reference (0.8-1.0) to preserve layout.
+### Instructions (Translation Notes)
+**Upload Order:**
+
+1.  **First Image:** Material sample photo (flooring pattern, tile texture, paint swatch, cabinet finish, etc.)
+2.  **Second Image:** Real-world scene photo where the material needs to be replaced
+
+**Parameter Instructions:**
+Fill in the specific element to be replaced in the `[specify element]` placeholder in the prompt:
+
+*   `flooring`
+*   `wall tiles`
+*   `wall paint/wall surface`
+*   `cabinet surfaces/cabinet doors`
+*   `countertops`
+*   `ceiling finish`
+*   `furniture upholstery`
+
+**Example Applications:**
+*   **To replace flooring:**
+    "...replace the flooring in the target scene..."
+*   **To replace cabinet doors:**
+    "...replace the cabinet doors in the target scene..."
+*   **To replace multiple elements of the same type (e.g., all walls):**
+    "...replace all wall surfaces in the target scene..."
 
 ---
 
-### 4.2 定制柜体内部结构
+### 4.2 Style Transfer
 
 #### Input
 
-![Input Image](./assets/placeholders/input.jpg)
+![Style Reference](./assets/cases/4.2-style-transfer/input-style.jpg)
+*Input 1: Style Reference*
+
+![Target Scene](./assets/cases/4.2-style-transfer/input-scene.jpg)
+*Input 2: Target Scene*
 
 #### Output
 
-![Output Image](./assets/placeholders/output.jpg)
+![Output Image](./assets/cases/4.2-style-transfer/output.jpg)
+*Output: Style Transferred*
 
 **Prompt:**
 ```
-Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawers with glass fronts, and LED strip lighting in the shelves. Finish: Dark grey melamine. Perspective view.
+Using the first uploaded image as the style reference and the second uploaded image as the target spatial scene, transfer the visual style characteristics from the reference to the target scene. Apply the reference's aesthetic qualities including color palette, tonal relationships, material treatment approach, lighting mood, textural rendering style, and decorative vocabulary to the target scene while preserving the target scene's spatial configuration, architectural structure, furniture layout, and functional organization. Maintain the target scene's perspective, proportions, and spatial relationships exactly as shown. The result should express the target space reinterpreted through the visual language and aesthetic sensibility of the style reference.
 ```
+
+#### 💡 Tips
+
+*   **Upload Order:** 1. Style Reference, 2. Target Scene.
+*   **Structure Preservation:** Prompt emphasizes keeping "spatial configuration" and "furniture layout".
+*   **Style Transfer:** Focuses on "aesthetic qualities" like color, material, and lighting.
 
 ---
 
@@ -1314,6 +1346,23 @@ Material aging simulation. Show a copper facade panel with realistic green patin
 **Prompt:**
 ```
 Replace the painting on the wall with a large-scale abstract expressionist artwork in blue and gold tones. Add a frame that matches the furniture wood.
+```
+
+---
+
+### 4.9 Joinery Internal View
+
+#### Input
+
+![Input Image](./assets/placeholders/input.jpg)
+
+#### Output
+
+![Output Image](./assets/placeholders/output.jpg)
+
+**Prompt:**
+```
+Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawers with glass fronts, and LED strip lighting in the shelves. Finish: Dark grey melamine. Perspective view.
 ```
 
 ---
