@@ -874,17 +874,27 @@ Using the uploaded blank floor plan showing the original as-built condition, pre
 
 ### 3.1 2D Floor Plan to 3D Isometric
 
-#### Input
+#### Phase 1: Isometric View
 
 ![Input Image](./assets/cases/3.1-plan-to-isometric/input.jpg)
-
-#### Output
+*Input: 2D Floor Plan*
 
 ![Output Image](./assets/cases/3.1-plan-to-isometric/output.jpg)
+*Output: 3D Isometric Drawing*
 
 **Prompt:**
 ```
 Transform this 2D floor plan into a 3D isometric architectural drawing. Extrude the walls to a consistent height. Apply a 'blueprint style' style with soft ambient occlusion shadows.
+```
+
+#### Phase 2: Reverse Perspective
+
+![Output Image Reverse](./assets/cases/3.1-plan-to-isometric/output-reverse.jpg)
+*Output: Reverse Isometric View*
+
+**Prompt:**
+```
+Using the previously generated 3D isometric architectural drawing as reference, create a new view from the opposite viewing angle, rotated 180 degrees around the vertical axis. Maintain the same extrusion height, rendering style, ambient occlusion shadows, and all architectural elements exactly as shown in the original. Only change the camera viewpoint to show the building from the reverse perspective, revealing the opposite facades and spatial relationships that were hidden in the first view.
 ```
 
 ---

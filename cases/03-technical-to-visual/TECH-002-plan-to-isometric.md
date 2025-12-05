@@ -11,8 +11,30 @@
 ![Input Image](../../assets/cases/3.1-plan-to-isometric/input.jpg)
 *Input: 2D Floor Plan / 输入：二维平面图*
 
+#### Phase 1: Isometric View / 阶段 1：轴测视图
+
 ![Output Image](../../assets/cases/3.1-plan-to-isometric/output.jpg)
 *Output: 3D Isometric Drawing / 输出：三维轴测图*
+
+**Prompt:**
+```markdown
+Transform this 2D floor plan into a 3D isometric architectural drawing. Extrude the walls to a consistent height. Apply a 'blueprint style' style with soft ambient occlusion shadows.
+```
+
+#### Phase 2: Reverse Perspective / 阶段 2：反向视角
+
+![Output Image Reverse](../../assets/cases/3.1-plan-to-isometric/output-reverse.jpg)
+*Output: Reverse Isometric View / 输出：反向轴测视图*
+
+**Prompt:**
+```markdown
+Using the previously generated 3D isometric architectural drawing as reference, create a new view from the opposite viewing angle, rotated 180 degrees around the vertical axis. Maintain the same extrusion height, rendering style, ambient occlusion shadows, and all architectural elements exactly as shown in the original. Only change the camera viewpoint to show the building from the reverse perspective, revealing the opposite facades and spatial relationships that were hidden in the first view.
+```
+
+**中文提示词:**
+```markdown
+使用之前生成的三维轴测建筑图作为参考，创建一个从相反视角（绕垂直轴旋转180度）的新视图。保持相同的拉伸高度、渲染风格、环境光遮蔽阴影以及所有建筑元素与原图完全一致。仅改变相机视点，从反向视角展示建筑，揭示在第一视图中被隐藏的相反立面和空间关系。
+```
 
 ---
 
