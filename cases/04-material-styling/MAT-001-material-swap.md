@@ -1,106 +1,78 @@
-# Kitchen Cabinet Material Swap / 厨房橱柜材质更换
+# Realistic Material Replacement / 真实材质替换
 
 ## 效果预览 / Preview
 
-> Quickly test different material combinations for existing spaces without changing layout or structure.
+> Replace specific materials in a scene with a provided sample while maintaining lighting and geometry.
 >
-> 在不改变布局或结构的情况下，快速测试现有空间的不同材质组合。
+> 使用提供的样本替换场景中的特定材质，同时保持光照和几何结构。
 
-![Material Swap Example](../../assets/images/MAT-001-output-placeholder.jpg)
-*Oak cabinets → Matte navy blue cabinets, same layout / 橡木橱柜 → 哑光海军蓝橱柜，相同布局*
+![Input Material](../../assets/cases/4.1-material-swap/input-material.jpg)
+*Input 1: Material Sample / 材质样本*
+
+![Input Scene](../../assets/cases/4.1-material-swap/input-scene.jpg)
+*Input 2: Target Scene / 目标场景*
+
+![Output Image](../../assets/cases/4.1-material-swap/output.jpg)
+*Output: Material Replaced / 材质替换后*
 
 ---
 
 ## 提示词 / Prompt
 
-### 中文版
-
-```
-在保持厨房布局完全不变的情况下，更换橱柜材质和颜色。
-
-材质更换规格:
-- 橱柜门板: 将 {原材质} 更换为 {新材质}
-  例如: "将橡木凸起面板门更换为哑光海军蓝平板门"
-- 台面: 将 {原台面} 更换为 {新台面}
-  例如: "将层压板台面更换为白色大理石台面"
-- 五金件: 将 {原五金} 更换为 {新五金}
-  例如: "将镀铬拉手更换为拉丝黄铜拉手"
-- 墙面: {墙面变化} (可选)
-  例如: "背景墙更换为白色地铁瓷砖"
-
-严格约束条件:
-- **保持厨房布局、电器位置和水槽位置完全不变**
-- **保持相机角度和光照不变**
-- **仅更改指定的材质和颜色**
-- **保持空间尺寸和比例**
-
-技术要求:
-- 真实的材质纹理(木纹/哑光漆面/大理石纹路)
-- 准确的光照反射(哑光vs光泽)
-- 五金件的真实金属质感
-- 照片级真实感
-
-结果应像专业的材质方案对比图，方便客户选择。
+**English:**
+```markdown
+Using the first uploaded image as the source material sample and the second uploaded image as the target scene, replace the [specify element: flooring/wall tiles/wall paint/cabinet surfaces/countertops/etc.] in the target scene with the material pattern and texture shown in the source sample. Apply the source material while maintaining the target scene's existing perspective distortion, lighting conditions, shadows, reflections, and surface geometry. Preserve all other elements in the target scene completely unchanged, including furniture placement, spatial configuration, architectural features, and any elements not specifically designated for material replacement. Ensure the replaced material responds naturally to the scene's lighting environment and integrates seamlessly with surrounding surfaces.
 ```
 
-### English Version
-
-```
-Replace kitchen cabinet materials and colors while keeping the layout completely unchanged.
-
-Material Replacement Specifications:
-- Cabinet Doors: Replace {ORIGINAL_MATERIAL} with {NEW_MATERIAL}
-  e.g., "Replace raised-panel oak doors with flat-panel matte navy blue doors"
-- Countertop: Replace {ORIGINAL_COUNTER} with {NEW_COUNTER}
-  e.g., "Replace laminate countertop with white marble countertop"
-- Hardware: Replace {ORIGINAL_HARDWARE} with {NEW_HARDWARE}
-  e.g., "Replace chrome pulls with brushed brass pulls"
-- Backsplash: {BACKSPLASH_CHANGE} (optional)
-  e.g., "Change to white subway tile backsplash"
-
-Strict Constraints:
-- **Keep kitchen layout, appliance positions, and sink position exactly unchanged**
-- **Maintain camera angle and lighting**
-- **Only change specified materials and colors**
-- **Preserve spatial dimensions and proportions**
-
-Technical Requirements:
-- Realistic material textures (wood grain/matte finish/marble veining)
-- Accurate lighting reflections (matte vs glossy)
-- Realistic metal finish on hardware
-- Photorealistic quality
-
-The result should look like a professional material comparison for client selection.
+**中文:**
+```markdown
+使用第一张上传的图片作为源材质样本，第二张上传的图片作为目标场景，将目标场景中的 [指定元素：地板/墙砖/墙漆/柜体表面/台面等] 替换为源样本中显示的材质图案和纹理。应用源材质时，保持目标场景现有的透视变形、光照条件、阴影、反射和表面几何形状。保持目标场景中的所有其他元素完全不变，包括家具摆放、空间配置、建筑特征以及任何未指定进行材质替换的元素。确保替换后的材质自然地响应场景的光照环境，并与周围表面无缝融合。
 ```
 
 ---
 
-## Tips / 使用技巧
+## 💡 Tips / 使用技巧
 
-### 中文
+### 使用说明 (Translation Notes)
 
-- **结构锁定**: 上传原图作为Structure Reference(强度0.8-1.0)确保布局不变
-- **材质对照表**: 明确列出"橱柜门→海军蓝"、"台面→白色大理石"的一一对应关系
-- **光泽度控制**: "哑光漆面"vs"高光烤漆"会产生完全不同的视觉效果，需明确指定
-- **多方案对比**: 生成3-4种色彩方案(如海军蓝、鼠尾草绿、木色、白色)供客户选择
+**上传顺序说明 (Upload Order):**
 
-### English
+1.  **第一张图 (First Image):** 材质样本照片（地板花色、瓷砖纹理、油漆色样、柜体表面处理等）
+    *   *Material sample photo (flooring pattern, tile texture, paint swatch, cabinet finish, etc.)*
+2.  **第二张图 (Second Image):** 需要替换材质的实景效果照片
+    *   *Real-world scene photo where the material needs to be replaced*
 
-- **Structure Locking**: Upload original image as Structure Reference (strength 0.8-1.0) to preserve layout
-- **Material Mapping Table**: Clearly list one-to-one mappings like "cabinet doors→navy blue", "countertop→white marble"
-- **Finish Control**: "Matte finish" vs "high-gloss lacquer" creates completely different visual effects - must specify clearly
-- **Multiple Options**: Generate 3-4 color schemes (navy blue, sage green, wood tone, white) for client selection
+**填写参数说明 (Parameter Instructions):**
+
+在提示词中的 `[specify element]` 位置填入具体要替换的元素：
+*Fill in the specific element to be replaced in the `[specify element]` placeholder in the prompt:*
+
+*   `flooring` - 地板
+*   `wall tiles` - 墙面瓷砖
+*   `wall paint/wall surface` - 墙面油漆/墙面
+*   `cabinet surfaces/cabinet doors` - 柜体表面/柜门
+*   `countertops` - 台面
+*   `ceiling finish` - 吊顶/天花表面
+*   `furniture upholstery` - 家具软包面料
+
+**示例应用 (Example Applications):**
+
+*   **如果要替换地板材质 (To replace flooring):**
+    *   `"...replace the flooring in the target scene..."`
+*   **如果要替换柜门表面 (To replace cabinet doors):**
+    *   `"...replace the cabinet doors in the target scene..."`
+*   **如果要同时替换多个相同类型的元素（如所有墙面） (To replace multiple elements of the same type, e.g., all walls):**
+    *   `"...replace all wall surfaces in the target scene..."`
 
 ---
 
 ## 标签 / Tags
 
-`#材质软装` `#材质更换` `#厨房设计` `#方案对比` `#客户选择`
-
-`#material-styling` `#material-swap` `#kitchen-design` `#option-comparison` `#client-selection`
+`#material-replacement` `#texture-swap` `#interior-design` `#renovation`
+`#材质替换` `#纹理更换` `#室内设计` `#装修`
 
 ---
 
-**Last Updated**: 2025-11-29
-**Contributor**: Project Maintainer
+**Last Updated**: 2025-12-05
 **Version**: 2.0
+

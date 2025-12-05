@@ -1169,22 +1169,33 @@ Apply the color grading and lighting style of Reference Image A to Reference Ima
 *Materials & Styling*
 
 **Cases in this stage:**  
-[4.1 材质板转 3D 渲染](#41-材质板转-3d-渲染) • [4.2 定制柜体内部结构](#42-定制柜体内部结构) • [4.3 砖石铺贴纹理研究](#43-砖石铺贴纹理研究) • [4.4 灯光照度可视化](#44-灯光照度可视化) • [4.5 软装布艺褶皱模拟](#45-软装布艺褶皱模拟) • [4.6 异形家具曲面分析](#46-异形家具曲面分析) • [4.7 老旧材质做旧模拟](#47-老旧材质做旧模拟) • [4.8 艺术品/挂画替换](#48-艺术品挂画替换)
+[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 定制柜体内部结构](#42-定制柜体内部结构) • [4.3 砖石铺贴纹理研究](#43-砖石铺贴纹理研究) • [4.4 灯光照度可视化](#44-灯光照度可视化) • [4.5 软装布艺褶皱模拟](#45-软装布艺褶皱模拟) • [4.6 异形家具曲面分析](#46-异形家具曲面分析) • [4.7 老旧材质做旧模拟](#47-老旧材质做旧模拟) • [4.8 艺术品/挂画替换](#48-艺术品挂画替换)
 
-### 4.1 材质板转 3D 渲染
+### 4.1 Realistic Material Replacement
 
 #### Input
 
-![Input Image](./assets/placeholders/input.jpg)
+![Input Material](./assets/cases/4.1-material-swap/input-material.jpg)
+*Input 1: Material Sample*
+
+![Input Scene](./assets/cases/4.1-material-swap/input-scene.jpg)
+*Input 2: Target Scene*
 
 #### Output
 
-![Output Image](./assets/placeholders/output.jpg)
+![Output Image](./assets/cases/4.1-material-swap/output.jpg)
+*Output: Material Replaced*
 
 **Prompt:**
 ```
-Interior rendering of a living room using the materials from the reference image. Apply the boucle fabric to the sofa, the walnut wood to the cabinets, and the terrazzo sample to the floor. Maintain accurate texture scaling.
+Using the first uploaded image as the source material sample and the second uploaded image as the target scene, replace the [specify element: flooring/wall tiles/wall paint/cabinet surfaces/countertops/etc.] in the target scene with the material pattern and texture shown in the source sample. Apply the source material while maintaining the target scene's existing perspective distortion, lighting conditions, shadows, reflections, and surface geometry. Preserve all other elements in the target scene completely unchanged, including furniture placement, spatial configuration, architectural features, and any elements not specifically designated for material replacement. Ensure the replaced material responds naturally to the scene's lighting environment and integrates seamlessly with surrounding surfaces.
 ```
+
+#### 💡 Tips
+
+*   **Upload Order:** 1. Material Sample, 2. Target Scene.
+*   **Parameter:** Fill in `[specify element]` with `flooring`, `wall tiles`, `cabinet doors`, etc.
+*   **Structure Locking:** Use Structure Reference (0.8-1.0) to preserve layout.
 
 ---
 
