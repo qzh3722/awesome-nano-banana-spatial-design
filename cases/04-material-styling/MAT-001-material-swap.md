@@ -33,36 +33,30 @@ Using the first uploaded image as the source material sample and the second uplo
 
 ## 💡 Tips / 使用技巧
 
-### 使用说明 (Translation Notes)
+### 使用说明（Translation Notes）
+上传顺序说明：
 
-**上传顺序说明 (Upload Order):**
+第一张图：材质样本照片（地板花色、瓷砖纹理、油漆色样、柜体表面处理等）
+第二张图：需要替换材质的实景效果照片
 
-1.  **第一张图 (First Image):** 材质样本照片（地板花色、瓷砖纹理、油漆色样、柜体表面处理等）
-    *   *Material sample photo (flooring pattern, tile texture, paint swatch, cabinet finish, etc.)*
-2.  **第二张图 (Second Image):** 需要替换材质的实景效果照片
-    *   *Real-world scene photo where the material needs to be replaced*
+填写参数说明：
+在提示词中的 [specify element] 位置填入具体要替换的元素：
 
-**填写参数说明 (Parameter Instructions):**
+flooring - 地板
+wall tiles - 墙面瓷砖
+wall paint/wall surface - 墙面油漆/墙面
+cabinet surfaces/cabinet doors - 柜体表面/柜门
+countertops - 台面
+ceiling finish - 吊顶/天花表面
+furniture upholstery - 家具软包面料
 
-在提示词中的 `[specify element]` 位置填入具体要替换的元素：
-*Fill in the specific element to be replaced in the `[specify element]` placeholder in the prompt:*
-
-*   `flooring` - 地板
-*   `wall tiles` - 墙面瓷砖
-*   `wall paint/wall surface` - 墙面油漆/墙面
-*   `cabinet surfaces/cabinet doors` - 柜体表面/柜门
-*   `countertops` - 台面
-*   `ceiling finish` - 吊顶/天花表面
-*   `furniture upholstery` - 家具软包面料
-
-**示例应用 (Example Applications):**
-
-*   **如果要替换地板材质 (To replace flooring):**
-    *   `"...replace the flooring in the target scene..."`
-*   **如果要替换柜门表面 (To replace cabinet doors):**
-    *   `"...replace the cabinet doors in the target scene..."`
-*   **如果要同时替换多个相同类型的元素（如所有墙面） (To replace multiple elements of the same type, e.g., all walls):**
-    *   `"...replace all wall surfaces in the target scene..."`
+示例应用：
+如果要替换地板材质：
+"...replace the flooring in the target scene..."
+如果要替换柜门表面：
+"...replace the cabinet doors in the target scene..."
+如果要同时替换多个相同类型的元素（如所有墙面）：
+"...replace all wall surfaces in the target scene..."
 
 ---
 
