@@ -897,6 +897,30 @@ Transform this 2D floor plan into a 3D isometric architectural drawing. Extrude 
 Using the previously generated 3D isometric architectural drawing as reference, create a new view from the opposite viewing angle, rotated 180 degrees around the vertical axis. Maintain the same extrusion height, rendering style, ambient occlusion shadows, and all architectural elements exactly as shown in the original. Only change the camera viewpoint to show the building from the reverse perspective, revealing the opposite facades and spatial relationships that were hidden in the first view.
 ```
 
+```
+
+#### 💡 Tips
+
+**1. Style Variations**
+Replace **'blueprint style'** with:
+
+*   **'wireframe style'**: Only shows edge lines, no surface fill, demonstrating structural logic.
+*   **'technical line drawing style'**: Precise black and white line drawing, different line weights indicating hierarchy.
+*   **'flat color blocking with ambient occlusion'**: Each mass filled with a single color, retaining shadow depth.
+*   **'watercolor rendering style'**: Soft watercolor texture, edges slightly bleeding, artistic expression.
+*   **'hand-drawn sketch style with hatching'**: Simulates manual drawing, using parallel lines to represent shadows.
+*   **'physical model photography style'**: Simulates physical architectural models made of white cardstock or wood.
+*   **'ghost render with transparency'**: Translucent exterior walls, allowing visibility into internal spatial layout.
+*   **'material study render'**: Accurately displays the real texture of different materials (concrete/wood/glass).
+*   **'diagram style with color-coded functional zones'**: Different functional spaces distinguished by different colors.
+*   **'clay render style'**: Soft, matte finish resembling clay models.
+
+**2. Viewpoint Variations**
+
+*   **90 Degrees (Side View):** `"rotated 90 degrees clockwise/counterclockwise"`
+*   **45 Degrees (Corner View):** `"rotated 45 degrees to show the adjacent corner perspective"`
+*   **Bird's Eye View:** `"from a higher bird's eye view angle looking down at 60 degrees"`
+
 ---
 
 ### 3.2 Complete Ensemble Deconstruction

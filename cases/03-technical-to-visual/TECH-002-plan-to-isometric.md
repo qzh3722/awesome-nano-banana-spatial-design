@@ -50,6 +50,54 @@ Transform this 2D floor plan into a 3D isometric architectural drawing. Extrude 
 将此二维平面图转换为三维等距建筑图。将墙壁拉伸至一致的高度。应用带有柔和环境光遮蔽阴影的“蓝图风格”。
 ```
 
+## 💡 Tips / 技巧
+
+### 1. Style Variations / 风格变体
+You can replace **'blueprint style'** in the prompt with any of the following to achieve different visual effects:
+您可以将提示词中的 **'blueprint style'** 替换为以下任意一种，以获得不同的视觉效果：
+
+*   **'wireframe style'** (线框风格)
+    *   *Only shows edge lines, no surface fill, demonstrating structural logic.*
+    *   *仅显示边缘线条,无表面填充,展示结构逻辑*
+*   **'technical line drawing style'** (技术线图风格)
+    *   *Precise black and white line drawing, different line weights indicating hierarchy, similar to construction drawings.*
+    *   *精确的黑白线条绘制,不同线宽表示层级,类似施工图*
+*   **'flat color blocking with ambient occlusion'** (平面色块+环境光遮蔽)
+    *   *Each mass filled with a single color, retaining shadow depth.*
+    *   *每个体块用单一颜色填充,保留阴影深度感*
+*   **'watercolor rendering style'** (水彩渲染风格)
+    *   *Soft watercolor texture, edges slightly bleeding, artistic expression.*
+    *   *柔和的水彩质感,边缘略带晕染效果,艺术化表达*
+*   **'hand-drawn sketch style with hatching'** (手绘素描风格+阴影线)
+    *   *Simulates manual drawing, using parallel lines to represent shadows and materials.*
+    *   *模拟手工绘制,用平行线表示阴影和材质*
+*   **'physical model photography style'** (实体模型摄影风格)
+    *   *Simulates physical architectural models made of white cardstock or wood.*
+    *   *模拟白色卡纸或木材制作的实体建筑模型*
+*   **'ghost render with transparency'** (半透明幽灵渲染)
+    *   *Translucent exterior walls, allowing visibility into internal spatial layout.*
+    *   *外墙半透明,可透视内部空间布局*
+*   **'material study render'** (材质研究渲染)
+    *   *Accurately displays the real texture of different materials (concrete/wood/glass).*
+    *   *精确显示不同材料(混凝土/木材/玻璃)的真实质感*
+*   **'diagram style with color-coded functional zones'** (图解风格+功能分区色标)
+    *   *Different functional spaces distinguished by different colors, with legend.*
+    *   *不同功能空间用不同颜色区分,带图例说明*
+*   **'clay render style'** (粘土渲染风格)
+    *   *Soft, matte finish resembling clay models.*
+    *   *柔和的哑光表面，类似于粘土模型*
+
+### 2. Viewpoint Variations / 视角变体
+You can also specify different rotation angles:
+您还可以指定不同的旋转角度：
+
+*   **90 Degrees (Side View) / 90度 (侧面):**
+    *   `"rotated 90 degrees clockwise/counterclockwise"`
+*   **45 Degrees (Corner View) / 45度 (斜角):**
+    *   `"rotated 45 degrees to show the adjacent corner perspective"`
+*   **Bird's Eye View / 鸟瞰俯视:**
+    *   `"from a higher bird's eye view angle looking down at 60 degrees"`
+
 ## 🏷️ Tags
 `#technical-to-visual` `#plan-to-isometric` `#blueprint-style` `#3d-visualization`
 `#技术转视觉` `#平面转轴测` `#蓝图风格` `#三维可视化`

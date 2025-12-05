@@ -876,6 +876,30 @@
 使用之前生成的三维轴测建筑图作为参考，创建一个从相反视角（绕垂直轴旋转180度）的新视图。保持相同的拉伸高度、渲染风格、环境光遮蔽阴影以及所有建筑元素与原图完全一致。仅改变相机视点，从反向视角展示建筑，揭示在第一视图中被隐藏的相反立面和空间关系。
 ```
 
+```
+
+#### 💡 技巧
+
+**1. 风格变体 (Style Variations)**
+将提示词中的 **'blueprint style'** 替换为：
+
+*   **'wireframe style' (线框风格)**: 仅显示边缘线条,无表面填充,展示结构逻辑。
+*   **'technical line drawing style' (技术线图风格)**: 精确的黑白线条绘制,不同线宽表示层级,类似施工图。
+*   **'flat color blocking with ambient occlusion' (平面色块+环境光遮蔽)**: 每个体块用单一颜色填充,保留阴影深度感。
+*   **'watercolor rendering style' (水彩渲染风格)**: 柔和的水彩质感,边缘略带晕染效果,艺术化表达。
+*   **'hand-drawn sketch style with hatching' (手绘素描风格+阴影线)**: 模拟手工绘制,用平行线表示阴影和材质。
+*   **'physical model photography style' (实体模型摄影风格)**: 模拟白色卡纸或木材制作的实体建筑模型。
+*   **'ghost render with transparency' (半透明幽灵渲染)**: 外墙半透明,可透视内部空间布局。
+*   **'material study render' (材质研究渲染)**: 精确显示不同材料(混凝土/木材/玻璃)的真实质感。
+*   **'diagram style with color-coded functional zones' (图解风格+功能分区色标)**: 不同功能空间用不同颜色区分,带图例说明。
+*   **'clay render style' (粘土渲染风格)**: 柔和的哑光表面，类似于粘土模型。
+
+**2. 视角变体 (Viewpoint Variations)**
+
+*   **90度 (侧面):** `"rotated 90 degrees clockwise/counterclockwise"`
+*   **45度 (斜角):** `"rotated 45 degrees to show the adjacent corner perspective"`
+*   **鸟瞰俯视:** `"from a higher bird's eye view angle looking down at 60 degrees"`
+
 ---
 
 ### 3.2 完整整体解构
