@@ -16,7 +16,7 @@
 
 ---
 
-## 🎯 Quick Navigation
+## 🎯 Quick Navigation <a id="table-of-contents"></a>
 
 **Jump to Workflow Stage:**  
 [🎨 Concept Ideation](#-concept-ideation) • [📐 Space Planning](#-space-planning) • [🔧 Technical to Visual](#-technical-to-visual) • [🎨 Material & Styling](#-material--styling) • [🖼️ Scene Rendering](#%EF%B8%8F-scene-rendering) • [⚙️ Specialized Tasks](#%EF%B8%8F-specialized-tasks)
@@ -46,6 +46,8 @@ Using the uploaded floor plan as the base image, arrange furniture and soft furn
 ```
 
 > **💡 Tip**: If you need to modify the generated image, please modify one space at a time. Do not propose modification opinions for multiple spaces simultaneously, otherwise the result may not be ideal.
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -77,6 +79,8 @@ For describing a villa from scratch (without an uploaded reference image), you s
 **What to Avoid:**
 Do not provide exhaustive lists of every design detail, material specification, or decorative element unless these are genuinely essential to your concept. Allow Gemini Image Pro to resolve secondary details through professional conventions. Do not over-prescribe aesthetic qualities with elaborate descriptive language when functional and technical parameters will suffice.
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 1.3 Miniature Building Model
@@ -94,6 +98,8 @@ Do not provide exhaustive lists of every design detail, material specification, 
 Ultra-realistic 3D render of a cute, miniature [Uploaded images] building.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 1.4 Generative Design Process
@@ -110,6 +116,8 @@ Ultra-realistic 3D render of a cute, miniature [Uploaded images] building.
 ```
 Using the uploaded building image as the final design outcome, generate a concept diagram sequence showing the generative design process in a 2x2 grid layout containing four sequential stages. Analyze the formal characteristics of the building shown in the uploaded image, then working backwards, illustrate the conceptual evolution from simple geometric mass to the final form. Stage 1 (top left) should show the initial primary massing as a simple geometric volume. Stage 2 (top right) should show the first major formal transformation such as subtractive operations or volumetric adjustments. Stage 3 (bottom left) should show secondary refinements including additional cutting, twisting, or articulation. Stage 4 (bottom right) should show the final building form matching the uploaded image. Present each stage as a clear three-dimensional diagram that demonstrates how the design evolved through successive formal operations from basic volume to completed architectural configuration.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -137,6 +145,8 @@ Using the uploaded building image as the final design outcome, generate a concep
 Using the uploaded hand-drawn sketch as the design source, convert the drawing into a photorealistic visualization while faithfully preserving the design intent expressed in the original sketch. Maintain the spatial configuration, proportional relationships, viewing angle, and arrangement of design elements exactly as indicated in the sketch. Interpret the sketch lines and annotations to understand the intended spatial layout, then translate this into realistic three-dimensional space with appropriate materials, textures, lighting, and photographic rendering quality. Keep all compositional decisions, element placements, and spatial relationships consistent with the original sketch, adding only the material realism and lighting detail necessary to achieve photorealistic quality without altering the fundamental design concept.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 1.6 CAD Layout Planning
@@ -154,6 +164,8 @@ Using the uploaded hand-drawn sketch as the design source, convert the drawing i
 Using the uploaded CAD floor plan showing the original as-built condition, preserve all existing building structure including exterior walls, load-bearing walls, all door openings (especially the entrance door), and all window positions exactly as shown without any modifications. The entrance door serves as the primary orientation point for functional layout planning: spaces immediately accessible from the entrance should be public/living areas. Based on this entrance location and the existing structural configuration, analyze the spatial potential and add non-load-bearing partition walls where appropriate to create rational room divisions according to residential design standards. After establishing the spatial divisions, arrange furniture and fixtures in every defined space according to its identified function and typical layout conventions for residential interiors. All interior areas within the floor plan boundary must be assigned clear functional purposes and furnished appropriately—no spaces should be left undefined or empty. Present the result as a complete floor plan showing both the new partition wall layout and furniture arrangement in professional CAD drawing style with appropriate line weights and graphic conventions, ensuring all original structural elements and openings remain unchanged.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ## 📐 Space Planning
@@ -170,6 +182,8 @@ Convert technical CAD floor plans into photorealistic colored top views with rea
 #### Input: CAD Floor Plan
 
 ![CAD Floor Plan Input](./assets/cases/2.1-cad-to-topview/input.jpg)
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -194,6 +208,8 @@ Room Label Language: All room labels must be in English.
 
 IMPORTANT: Strictly follow the input floor plan. Do not add any items not present in the original CAD. Do not remove or omit any items present in the original. Maintain accurate room count, furniture placement, and spatial layout.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -769,6 +785,8 @@ Use the JSON structure specification below.
 
 </details>
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 #### 💡 Tips
@@ -781,6 +799,8 @@ Use the JSON structure specification below.
   - Furniture materials (e.g., `"Linen Fabric"` → `"Leather"`)
   - Flooring colors (e.g., `"#D4B896"` → Darker/Lighter shades)
   - Overall atmosphere (`"Modern Residential"` → `"Luxury"`, `"Minimalist"`)
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 ### 2.2 Landscape Zoning Map
@@ -798,6 +818,8 @@ Use the JSON structure specification below.
 Site analysis diagram. Overlay color-coded zones on the site plan: Green for 'Public Park', Blue for 'Water Feature', Yellow for 'Residential'. Use hatch patterns and legends. Vector graphic style.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 2.3 Urban Fabric Stylization
@@ -814,6 +836,8 @@ Site analysis diagram. Overlay color-coded zones on the site plan: Green for 'Pu
 ```
 Urban figure-ground diagram (Noli map). Render all buildings as solid black masses and all streets/open spaces as pure white. High contrast, abstract map style. Remove all vegetation and cars.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -845,6 +869,8 @@ Using the previously generated morning rendering as the base image, convert the 
 #### 💡 Tips
 *   **Continuous Iteration:** Nano Banana Pro supports continuous iteration. You can use the output of a previous generation as the input for the next step without re-uploading, allowing for progressive refinement (e.g., changing time of day).
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 2.5 Office Layout Planning
@@ -861,6 +887,8 @@ Using the previously generated morning rendering as the base image, convert the 
 ```
 Using the uploaded blank floor plan showing the original as-built condition, preserve all existing building structure including exterior walls, load-bearing walls, all door openings, and all window positions exactly as shown without any modifications. Design a complete office layout that meets ergonomic standards for workplace design. The space planning must include the following required functional zones: a general manager's office positioned in a location with appropriate status and privacy, executive offices for senior management, and a finance office configured for relative enclosure and independence from other work areas. Arrange open-plan workstations in the remaining areas following ergonomic spacing standards for desk dimensions, circulation clearances, and visual privacy between stations. Optimize workstation arrangement to create efficient circulation paths that minimize cross-traffic through work zones. Designate and furnish collaboration areas positioned to support team interaction without disrupting focused work zones. All furniture placement must comply with ergonomic principles including appropriate desk heights, chair clearances, and equipment accessibility. Present the result as a complete office floor plan showing partition walls for enclosed offices, workstation layouts, and all furniture arrangements in professional architectural drawing style with appropriate line weights and graphic conventions.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -921,6 +949,8 @@ Replace **'blueprint style'** with:
 *   **45 Degrees (Corner View):** `"rotated 45 degrees to show the adjacent corner perspective"`
 *   **Bird's Eye View:** `"from a higher bird's eye view angle looking down at 60 degrees"`
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 
@@ -940,6 +970,8 @@ Replace **'blueprint style'** with:
 Architectural section perspective based on this line drawing. Render the cut surfaces (walls/slabs) in solid jet black (Poché). Render the interior spaces with photorealistic materials: concrete ceiling, oak flooring. Add depth and atmospheric lighting entering from the windows. 4K resolution.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 3.11 Exploded Axonometric
@@ -956,6 +988,8 @@ Architectural section perspective based on this line drawing. Render the cut sur
 ```
 Exploded axonometric diagram of the building structure. Separate the layers vertically: foundation at the bottom, structural grid in the middle, and roof skin at the top. Style: Technical illustration, clean white background, thin linework, pastel color coding for each layer.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -974,6 +1008,8 @@ Exploded axonometric diagram of the building structure. Separate the layers vert
 Convert this loose architectural sketch into a clean, geometric white massing model. Straighten the lines and correct the perspective. Render in a 'studio lighting' setup with sharp shadows to define the volumes. Abstract minimalism.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 3.13 Structural Analysis Diagram
@@ -990,6 +1026,8 @@ Convert this loose architectural sketch into a clean, geometric white massing mo
 ```
 Structural diagram. Make the non-structural walls transparent/ghosted. Highlight the columns and main beams in solid red. Show the load-bearing logic. X-ray architectural style.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1008,6 +1046,8 @@ Structural diagram. Make the non-structural walls transparent/ghosted. Highlight
 Reflected ceiling plan visualization. Overlay 3D semi-transparent blue ducts showing the HVAC system. Distinguish supply diffusers (arrows out) and return vents. Maintain the layout of the lights.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 3.15 Vertical Circulation
@@ -1024,6 +1064,8 @@ Reflected ceiling plan visualization. Overlay 3D semi-transparent blue ducts sho
 ```
 Sectional circulation diagram. Highlight staircases and elevator shafts in glowing orange. Add arrows indicating upward movement. Dark background blueprint style.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1042,6 +1084,8 @@ Sectional circulation diagram. Highlight staircases and elevator shafts in glowi
 Photorealistic 3D cutaway of a curtain wall detail based on this drawing. Show the layers: aluminum mullion, double glazing, rubber gasket, and insulation. Macro photography style, sharp focus on the joint.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 3.17 MEP X-Ray
@@ -1058,6 +1102,8 @@ Photorealistic 3D cutaway of a curtain wall detail based on this drawing. Show t
 ```
 Technical visualization. A bathroom wall rendered with 50% transparency. Reveal the copper plumbing pipes and PVC drainage pipes inside the wall cavity. Educational diagram style.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1076,6 +1122,8 @@ Technical visualization. A bathroom wall rendered with 50% transparency. Reveal 
 Layered floor construction diagram. Peel back the layers to show: 1. Concrete slab, 2. Acoustic mat, 3. Underfloor heating pipes, 4. Screed, 5. Timber finish. Label each layer.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 3.19 Accessibility Diagram
@@ -1092,6 +1140,8 @@ Layered floor construction diagram. Peel back the layers to show: 1. Concrete sl
 ```
 Accessibility analysis overlay on floor plan. Show 1.5m diameter turning circles in red dashed lines in bathrooms and hallways. Highlight wheelchair ramps in blue. Technical annotation style.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1110,6 +1160,8 @@ Accessibility analysis overlay on floor plan. Show 1.5m diameter turning circles
 Sustainability concept section. Show blue arrows for natural ventilation airflow through windows. Show yellow arrows for sunlight shading. Add icons for 'Solar Panels' on the roof. Educational style.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 3.21 Aerial to Site Plan
@@ -1126,6 +1178,8 @@ Sustainability concept section. Show blue arrows for natural ventilation airflow
 ```
 Convert this aerial drone photo into a flat architectural site plan diagram. Flatten the perspective to 2D top-down. Simplify trees to circles and buildings to solid shapes. Desaturated colors.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1144,6 +1198,8 @@ Convert this aerial drone photo into a flat architectural site plan diagram. Fla
 Render this building model as a 3D printed object. Material: White PLA plastic with visible layer lines. Sitting on a wooden table. Depth of field blurring the background.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 3.23 Structure Reference
@@ -1160,6 +1216,8 @@ Render this building model as a 3D printed object. Material: White PLA plastic w
 ```
 Apply the color grading and lighting style of Reference Image A to Reference Image B. Make them look like they belong to the same photography set. Keep the content of Image B unchanged.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1217,6 +1275,8 @@ Fill in the specific element to be replaced in the `[specify element]` placehold
     "...replace the cabinet doors in the target scene..."
 *   **To replace multiple elements of the same type (e.g., all walls):**
     "...replace all wall surfaces in the target scene..."
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1281,6 +1341,8 @@ While keeping these elements unchanged:
 **Note:**
 This is a holistic style transfer tool. If you only need to change the material of specific elements, please use the previous "Material Replacement" prompt template. Style transfer affects the overall visual expression of the scene, not just individual material swaps.
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 4.3 砖石铺贴纹理研究
@@ -1297,6 +1359,8 @@ This is a holistic style transfer tool. If you only need to change the material 
 ```
 Close-up texture study of a brick wall. Arrange the bricks in a 'vertical stack bond' pattern. Bricks should be handmade terracotta with irregular edges and thick mortar joints.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1315,6 +1379,8 @@ Close-up texture study of a brick wall. Arrange the bricks in a 'vertical stack 
 Lighting visualization. A textured stone wall lit by three recessed spotlights from above. Show the realistic 'scallop' shape of the light beams and the texture relief created by grazing light.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 4.5 软装布艺褶皱模拟
@@ -1331,6 +1397,8 @@ Lighting visualization. A textured stone wall lit by three recessed spotlights f
 ```
 Close-up of heavy velvet curtains pooling on a wooden floor. Show realistic fabric folds, weight, and light sheen. Color: Deep emerald green.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1349,6 +1417,8 @@ Close-up of heavy velvet curtains pooling on a wooden floor. Show realistic fabr
 Studio render of a parametric curved bench. Material: Glossy white fiberglass. Use 'zebra stripe' reflection mapping to highlight the curvature continuity.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 4.7 老旧材质做旧模拟
@@ -1365,6 +1435,8 @@ Studio render of a parametric curved bench. Material: Glossy white fiberglass. U
 ```
 Material aging simulation. Show a copper facade panel with realistic green patina (verdigris) streaming down from the top edges, simulating 10 years of weather exposure.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1383,6 +1455,8 @@ Material aging simulation. Show a copper facade panel with realistic green patin
 Replace the painting on the wall with a large-scale abstract expressionist artwork in blue and gold tones. Add a frame that matches the furniture wood.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 4.9 Joinery Internal View
@@ -1399,6 +1473,8 @@ Replace the painting on the wall with a large-scale abstract expressionist artwo
 ```
 Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawers with glass fronts, and LED strip lighting in the shelves. Finish: Dark grey melamine. Perspective view.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1423,6 +1499,8 @@ Open view of a bespoke wardrobe. Show the internal layout: hanging rails, drawer
 Turn this daylight photo into a night scene. Dark blue sky. Turn on the interior lights (3000K warm white). Add exterior uplighting to the trees.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 5.2 餐厅灯光氛围模拟
@@ -1439,6 +1517,8 @@ Turn this daylight photo into a night scene. Dark blue sky. Turn on the interior
 ```
 Fine dining restaurant interior. Moody, low-key lighting. Tables illuminated by focused pin-spots, leaving the surrounding areas in shadow. Velvet booth seating. Candlelight on tables.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1457,6 +1537,8 @@ Fine dining restaurant interior. Moody, low-key lighting. Tables illuminated by 
 Luxury hotel room interior. King size bed with crisp white linens and a beige throw. Floor-to-ceiling window with shear curtains. Warm bedside lamps on. Symmetrical composition.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 5.4 咖啡馆氛围板
@@ -1473,6 +1555,8 @@ Luxury hotel room interior. King size bed with crisp white linens and a beige th
 ```
 Rustic coffee shop interior. Exposed brick walls, reclaimed wood tables, industrial pendant lights. Steam rising from a coffee cup in the foreground. Warm, inviting, morning light.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1491,6 +1575,8 @@ Rustic coffee shop interior. Exposed brick walls, reclaimed wood tables, industr
 Cinematic storyboard keyframes for architectural walkthrough. Frame 1: Wide shot of building exterior at dawn. Frame 2: Close up of hand opening the door. Frame 3: Eye- level view of the sunlit lobby. Consistent color grading.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 5.6 配景人物植入
@@ -1508,6 +1594,8 @@ Cinematic storyboard keyframes for architectural walkthrough. Frame 1: Wide shot
 Populate this plaza render with diverse groups of people. People walking, sitting on benches, talking. Motion blur on walking figures. Ensure shadows match the sun direction of the scene.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 5.7 风格一致性检查
@@ -1524,6 +1612,8 @@ Populate this plaza render with diverse groups of people. People walking, sittin
 ```
 Apply the color grading and lighting style of Reference Image A to Reference Image B. Make them look like they belong to the same photography set. Keep the content of Image B unchanged.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1548,6 +1638,8 @@ Apply the color grading and lighting style of Reference Image A to Reference Ima
 Renovation visualization. Change the wall color to sage green and the floor to herringbone parquet. Constraint: Keep the existing sofa, coffee table, and rug exactly as they are in the photo. Do not move them.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 6.2 清空房间
@@ -1564,6 +1656,8 @@ Renovation visualization. Change the wall color to sage green and the floor to h
 ```
 Real estate photo editing. Remove all furniture, boxes, and clutter from this room. Show the clean, empty space with bare walls and flooring. Auto-fill the floor texture where furniture was removed.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1582,6 +1676,8 @@ Real estate photo editing. Remove all furniture, boxes, and clutter from this ro
 Virtual staging. Furnish this empty bedroom with a Queen-sized bed, two nightstands, and a wardrobe. Style: Modern Minimalist. Ensure furniture perspective aligns with the room's vanishing points.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 6.4 厨房翻新：换门板不换布局
@@ -1598,6 +1694,8 @@ Virtual staging. Furnish this empty bedroom with a Queen-sized bed, two nightsta
 ```
 Kitchen facelift. Replace the oak cabinet doors with matte navy blue flat-panel doors. Change countertop to white marble. Keep the kitchen layout, appliances, and sink position exactly unchanged.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1616,6 +1714,8 @@ Kitchen facelift. Replace the oak cabinet doors with matte navy blue flat-panel 
 View substitution. Replace the white window background with a cityscape at twilight. Add realistic blue reflections of the city lights onto the interior floor.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 6.6 建筑立面改造
@@ -1632,6 +1732,8 @@ View substitution. Replace the white window background with a cityscape at twili
 ```
 Building exterior renovation. Replace the red brick facade with sleek silver aluminum composite panels. Keep the window openings and building shape structurally identical.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1650,6 +1752,8 @@ Building exterior renovation. Replace the red brick facade with sleek silver alu
 Add lush indoor plants to this office lobby. Place tall Ficus trees in the corners and hanging planters from the ceiling beams. Natural, vibrant atmosphere.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 6.8 季节/天气变换
@@ -1666,6 +1770,8 @@ Add lush indoor plants to this office lobby. Place tall Ficus trees in the corne
 ```
 Change season to Winter. Cover the garden ground with snow. Trees should be bare branches. Add warm light glow coming from the house windows. Cozy winter evening.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1684,6 +1790,8 @@ Change season to Winter. Cover the garden ground with snow. Trees should be bare
 Retail storefront render. Place a 3D neon sign reading 'URBAN CAFE' above the entrance. Font style: Retro script. Color: Bright pink. Show realistic glow reflection on the glass window.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 6.10 货架陈列生成
@@ -1700,6 +1808,8 @@ Retail storefront render. Place a 3D neon sign reading 'URBAN CAFE' above the en
 ```
 Supermarket shelves visualization. Fill the shelves with neatly arranged cereal boxes and colorful packaging. Ensure distinct, non-repetitive product designs. bright, even lighting.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1718,6 +1828,8 @@ Supermarket shelves visualization. Fill the shelves with neatly arranged cereal 
 3x3 meter exhibition booth design. Minimalist white style with a central reception counter. Large LED screen on the back wall displaying a abstract blue wave pattern. Spotlights on the counter.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 6.12 品牌快闪店
@@ -1734,6 +1846,8 @@ Supermarket shelves visualization. Fill the shelves with neatly arranged cereal 
 ```
 Pop-up store design in a mall atrium. A cylindrical structure made of translucent polycarbonate sheets. Glowing from within with purple light. Branding text 'FUTURE TECH' on the top header.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1752,6 +1866,8 @@ Pop-up store design in a mall atrium. A cylindrical structure made of translucen
 Hospital corridor interior. Apply clear vinyl wayfinding graphics to the floor: A blue line with text 'Radiology' and a red line with text 'Emergency'. Perspective adjusted to match the floor plane.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 6.14 橱窗陈列设计
@@ -1768,6 +1884,8 @@ Hospital corridor interior. Apply clear vinyl wayfinding graphics to the floor: 
 ```
 Fashion boutique window display. Two mannequins wearing avant-garde silver jackets. Background: Abstract geometric shapes suspended in air. Lighting: Dramatic purple and teal spotlights.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1786,6 +1904,8 @@ Fashion boutique window display. Two mannequins wearing avant-garde silver jacke
 Architectural concept diagram series. Three steps: 1. A simple cube. 2. The cube sliced diagonally. 3. The final form with terraced gardens. Style: Simple white isometric blocks with blue arrows showing the transformation.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ### 6.16 渲染图转水彩手绘
@@ -1802,6 +1922,8 @@ Architectural concept diagram series. Three steps: 1. A simple cube. 2. The cube
 ```
 Convert this photorealistic building render into a loose watercolor sketch. Soft washes of color, pencil outlines, bleeding edges. Artistic, hand-drawn feel. Reduce detail.
 ```
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
@@ -1820,6 +1942,8 @@ Convert this photorealistic building render into a loose watercolor sketch. Soft
 Architectural presentation board layout. Arrange the provided render (top), floor plan (bottom left), and material palette (bottom right) on a clean white background. Add a title 'PROJECT HORIZON' in minimalist sans-serif font.
 ```
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 
@@ -1830,11 +1954,15 @@ Architectural presentation board layout. Arrange the provided render (top), floo
 - 📖 [CASE_TEMPLATE.md](./CASE_TEMPLATE.md) - Template for creating new use cases
 - 🤝 [CONTRIBUTING.md](./CONTRIBUTING.md) - How to contribute new cases
 
+[↑ Back to Top](#table-of-contents)
+
 ---
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+[↑ Back to Top](#table-of-contents)
 
 ---
 
