@@ -897,7 +897,7 @@ Transform this 2D floor plan into a 3D isometric architectural drawing. Extrude 
 Using the previously generated 3D isometric architectural drawing as reference, create a new view from the opposite viewing angle, rotated 180 degrees around the vertical axis. Maintain the same extrusion height, rendering style, ambient occlusion shadows, and all architectural elements exactly as shown in the original. Only change the camera viewpoint to show the building from the reverse perspective, revealing the opposite facades and spatial relationships that were hidden in the first view.
 ```
 
-```
+
 
 #### 💡 Tips
 
