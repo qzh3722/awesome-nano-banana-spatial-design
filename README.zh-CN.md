@@ -1230,7 +1230,8 @@
 *材质与风格*
 
 **本阶段案例：**  
-[4.1 真实材质替换](#41-真实材质替换-realistic-material-replacement) • [4.2 风格迁移](#42-风格迁移-style-transfer) • [4.3 砖石铺贴纹理研究](#43-砖石铺贴纹理研究) • [4.4 灯光照度可视化](#44-灯光照度可视化) • [4.5 软装布艺褶皱模拟](#45-软装布艺褶皱模拟) • [4.6 异形家具曲面分析](#46-异形家具曲面分析) • [4.7 老旧材质做旧模拟](#47-老旧材质做旧模拟) • [4.8 艺术品/挂画替换](#48-艺术品挂画替换) • [4.9 定制柜体内部结构](#49-定制柜体内部结构)
+**本阶段案例：**  
+[4.1 真实材质替换](#41-真实材质替换-realistic-material-replacement) • [4.2 风格迁移](#42-风格迁移-style-transfer) • [4.3 家具替换](#43-家具替换-furniture-replacement) • [4.4 砖石铺贴纹理研究](#44-砖石铺贴纹理研究) • [4.5 灯光照度可视化](#45-灯光照度可视化) • [4.6 软装布艺褶皱模拟](#46-软装布艺褶皱模拟) • [4.7 异形家具曲面分析](#47-异形家具曲面分析) • [4.8 老旧材质做旧模拟](#48-老旧材质做旧模拟) • [4.9 艺术品/挂画替换](#49-艺术品挂画替换) • [4.10 定制柜体内部结构](#410-定制柜体内部结构)
 
 ### 4.1 真实材质替换 (Realistic Material Replacement)
 
@@ -1354,7 +1355,76 @@ furniture upholstery - 家具软包面料
 
 ---
 
-### 4.3 砖石铺贴纹理研究
+### 4.3 家具替换 (Furniture Replacement)
+
+#### 输入
+
+![家具参考](./assets/cases/04-material-styling/MAT-003-furniture-replacement/ref-furniture.jpg)
+*输入 1: 家具参考*
+
+![目标场景](./assets/cases/04-material-styling/MAT-003-furniture-replacement/target-scene.jpg)
+*输入 2: 目标场景*
+
+#### 输出
+
+![输出图片](./assets/cases/04-material-styling/MAT-003-furniture-replacement/output.jpg)
+*输出: 家具替换后*
+
+**提示词：**
+```
+使用第一张上传的图片作为家具参考，第二张上传的图片作为目标室内场景，将目标场景中的 [指定家具：沙发/茶几/床/餐桌/餐椅/柜子/边几等] 替换为参考图中显示的家具。将参考家具放置在与原始家具相同的空间位置，匹配目标场景的透视角度和观看位置。适当缩放参考家具以适应空间语境并保持与周围元素的比例关系。将目标场景现有的光照条件、阴影和反射应用于新放置的家具，以确保自然融合。保持目标场景中的所有其他元素完全不变，包括墙壁、地板、其他家具、装饰物品、建筑特征和空间配置。
+```
+
+#### 💡 技巧
+
+### 使用说明（Translation Notes）
+上传顺序说明：
+
+第一张图：家具产品照片（可以是产品图、实拍照片、或其他场景中的家具）
+第二张图：需要替换家具的室内场景照片
+
+填写参数说明：
+在提示词中的 [specify furniture item] 位置填入具体要替换的家具类型：
+
+**起居空间家具：**
+* soa - 沙发
+* coffee table - 茶几/咖啡桌
+* side table/end table - 边几/角几
+* armchair - 单人扶手椅
+* TV stand/media console - 电视柜
+* bookshelf/shelving unit - 书架/置物架
+
+**餐厅家具：**
+* dining table - 餐桌
+* dining chairs - 餐椅
+* sideboard/buffet - 餐边柜
+
+**卧室家具：**
+* bed/bed frame - 床/床架
+* nightstand/bedside table - 床头柜
+* dresser - 梳妆台/五斗柜
+* wardrobe - 衣柜
+
+**其他家具：**
+* desk - 书桌/办公桌
+* office chair - 办公椅
+* console table - 玄关台
+* ottoman/pouf - 脚凳/坐墩
+* bench - 长凳
+
+**示例应用：**
+如果要替换沙发：
+"...replace the sofa in the target scene..."
+如果要替换茶几：
+"...replace the coffee table in the target scene..."
+如果要替换一组餐椅：
+"...replace the dining chairs in the target scene..."
+
+[↑ 回到顶部](#目录)
+
+---
+
+### 4.4 砖石铺贴纹理研究
 
 #### 输入
 
@@ -1373,7 +1443,7 @@ furniture upholstery - 家具软包面料
 
 ---
 
-### 4.4 灯光照度可视化
+### 4.5 灯光照度可视化
 
 #### 输入
 
@@ -1392,7 +1462,7 @@ furniture upholstery - 家具软包面料
 
 ---
 
-### 4.5 软装布艺褶皱模拟
+### 4.6 软装布艺褶皱模拟
 
 #### 输入
 
@@ -1411,7 +1481,7 @@ furniture upholstery - 家具软包面料
 
 ---
 
-### 4.6 异形家具曲面分析
+### 4.7 异形家具曲面分析
 
 #### 输入
 
@@ -1430,7 +1500,7 @@ furniture upholstery - 家具软包面料
 
 ---
 
-### 4.7 老旧材质做旧模拟
+### 4.8 老旧材质做旧模拟
 
 #### 输入
 
@@ -1449,7 +1519,7 @@ furniture upholstery - 家具软包面料
 
 ---
 
-### 4.8 艺术品/挂画替换
+### 4.9 艺术品/挂画替换
 
 #### 输入
 
@@ -1468,7 +1538,7 @@ furniture upholstery - 家具软包面料
 
 ---
 
-### 4.9 定制柜体内部结构
+### 4.10 定制柜体内部结构
 
 #### 输入
 
