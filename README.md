@@ -1227,7 +1227,7 @@ Apply the color grading and lighting style of Reference Image A to Reference Ima
 *Materials & Styling*
 
 **Cases in this stage:**  
-[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 Style Transfer](#42-style-transfer) • [4.3 砖石铺贴纹理研究](#43-砖石铺贴纹理研究) • [4.4 灯光照度可视化](#44-灯光照度可视化) • [4.5 软装布艺褶皱模拟](#45-软装布艺褶皱模拟) • [4.6 异形家具曲面分析](#46-异形家具曲面分析) • [4.7 老旧材质做旧模拟](#47-老旧材质做旧模拟) • [4.8 艺术品/挂画替换](#48-艺术品挂画替换) • [4.9 Joinery Internal View](#49-joinery-internal-view)
+[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 Style Transfer](#42-style-transfer) • [4.3 Furniture Replacement](#43-furniture-replacement) • [4.4 砖石铺贴纹理研究](#44-砖石铺贴纹理研究) • [4.5 灯光照度可视化](#45-灯光照度可视化) • [4.6 软装布艺褶皱模拟](#46-软装布艺褶皱模拟) • [4.7 异形家具曲面分析](#47-异形家具曲面分析) • [4.8 老旧材质做旧模拟](#48-老旧材质做旧模拟) • [4.9 艺术品/挂画替换](#49-艺术品挂画替换) • [4.10 Joinery Internal View](#410-joinery-internal-view)
 
 ### 4.1 Realistic Material Replacement
 
@@ -1345,7 +1345,76 @@ This is a holistic style transfer tool. If you only need to change the material 
 
 ---
 
-### 4.3 砖石铺贴纹理研究
+### 4.3 Furniture Replacement
+
+#### Input
+
+![Reference Furniture](./assets/cases/4.3-furniture-replacement/ref-furniture.jpg)
+*Input 1: Reference Furniture*
+
+![Target Scene](./assets/cases/4.3-furniture-replacement/target-scene.jpg)
+*Input 2: Target Scene*
+
+#### Output
+
+![Output Image](./assets/cases/4.3-furniture-replacement/output.jpg)
+*Output: Furniture Replaced*
+
+**Prompt:**
+```
+Using the first uploaded image as the furniture reference and the second uploaded image as the target interior scene, replace the [specify furniture item: sofa/coffee table/bed/dining table/chairs/cabinet/side table/etc.] in the target scene with the furniture shown in the reference image. Position the reference furniture in the same spatial location as the original furniture, matching the perspective angle and viewing position of the target scene. Scale the reference furniture appropriately to fit the spatial context and maintain proportional relationships with surrounding elements. Apply the target scene's existing lighting conditions, shadows, and reflections to the newly placed furniture to ensure natural integration. Preserve all other elements in the target scene completely unchanged, including walls, flooring, other furniture pieces, decorative items, architectural features, and spatial configuration.
+```
+
+#### 💡 Tips
+
+### Instructions (Translation Notes)
+**Upload Order:**
+
+1.  **First Image:** Furniture product photo (product shot, real photo, or furniture in another scene)
+2.  **Second Image:** Interior scene photo where the furniture needs to be replaced
+
+**Parameter Instructions:**
+Fill in the specific furniture type to be replaced in the `[specify furniture item]` placeholder in the prompt:
+
+**Living Room Furniture:**
+*   `sofa`
+*   `coffee table`
+*   `side table/end table`
+*   `armchair`
+*   `TV stand/media console`
+*   `bookshelf/shelving unit`
+
+**Dining Room Furniture:**
+*   `dining table`
+*   `dining chairs`
+*   `sideboard/buffet`
+
+**Bedroom Furniture:**
+*   `bed/bed frame`
+*   `nightstand/bedside table`
+*   `dresser`
+*   `wardrobe`
+
+**Other Furniture:**
+*   `desk`
+*   `office chair`
+*   `console table`
+*   `ottoman/pouf`
+*   `bench`
+
+**Example Applications:**
+*   **To replace a sofa:**
+    "...replace the sofa in the target scene..."
+*   **To replace a coffee table:**
+    "...replace the coffee table in the target scene..."
+*   **To replace a set of dining chairs:**
+    "...replace the dining chairs in the target scene..."
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### 4.4 砖石铺贴纹理研究
 
 #### Input
 
@@ -1364,7 +1433,7 @@ Close-up texture study of a brick wall. Arrange the bricks in a 'vertical stack 
 
 ---
 
-### 4.4 灯光照度可视化
+### 4.5 灯光照度可视化
 
 #### Input
 
@@ -1383,7 +1452,7 @@ Lighting visualization. A textured stone wall lit by three recessed spotlights f
 
 ---
 
-### 4.5 软装布艺褶皱模拟
+### 4.6 软装布艺褶皱模拟
 
 #### Input
 
@@ -1402,7 +1471,7 @@ Close-up of heavy velvet curtains pooling on a wooden floor. Show realistic fabr
 
 ---
 
-### 4.6 异形家具曲面分析
+### 4.7 异形家具曲面分析
 
 #### Input
 
@@ -1421,7 +1490,7 @@ Studio render of a parametric curved bench. Material: Glossy white fiberglass. U
 
 ---
 
-### 4.7 老旧材质做旧模拟
+### 4.8 老旧材质做旧模拟
 
 #### Input
 
@@ -1440,7 +1509,7 @@ Material aging simulation. Show a copper facade panel with realistic green patin
 
 ---
 
-### 4.8 艺术品/挂画替换
+### 4.9 艺术品/挂画替换
 
 #### Input
 
@@ -1459,7 +1528,7 @@ Replace the painting on the wall with a large-scale abstract expressionist artwo
 
 ---
 
-### 4.9 Joinery Internal View
+### 4.10 Joinery Internal View
 
 #### Input
 
