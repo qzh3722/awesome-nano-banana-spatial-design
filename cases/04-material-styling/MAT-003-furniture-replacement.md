@@ -6,13 +6,13 @@
 >
 > 使用参考图替换场景中的特定家具，同时保持透视和光照。
 
-![Reference Furniture](../../assets/cases/04-material-styling/MAT-003-furniture-replacement/ref-furniture.jpg)
+![Reference Furniture](../../assets/cases/4.3-furniture-replacement/ref-furniture.jpg)
 *Input 1: Reference Furniture / 家具产品照片*
 
-![Target Scene](../../assets/cases/04-material-styling/MAT-003-furniture-replacement/target-scene.jpg)
+![Target Scene](../../assets/cases/4.3-furniture-replacement/target-scene.jpg)
 *Input 2: Target Scene / 室内场景照片*
 
-![Output Image](../../assets/cases/04-material-styling/MAT-003-furniture-replacement/output.jpg)
+![Output Image](../../assets/cases/4.3-furniture-replacement/output.jpg)
 *Output: Furniture Replaced / 家具替换后*
 
 ---

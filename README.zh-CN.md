@@ -1359,15 +1359,15 @@ furniture upholstery - 家具软包面料
 
 #### 输入
 
-![家具参考](./assets/cases/04-material-styling/MAT-003-furniture-replacement/ref-furniture.jpg)
+![家具参考](./assets/cases/4.3-furniture-replacement/ref-furniture.jpg)
 *输入 1: 家具参考*
 
-![目标场景](./assets/cases/04-material-styling/MAT-003-furniture-replacement/target-scene.jpg)
+![目标场景](./assets/cases/4.3-furniture-replacement/target-scene.jpg)
 *输入 2: 目标场景*
 
 #### 输出
 
-![输出图片](./assets/cases/04-material-styling/MAT-003-furniture-replacement/output.jpg)
+![输出图片](./assets/cases/4.3-furniture-replacement/output.jpg)
 *输出: 家具替换后*
 
 **提示词：**
