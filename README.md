@@ -971,7 +971,7 @@ Replace **'blueprint style'** with:
 *Materials & Styling*
 
 **Cases in this stage:**  
-[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 Style Transfer](#42-style-transfer) • [4.3 Furniture Replacement](#43-furniture-replacement)
+[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 Style Transfer](#42-style-transfer) • [4.3 Furniture Replacement](#43-furniture-replacement) • [4.4 Declutter / Empty Room](#44-declutter--empty-room)
 
 ### 4.1 Realistic Material Replacement
 
@@ -1153,6 +1153,32 @@ Fill in the specific furniture type to be replaced in the `[specify furniture it
     "...replace the coffee table in the target scene..."
 *   **To replace a set of dining chairs:**
     "...replace the dining chairs in the target scene..."
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### 4.4 Declutter / Empty Room
+
+#### Input
+
+![Input Image](./assets/cases/4.4-declutter-empty-room/input.jpg)
+
+#### Output
+
+![Output Image](./assets/cases/4.4-declutter-empty-room/output.png)
+
+**Prompt:**
+```
+Real estate photo editing. Remove all furniture, boxes, and clutter from this room. Show the clean, empty space with bare walls and flooring. Auto-fill the floor texture where furniture was removed.
+```
+
+#### 💡 Tips
+
+- This prompt is ideal for real estate listings where you want to show the potential of a cluttered space
+- Works best with good lighting conditions in the original photo
+- The AI will attempt to preserve architectural features (windows, doors, fireplaces)
+- For best results, ensure the original photo has visible floor and wall areas to reference
 
 [↑ Back to Top](#table-of-contents)
 
