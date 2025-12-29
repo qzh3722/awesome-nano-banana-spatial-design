@@ -57,3 +57,9 @@ assets/**/*.ai
 
 # Allow placeholder images but document they need replacement
 # (Remove this line once real images are added)
+
+# Private development context (internal use only)
+.claude/DEVELOPMENT_CONTEXT.md
+
+# Frontend project (not part of public prompt repository)
+nano-banana-web/

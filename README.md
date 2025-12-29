@@ -4,7 +4,7 @@
 
 # Awesome Nano Banana Spatial Design
 
-> Professional Prompt Library for Spatial Designers using Gemini 3 Pro Image
+A practical, scenario-based AI prompt repository for **spatial designers**.
  
 <!-- Language Switch -->
 **English** | [简体中文](./README.zh-CN.md)
@@ -13,6 +13,18 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 </div>
+
+This repository is **not a collection of "magic prompts"**.  
+It documents **how AI prompts are actually used in real spatial design workflows** — from early concept ideation to floor plan automation and design communication.
+
+All prompts here are:
+- Derived from real projects
+- Organized by **design scenarios and stages**
+- Intended to be **modified, combined, and adapted**, not copied blindly
+
+This project summarizes **prompt patterns proven usable throughout 2025**, and is now released as an open, evolving reference for the spatial design community.
+
+> 📖 **New here?** Check out [Start Here](./Start-Here.md) to find the best entry point for your experience level.
 
 ---
 
