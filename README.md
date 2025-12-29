@@ -18,7 +18,7 @@ This repository is **not a collection of "magic prompts"**.
 It documents **how AI prompts are actually used in real spatial design workflows** — from early concept ideation to floor plan automation and advanced rendering customization.
 
 All prompts here are:
-- Derived from real projects
+- Designed for **real-world design scenarios**
 - Organized by **design scenarios and stages**
 - Intended to be **modified, combined, and adapted**, not copied blindly
 
