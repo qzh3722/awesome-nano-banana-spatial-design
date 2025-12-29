@@ -22,7 +22,7 @@ All prompts here are:
 - Organized by **design scenarios and stages**
 - Intended to be **modified, combined, and adapted**, not copied blindly
 
-This project summarizes **prompt patterns proven usable throughout 2025**, and is now released as an open, evolving reference for the spatial design community.
+This project is released as an open, evolving reference for the spatial design community.
 
 > 📖 **New here?** Check out [Start Here](./Start-Here.md) to find the best entry point for your experience level.
 
