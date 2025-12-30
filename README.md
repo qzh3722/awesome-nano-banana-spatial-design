@@ -1180,6 +1180,8 @@ Real estate photo editing. Remove all furniture, boxes, and clutter from this ro
 - The AI will attempt to preserve architectural features (windows, doors, fireplaces)
 - For best results, ensure the original photo has visible floor and wall areas to reference
 
+> ⚠️ **Known Limitation**: In this example, the AI incorrectly filled in an opening on the left wall. Always review AI results for structural accuracy.
+
 [↑ Back to Top](#table-of-contents)
 
 ---

@@ -33,11 +33,15 @@ Real estate photo editing. Remove all furniture, boxes, and clutter from this ro
 - The AI will attempt to preserve architectural features (windows, doors, fireplaces)
 - For best results, ensure the original photo has visible floor and wall areas to reference
 
+> ⚠️ **Known Limitation**: In this example, the AI incorrectly filled in an opening on the left wall that existed in the original photo. This demonstrates that AI results should always be reviewed for structural accuracy. The output may occasionally modify architectural features that should be preserved.
+
 **中文:**
 - 此提示词非常适合房地产挂牌展示，用于展示杂乱空间的潜力
 - 在原始照片光线良好的情况下效果最佳
 - AI 会尝试保留建筑特征（窗户、门、壁炉）
 - 为获得最佳效果，确保原始照片有可见的地面和墙面区域作为参考
+
+> ⚠️ **已知限制**：在本示例中，AI 错误地将原始照片左侧墙上的一个开口填平了。这说明 AI 生成的结果应始终检查结构准确性。输出结果有时可能会修改本应保留的建筑特征。
 
 ---
 
