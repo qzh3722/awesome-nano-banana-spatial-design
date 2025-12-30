@@ -9,7 +9,7 @@ A practical, scenario-based AI prompt repository for **spatial designers**.
 <!-- Language Switch -->
 **English** | [简体中文](./README.zh-CN.md)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 </div>
@@ -1214,9 +1214,25 @@ Real estate photo editing. Remove all furniture, boxes, and clutter from this ro
 
 ---
 
+## Usage Principles
+
+This repository encourages learning, adaptation, and collaboration. Please note:
+
+- Prompts here are **working templates**, not guaranteed solutions
+- AI output should always be reviewed by a professional designer
+- Modification based on your project context is strongly recommended
+
+📖 **Full details**: See [USAGE.md](./USAGE.md) for complete usage principles and attribution guidelines.
+
+---
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+
+You are free to share and adapt the material for any purpose, even commercially, as long as you give appropriate credit.
+
+See [LICENSE](LICENSE) for details or visit [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 [↑ Back to Top](#table-of-contents)
 

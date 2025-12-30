@@ -9,7 +9,7 @@
 <!-- 语言切换 -->
 [English](./README.md) | **简体中文**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 </div>
@@ -1131,9 +1131,25 @@
 
 ---
 
+## 使用原则
+
+本仓库鼓励学习、改编与协作。请注意：
+
+- 本仓库中的 prompt 是**可用的工作模板**，而非万能解决方案
+- AI 生成的内容应始终由专业设计师审核
+- 强烈建议根据您的项目需求进行修改和调整
+
+📖 **完整说明**：详见 [USAGE.zh-CN.md](./USAGE.zh-CN.md) 了解完整的使用原则和署名指南。
+
+---
+
 ## 许可证
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
+本项目采用 **知识共享署名 4.0 国际许可协议 (CC BY 4.0)** 进行许可。
+
+您可以自由地共享和演绎本作品（包括商业目的），只需给出适当的署名。
+
+详见 [LICENSE](LICENSE) 或访问 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)。
 
 [↑ 回到顶部](#目录)
 
