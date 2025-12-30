@@ -24,6 +24,46 @@ Please note:
 ❌ Present the prompts as proprietary or "exclusive formulas"  
 ❌ Remove attribution when redistributing  
 
+---
+
+## Credits & Attribution
+
+This repository embraces the open-source spirit of "standing on the shoulders of giants." During the curation process, some prompts have been inspired by or adapted from community creators. We use the following labels:
+
+| Label | Meaning |
+|-------|---------|
+| `[Original]` | Created independently by this project |
+| `[Remix]` | Based on public community prompts, deeply optimized for Nano Banana Pro model characteristics and spatial design scenarios |
+| `[Inspiration]` | Creative inspiration from specific artists or public works; original source credited in the prompt notes |
+
+### A Note to Original Creators
+
+If any content in this repository does not meet your attribution expectations, or if you prefer not to have your work referenced, please contact us via [GitHub Issues](https://github.com/qzh3722/awesome-nano-banana-spatial-design/issues). We will promptly remove or update the attribution.
+
+---
+
+## Disclaimer
+
+### AI Output Variability
+
+AI model outputs are inherently stochastic. The prompts provided in this repository **do not guarantee identical results** across different versions, environments, or generation attempts. Results may vary based on:
+
+- Model version updates
+- Random seed variations
+- Platform-specific implementations
+- Image input quality and characteristics
+
+### Copyright Considerations
+
+Given that global legal frameworks regarding AI-generated content are still evolving, we recommend:
+
+- For significant commercial projects, combine AI outputs with your own design work
+- Consult legal professionals for jurisdiction-specific guidance
+- Document your creative process and human contributions
+- Use AI as a tool to augment, not replace, professional design judgment
+
+---
+
 ## Attribution
 
 If you reference or redistribute content from this repository, please credit the original project:

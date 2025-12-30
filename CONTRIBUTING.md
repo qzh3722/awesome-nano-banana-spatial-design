@@ -128,11 +128,20 @@ Expect feedback within 5-7 days. We may request revisions before merging.
 
 ### 7. Recognition
 
-Contributors will be:
+**We value every contribution!** Contributors will be:
 
-- Listed in case credits (Contributor field)
-- Acknowledged in README if making significant contributions
-- Invited to join as collaborators after consistent quality contributions
+- 🏆 **Listed in case credits** — Your name appears in the Contributor field of the case
+- 📜 **Added to Credits list** — Contributor names are **permanently preserved** in our Credits section
+- ⭐ **Acknowledged in README** — Significant contributions get special recognition
+- 🤝 **Invited as collaborators** — Consistent quality contributors can join the core team
+
+> 💡 **For Students & Educators**: We especially welcome prompt contributions from students learning AI-assisted design! This is a great opportunity to:
+> - Build your portfolio with real open-source contributions
+> - Learn best practices in prompt engineering
+> - Get feedback from the community
+> - Have your work cited by others in the field
+>
+> **Your contributions will be credited and preserved permanently in this project.**
 
 ### 8. Questions?
 
