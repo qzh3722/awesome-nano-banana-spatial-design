@@ -55,7 +55,4 @@ build/
 assets/**/*.psd
 assets/**/*.ai
 
-# Local development
-.claude/
-.private/
-nano-banana-web/
+
