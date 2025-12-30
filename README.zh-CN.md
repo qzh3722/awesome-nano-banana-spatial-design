@@ -1219,7 +1219,11 @@
 
 您可以自由地共享和演绎本作品（包括商业目的），只需给出适当的署名。
 
-详见 [LICENSE](LICENSE) 或访问 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)。
+有关完整的许可文本，请参阅[LICENSE](./LICENSE)或访问[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。
+
+## 联系方式 / Contact
+
+维护者：[qzh3722@gmail.com](mailto:qzh3722@gmail.com)
 
 [↑ 回到顶部](#目录)
 

@@ -1300,9 +1300,11 @@ This repository encourages learning, adaptation, and collaboration. Please note:
 
 This project is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
-You are free to share and adapt the material for any purpose, even commercially, as long as you give appropriate credit.
+You are free to share and adapt the material for any purpose, even commercially, as long as you give appropriate credit. For full license text, see [LICENSE](./LICENSE) or visit [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-See [LICENSE](LICENSE) for details or visit [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+## Contact
+
+Maintainer: [qzh3722@gmail.com](mailto:qzh3722@gmail.com)
 
 [↑ Back to Top](#table-of-contents)
 

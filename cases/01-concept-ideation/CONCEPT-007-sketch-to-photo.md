@@ -1,4 +1,4 @@
-# Case 1.5: Sketch to Photorealistic Visualization / 手绘草图转照片级可视化
+# Case 1.5: Sketch to Photorealistic Visualization / 手绘草图转照片级可视化 `[Original]`
 
 > **Sketch to Render.**
 >

@@ -1,4 +1,4 @@
-# Furniture Layout Generation from Room Dimensions / 根据房间尺寸生成家具布局
+# Furniture Layout Generation from Room Dimensions / 根据房间尺寸生成家具布局 `[Original]`
 
 ## 效果预览 / Preview
 

@@ -147,7 +147,7 @@ Expect feedback within 5-7 days. We may request revisions before merging.
 
 - Check existing [Issues](https://github.com/qzh3722/awesome-nano-banana-spatial-design/issues)
 - Join [Discussions](https://github.com/qzh3722/awesome-nano-banana-spatial-design/discussions)
-- Reach out to maintainers
+- Reach out to maintainers at [qzh3722@gmail.com](mailto:qzh3722@gmail.com)
 
 ---
 

@@ -1,4 +1,4 @@
-# Auto-Furnish Floor Plan / 自动布置平面图
+# Auto-Furnish Floor Plan / 自动布置平面图 `[Original]`
 
 ## 效果预览 / Preview
 

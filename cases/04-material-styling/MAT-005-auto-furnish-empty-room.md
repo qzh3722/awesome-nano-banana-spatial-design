@@ -1,4 +1,4 @@
-# MAT-005: Auto-Furnish Empty Room
+# MAT-005: Auto-Furnish Empty Room `[Original]`
 # MAT-005: 空房间自动布置
 
 ## Overview / 概述

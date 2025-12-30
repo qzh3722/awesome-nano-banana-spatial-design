@@ -1,4 +1,4 @@
-# Case 2.2: Landscape Zoning Map
+# Case 2.2: Landscape Zoning Map `[Original]`
 
 > **Site analysis diagram.**
 >

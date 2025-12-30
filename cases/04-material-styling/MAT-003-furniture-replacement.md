@@ -1,4 +1,4 @@
-# Furniture Replacement / 家具替换
+# Furniture Replacement / 家具替换 `[Original]`
 
 ## 效果预览 / Preview
 

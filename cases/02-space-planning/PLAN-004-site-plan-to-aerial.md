@@ -1,4 +1,4 @@
-# Case 2.4: Site Plan to Photorealistic Aerial
+# Case 2.4: Site Plan to Photorealistic Aerial `[Original]`
 
 > **From 2D Plan to 3D Reality.**
 >

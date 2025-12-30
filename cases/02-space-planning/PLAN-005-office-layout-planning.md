@@ -1,4 +1,4 @@
-# Case 2.5: Office Layout Planning / 办公室布局规划
+# Case 2.5: Office Layout Planning / 办公室布局规划 `[Original]`
 
 > **Office Space Planning.**
 >

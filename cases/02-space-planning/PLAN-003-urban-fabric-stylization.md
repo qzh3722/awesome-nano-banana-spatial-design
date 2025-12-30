@@ -1,4 +1,4 @@
-# Case 2.3: Urban Fabric Stylization
+# Case 2.3: Urban Fabric Stylization `[Original]`
 
 > **Urban figure-ground diagram (Noli map).**
 >

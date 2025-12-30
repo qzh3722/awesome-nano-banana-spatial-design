@@ -34,11 +34,11 @@ Desktop.ini
 *.backup
 ~*
 
-# Node modules (if adding any automation tools later)
+# Node modules
 node_modules/
 npm-debug.log*
 
-# Python (if adding any scripts later)
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -46,23 +46,16 @@ __pycache__/
 venv/
 env/
 
-# Build outputs (if adding any build process)
+# Build outputs
 dist/
 build/
 *.egg-info/
 
-# Keep assets directory but ignore very large files
+# Large asset files
 assets/**/*.psd
 assets/**/*.ai
 
-# Allow placeholder images but document they need replacement
-# (Remove this line once real images are added)
-
-# Claude AI assistant settings (if any)
+# Local development
 .claude/
-
-# Private files folder (not uploaded to GitHub)
 .private/
-
-# Frontend project (not part of public prompt repository)
 nano-banana-web/
