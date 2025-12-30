@@ -971,7 +971,7 @@ Replace **'blueprint style'** with:
 *Materials & Styling*
 
 **Cases in this stage:**  
-[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 Style Transfer](#42-style-transfer) • [4.3 Furniture Replacement](#43-furniture-replacement) • [4.4 Declutter / Empty Room](#44-declutter--empty-room)
+[4.1 Realistic Material Replacement](#41-realistic-material-replacement) • [4.2 Style Transfer](#42-style-transfer) • [4.3 Furniture Replacement](#43-furniture-replacement) • [4.4 Declutter / Empty Room](#44-declutter--empty-room) • [4.5 Auto-Furnish Empty Room](#45-auto-furnish-empty-room)
 
 ### 4.1 Realistic Material Replacement
 
@@ -1179,6 +1179,74 @@ Real estate photo editing. Remove all furniture, boxes, and clutter from this ro
 - Works best with good lighting conditions in the original photo
 - The AI will attempt to preserve architectural features (windows, doors, fireplaces)
 - For best results, ensure the original photo has visible floor and wall areas to reference
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### 4.5 Auto-Furnish Empty Room
+
+> Transform an empty room into a fully furnished, styled interior. One input photo, endless design possibilities.
+
+#### Input
+
+![Empty Room](./assets/cases/4.5-auto-furnish-empty-room/input.png)
+*Input: Empty room photo*
+
+#### Output Examples
+
+![Boy's Bedroom](./assets/cases/4.5-auto-furnish-empty-room/output-boys-bedroom.jpg)
+*Example 1: 10-Year-Old Boy's Bedroom - Blue and White, Vibrant and Playful*
+
+![Master Bedroom](./assets/cases/4.5-auto-furnish-empty-room/output-master-bedroom.jpg)
+*Example 2: French Light Luxury Master Bedroom - Cream Palette*
+
+![Living Room](./assets/cases/4.5-auto-furnish-empty-room/output-living-room.jpg)
+*Example 3: Modern Living Room with Full-Wall TV Cabinet*
+
+**Prompt Template:**
+```
+Redesign this room according to my specified style. Act as a professional interior designer and completely transform this space as if starting from an empty shell.
+
+CRITICAL - Maintain from the uploaded photo:
+- Exact same camera angle and perspective
+- Same viewing position and field of view
+- Same room proportions as shown
+
+You may modify everything else:
+- All furniture
+- Wall colors/finishes/treatments
+- Ceiling design and treatments
+- Flooring materials and colors
+- Window treatments (curtains, blinds)
+- Lighting fixtures
+- Built-in features (shelving, fireplace surround, cabinetry)
+- All decorative elements
+
+Structural changes NOT allowed:
+- Do not add, remove, or relocate windows
+- Do not add, remove, or relocate doors
+- Do not modify wall positions
+
+Apply professional design principles. Create a magazine-quality result.
+
+The room purpose and style I want: [Specify room type, color palette, and design style]
+```
+
+#### 💡 Tips
+
+**How to Write Effective Customization:**
+
+Structure your request with:
+1. **Room Type**: bedroom, living room, home office, dining room
+2. **Color Palette**: specific colors (blue and white, cream, earth tones)
+3. **Design Style**: modern, Scandinavian, French luxury, industrial
+4. **Special Features** (optional): TV wall, study area, reading nook
+
+**Example Customizations:**
+- `10-Year-Old Boy's Bedroom: Blue and White Color Scheme, Vibrant and Playful Style`
+- `Cozy master bedroom, cream color palette, French-inspired light luxury style`
+- `Modern-style apartment living room featuring a TV console with full-wall cabinets`
 
 [↑ Back to Top](#table-of-contents)
 
