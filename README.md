@@ -1323,29 +1323,25 @@ Structure your request with:
 
 ### 5.1 Clay Model to Photorealistic Render
 
-Transform clay/white 3D model renders into photorealistic visualizations with intelligent material assignment and style control.
+Transform clay/white 3D model renders into photorealistic visualizations with intelligent material assignment and style control. Two methods available: **Text-Specified Style** or **Image Reference Style**.
 
-#### Input: Clay/White Model Render
+---
+
+#### Method A: Text-Specified Style
+
+*Use text descriptions to define the target style and materials.*
+
+**Input:**
 
 ![Input Image](./assets/cases/5.1-clay-to-render/input.jpg)
+*Clay/White Model Render*
 
-#### Output Examples
-
-#### Output 1: Cream Luxury Style
+**Output:**
 
 ![Output Cream](./assets/cases/5.1-clay-to-render/output-cream.jpg)
+*Cream Luxury Style*
 
-#### Output 2: Dark Wood Japanese Style (Image Reference)
-
-*Style Reference Image:*
-
-![Style Reference](./assets/cases/5.1-clay-to-render/ref-dark-style.jpg)
-
-*Generated Output:*
-
-![Output Dark](./assets/cases/5.1-clay-to-render/output-dark.png)
-
-**Prompt (Text-Specified Style):**
+**Prompt:**
 ```
 Transform this clay/white model render into a photorealistic architectural visualization with the following STRICT analysis rules:
 
@@ -1365,8 +1361,6 @@ Transform this clay/white model render into a photorealistic architectural visua
 5. OUTPUT: High-quality photorealistic interior render, maintaining the exact camera angle and composition.
 ```
 
-#### 💡 Tips
-
 **Common Style Keywords:**
 
 | Style | Description |
@@ -1377,10 +1371,28 @@ Transform this clay/white model render into a photorealistic architectural visua
 | `Industrial Loft` | Exposed brick, metal, concrete |
 | `French Light Luxury` | Cream palette, elegant details |
 
-**Prompt (Image Reference Style - for Output 2):**
+---
 
-Upload Order: 1st = Style Reference, 2nd = Clay Model
+#### Method B: Image Reference Style
 
+*Use an existing interior photo as style reference. Upload order: 1st = Style Reference, 2nd = Clay Model.*
+
+**Input 1 - Style Reference:**
+
+![Style Reference](./assets/cases/5.1-clay-to-render/ref-dark-style.jpg)
+*Style/Material Reference Image*
+
+**Input 2 - Clay Model:**
+
+![Input Image](./assets/cases/5.1-clay-to-render/input.jpg)
+*Clay/White Model Render (same as Method A)*
+
+**Output:**
+
+![Output Dark](./assets/cases/5.1-clay-to-render/output-dark.png)
+*Dark Wood Japanese Style (Generated from Reference)*
+
+**Prompt:**
 ```
 Using the FIRST uploaded image as the style/material reference and the SECOND uploaded image as the clay/white model source:
 
