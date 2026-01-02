@@ -55,4 +55,6 @@ build/
 assets/**/*.psd
 assets/**/*.ai
 
+# Local development files (not tracked)
+ROADMAP.md
 
