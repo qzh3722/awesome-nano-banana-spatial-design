@@ -163,8 +163,25 @@ Before submitting, ensure:
 - [ ] Both English and Chinese versions complete
 - [ ] Tips section has practical advice
 - [ ] Related cases are linked
-- [ ] Added to category README.md table of contents
+- [ ] **Added to category README.md table** (see below)
+- [ ] **Added to main README.md** (EN & CN versions)
 - [ ] Files properly named and located
+
+### ⚠️ Required: Updating README Files
+
+When adding a new case, you **MUST** update the following files:
+
+1. **Category README.md** (`cases/[category]/README.md`):
+   - Add a new row to the case index table
+   - Example format:
+     ```markdown
+     | CONCEPT-009 | [New Case Name](./CONCEPT-009-new-case.md) | 新案例中文名 |
+     ```
+   - Update the total case count
+
+2. **Main README.md** (`README.md` and `README.zh-CN.md`):
+   - Add the full case content to the appropriate workflow stage section
+   - Include input/output images, prompts, and tips
 
 ---
 
