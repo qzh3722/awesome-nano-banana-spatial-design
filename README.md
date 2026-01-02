@@ -1316,9 +1316,62 @@ Structure your request with:
 ---
 
 ## 🖼️ Scene Rendering
-*Scene Rendering*
+*Final Rendering & Visualization*
 
-> Cases for this stage are in development. Check back for updates!
+**Cases in this stage:**  
+[5.1 Clay Model to Photorealistic Render](#51-clay-model-to-photorealistic-render)
+
+### 5.1 Clay Model to Photorealistic Render
+
+Transform clay/white 3D model renders into photorealistic visualizations with intelligent material assignment and style control.
+
+#### Input: Clay/White Model Render
+
+![Input Image](./assets/cases/5.1-clay-to-render/input.jpg)
+
+#### Output Examples
+
+#### Output 1: Cream Luxury Style
+
+![Output Cream](./assets/cases/5.1-clay-to-render/output-cream.jpg)
+
+#### Output 2: Dark Wood Japanese Style
+
+![Output Dark](./assets/cases/5.1-clay-to-render/output-dark.png)
+
+**Prompt (Text-Specified Style):**
+```
+Transform this clay/white model render into a photorealistic architectural visualization with the following STRICT analysis rules:
+
+1. GEOMETRY PRESERVATION: Analyze and preserve the EXACT 3D geometry, perspective, lighting direction, and spatial proportions from the input model. Do NOT modify any architectural elements, furniture shapes, or spatial relationships.
+
+2. INTELLIGENT MATERIAL ASSIGNMENT: Based on the visible forms and context, intelligently assign appropriate materials:
+   - Wall surfaces → [specify: e.g., white textured paint / exposed concrete / wood paneling]
+   - Flooring → [specify: e.g., light oak hardwood / marble tile / polished concrete]
+   - Ceiling → [specify: e.g., white matte / wood beams / recessed panels]
+   - Furniture → [specify: e.g., natural fabrics / leather / mixed materials]
+   - Fixtures → [specify: e.g., brushed brass / matte black / chrome]
+
+3. DESIGN STYLE: [specify style: e.g., Modern Minimalist / Scandinavian / Japanese Wabi-Sabi / Industrial Loft / French Luxury]
+
+4. LIGHTING & ATMOSPHERE: Apply photorealistic lighting that enhances the specified style.
+
+5. OUTPUT: High-quality photorealistic interior render, maintaining the exact camera angle and composition.
+```
+
+#### 💡 Tips
+
+**Common Style Keywords:**
+
+| Style | Description |
+|-------|-------------|
+| `Modern Minimalist` | Clean lines, neutral palette |
+| `Scandinavian` | Warm wood tones, hygge atmosphere |
+| `Japanese Wabi-Sabi` | Raw textures, muted earth tones |
+| `Industrial Loft` | Exposed brick, metal, concrete |
+| `French Light Luxury` | Cream palette, elegant details |
+
+**For Image Reference Style:** Upload the style reference as the FIRST image, then the clay model as the SECOND image.
 
 [↑ Back to Top](#table-of-contents)
 
