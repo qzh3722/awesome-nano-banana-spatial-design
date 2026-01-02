@@ -12,11 +12,11 @@
 
 | ID | Case Name | 中文名称 |
 |----|-----------|----------|
-| PLAN-002 | [Landscape Zoning Map](./PLAN-002-landscape-zoning-map.md) | 景观分区图 |
-| PLAN-003 | [Urban Fabric Stylization](./PLAN-003-urban-fabric-stylization.md) | 城市肌理风格化 |
-| PLAN-004 | [Site Plan to Aerial](./PLAN-004-site-plan-to-aerial.md) | 总平面图转鸟瞰 |
-| PLAN-005 | [Office Layout Planning](./PLAN-005-office-layout-planning.md) | 办公室布局规划 |
-| PLAN-006 | [Furniture Layout](./PLAN-006-furniture-layout.md) | 家具布局（JSON控制） |
+| 2.1 | [Landscape Zoning Map](./2.1-landscape-zoning-map.md) | 景观分区图 |
+| 2.2 | [Urban Fabric Stylization](./2.2-urban-fabric-stylization.md) | 城市肌理风格化 |
+| 2.3 | [Site Plan to Aerial](./2.3-site-plan-to-aerial.md) | 总平面图转鸟瞰 |
+| 2.4 | [Office Layout Planning](./2.4-office-layout-planning.md) | 办公室布局规划 |
+| 2.5 | [Furniture Layout](./2.5-furniture-layout.md) | 家具布局（JSON控制） |
 
 **Total: 5 cases**
 

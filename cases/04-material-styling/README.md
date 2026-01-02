@@ -12,11 +12,11 @@
 
 | ID | Case Name | 中文名称 |
 |----|-----------|----------|
-| MAT-001 | [Material Swap](./MAT-001-material-swap.md) | 材质替换 |
-| MAT-002 | [Style Transfer](./MAT-002-style-transfer.md) | 风格迁移 |
-| MAT-003 | [Furniture Replacement](./MAT-003-furniture-replacement.md) | 家具替换 |
-| MAT-004 | [Declutter / Empty Room](./MAT-004-declutter-empty-room.md) | 清空房间 |
-| MAT-005 | [Auto-Furnish Empty Room](./MAT-005-auto-furnish-empty-room.md) | 空房间自动布置 |
+| 4.1 | [Material Swap](./4.1-material-swap.md) | 材质替换 |
+| 4.2 | [Style Transfer](./4.2-style-transfer.md) | 风格迁移 |
+| 4.3 | [Furniture Replacement](./4.3-furniture-replacement.md) | 家具替换 |
+| 4.4 | [Declutter / Empty Room](./4.4-declutter-empty-room.md) | 清空房间 |
+| 4.5 | [Auto-Furnish Empty Room](./4.5-auto-furnish-empty-room.md) | 空房间自动布置 |
 
 **Total: 5 cases**
 

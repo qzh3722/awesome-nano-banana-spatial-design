@@ -12,8 +12,8 @@
 
 | ID | Case Name | 中文名称 |
 |----|-----------|----------|
-| TECH-002 | [Plan to Isometric](./TECH-002-plan-to-isometric.md) | 平面图转轴测图 |
-| TECH-003 | [Wardrobe Interior](./TECH-003-wardrobe-interior.md) | 衣柜内部结构可视化 |
+| 3.1 | [Plan to Isometric](./3.1-plan-to-isometric.md) | 平面图转轴测图 |
+| 3.2 | [Wardrobe Interior](./3.2-wardrobe-interior.md) | 衣柜内部结构可视化 |
 
 **Total: 2 cases**
 

@@ -12,7 +12,7 @@
 
 | ID | Case Name | 中文名称 |
 |----|-----------|----------|
-| RENDER-001 | [Clay Model to Photorealistic](./RENDER-001-clay-to-photorealistic.md) | 白模转照片级渲染 |
+| 5.1 | [Clay Model to Photorealistic](./5.1-clay-to-photorealistic.md) | 白模转照片级渲染 |
 
 **Total: 1 case**
 
