@@ -42,12 +42,15 @@
 
 ---
 
-**Case Count**: 2
+**Case Count**: 3
 
-**Example Cases**:
-- See legacy cases:
-  - [A-001 - CAD Floor Plan to Colored Plan](../architecture/A-001-cad-to-colored-plan.md)
-  - [L-001 - Master Plan Visualization](../landscape/L-001-master-plan-visualization.md)
+**Cases**:
+- [TECH-002 - 2D Floor Plan to 3D Isometric](./TECH-002-plan-to-isometric.md)
+- [TECH-003 - Wardrobe Interior Visualization](./TECH-003-wardrobe-interior.md)
+
+**See also legacy cases**:
+- [A-001 - CAD Floor Plan to Colored Plan](../architecture/A-001-cad-to-colored-plan.md)
+- [L-001 - Master Plan Visualization](../landscape/L-001-master-plan-visualization.md)
 
 **Related Stages**:
 - Previous: [02 - Space Planning](../02-space-planning/)
