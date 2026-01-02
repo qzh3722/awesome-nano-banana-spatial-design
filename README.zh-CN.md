@@ -972,11 +972,13 @@
 
 #### 阶段 1：内部结构展示
 
+#### 输入：关闭状态的衣柜
+
 ![输入图片](./assets/cases/3.2-wardrobe-interior/input.jpg)
-*输入：关闭状态的衣柜*
+
+#### 输出：内部收纳结构展示
 
 ![输出图片1](./assets/cases/3.2-wardrobe-interior/output1.jpg)
-*输出：内部收纳结构展示*
 
 **提示词：**
 ```
@@ -996,8 +998,9 @@
 
 #### 阶段 2：迭代优化
 
+#### 输出：修改后布局（右上柜改为挂衣区）
+
 ![输出图片2](./assets/cases/3.2-wardrobe-interior/output2.jpg)
-*输出：修改后布局 - 右上柜改为挂衣区*
 
 **提示词（基于 Output 1）：**
 ```

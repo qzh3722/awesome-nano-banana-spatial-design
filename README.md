@@ -971,11 +971,13 @@ Reveal the internal organization system of a closed wardrobe with intelligent st
 
 #### Phase 1: Interior Structure Reveal
 
+#### Input: Closed Wardrobe
+
 ![Input Image](./assets/cases/3.2-wardrobe-interior/input.jpg)
-*Input: Closed Wardrobe*
+
+#### Output: Interior Organization Reveal
 
 ![Output Image 1](./assets/cases/3.2-wardrobe-interior/output1.jpg)
-*Output: Interior Organization Reveal*
 
 **Prompt:**
 ```
@@ -995,15 +997,11 @@ Transform this wardrobe into an open interior view with the following STRICT rul
 
 #### Phase 2: Iterative Refinement
 
+#### Output: Modified Layout (Upper Right Changed to Hanging Rail)
+
 ![Output Image 2](./assets/cases/3.2-wardrobe-interior/output2.jpg)
-*Output: Modified Layout - Upper Right Changed to Hanging Rail*
 
 **Prompt (Based on Output 1):**
-```
-将右上柜改成衣架式，保持右下柜是抽屉不变。
-```
-
-**English Translation:**
 ```
 Change the upper right cabinet to a hanging rail style, keep the lower right cabinet as drawers unchanged.
 ```
