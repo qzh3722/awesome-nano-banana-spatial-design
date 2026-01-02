@@ -1335,7 +1335,13 @@ Transform clay/white 3D model renders into photorealistic visualizations with in
 
 ![Output Cream](./assets/cases/5.1-clay-to-render/output-cream.jpg)
 
-#### Output 2: Dark Wood Japanese Style
+#### Output 2: Dark Wood Japanese Style (Image Reference)
+
+*Style Reference Image:*
+
+![Style Reference](./assets/cases/5.1-clay-to-render/ref-dark-style.jpg)
+
+*Generated Output:*
 
 ![Output Dark](./assets/cases/5.1-clay-to-render/output-dark.png)
 
@@ -1371,7 +1377,21 @@ Transform this clay/white model render into a photorealistic architectural visua
 | `Industrial Loft` | Exposed brick, metal, concrete |
 | `French Light Luxury` | Cream palette, elegant details |
 
-**For Image Reference Style:** Upload the style reference as the FIRST image, then the clay model as the SECOND image.
+**Prompt (Image Reference Style - for Output 2):**
+
+Upload Order: 1st = Style Reference, 2nd = Clay Model
+
+```
+Using the FIRST uploaded image as the style/material reference and the SECOND uploaded image as the clay/white model source:
+
+1. GEOMETRY SOURCE: Extract ALL 3D geometry, spatial layout, furniture placement, camera angle, and perspective EXCLUSIVELY from the clay model (second image). Do NOT modify any shapes or positions.
+
+2. STYLE TRANSFER: Apply the visual style, material palette, color scheme, lighting atmosphere, and design language from the reference image (first image) to the clay model geometry.
+
+3. MATERIAL MAPPING: Intelligently map materials from the style reference to corresponding surfaces in the clay model.
+
+4. PHOTOREALISTIC OUTPUT: Generate a final render that combines the EXACT spatial structure of the clay model with the aesthetic quality of the style reference.
+```
 
 [↑ Back to Top](#table-of-contents)
 
