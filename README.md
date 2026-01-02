@@ -910,7 +910,7 @@ Using the uploaded blank floor plan showing the original as-built condition, pre
 *Technical Drawings to Visualization*
 
 **Cases in this stage:**  
-[3.1 2D Floor Plan to 3D Isometric](#31-2d-floor-plan-to-3d-isometric)
+[3.1 2D Floor Plan to 3D Isometric](#31-2d-floor-plan-to-3d-isometric) • [3.2 Wardrobe Interior Visualization](#32-wardrobe-interior-visualization)
 
 ### 3.1 2D Floor Plan to 3D Isometric
 
@@ -960,6 +960,69 @@ Replace **'blueprint style'** with:
 *   **90 Degrees (Side View):** `"rotated 90 degrees clockwise/counterclockwise"`
 *   **45 Degrees (Corner View):** `"rotated 45 degrees to show the adjacent corner perspective"`
 *   **Bird's Eye View:** `"from a higher bird's eye view angle looking down at 60 degrees"`
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### 3.2 Wardrobe Interior Visualization
+
+Reveal the internal organization system of a closed wardrobe with intelligent structure analysis and iterative refinement.
+
+#### Phase 1: Interior Structure Reveal
+
+![Input Image](./assets/cases/3.2-wardrobe-interior/input.jpg)
+*Input: Closed Wardrobe*
+
+![Output Image 1](./assets/cases/3.2-wardrobe-interior/output1.jpg)
+*Output: Interior Organization Reveal*
+
+**Prompt:**
+```
+Transform this wardrobe into an open interior view with the following STRICT rules:
+
+1. STRUCTURAL FIDELITY: Preserve the EXACT number and position of compartments, doors, and drawers as shown in the reference image. Do NOT change, merge, or add any divisions.
+
+2. REVEAL INTERIOR: 
+   - Remove all cabinet doors to expose internal storage
+   - Pull out all drawers partially to show their contents
+   - Keep original proportions and alignments intact
+
+3. INTELLIGENT FILL: Populate the revealed interior with realistic organized items (clothes, linens, accessories) that match the wardrobe's style.
+
+4. CONSISTENCY: Maintain the same camera angle, lighting, room environment, and material finish as the original image.
+```
+
+#### Phase 2: Iterative Refinement
+
+![Output Image 2](./assets/cases/3.2-wardrobe-interior/output2.jpg)
+*Output: Modified Layout - Upper Right Changed to Hanging Rail*
+
+**Prompt (Based on Output 1):**
+```
+将右上柜改成衣架式，保持右下柜是抽屉不变。
+```
+
+**English Translation:**
+```
+Change the upper right cabinet to a hanging rail style, keep the lower right cabinet as drawers unchanged.
+```
+
+#### 💡 Tips
+
+**Key Principles for Structure Fidelity:**
+
+| Instruction | Purpose |
+|------------|---------|
+| `"Preserve the EXACT number"` | Prevent AI from modifying compartment counts |
+| `"Do NOT change, merge, or add"` | Explicitly prohibit any structural changes |
+| `"Pull out all drawers partially"` | Ensure drawers reveal their contents |
+| `"Keep original proportions"` | Maintain proportional consistency for comparison |
+
+**Iterative Refinement Strategy:**
+This case demonstrates a **two-phase workflow**:
+1. **Phase 1**: Generate the initial interior reveal with strict structural fidelity
+2. **Phase 2**: Apply targeted modifications using simple, precise instructions
 
 [↑ Back to Top](#table-of-contents)
 
