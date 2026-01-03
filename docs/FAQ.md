@@ -14,7 +14,7 @@ A curated library of professional-grade prompts for Nano Banana Pro (Gemini 3 Pr
 - Anyone working with spatial design who wants to leverage AI effectively
 
 ### Is this free to use?
-Yes! This is an open-source project under the MIT License. You can use, modify, and share all content freely.
+Yes! This is an open-source project under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) License. You can use, modify, and share all content freely, as long as you provide appropriate attribution.
 
 ### How is this different from generic prompt libraries?
 - **Problem-focused**: Each prompt solves a specific design workflow challenge
@@ -64,10 +64,11 @@ When enabled, the model "thinks through" spatial logic before generating.
 Nano Banana Pro can generate up to 4K+ resolution. Minimum recommended for professional use: 1920px on the longest side.
 
 ### Can I use this for commercial projects?
-Yes! The prompts are MIT licensed. However:
+Yes! The prompts are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This means:
+- You can use them for commercial projects
+- You must provide appropriate attribution (credit this library)
 - Review Nano Banana Pro's terms of service for commercial use
 - You own the outputs you generate
-- Give credit to this library if you'd like (appreciated but not required)
 
 ### Do I need reference images?
 It depends on the case:
@@ -94,12 +95,6 @@ An advanced image generation model (Gemini 3 Pro Image) with:
 - Multi-reference image consistency
 - Precise text rendering in images
 - High-resolution outputs (4K+)
-
-### How do I access Nano Banana Pro?
-[Add access instructions based on actual availability]
-
-### Is Nano Banana Pro free?
-[Add pricing information based on actual service]
 
 ## Contributing
 
@@ -194,11 +189,6 @@ Please do! We'd love to see:
 
 Tag us or use discussions to share!
 
-### How can I stay updated?
-- **Watch** the GitHub repository for updates
-- Check [ROADMAP.md](./ROADMAP.md) for development plans
-- Join discussions for announcements
-
 ## Future Development
 
 ### Will more cases be added?
@@ -230,4 +220,4 @@ Currently focused on Nano Banana Pro. Future plans may include:
 
 ---
 
-Last updated: 2025-11-28
+Last updated: 2026-01-03
