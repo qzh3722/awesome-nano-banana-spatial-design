@@ -1410,9 +1410,52 @@ Using the FIRST uploaded image as the style/material reference and the SECOND up
 ---
 
 ## ⚙️ Specialized Tasks
-*Specialized Tasks*
+*Design Assistance & Documentation*
 
-> Cases for this stage are in development. Check back for updates!
+**Cases in this stage:**  
+[6.1 Soft Furnishing Extraction Board](#61-soft-furnishing-extraction-board)
+
+### 6.1 Soft Furnishing Extraction Board
+
+Extract furniture and decorative items from interior renderings into a professional product catalog-style board — perfect for procurement lists and supplier quotations.
+
+#### Input
+
+![Input Image](./assets/cases/6.1-soft-furnishing-extraction/input.jpg)
+
+#### Output
+
+![Output Image](./assets/cases/6.1-soft-furnishing-extraction/output.png)
+
+**Prompt:**
+```
+Extract furniture and decorative items from this interior image.
+Create a PREMIUM PRODUCT CATALOG style board.
+
+⚠️ CRITICAL: NO DUPLICATE ITEMS
+- Each unique item appears ONLY ONCE
+- Exception: paired items (2 matching lamps, 2 nightstands) should both be shown
+
+EXCLUDE:
+- Built-in wall cabinets and shelving
+- Fixed architectural elements
+- Wall panels, flooring, ceiling
+
+LAYOUT STYLE:
+- Clean white background
+- Elegant grid with generous spacing
+- Consistent sizing within categories
+- Large items at top, small at bottom
+
+FORMAT:
+- Category headers: FURNITURE | LIGHTING | TEXTILES | DÉCOR
+- Sequential numbering
+- Front-facing view
+
+AESTHETIC: High-end interior design catalog, minimalist, sophisticated.
+```
+
+> **💡 Tip**: Generate multiple times and select the best result. Small accessories may be omitted; request separate extraction if needed.
 
 [↑ Back to Top](#table-of-contents)
 

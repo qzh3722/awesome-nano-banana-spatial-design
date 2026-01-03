@@ -56,5 +56,5 @@ assets/**/*.psd
 assets/**/*.ai
 
 # Local development files (not tracked)
-ROADMAP.md
+# ROADMAP.md  # Temporarily commented out for AI access
 
