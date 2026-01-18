@@ -1458,10 +1458,33 @@ OUTPUT: Professional photography-quality lighting that feels natural and atmosph
 
 **Step 1:** Use this meta-prompt to generate a custom enhancement prompt:
 ```
-Analyze this interior rendering and identify specific lighting issues. Then generate a targeted enhancement prompt that addresses ONLY the specific issues identified, uses precise technical language, and includes geometry preservation safeguards.
+Analyze this interior rendering and identify specific lighting issues that need improvement:
+
+STEP 1 - DIAGNOSTIC ANALYSIS:
+List all detected lighting problems:
+- Light source glow quality (weak/strong/natural)
+- Shadow areas (over-dark/detail-lost/acceptable)
+- Light falloff (flat/realistic/over-dramatic)
+- Ceiling brightness (too dark/balanced/over-lit)
+- Depth separation (flat/moderate/good)
+- Any overexposed or underexposed areas
+
+STEP 2 - GENERATE CUSTOM PROMPT:
+Based on your analysis, generate a targeted lighting enhancement prompt that:
+- Addresses ONLY the specific issues identified
+- Prioritizes the most impactful improvements
+- Uses precise technical language for AI image generation
+- Includes geometry preservation safeguards
+
+OUTPUT FORMAT:
+## Lighting Issues Detected:
+[Bullet list of specific problems]
+
+## Custom Enhancement Prompt:
+[Ready-to-use prompt tailored to this specific image]
 ```
 
-**Step 2:** Copy the AI-generated prompt and use it with your image.
+**Step 2:** Copy the AI-generated custom prompt and use it with your image.
 
 > **💡 Tip**: Method B produces the best results for portfolio/presentation quality images.
 
