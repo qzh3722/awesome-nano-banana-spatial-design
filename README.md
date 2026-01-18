@@ -1319,7 +1319,7 @@ Structure your request with:
 *Final Rendering & Visualization*
 
 **Cases in this stage:**  
-[5.1 Clay Model to Photorealistic Render](#51-clay-model-to-photorealistic-render)
+[5.1 Clay Model to Photorealistic Render](#51-clay-model-to-photorealistic-render) • [5.2 Lighting Enhancement](#52-lighting-enhancement)
 
 ### 5.1 Clay Model to Photorealistic Render
 
@@ -1404,6 +1404,50 @@ Using the FIRST uploaded image as the style/material reference and the SECOND up
 
 4. PHOTOREALISTIC OUTPUT: Generate a final render that combines the EXACT spatial structure of the clay model with the aesthetic quality of the style reference.
 ```
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### 5.2 Lighting Enhancement
+
+Enhance lighting quality in interior renderings: add chandelier glow, recover shadow details, improve light falloff, and boost spatial depth. Perfect for post-production optimization.
+
+#### Input
+
+![Input Image](./assets/cases/5.2-lighting-enhancement/input.png)
+*Original rendering with flat lighting*
+
+#### Output
+
+![Output Image](./assets/cases/5.2-lighting-enhancement/output.png)
+*Enhanced with glow, depth, and atmosphere*
+
+**Prompt:**
+```
+Enhance the lighting and atmosphere of this interior rendering while preserving all geometry and design elements exactly:
+
+LIGHTING ENHANCEMENT:
+1. Chandelier Glow: Intensify the warm glow emanating from the light fixtures. Add soft light halos and natural light bloom effects around each light source.
+
+2. Shadow Recovery: Lift shadow areas (under tables, corners) to reveal hidden details while maintaining depth. Avoid flat or washed-out appearance.
+
+3. Light Falloff: Apply realistic inverse-square light falloff from each light source. Areas closer to lights should be noticeably brighter with smooth gradual dimming.
+
+4. Ceiling Bounce: Add subtle warm light reflection on ceiling surfaces from lights and ambient sources below.
+
+5. Depth Enhancement: Create clear lighting separation between foreground (brighter) and background areas (slightly muted) to enhance spatial depth.
+
+PRESERVATION RULES:
+- Maintain EXACT geometry, furniture, decor, and color palette
+- Keep the warm, luxurious atmosphere
+- Do not add or remove any objects
+- Preserve all material textures and finishes
+
+OUTPUT: Photorealistic interior with enhanced lighting that feels natural and atmospheric.
+```
+
+> **💡 Tip**: Add "subtle" or "gentle" if the result is too dramatic. Use "dramatic light bloom" for stronger glow effects.
 
 [↑ Back to Top](#table-of-contents)
 
