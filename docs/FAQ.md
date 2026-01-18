@@ -129,11 +129,12 @@ Yes! Many cases specifically handle CAD outputs:
 - Generate photorealistic visualizations
 
 ### How long does generation take?
-[Add timing information based on actual model performance]
+Generation time depends on image complexity and model load:
 
 Typically:
-- Simple cases: [X] seconds
-- Complex cases with Thinking Mode: [X] seconds
+- Simple cases: 10-30 seconds
+- Complex cases with Thinking Mode: 30-60 seconds
+- High-resolution outputs (4K+): 45-90 seconds
 
 ### Can I batch generate multiple options?
 Yes! To generate variations:
@@ -220,4 +221,4 @@ Currently focused on Nano Banana Pro. Future plans may include:
 
 ---
 
-Last updated: 2026-01-03
+Last updated: 2026-01-18

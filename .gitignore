@@ -55,6 +55,8 @@ build/
 assets/**/*.psd
 assets/**/*.ai
 
-# Local development files (not tracked)
-# ROADMAP.md  # Temporarily commented out for AI access
+# Private/internal development files
+.private/
 
+# Web app (separate deployment)
+nano-banana-web/
