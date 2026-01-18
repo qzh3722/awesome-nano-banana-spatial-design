@@ -1411,43 +1411,59 @@ Using the FIRST uploaded image as the style/material reference and the SECOND up
 
 ### 5.2 Lighting Enhancement
 
-Enhance lighting quality in interior renderings: add chandelier glow, recover shadow details, improve light falloff, and boost spatial depth. Perfect for post-production optimization.
+Enhance lighting quality in interior renderings: add light source glow, recover shadow details, improve light falloff, and boost spatial depth. Two methods available: **Quick Start** (universal) or **Advanced** (meta-prompt for best results).
 
 #### Input
 
 ![Input Image](./assets/cases/5.2-lighting-enhancement/input.png)
-*Original rendering with flat lighting*
+*Original rendering*
 
 #### Output
 
 ![Output Image](./assets/cases/5.2-lighting-enhancement/output.png)
-*Enhanced with glow, depth, and atmosphere*
+*Enhanced lighting (Universal Prompt)*
+
+---
+
+#### Method A: Quick Start (Universal Prompt)
+
+*Works for any interior rendering without modification.*
 
 **Prompt:**
 ```
-Enhance the lighting and atmosphere of this interior rendering while preserving all geometry and design elements exactly:
+Enhance the lighting quality of this interior rendering while strictly preserving all geometry, furniture, and design elements:
 
-LIGHTING ENHANCEMENT:
-1. Chandelier Glow: Intensify the warm glow emanating from the light fixtures. Add soft light halos and natural light bloom effects around each light source.
+AUTOMATIC LIGHTING ANALYSIS & ENHANCEMENT:
+1. Analyze all visible light sources and intensify their glow with natural bloom effects
+2. Recover shadow details in dark areas while maintaining depth
+3. Apply realistic light falloff - objects closer to lights should be noticeably brighter
+4. Add subtle ambient light bounce on ceilings and walls
+5. Enhance depth perception - create clear brightness separation between foreground and background
 
-2. Shadow Recovery: Lift shadow areas (under tables, corners) to reveal hidden details while maintaining depth. Avoid flat or washed-out appearance.
+STRICT PRESERVATION:
+- Maintain exact geometry, colors, materials, and spatial layout
+- Do not add, remove, or modify any objects
 
-3. Light Falloff: Apply realistic inverse-square light falloff from each light source. Areas closer to lights should be noticeably brighter with smooth gradual dimming.
-
-4. Ceiling Bounce: Add subtle warm light reflection on ceiling surfaces from lights and ambient sources below.
-
-5. Depth Enhancement: Create clear lighting separation between foreground (brighter) and background areas (slightly muted) to enhance spatial depth.
-
-PRESERVATION RULES:
-- Maintain EXACT geometry, furniture, decor, and color palette
-- Keep the warm, luxurious atmosphere
-- Do not add or remove any objects
-- Preserve all material textures and finishes
-
-OUTPUT: Photorealistic interior with enhanced lighting that feels natural and atmospheric.
+OUTPUT: Professional photography-quality lighting that feels natural and atmospheric.
 ```
 
-> **💡 Tip**: Add "subtle" or "gentle" if the result is too dramatic. Use "dramatic light bloom" for stronger glow effects.
+---
+
+#### Method B: Advanced (Meta-Prompt)
+
+*Let AI analyze your image first, then generate a custom prompt for optimal results.*
+
+![Output Meta](./assets/cases/5.2-lighting-enhancement/output-meta.png)
+*Best result using meta-prompt approach*
+
+**Step 1:** Use this meta-prompt to generate a custom enhancement prompt:
+```
+Analyze this interior rendering and identify specific lighting issues. Then generate a targeted enhancement prompt that addresses ONLY the specific issues identified, uses precise technical language, and includes geometry preservation safeguards.
+```
+
+**Step 2:** Copy the AI-generated prompt and use it with your image.
+
+> **💡 Tip**: Method B produces the best results for portfolio/presentation quality images.
 
 [↑ Back to Top](#table-of-contents)
 
