@@ -1241,7 +1241,7 @@
 *最终渲染与效果图*
 
 **本阶段案例：**  
-[5.1 白模转照片级渲染](#51-白模转照片级渲染-clay-to-photorealistic) • [5.2 光影修复与强化](#52-光影修复与强化-lighting-enhancement)
+[5.1 白模转照片级渲染](#51-白模转照片级渲染-clay-to-photorealistic) • [5.2 光影修复与强化](#52-光影修复与强化-lighting-enhancement) • [5.3 色调统一与色彩校正](#53-洗图2色调统一与色彩校正)
 
 ### 5.1 白模转照片级渲染 (Clay to Photorealistic)
 

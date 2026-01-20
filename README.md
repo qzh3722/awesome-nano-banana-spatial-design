@@ -1319,7 +1319,7 @@ Structure your request with:
 *Final Rendering & Visualization*
 
 **Cases in this stage:**  
-[5.1 Clay Model to Photorealistic Render](#51-clay-model-to-photorealistic-render) • [5.2 Lighting Enhancement](#52-lighting-enhancement)
+[5.1 Clay Model to Photorealistic Render](#51-clay-model-to-photorealistic-render) • [5.2 Lighting Enhancement](#52-lighting-enhancement) • [5.3 Tone Unification](#53-tone-unification)
 
 ### 5.1 Clay Model to Photorealistic Render
 
