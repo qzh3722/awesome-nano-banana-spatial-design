@@ -57,4 +57,6 @@ assets/**/*.ai
 
 # Local development files (not tracked)
 # ROADMAP.md  # Temporarily commented out for AI access
-
+.agent/
+PROJECT_STATUS.md
+.claude/

@@ -1488,9 +1488,97 @@ OUTPUT FORMAT:
 
 > **💡 Tip**: Method B produces the best results for portfolio/presentation quality images.
 
+
 [↑ Back to Top](#table-of-contents)
 
 ---
+
+### 5.3 Tone Unification
+*Post-production 2: Tone Unification and Color Correction*
+
+Fix mixed lighting issues, unify color temperature, and correct white balance while preserving original details. **Three-tier prompt system** adapts to different user needs.
+
+#### Input
+
+![Input Image](./assets/cases/5.3-tone-unification/input.png)
+*Input: Mixed lighting (cool window light clashing with warm interior lights)*
+
+#### Output Option A: Quick Fix (Warm Tone)
+
+![Output Quick](./assets/cases/5.3-tone-unification/output-quick.png)
+*AI automatically enhanced warm atmosphere while eliminating color conflicts*
+
+#### Output Option B: Meta-Prompt (Neutral Tone)
+
+![Output Meta](./assets/cases/5.3-tone-unification/output-meta.png)
+*User-specified 4000K neutral white balance with preserved material colors*
+
+---
+
+#### Level 1: Quick Fix (AI Auto-Determines Best Tone)
+
+Best for: Fast turnaround, letting AI decide the optimal color direction.
+
+```
+Use the uploaded image as a strict reference. Keep all furniture, decorations, geometry, and details exactly unchanged.
+
+First, analyze the space type, design style, and intended atmosphere of this render.
+Then, identify the specific color temperature issues (such as clashing mixed lighting or localized color casts).
+
+Re-render the image to unify the lighting color temperature while:
+- Preserving and enhancing the original design's atmospheric intent (e.g., keep warm tones for cozy residential spaces, cool tones for modern offices)
+- Only eliminating discordant color casts and mixed lighting conflicts
+- Ensuring the final tone is both unified and harmonious, while elevating the space's design expression
+
+Do not flatten the image into a bland neutral tone. Instead, grade it to the tone that best showcases this space's unique design character.
+```
+
+---
+
+#### Level 2: Meta-Prompt (AI Analyzes and Generates Custom Instructions)
+
+Best for: Understanding the color issues before fixing, generating precise correction prompts.
+
+**Step 1:** Use this meta-prompt to analyze your image:
+
+```
+You are a professional architectural visualization post-production expert. Analyze the uploaded render to identify specific defects in color temperature and white balance.
+Then, write a **modification instruction prompt** based on your analysis.
+
+⚠️ **Critical Rules (for Nano Banana Pro)**:
+1. **Instruction-Only Mode**: Write ONLY "what to modify", NO content descriptions.
+2. **Light vs. Material Separation**: Distinctly separate "lighting temperature" from "material intrinsic color".
+   - ✅ Correct: Neutralize cool **lighting** cast.
+   - ❌ Incorrect: Remove blue tints from background (This turns blue furniture gray).
+3. **Mandatory Protection Instructions**: You MUST include:
+   - "Do not alter the intrinsic color of any furniture, soft furnishings, or materials."
+   - "Apply color correction ONLY to the lighting/atmosphere, NOT the objects."
+```
+
+**Step 2:** Copy the AI-generated custom prompt and use it with your image.
+
+---
+
+#### Level 3: Manual Fine-Tuning (Specify Kelvin Values)
+
+Best for: Professional colorists who know exactly what color temperature they need.
+
+```
+Use the uploaded image as a strict reference. Keep all furniture, decorations, geometry, and details exactly unchanged. Re-render the image to unify the lighting color temperature. Eliminate chaotic mixed lighting and unify the overall tone to [3000K / 4000K / 5000K / 6500K]. Ensure accurate white balance and natural, harmonious colors.
+```
+
+| Kelvin | Name | Best For |
+|--------|------|----------|
+| 2700K-3000K | Warm White | Bedrooms, restaurants, hotels |
+| 4000K | Natural White | Offices, showrooms, commercial |
+| 5000K-6500K | Cool White | Hospitals, tech spaces, galleries |
+
+> **💡 Tip**: Start with Level 1 (Quick Fix). If unsatisfied, use Level 2 to understand the issues, then fine-tune with Level 3.
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 
 ## ⚙️ Specialized Tasks
 *Design Assistance & Documentation*
