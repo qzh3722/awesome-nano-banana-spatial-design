@@ -1579,6 +1579,30 @@ Use the uploaded image as a strict reference. Keep all furniture, decorations, g
 
 ---
 
+### 5.4 Day to Night Transformation
+*Post-production 3: Atmospheric Lighting Change*
+
+Transform a daytime architectural rendering into a dramatic night scene with customized lighting.
+
+#### Input
+
+![Input Image](./assets/cases/5.4-day-to-night/input.jpg)
+
+#### Output
+
+![Output Image](./assets/cases/5.4-day-to-night/output.png)
+
+**Prompt:**
+```
+A photorealistic night view of a modern contemporary villa. The building features large glass windows emitting warm, inviting interior light (3000K). The sky is a deep blue twilight 'blue hour' sky with subtle stars. Exterior garden lighting illuminates the landscaping. The concrete texture is visible but darker. There are reflections of the interior lights on the glass and potentially on the ground if wet or polished. High contrast, cinematic lighting, architectural photography style. Maintain the exact architectural structure and perspective of the input image, only changing the lighting and atmosphere to night time.
+```
+
+> **💡 Tip**: Use **Blue Hour** in your prompt for the most visually appealing night sky.
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
 
 ## ⚙️ Specialized Tasks
 *Design Assistance & Documentation*
