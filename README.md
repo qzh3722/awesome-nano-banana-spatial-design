@@ -1582,7 +1582,7 @@ Use the uploaded image as a strict reference. Keep all furniture, decorations, g
 ### 5.4 Day to Night Transformation
 *Post-production 3: Atmospheric Lighting Change*
 
-Transform a daytime architectural rendering into a dramatic night scene with customized lighting.
+Transform any daytime rendering (interior or exterior) into a realistic night scene with intelligent lighting activation.
 
 #### Input
 
@@ -1594,10 +1594,25 @@ Transform a daytime architectural rendering into a dramatic night scene with cus
 
 **Prompt:**
 ```
-A photorealistic night view of a modern contemporary villa. The building features large glass windows emitting warm, inviting interior light (3000K). The sky is a deep blue twilight 'blue hour' sky with subtle stars. Exterior garden lighting illuminates the landscaping. The concrete texture is visible but darker. There are reflections of the interior lights on the glass and potentially on the ground if wet or polished. High contrast, cinematic lighting, architectural photography style. Maintain the exact architectural structure and perspective of the input image, only changing the lighting and atmosphere to night time.
+Transform this daytime rendering into a realistic night scene while strictly preserving all geometry, materials, and design elements:
+
+AUTOMATIC NIGHT TRANSFORMATION:
+1. Analyze the scene type (interior/exterior) and intelligently determine appropriate night lighting
+2. For windows: Add warm interior glow (if viewing from outside) or cool exterior darkness (if viewing from inside)
+3. Add natural artificial lighting effects - activate all visible light fixtures with realistic glow and bloom
+4. Transform the sky/background to twilight or night atmosphere
+5. Apply realistic light falloff and shadows appropriate for artificial lighting
+6. Add subtle reflections on glass and polished surfaces
+
+STRICT PRESERVATION:
+- Maintain exact geometry, colors, materials, and spatial layout
+- Do not add, remove, or modify any objects
+- Preserve the original design intent and atmosphere
+
+OUTPUT: Professional architectural photography-quality night visualization.
 ```
 
-> **💡 Tip**: Use **Blue Hour** in your prompt for the most visually appealing night sky.
+> **💡 Tip**: This universal prompt works for both interior and exterior scenes. AI automatically detects scene type and applies appropriate lighting.
 
 [↑ Back to Top](#table-of-contents)
 
