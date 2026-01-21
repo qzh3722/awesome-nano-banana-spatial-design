@@ -910,7 +910,7 @@ Using the uploaded blank floor plan showing the original as-built condition, pre
 *Technical Drawings to Visualization*
 
 **Cases in this stage:**  
-[3.1 2D Floor Plan to 3D Isometric](#31-2d-floor-plan-to-3d-isometric) • [3.2 Wardrobe Interior Visualization](#32-wardrobe-interior-visualization)
+[3.1 2D Floor Plan to 3D Isometric](#31-2d-floor-plan-to-3d-isometric) • [3.2 Wardrobe Interior Visualization](#32-wardrobe-interior-visualization) • [3.3 Elevation to Render](#33-elevation-to-render)
 
 ### 3.1 2D Floor Plan to 3D Isometric
 
@@ -1021,6 +1021,50 @@ Change the upper right cabinet to a hanging rail style, keep the lower right cab
 This case demonstrates a **two-phase workflow**:
 1. **Phase 1**: Generate the initial interior reveal with strict structural fidelity
 2. **Phase 2**: Apply targeted modifications using simple, precise instructions
+
+[↑ Back to Top](#table-of-contents)
+
+---
+
+### 3.3 Elevation to Render
+Transform 2D technical elevation drawings into photorealistic material visualizations.
+
+#### Input
+
+![Input Image](./assets/cases/3.3-elevation-to-render/input.jpg)
+
+#### Output
+
+![Output Image](./assets/cases/3.3-elevation-to-render/output.jpg)
+
+**Prompt:**
+```
+Transform this 2D CAD elevation drawing into a photorealistic interior rendering, strictly following the geometry and proportions:
+
+SCENE UTNDERSTANDING:
+1. Interpret the 2D lines as a real 3D space with depth and shadow
+2. Identify furniture, cabinetry, shelves, and decorative panels
+
+MATERIAL DEFINITION:
+- Main Wall/Background: [Specify: e.g., White Marble / Wood Veneer / Textured Paint]
+- Cabinetry: [Specify: e.g., Dark Grey Matte Lacquer / Glass Doors]
+- Shelving: [Specify: e.g., Walnut Wood / Thin Metal]
+- Floor/Baseboard: [Specify Material]
+
+LIGHTING & ATMOSPHERE:
+- Apply soft interior lighting
+- Activate integrated LED strips within cabinetry (if linear patterns exist)
+- Create a Modern Minimalist or Luxury atmosphere
+- Ensure realistic reflections and textures
+
+STRICT FIDELITY:
+- Maintain exact position, size, and aspect ratio of all elements matching the CAD
+- Do not add large furniture not present in the drawing
+
+OUTPUT: Photorealistic frontal interior elevation render.
+```
+
+> **💡 Tip**: Explicitly map materials to specific shapes (e.g., "The large rectangle on the left is walnut wood").
 
 [↑ Back to Top](#table-of-contents)
 
