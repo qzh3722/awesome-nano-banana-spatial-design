@@ -1056,8 +1056,8 @@ TASK: Apply VIBRANT, PHOTOREALISTIC MATERIALS directly onto this 2D CAD geometry
 3.  **TRACE LINES**: Every line in the input corresponds to a material change or gap.
 
 🧠 INTELLIGENT SYMBOL READING:
--   **Kickplate Rule**: If a unit has a bottom plinth/kickplate -> It is a **CABINET**.
--   **Floor Rule**: If a unit goes straight to the floor without a plinth -> It is a **DOOR/PASSAGE**.
+-   **Plinth Logic**: If unit has recessed plinth -> Identify as **CABINET**.
+-   **Grounding Logic**: If vertical lines extend to floor -> Identify as **DOOR/PASSAGE**.
 -   **Double Lines**: Render as metal frames or shadow gaps.
 -   **Text Removal**: Remove text labels and fill with background material.
 
