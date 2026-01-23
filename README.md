@@ -1036,8 +1036,12 @@ Transform 2D technical elevation drawings into photorealistic material visualiza
 #### Input
 ![Input Image](./assets/cases/3.3-elevation-to-render/input.png)
 
-#### Output
-![Output Image](./assets/cases/3.3-elevation-to-render/output-meta.jpeg)
+#### Outputs
+**1. Universal Template Result**
+![Universal Template Output](./assets/cases/3.3-elevation-to-render/output.jpeg)
+
+**2. Meta-Prompt Result**
+![Meta-Prompt Output](./assets/cases/3.3-elevation-to-render/output-meta.jpeg)
 *Generated via Meta-Prompt method*
 
 ---

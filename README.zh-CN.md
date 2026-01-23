@@ -1039,8 +1039,12 @@
 ![输入图片](./assets/cases/3.3-elevation-to-render/input.png)
 
 #### 输出
+**1. 通用模板结果 (Universal Template)**
+![通用模板输出](./assets/cases/3.3-elevation-to-render/output.jpeg)
 
-![输出图片](./assets/cases/3.3-elevation-to-render/output-meta.jpeg)
+**2. 元提示词结果 (Meta-Prompt)**
+![元提示词输出](./assets/cases/3.3-elevation-to-render/output-meta.jpeg)
+*由元提示词自动生成*
 
 ---
 
