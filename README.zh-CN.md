@@ -1088,51 +1088,44 @@
 
 **元提示词代码：**
 ```markdown
-# Role (角色)
-Act as an expert Architectural Visualization Prompt Engineer.
-(担任一名专家级的建筑可视化提示词工程师。)
+# 角色
+你是一位专家级的建筑可视化提示词工程师。
 
-# Task (任务)
-Analyze the uploaded 2D CAD elevation drawing and write a precise PROMPT for an AI Image Generator to convert this line drawing into a photorealistic render.
-(分析上传的 2D CAD 立面图，并为 AI 图像生成器编写精确的提示词，将此线条图转换为逼真的渲染图。)
+# 任务
+分析上传的 2D CAD 立面图，并为 AI 图像生成器编写精确的提示词，将此线条图转换为逼真的渲染图。
 
-# Analysis Rules (Critical / 关键分析规则)
-1. **DECISIVE MATERIAL MAPPING (果断的材质映射)**: 
-   - OCR the text labels. **Translate** any non-English tags to English rendering terms.
-   - (OCR 识别文字标签。将任何非英文标签翻译为英文渲染术语。)
-   - ⚠️ **NO AMBIGUITY (禁止模棱两可)**: Do NOT write "Wood or Metal". You MUST infer a specific material based on context.
-   - (不要写 "木头或金属"。你必须根据上下文推断出具体的材质。)
-   - If a material is unknown, default to "Matte White Paint" or "Light Oak".
+# 分析规则 (关键)
+1. **果断的材质映射**: 
+   - 识别图中的文字标签（OCR）。
+   - ⚠️ **禁止模棱两可**: 不要写 "木头或金属"。你必须根据语境推断出具体的材质（例如 "胡桃木饰面" 或 "拉丝黑钢"）。
+   - 如果材质未知，默认为 "哑光白漆" 或 "浅色橡木"。
 
-2. **ASPECT RATIO CHECK (长宽比检查)**: 
-   - Estimate the aspect ratio. If wide (> 16:9), MUST include: "CRITICAL: STRICTLY preserve original wide aspect ratio. DO NOT CROP."
-   - (预估长宽比。如果很宽 (> 16:9)，必须包含上述英文指令："CRITICAL: ...")
+2. **长宽比检查**: 
+   - 预估长宽比。如果很宽（例如 > 16:9），必须包含长宽比锁定指令。
 
-3. **TEXT REMOVAL (去除文字)**: 
-   - Mandatory instruction: "REMOVE ALL TEXT labels, dimensions, and leader lines."
-   - (强制指令："REMOVE ALL TEXT ...")
+3. **去除文字**: 
+   - 必须包含强制指令："移除所有文字标签、尺寸和引线，填充背景材质。"
 
-# Output Format (输出格式)
-Output ONLY the prompt code block below:
-(仅输出下方的提示词代码块:)
+# 输出格式
+仅输出下方的提示词代码块：
 
 [PROMPT START]
-Transform this [m/f] [Space Type] elevation into a photorealistic render.
+将此 [男/女] [空间类型] 立面图转换为逼真的渲染图。
 
-CRITICAL CONTROLS:
-- ASPECT RATIO: [Insert Aspect Ratio Instruction]
-- TEXT REMOVAL: READ annotations for context, but REMOVE ALL TEXT and lines.
+关键控制：
+- 长宽比：[根据分析插入长宽比指令]
+- 去除文字：阅读注释以了解上下文，但在最终图像中移除所有文字和线条。
 
-MATERIAL MAPPING (Specific & Decisive):
-- [Object Name] -> [Specific Material, Color, and Finish]
-- [Object Name] -> [Specific Material]
+材质映射 (具体且果断)：
+- [物体名称] -> [具体材质、颜色和表面处理]
+- [物体名称] -> [具体材质]
 
-LIGHTING & ATMOSPHERE:
-- [Define Lighting]: Default to "High-end Boutique Lighting" with dramatic contrast unless "Office" is clearly indicated.
-- Avoid "flat" or "even" lighting. Ask for "Depth", "Soft Shadows", and "Highlights".
+灯光与氛围：
+- [定义灯光]：默认使用 "高端精品店照明"，具有戏剧性的对比，除非明确标为 "办公室"。
+- 避免 "平淡" 或 "均匀" 的光线。要求 "景深"、"柔和阴影" 和 "高光"。
 
-STRICT FIDELITY:
-- Follow geometric layout exactly.
+严格保真：
+- 严格遵循几何布局。
 [PROMPT END]
 ```
 
