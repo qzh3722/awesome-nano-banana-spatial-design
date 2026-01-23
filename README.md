@@ -1029,46 +1029,17 @@ This case demonstrates a **two-phase workflow**:
 ### 3.3 Elevation to Render
 Transform 2D technical elevation drawings into photorealistic material visualizations.
 
+**Two Methods Provided:**
+1.  **Universal Template**: For simple, standard cases.
+2.  **Meta-Prompt Generator**: For complex, annotated drawings. Let AI read the CAD annotations and write the rendering prompt for you.
+
 #### Input
 
-![Input Image](./assets/cases/3.3-elevation-to-render/input.jpg)
+![Input Image](./assets/cases/3.3-elevation-to-render/input.png)
 
 #### Output
 
-![Output Image](./assets/cases/3.3-elevation-to-render/output.jpg)
-
-**Prompt:**
-```
-Transform this 2D CAD elevation drawing into a photorealistic interior rendering, strictly following the geometry and proportions:
-
-SCENE UTNDERSTANDING:
-1. Interpret the 2D lines as a real 3D space with depth and shadow
-2. Identify furniture, cabinetry, shelves, and decorative panels
-
-MATERIAL DEFINITION:
-- Main Wall/Background: [Specify: e.g., White Marble / Wood Veneer / Textured Paint]
-- Cabinetry: [Specify: e.g., Dark Grey Matte Lacquer / Glass Doors]
-- Shelving: [Specify: e.g., Walnut Wood / Thin Metal]
-- Floor/Baseboard: [Specify Material]
-
-LIGHTING & ATMOSPHERE:
-- Apply soft interior lighting
-- Activate integrated LED strips within cabinetry (if linear patterns exist)
-- Create a Modern Minimalist or Luxury atmosphere
-- Ensure realistic reflections and textures
-
-STRICT FIDELITY:
-- Maintain exact position, size, and aspect ratio of all elements matching the CAD
-- Do not add large furniture not present in the drawing
-
-OUTPUT: Photorealistic frontal interior elevation render.
-```
-
-> **💡 Tip**: Explicitly map materials to specific shapes (e.g., "The large rectangle on the left is walnut wood").
-
-[↑ Back to Top](#table-of-contents)
-
----
+![Output Image](./assets/cases/3.3-elevation-to-render/output.jpeg)
 
 
 
