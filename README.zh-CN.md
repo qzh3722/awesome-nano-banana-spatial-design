@@ -1042,31 +1042,116 @@
 
 ![输出图片](./assets/cases/3.3-elevation-to-render/output-meta.jpeg)
 
-**提示词（由元提示词生成）：**
+---
+
+#### 方法 1：通用模板 (Universal Template)
+*手动填写。适用于简单案例。*
+
+**提示词：**
 ```markdown
-Transform this retail store elevation into a photorealistic render.
+⭐ TEXTURE MAPPING MODE ACTIVATED.
+TASK: Apply VIBRANT, PHOTOREALISTIC MATERIALS directly onto this 2D CAD geometry.
+
+⚠️ GEOMETRY LOCK (DO NOT CHANGE):
+1.  **ASPECT RATIO**: Output MUST EXACTLY match the input's ultra-wide ratio. Do NOT crop.
+2.  **ORTHOGRAPHIC VIEW**: Render as a flat frontal elevation. Zero perspective distortion.
+3.  **TRACE LINES**: Every line in the input corresponds to a material change or gap.
+
+🧠 INTELLIGENT SYMBOL READING:
+-   **Kickplate Rule**: If a unit has a bottom plinth/kickplate -> It is a **CABINET**.
+-   **Floor Rule**: If a unit goes straight to the floor without a plinth -> It is a **DOOR/PASSAGE**.
+-   **Double Lines**: Render as metal frames or shadow gaps.
+-   **Text Removal**: Remove text labels and fill with background material.
+
+⚠️ CONTENT FREEZE (ANTI-HALLUCINATION):
+-   **NO new windows** (unless explicitly labeled).
+-   **NO new furniture** (chairs, benches).
+-   **NO new plants** or decor.
+
+🎨 VISUAL STYLE (RICH CONTRAST):
+-   **Color Palette**: [Insert Colors]
+-   **Lighting**: Commercial display lighting. EMPHASIZE highlights on glass and deep shadows in gaps. Avoid flat/grey lighting.
+-   **Definition**: Sharp edges, high material definition.
+
+VERIFICATION:
+-   Is the image SUPER WIDE (like the input)?
+-   Is the wood color RICH (not grey clay)?
+-   Are the doors correctly identified (no kickplate)?
+```
+
+---
+
+#### 方法 2：元提示词生成器 (Meta-Prompt) - 推荐
+*让 AI 帮你写提示词。将你的 CAD 图 + 这段元提示词代码发送给 LLM。*
+
+**元提示词代码：**
+```markdown
+# Role
+Act as an expert Architectural Visualization Prompt Engineer.
+
+# Task
+Analyze the uploaded 2D CAD elevation drawing and write a precise PROMPT for an AI Image Generator to convert this line drawing into a photorealistic render.
+
+# Analysis Rules (CRITICAL)
+1. **DECISIVE MATERIAL MAPPING**: 
+   - OCR the text labels. **Translate** any non-English tags to English rendering terms.
+   - ⚠️ **NO AMBIGUITY**: Do NOT write "Wood or Metal". You MUST infer a specific material based on context.
+   - If a material is unknown, default to "Matte White Paint" or "Light Oak".
+
+2. **ASPECT RATIO CHECK**: 
+   - Estimate the aspect ratio. If wide (> 16:9), MUST include: "CRITICAL: STRICTLY preserve original wide aspect ratio. DO NOT CROP."
+
+3. **TEXT REMOVAL**: 
+   - Mandatory instruction: "REMOVE ALL TEXT labels, dimensions, and leader lines."
+
+# Output Format
+Output ONLY the prompt code block below:
+
+[PROMPT START]
+Transform this [m/f] [Space Type] elevation into a photorealistic render.
+
 CRITICAL CONTROLS:
+- ASPECT RATIO: [Insert Aspect Ratio Instruction]
+- TEXT REMOVAL: READ annotations for context, but REMOVE ALL TEXT and lines.
 
-ASPECT RATIO: CRITICAL: STRICTLY preserve original wide aspect ratio. DO NOT CROP.
-TEXT REMOVAL: READ annotations for context, but REMOVE ALL TEXT and lines in the final image.
-MATERIAL MAPPING (Based on your analysis):
+MATERIAL MAPPING (Specific & Decisive):
+- [Object Name] -> [Specific Material, Color, and Finish]
+- [Object Name] -> [Specific Material]
 
-Double doors (left) -> Wood or metal with glass panels
-Display case frames (left, center) -> 30mm black stainless steel trim
-Back panels of left display cases -> Backlit fabric curtain
-Shelving within left display cases -> Glass
-Cabinets below left display cases -> Wood veneer
-Center display case frames -> Original wood veneer cabinet
-Large wall unit (right of center) -> Interactive equipment screen, custom display panel, backlit fabric curtain
-Circular seating area (right) -> Upholstered seating
-Rightmost wall area -> White latex paint, custom display panel, finished cabinet
-Flooring -> Polished concrete or large format tile
 LIGHTING & ATMOSPHERE:
+- [Define Lighting]: Default to "High-end Boutique Lighting" with dramatic contrast unless "Office" is clearly indicated.
+- Avoid "flat" or "even" lighting. Ask for "Depth", "Soft Shadows", and "Highlights".
 
-Bright, even retail lighting from ceiling fixtures. Accent lighting within display cases, glowing fabric panels, and integrated lighting for the interactive wall and circular seating area.
 STRICT FIDELITY:
+- Follow geometric layout exactly.
+[PROMPT END]
+```
 
-Follow geometric layout exactly.
+**生成的提示词示例 (Generated Prompt Example - Translated):**
+```markdown
+将此零售店立面图转换为逼真的渲染图。
+关键控制：
+
+长宽比：关键：严格保持原始宽长宽比。不要裁剪。
+去除文字：阅读注释以了解上下文，但删除最终图像中的所有文字和线条。
+
+材质映射（基于您的分析）：
+左侧双门 -> 带有玻璃面板的木材或金属
+左侧和中间展示柜框架 -> 30mm 黑色不锈钢饰边
+左侧展示柜背板 -> 背光织物窗帘
+左侧展示柜内的搁架 -> 玻璃
+左侧展示柜下方的橱柜 -> 木饰面
+中间展示柜框架 -> 原始木饰面橱柜
+中心右侧的大型墙面单元 -> 交互式设备屏幕，定制展示面板，背光织物窗帘
+右侧圆形座位区 -> 软垫座椅
+最右侧墙面区域 -> 白色乳胶漆，定制展示面板，成品橱柜
+地板 -> 抛光混凝土或大规格瓷砖
+
+灯光与氛围：
+来自天花板灯具的明亮均匀的零售照明。展示柜内的重点照明，发光的织物面板，以及交互式墙面和圆形座位区的集成照明。
+
+严格保真：
+完全遵循几何布局。
 ```
 
 > **💡 最佳实践**：推荐使用**元提示词**（案例文件中的 Method 2）来自动分析输入图纸。它能自动检测长宽比、读取材质标注（如"木饰面"、"玻璃"）并生成精准的渲染提示词。
