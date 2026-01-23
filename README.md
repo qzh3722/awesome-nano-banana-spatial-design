@@ -1106,7 +1106,7 @@ Analyze the uploaded 2D CAD elevation drawing and write a precise PROMPT for an 
 Output ONLY the prompt code block below:
 
 [PROMPT START]
-Transform this [m/f] [Space Type] elevation into a photorealistic render.
+Transform this [Adjective] [Space Type] elevation into a photorealistic render.
 
 CRITICAL CONTROLS:
 - ASPECT RATIO: [Insert Aspect Ratio Instruction]
