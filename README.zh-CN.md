@@ -1044,39 +1044,41 @@
 
 ---
 
+---
+
 #### 方法 1：通用模板 (Universal Template)
 *手动填写。适用于简单案例。*
 
 **提示词：**
 ```markdown
 ⭐ TEXTURE MAPPING MODE ACTIVATED.
-TASK: Apply VIBRANT, PHOTOREALISTIC MATERIALS directly onto this 2D CAD geometry.
+任务：将生动、逼真的材质直接应用到此 2D CAD 几何图形上。
 
-⚠️ GEOMETRY LOCK (DO NOT CHANGE):
-1.  **ASPECT RATIO**: Output MUST EXACTLY match the input's ultra-wide ratio. Do NOT crop.
-2.  **ORTHOGRAPHIC VIEW**: Render as a flat frontal elevation. Zero perspective distortion.
-3.  **TRACE LINES**: Every line in the input corresponds to a material change or gap.
+⚠️ 几何锁定 (GEOMETRY LOCK - 请勿更改):
+1.  **长宽比 (ASPECT RATIO)**: 输出必须完全匹配输入的超宽比例。请勿裁剪。
+2.  **正交视图 (ORTHOGRAPHIC VIEW)**: 渲染为平坦的正立面。零透视失真。
+3.  **线条追踪 (TRACE LINES)**: 输入中的每一条线都对应着材质的变化或缝隙。
 
-🧠 INTELLIGENT SYMBOL READING:
--   **Kickplate Rule**: If a unit has a bottom plinth/kickplate -> It is a **CABINET**.
--   **Floor Rule**: If a unit goes straight to the floor without a plinth -> It is a **DOOR/PASSAGE**.
--   **Double Lines**: Render as metal frames or shadow gaps.
--   **Text Removal**: Remove text labels and fill with background material.
+🧠 智能符号读取:
+-   **踢脚线规则 (Kickplate Rule)**: 如果单元底部有踢脚线 -> 它是 **橱柜 (CABINET)**。
+-   **地面规则 (Floor Rule)**: 如果单元直接落地没有踢脚线 -> 它是 **门/通道 (DOOR/PASSAGE)**。
+-   **双线**: 渲染为金属框架或阴影缝隙。
+-   **去除文字**: 移除文字标签并用背景材质填充。
 
-⚠️ CONTENT FREEZE (ANTI-HALLUCINATION):
--   **NO new windows** (unless explicitly labeled).
--   **NO new furniture** (chairs, benches).
--   **NO new plants** or decor.
+⚠️ 内容冻结 (防止幻觉):
+-   **禁止** 新增窗户 (除非明确标注)。
+-   **禁止** 新增家具 (椅子, 长凳)。
+-   **禁止** 新增植物或装饰。
 
-🎨 VISUAL STYLE (RICH CONTRAST):
--   **Color Palette**: [Insert Colors]
--   **Lighting**: Commercial display lighting. EMPHASIZE highlights on glass and deep shadows in gaps. Avoid flat/grey lighting.
--   **Definition**: Sharp edges, high material definition.
+🎨 视觉风格 (丰富对比):
+-   **调色板**: [填写颜色]
+-   **灯光**: 商业展示照明。强调玻璃上的高光和缝隙中的深阴影。避免平淡/灰暗的灯光。
+-   **清晰度**: 边缘锋利，材质定义清晰。
 
-VERIFICATION:
--   Is the image SUPER WIDE (like the input)?
--   Is the wood color RICH (not grey clay)?
--   Are the doors correctly identified (no kickplate)?
+验证:
+-   图像是否超宽 (像输入一样)?
+-   木材颜色是否丰富 (不是灰色粘土)?
+-   门是否被正确识别 (无踢脚线)?
 ```
 
 ---
@@ -1086,26 +1088,33 @@ VERIFICATION:
 
 **元提示词代码：**
 ```markdown
-# Role
+# Role (角色)
 Act as an expert Architectural Visualization Prompt Engineer.
+(担任一名专家级的建筑可视化提示词工程师。)
 
-# Task
+# Task (任务)
 Analyze the uploaded 2D CAD elevation drawing and write a precise PROMPT for an AI Image Generator to convert this line drawing into a photorealistic render.
+(分析上传的 2D CAD 立面图，并为 AI 图像生成器编写精确的提示词，将此线条图转换为逼真的渲染图。)
 
-# Analysis Rules (CRITICAL)
-1. **DECISIVE MATERIAL MAPPING**: 
+# Analysis Rules (Critical / 关键分析规则)
+1. **DECISIVE MATERIAL MAPPING (果断的材质映射)**: 
    - OCR the text labels. **Translate** any non-English tags to English rendering terms.
-   - ⚠️ **NO AMBIGUITY**: Do NOT write "Wood or Metal". You MUST infer a specific material based on context.
+   - (OCR 识别文字标签。将任何非英文标签翻译为英文渲染术语。)
+   - ⚠️ **NO AMBIGUITY (禁止模棱两可)**: Do NOT write "Wood or Metal". You MUST infer a specific material based on context.
+   - (不要写 "木头或金属"。你必须根据上下文推断出具体的材质。)
    - If a material is unknown, default to "Matte White Paint" or "Light Oak".
 
-2. **ASPECT RATIO CHECK**: 
+2. **ASPECT RATIO CHECK (长宽比检查)**: 
    - Estimate the aspect ratio. If wide (> 16:9), MUST include: "CRITICAL: STRICTLY preserve original wide aspect ratio. DO NOT CROP."
+   - (预估长宽比。如果很宽 (> 16:9)，必须包含上述英文指令："CRITICAL: ...")
 
-3. **TEXT REMOVAL**: 
+3. **TEXT REMOVAL (去除文字)**: 
    - Mandatory instruction: "REMOVE ALL TEXT labels, dimensions, and leader lines."
+   - (强制指令："REMOVE ALL TEXT ...")
 
-# Output Format
+# Output Format (输出格式)
 Output ONLY the prompt code block below:
+(仅输出下方的提示词代码块:)
 
 [PROMPT START]
 Transform this [m/f] [Space Type] elevation into a photorealistic render.
