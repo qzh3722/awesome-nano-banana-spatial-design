@@ -1040,7 +1040,34 @@
 
 #### 输出
 
-![输出图片](./assets/cases/3.3-elevation-to-render/output.jpeg)
+![输出图片](./assets/cases/3.3-elevation-to-render/output-meta.jpeg)
+
+**提示词（由元提示词生成）：**
+```markdown
+Transform this retail store elevation into a photorealistic render.
+CRITICAL CONTROLS:
+
+ASPECT RATIO: CRITICAL: STRICTLY preserve original wide aspect ratio. DO NOT CROP.
+TEXT REMOVAL: READ annotations for context, but REMOVE ALL TEXT and lines in the final image.
+MATERIAL MAPPING (Based on your analysis):
+
+Double doors (left) -> Wood or metal with glass panels
+Display case frames (left, center) -> 30mm black stainless steel trim
+Back panels of left display cases -> Backlit fabric curtain
+Shelving within left display cases -> Glass
+Cabinets below left display cases -> Wood veneer
+Center display case frames -> Original wood veneer cabinet
+Large wall unit (right of center) -> Interactive equipment screen, custom display panel, backlit fabric curtain
+Circular seating area (right) -> Upholstered seating
+Rightmost wall area -> White latex paint, custom display panel, finished cabinet
+Flooring -> Polished concrete or large format tile
+LIGHTING & ATMOSPHERE:
+
+Bright, even retail lighting from ceiling fixtures. Accent lighting within display cases, glowing fabric panels, and integrated lighting for the interactive wall and circular seating area.
+STRICT FIDELITY:
+
+Follow geometric layout exactly.
+```
 
 > **💡 最佳实践**：推荐使用**元提示词**（案例文件中的 Method 2）来自动分析输入图纸。它能自动检测长宽比、读取材质标注（如"木饰面"、"玻璃"）并生成精准的渲染提示词。
 
